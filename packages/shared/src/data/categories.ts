@@ -56,7 +56,7 @@ export const categories: Category[] = [
     {
         slug: 'dragon-ball',
         name: 'Dragon Ball',
-        icon: 'https://upload.wikimedia.org/wikipedia/commons/9/9b/Dragon_Ball_Z_Logo.png',
+        icon: 'https://logos-world.net/wp-content/uploads/2021/02/Dragon-Ball-Logo.png',
         characterCount: dragonBallCharacters.length,
     },
     {
@@ -80,7 +80,7 @@ export const categories: Category[] = [
     {
         slug: 'genshin-impact',
         name: 'Genshin Impact',
-        icon: 'https://gi.yatta.moe/assets/UI/UI_AvatarIcon_PlayerGirl.png',
+        icon: 'https://logos-world.net/wp-content/uploads/2024/01/Genshin-Impact-Logo.png',
         characterCount: genshinCharacters.length,
     },
     {
@@ -110,19 +110,19 @@ export const categories: Category[] = [
     {
         slug: 'one-piece',
         name: 'One Piece',
-        icon: 'https://upload.wikimedia.org/wikipedia/commons/3/34/One_piece_logo_1.svg',
+        icon: 'https://logos-world.net/wp-content/uploads/2021/09/One-Piece-Logo.png',
         characterCount: onePieceCharacters.length,
     },
     {
         slug: 'attack-on-titan',
         name: 'Attack on Titan',
-        icon: 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Attack_on_Titan_%28international_anglophone%29_logo.svg',
+        icon: 'https://logos-world.net/wp-content/uploads/2022/01/Attack-on-Titan-Logo.png',
         characterCount: attackOnTitanCharacters.length,
     },
     {
         slug: 'demon-slayer',
         name: 'Demon Slayer',
-        icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Demon_Slayer_logo.svg',
+        icon: 'https://logos-world.net/wp-content/uploads/2021/12/Demon-Slayer-Logo.png',
         characterCount: demonSlayerCharacters.length,
     },
     {
@@ -134,7 +134,7 @@ export const categories: Category[] = [
     {
         slug: 'brands',
         name: 'Brands',
-        icon: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg',
+        icon: 'https://logos-world.net/wp-content/uploads/2020/09/Google-Logo.png',
         characterCount: brandCharacters.length,
     },
 ]
