@@ -208,10 +208,66 @@ async function fetchRickAndMorty(): Promise<string> {
     )
 }
 
+async function fetchOverwatch(): Promise<string> {
+    const data = await fetch('https://overfast-api.tekrop.fr/heroes').then((r) => r.json())
+
+    const characters = (data as { name: string; portrait: string }[])
+        .map(({ name, portrait }) => ({ name, imageUrl: portrait }))
+        .sort((a, b) => a.name.localeCompare(b.name))
+
+    console.log(`Overwatch: ${characters.length} heroes`)
+    return (
+        header + `export const overwatchCharacters: Character[] = ${serialize(characters)}\n`
+    )
+}
+
+async function fetchDragonBall(): Promise<string> {
+    const data = await fetch(
+        'https://dragonball-api.com/api/characters?limit=100',
+    ).then((r) => r.json())
+
+    const characters = (data.items as { name: string; image: string }[])
+        .map(({ name, image }) => ({ name, imageUrl: image }))
+        .sort((a, b) => a.name.localeCompare(b.name))
+
+    console.log(`Dragon Ball: ${characters.length} characters`)
+    return (
+        header + `export const dragonBallCharacters: Character[] = ${serialize(characters)}\n`
+    )
+}
+
+async function fetchNaruto(): Promise<string> {
+    const first = await fetch('https://dattebayo-api.onrender.com/characters?limit=100').then(
+        (r) => r.json(),
+    )
+
+    const results = [...first.characters]
+    const totalPages = Math.ceil(first.total / 100)
+
+    await Promise.all(
+        Array.from({ length: totalPages - 1 }, (_, i) =>
+            fetch(`https://dattebayo-api.onrender.com/characters?limit=100&page=${i + 2}`)
+                .then((r) => r.json())
+                .then((d) => results.push(...d.characters)),
+        ),
+    )
+
+    const characters = (results as { name: string; images: string[] }[])
+        .filter((c) => c.images.length > 0)
+        .slice(0, 60)
+        .map(({ name, images }) => ({ name, imageUrl: images[0] }))
+        .sort((a, b) => a.name.localeCompare(b.name))
+
+    console.log(`Naruto: ${characters.length} characters`)
+    return (
+        header + `export const narutoCharacters: Character[] = ${serialize(characters)}\n`
+    )
+}
+
 async function main() {
     console.log('Generating character data...\n')
 
-    const [lol, dota2, valorant, flags, pokemon, fortnite, genshin, rickAndMorty] =
+    const [lol, dota2, valorant, flags, pokemon, fortnite, genshin, rickAndMorty, overwatch, dragonBall, naruto] =
         await Promise.all([
             fetchLol(),
             fetchDota2(),
@@ -221,6 +277,9 @@ async function main() {
             fetchFortnite(),
             fetchGenshin(),
             fetchRickAndMorty(),
+            fetchOverwatch(),
+            fetchDragonBall(),
+            fetchNaruto(),
         ])
 
     writeFileSync(join(OUT_DIR, 'league-of-legends.ts'), lol)
@@ -231,6 +290,9 @@ async function main() {
     writeFileSync(join(OUT_DIR, 'fortnite.ts'), fortnite)
     writeFileSync(join(OUT_DIR, 'genshin.ts'), genshin)
     writeFileSync(join(OUT_DIR, 'rick-and-morty.ts'), rickAndMorty)
+    writeFileSync(join(OUT_DIR, 'overwatch.ts'), overwatch)
+    writeFileSync(join(OUT_DIR, 'dragon-ball.ts'), dragonBall)
+    writeFileSync(join(OUT_DIR, 'naruto.ts'), naruto)
 
     console.log('\nDone! Files written to src/data/characters/')
 }

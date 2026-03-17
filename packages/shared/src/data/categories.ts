@@ -2,10 +2,13 @@ import type { Category } from '../types'
 
 import {
     dota2Characters,
+    dragonBallCharacters,
     flagCharacters,
     fortniteCharacters,
     genshinCharacters,
     leagueOfLegendsCharacters,
+    narutoCharacters,
+    overwatchCharacters,
     pokemonCharacters,
     rickAndMortyCharacters,
     valorantCharacters,
@@ -25,6 +28,18 @@ export const categories: Category[] = [
         characterCount: flagCharacters.length,
     },
     {
+        slug: 'dragon-ball',
+        name: 'Dragon Ball',
+        icon: 'https://dragonball-api.com/characters/goku_normal.webp',
+        characterCount: dragonBallCharacters.length,
+    },
+    {
+        slug: 'naruto',
+        name: 'Naruto',
+        icon: 'https://static.wikia.nocookie.net/naruto/images/d/d6/Naruto_Part_I.png',
+        characterCount: narutoCharacters.length,
+    },
+    {
         slug: 'league-of-legends',
         name: 'League of Legends',
         icon: 'https://vignette.wikia.nocookie.net/leagueoflegends/images/1/12/League_of_Legends_Icon.png',
@@ -35,6 +50,12 @@ export const categories: Category[] = [
         name: 'Valorant',
         icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version_%28cropped%29.png',
         characterCount: valorantCharacters.length,
+    },
+    {
+        slug: 'overwatch',
+        name: 'Overwatch',
+        icon: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/985b06beae46b7ba3ca87d1512d0fc62ca7f206ceca58ef16fc44d43a1cc84ed.png',
+        characterCount: overwatchCharacters.length,
     },
     {
         slug: 'fortnite',
@@ -67,11 +88,14 @@ export const charactersByCategory: Record<
     typeof leagueOfLegendsCharacters
 > = {
     pokemon: pokemonCharacters,
+    flags: flagCharacters,
+    'dragon-ball': dragonBallCharacters,
+    naruto: narutoCharacters,
     'league-of-legends': leagueOfLegendsCharacters,
     valorant: valorantCharacters,
+    overwatch: overwatchCharacters,
     fortnite: fortniteCharacters,
     'genshin-impact': genshinCharacters,
-    'dota-2': dota2Characters,
     'rick-and-morty': rickAndMortyCharacters,
-    flags: flagCharacters,
+    'dota-2': dota2Characters,
 }
