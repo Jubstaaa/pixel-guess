@@ -243,8 +243,7 @@ async function fetchTmdb(endpoint: string, apiKey: string, pages: number): Promi
     await Promise.all(
         Array.from({ length: pages }, (_, i) =>
             fetch(
-                `https://api.themoviedb.org/3/${endpoint}?language=en-US&page=${i + 1}`,
-                { headers: { Authorization: `Bearer ${apiKey}` } },
+                `https://api.themoviedb.org/3/${endpoint}?api_key=${apiKey}&language=en-US&page=${i + 1}`,
             )
                 .then((r) => r.json())
                 .then((d) => results.push(...(d.results ?? []))),
@@ -254,7 +253,7 @@ async function fetchTmdb(endpoint: string, apiKey: string, pages: number): Promi
 }
 
 async function fetchMovies(apiKey: string): Promise<string> {
-    const results = await fetchTmdb('movie/popular', apiKey, 5)
+    const results = await fetchTmdb('movie/top_rated', apiKey, 5)
 
     const characters = results
         .filter((m) => m.poster_path)
@@ -269,7 +268,7 @@ async function fetchMovies(apiKey: string): Promise<string> {
 }
 
 async function fetchTvShows(apiKey: string): Promise<string> {
-    const results = await fetchTmdb('tv/popular', apiKey, 5)
+    const results = await fetchTmdb('tv/top_rated', apiKey, 5)
 
     const characters = results
         .filter((s) => s.poster_path)
@@ -284,10 +283,11 @@ async function fetchTvShows(apiKey: string): Promise<string> {
 }
 
 async function fetchPeople(apiKey: string): Promise<string> {
-    const results = await fetchTmdb('person/popular', apiKey, 5)
+    const results = await fetchTmdb('person/popular', apiKey, 3)
 
     const characters = results
         .filter((p) => p.profile_path)
+        .slice(0, 50)
         .map((p) => ({
             name: p.name!,
             imageUrl: `https://image.tmdb.org/t/p/w500${p.profile_path}`,

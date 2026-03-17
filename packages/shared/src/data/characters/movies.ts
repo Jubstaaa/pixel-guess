@@ -3,64 +3,54 @@ import type { Character } from '../../types'
 
 export const movieCharacters: Character[] = [
     {
-        name: '"Wuthering Heights"',
+        name: '¿Quieres ser mi hijo?',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/3YBce6dTh1D5oCMITXk2S5QhPt.jpg',
+            'https://image.tmdb.org/t/p/w500/9GuvODahvuFqdhuZ16aBLR4UJoP.jpg',
     },
     {
-        name: '28 Years Later: The Bone Temple',
+        name: '12 Angry Men',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/kK1BGkG3KAvWB0WMV1DfOx9yTMZ.jpg',
+            'https://image.tmdb.org/t/p/w500/2QXLVh32JKaWTjFJU3n8aIxRK9P.jpg',
     },
     {
-        name: "A Fox's Tale",
+        name: 'A Brighter Summer Day',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/9JmD7mrimja0tpHMhiA231h6JHx.jpg',
+            'https://image.tmdb.org/t/p/w500/3l8fOAwiN3N5n3hHnZ51eog7Zu2.jpg',
     },
     {
-        name: 'Alien: Covenant',
+        name: "A Dog's Will",
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/zecMELPbU5YMQpC81Z8ImaaXuf9.jpg',
+            'https://image.tmdb.org/t/p/w500/imcOp1kJsCsAFCoOtY5OnPrFbAf.jpg',
     },
     {
-        name: 'Alpha',
+        name: 'A Silent Voice: The Movie',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/iE3P4LFSJCBX5PRWxbPs7DQh7yI.jpg',
+            'https://image.tmdb.org/t/p/w500/tuFaWiqX0TXoWu7DGNcmX3UW7sT.jpg',
     },
     {
-        name: 'Anaconda',
+        name: 'American History X',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/qxMv3HwAB3XPuwNLMhVRg795Ktp.jpg',
+            'https://image.tmdb.org/t/p/w500/x2drgoXYZ8484lqyDj7L1CEVR4T.jpg',
     },
     {
-        name: 'Avatar: Fire and Ash',
+        name: 'Apocalypse Now',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/bRBeSHfGHwkEpImlhxPmOcUsaeg.jpg',
+            'https://image.tmdb.org/t/p/w500/gQB8Y5RCMkv2zwzFHbUJX3kAhvA.jpg',
     },
     {
-        name: 'Bāhubali: The Epic',
+        name: 'Avengers: Endgame',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/z9YIo2qscyaXYgRqIdRJtND3bw8.jpg',
+            'https://image.tmdb.org/t/p/w500/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg',
     },
     {
-        name: 'Bizet: Carmen',
+        name: 'Avengers: Infinity War',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/tYtzaMu0rzWcp2jUHD7IvRo0La.jpg',
+            'https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg',
     },
     {
-        name: 'Blades of the Guardians: Wind Rises in the Desert',
+        name: 'Back to the Future',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/AbunjMKX4P1sDNlKfhYrWkIoRD9.jpg',
-    },
-    {
-        name: 'Bloodline Killer',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/wHmzCQwBzT6m8wtZdXHOIITn82B.jpg',
-    },
-    {
-        name: 'Caring Cabin',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/zC84wmZcQPanuKQg5288go9QQ2P.jpg',
+            'https://image.tmdb.org/t/p/w500/vN5B5WgYscRGcQpVhHl6p9DDTP0.jpg',
     },
     {
         name: 'Chainsaw Man - The Movie: Reze Arc',
@@ -68,109 +58,144 @@ export const movieCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/pHyxb2RV5wLlboAwm9ZJ9qTVEDw.jpg',
     },
     {
-        name: 'Cold Storage',
+        name: 'Cinema Paradiso',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/3HA2iiq982e01EKXJvPFyfMADVM.jpg',
+            'https://image.tmdb.org/t/p/w500/gCI2AeMV4IHSewhJkzsur5MEp6R.jpg',
     },
     {
-        name: 'Crime 101',
+        name: 'City Lights',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/heMdO64ys1hR896YE2jvTv8JlBX.jpg',
+            'https://image.tmdb.org/t/p/w500/bXNvzjULc9jrOVhGfjcc64uKZmZ.jpg',
     },
     {
-        name: 'Crime 101',
+        name: 'City of God',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/heMdO64ys1hR896YE2jvTv8JlBX.jpg',
+            'https://image.tmdb.org/t/p/w500/k7eYdWvhYQyRQoU2TB2A2Xu2TfD.jpg',
     },
     {
-        name: 'David',
+        name: 'Clouds',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/7lFG1WrCwAxBfyGK8ahlBVzXno7.jpg',
+            'https://image.tmdb.org/t/p/w500/d0OdD1I8qAfETvE9Rp9Voq7R8LR.jpg',
     },
     {
-        name: 'Dracula',
+        name: 'Counterattack',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/libhghrUSBSEdHgF9uP1SQES0nQ.jpg',
+            'https://image.tmdb.org/t/p/w500/38I76hGcFY6xB47pjm7pZwkfuAF.jpg',
     },
     {
-        name: 'EVANGELION 30th Anniversary Special Screening',
+        name: 'Dead Poets Society',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/jWKTLEbJCsbfIQV4IsiU9H1qRAN.jpg',
+            'https://image.tmdb.org/t/p/w500/l5NbiHKUmahlAT3Q1ig8Tyl9xrc.jpg',
     },
     {
-        name: 'F1',
+        name: 'Dedicated to my ex',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/vqBmyAj0Xm9LnS1xe1MSlMAJyHq.jpg',
+            'https://image.tmdb.org/t/p/w500/xc4bTXVwYNXi10jG9dwcaYt5IpU.jpg',
     },
     {
-        name: 'Firecreek',
+        name: 'Dilwale Dulhania Le Jayenge',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/zypuu5aEoyM5tadMAkbNm3Kccq9.jpg',
+            'https://image.tmdb.org/t/p/w500/2CAL2433ZeIihfX1Hb2139CX0pW.jpg',
     },
     {
-        name: 'Frankenstein',
+        name: 'Dou kyu sei – Classmates',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/g4JtvGlQO7DByTI6frUobqvSL3R.jpg',
+            'https://image.tmdb.org/t/p/w500/cIfRCA5wEvj9tApca4UDUagQEiM.jpg',
     },
     {
-        name: 'From the Ashes',
+        name: 'Fight Club',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/aEUH2ECoZHvSmoMzJpca0STF2CZ.jpg',
+            'https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg',
     },
     {
-        name: 'Ginger & Rosa',
+        name: 'Forrest Gump',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/5EmQri2RwjN5zELdAtUY52k71pN.jpg',
+            'https://image.tmdb.org/t/p/w500/saHP97rTPS5eLmrLQEcANmKrsFl.jpg',
     },
     {
-        name: 'GOAT',
+        name: "Gabriel's Inferno",
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg',
+            'https://image.tmdb.org/t/p/w500/oyG9TL7FcRP4EZ9Vid6uKzwdndz.jpg',
     },
     {
-        name: "Good Luck, Have Fun, Don't Die",
+        name: "Gabriel's Inferno: Part II",
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/rWcfOdY7TU6lTdazWj0ebDZnAfO.jpg',
+            'https://image.tmdb.org/t/p/w500/x5o8cLZfEXMoZczTYWLrUo1P7UJ.jpg',
     },
     {
-        name: 'Greenland 2: Migration',
+        name: "Gabriel's Inferno: Part III",
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/z2tqCJLsw6uEJ8nJV8BsQXGa3dr.jpg',
+            'https://image.tmdb.org/t/p/w500/fYtHxTxlhzD4QWfEbrC1rypysSD.jpg',
     },
     {
-        name: 'Hamnet',
+        name: 'Given',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/vbeyOZm2bvBXcbgPD3v6o94epPX.jpg',
+            'https://image.tmdb.org/t/p/w500/pegCub2zdYD5As43AOmGsIctuKc.jpg',
     },
     {
-        name: 'Hellfire',
+        name: 'Gladiator',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/tQti9QTf13MfzNpXguijgNh7ojE.jpg',
+            'https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg',
     },
     {
-        name: 'Hidden Strike',
+        name: 'GoodFellas',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/zsbolOkw8RhTU4DKOrpf4M7KCmi.jpg',
+            'https://image.tmdb.org/t/p/w500/9OkCLM73MIU2CrKZbqiT8Ln1wY2.jpg',
     },
     {
-        name: 'Hoppers',
+        name: 'Grave of the Fireflies',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg',
+            'https://image.tmdb.org/t/p/w500/k9tv1rXZbOhH7eiCk378x61kNQ1.jpg',
     },
     {
-        name: 'House on Eden',
+        name: 'Green Book',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/2xVyCvnuVVRpYohPxrvwxZiH49r.jpg',
+            'https://image.tmdb.org/t/p/w500/7BsvSuDQuoqhWmU2fL7W2GOcZHU.jpg',
     },
     {
-        name: 'Hunting Season',
+        name: 'Harakiri',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/cbryTyaWdqrKpQCw6K7zm2jrB5v.jpg',
+            'https://image.tmdb.org/t/p/w500/3nPwMd3KviJWaHzG9fZCqlwWMas.jpg',
     },
     {
-        name: 'Ice Skater',
+        name: 'High and Low',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/m93BKabB7Je8WQACed58BXeHNNR.jpg',
+            'https://image.tmdb.org/t/p/w500/tgNjemQPG96uIezpiUiXFcer5ga.jpg',
+    },
+    {
+        name: 'Hope',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/x9yjkm9gIz5qI5fJMUTfBnWiB2o.jpg',
+    },
+    {
+        name: 'Hotarubi no Mori e',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/mDqzHV8UXWWNpZkoAbKmKX1ZxEE.jpg',
+    },
+    {
+        name: "Howl's Moving Castle",
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/13kOl2v0nD2OLbVSHnHk8GUFEhO.jpg',
+    },
+    {
+        name: 'I Want to Eat Your Pancreas',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/qpV8kvRfAntV7D4aOOsLIz7OdPc.jpg',
+    },
+    {
+        name: 'Ikiru',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/dgNTS4EQDDVfkzJI5msKuHu2Ei3.jpg',
+    },
+    {
+        name: 'Impossible Things',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/t2Ew8NZ8Ci2kqmoecZUNQUFDJnQ.jpg',
+    },
+    {
+        name: 'Inception',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg',
     },
     {
         name: 'Interstellar',
@@ -178,209 +203,189 @@ export const movieCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg',
     },
     {
-        name: 'Jay Kelly',
+        name: "It's a Wonderful Life",
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/lEXYpY9X17pGC7xYYy17Guv0L3J.jpg',
+            'https://image.tmdb.org/t/p/w500/bSqt9rhDZx1Q7UZ86dBPKdNomp2.jpg',
     },
     {
-        name: 'Joy Ride',
+        name: 'Josee, the Tiger and the Fish',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/1LVGjf1QWgkNNPQssZtuT1GYKoP.jpg',
+            'https://image.tmdb.org/t/p/w500/z1D8xi9x4uEhyFruo7uEHXUMD4K.jpg',
     },
     {
-        name: 'JUJUTSU KAISEN: Execution',
+        name: 'Klaus',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/v0s3dx6am0RzfsuK3KdEy8ZoCDs.jpg',
+            'https://image.tmdb.org/t/p/w500/q125RHUDgR4gjwh1QkfYuJLYkL.jpg',
     },
     {
-        name: 'Kasganj',
+        name: 'Le Trou',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/4pIXubnvdR0K0W4bIC389auCo3l.jpg',
+            'https://image.tmdb.org/t/p/w500/xyZhiOz5NHVBUKlpioxjwajy7pm.jpg',
     },
     {
-        name: 'KPop Demon Hunters',
+        name: 'Léon: The Professional',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/zT7Lhw3BhJbMkRqm9Zlx2YGMsY0.jpg',
+            'https://image.tmdb.org/t/p/w500/bxB2q91nKYp8JNzqE7t7TWBVupB.jpg',
     },
     {
-        name: 'Leberkäsjunkie',
+        name: 'Life in a Year',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/gMCNiOVCSxg4C7per145CVVFd18.jpg',
+            'https://image.tmdb.org/t/p/w500/bP7u19opmHXYeTCUwGjlLldmUMc.jpg',
     },
     {
-        name: 'Marty Supreme',
+        name: 'Life Is Beautiful',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/lYWEXbQgRTR4ZQleSXAgRbxAjvq.jpg',
+            'https://image.tmdb.org/t/p/w500/mfnkSeeVOBVheuyn2lo4tfmOPQb.jpg',
     },
     {
-        name: 'Mercy',
+        name: 'Lucy Shimmers and the Prince of Peace',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/pyok1kZJCfyuFapYXzHcy7BLlQa.jpg',
+            'https://image.tmdb.org/t/p/w500/yfnJ5qIYx7q33fY4jqv9Pu95RSg.jpg',
     },
     {
-        name: 'Mouseboat Massacre',
+        name: 'Miracle in Cell No. 7',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/ctKqevqOwbeVg5GLQLu5VvnCjan.jpg',
+            'https://image.tmdb.org/t/p/w500/bOth4QmNyEkalwahfPCfiXjNh1r.jpg',
     },
     {
-        name: 'Muzzle: City of Wolves',
+        name: 'Modern Times',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/8qTMRmC07XCGidnKQFLbRM3FoDU.jpg',
+            'https://image.tmdb.org/t/p/w500/7uoiKOEjxBBW0AgDGQWrlfGQ90w.jpg',
     },
     {
-        name: 'My Fault',
+        name: 'Neon Genesis Evangelion: The End of Evangelion',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/w46Vw536HwNnEzOa7J24YH9DPRS.jpg',
+            'https://image.tmdb.org/t/p/w500/j6G24dqI4WgUtChhWjfnI4lnmiK.jpg',
     },
     {
-        name: 'Nobody',
+        name: 'Oldboy',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/oBgWY00bEFeZ9N25wWVyuQddbAo.jpg',
+            'https://image.tmdb.org/t/p/w500/pWDtjs568ZfOTMbURQBYuT4Qxka.jpg',
     },
     {
-        name: "Now You See Me: Now You Don't",
+        name: 'Once Upon a Studio',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/oD3Eey4e4Z259XLm3eD3WGcoJAh.jpg',
+            'https://image.tmdb.org/t/p/w500/aiy3G1cYWV3LgKZHY6a3jL8bjYL.jpg',
     },
     {
-        name: 'One Battle After Another',
+        name: 'Once Upon a Time in America',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/lbBWwxBht4JFP5PsuJ5onpMqugW.jpg',
+            'https://image.tmdb.org/t/p/w500/i0enkzsL5dPeneWnjl1fCWm6L7k.jpg',
     },
     {
-        name: 'One Battle After Another',
+        name: 'Once Upon a Time in the West',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/lbBWwxBht4JFP5PsuJ5onpMqugW.jpg',
+            'https://image.tmdb.org/t/p/w500/qbYgqOczabWNn2XKwgMtVrntD6P.jpg',
     },
     {
-        name: 'Oscar Shaw',
+        name: "One Flew Over the Cuckoo's Nest",
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/tsE3nySukwrfUjouz8vzvKTcXNC.jpg',
+            'https://image.tmdb.org/t/p/w500/kjWsMh72V6d8KRLV4EOoSJLT1H7.jpg',
     },
     {
-        name: 'Peaky Blinders: The Immortal Man',
+        name: 'Out of the Clear Blue Sky',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/gRMalasZEzsZi4w2VFuYusfSfqf.jpg',
+            'https://image.tmdb.org/t/p/w500/o9cSEHrXzPOO4OIoT9yrdxc216w.jpg',
     },
     {
-        name: 'Petmalu',
+        name: 'Parasite',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/bgaEjqLHzrHFLtXxf0iKtcdF4rP.jpg',
+            'https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg',
     },
     {
-        name: 'Playdate',
+        name: 'Paths of Glory',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/fGodXWqJkkkbSebPIlxLSygV8GY.jpg',
+            'https://image.tmdb.org/t/p/w500/tJXwtzOSNUC8dxJfrdvkNtGrrgW.jpg',
     },
     {
-        name: 'Pose',
+        name: 'Perfect Blue',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/qhyyyWrHUbl6QG4udAJj17CBa5.jpg',
+            'https://image.tmdb.org/t/p/w500/6WTiOCfDPP8XV4jqfloiVWf7KHq.jpg',
     },
     {
-        name: 'Predator: Badlands',
+        name: 'Princess Mononoke',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/erTRAi241eYF4K8KoGGOI8kFPox.jpg',
+            'https://image.tmdb.org/t/p/w500/cMYCDADoLKLbB83g4WnJegaZimC.jpg',
     },
     {
-        name: 'Project Hail Mary',
+        name: 'Psycho',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/vOhW7Lbt4kZAqe0vJhVC4Ced9x2.jpg',
+            'https://image.tmdb.org/t/p/w500/yz4QVqPx3h1hD1DfqqQkCq3rmxW.jpg',
     },
     {
-        name: 'Reminders of Him',
+        name: 'Pulp Fiction',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/7L6rceYgzQ0NeHD7PRDNrRoQ291.jpg',
+            'https://image.tmdb.org/t/p/w500/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg',
     },
     {
-        name: 'Return to Silent Hill',
+        name: 'Radical',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/fqAGFN2K2kDL0EHxvJaXzaMUkkt.jpg',
+            'https://image.tmdb.org/t/p/w500/lOAJYpX608aT0ApIv63ZTnol27Y.jpg',
     },
     {
-        name: 'Scream 7',
+        name: 'Rascal Does Not Dream of a Dreaming Girl',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/jjyuk0edLiW8vOSnlfwWCCLpbh5.jpg',
+            'https://image.tmdb.org/t/p/w500/AtFnN4OztDJy8IFwYd5JfU0jlEM.jpg',
     },
     {
-        name: 'Sentimental Value',
+        name: 'Rear Window',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/pz9NCWxxOk3o0W3v1Zkhawrwb4i.jpg',
+            'https://image.tmdb.org/t/p/w500/ILVF0eJxHMddjxeQhswFtpMtqx.jpg',
     },
     {
-        name: 'SHARE?',
+        name: 'Saving Private Ryan',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/9HZv3pcDFZDSl8pdzxohHQZa1y3.jpg',
+            'https://image.tmdb.org/t/p/w500/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg',
     },
     {
-        name: 'Shelter',
+        name: "Schindler's List",
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/buPFnHZ3xQy6vZEHxbHgL1Pc6CR.jpg',
+            'https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg',
     },
     {
-        name: 'Sinners',
+        name: 'Se7en',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/fWPgbnt2LSqkQ6cdQc0SZN9CpLm.jpg',
+            'https://image.tmdb.org/t/p/w500/191nKfP0ehp3uIvWqgPbFmI4lv9.jpg',
     },
     {
-        name: 'Sinners',
+        name: 'Seven Samurai',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/fWPgbnt2LSqkQ6cdQc0SZN9CpLm.jpg',
+            'https://image.tmdb.org/t/p/w500/lOMGc8bnSwQhS4XyE1S99uH8NXf.jpg',
     },
     {
-        name: 'Solo Mio',
+        name: 'Spider-Man: Across the Spider-Verse',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/efSsZJaddeq0LOABZqpCXdMxv9P.jpg',
+            'https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg',
     },
     {
-        name: 'State of Fear',
+        name: 'Spider-Man: Into the Spider-Verse',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/3Eaqedg8MAlnP51GYY8MCSIdTnV.jpg',
+            'https://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg',
     },
     {
-        name: 'The Alamo',
+        name: 'Spirited Away',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/aZrWYkxCCwSPKp4VjVvn46uHbIX.jpg',
+            'https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg',
     },
     {
-        name: 'The Avengers',
+        name: 'Sunset Boulevard',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg',
+            'https://image.tmdb.org/t/p/w500/zt8aQ6ksqK6p1AopC5zVTDS9pKT.jpg',
     },
     {
-        name: 'The Aviary',
+        name: 'The Dark Knight',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/u6HUQcOQsgkFFO8xCITfxQz6ivc.jpg',
+            'https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg',
     },
     {
-        name: 'The Bluff',
+        name: 'The Empire Strikes Back',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/w0jwjFmRu2or7LQqh1tSMFjq0At.jpg',
+            'https://image.tmdb.org/t/p/w500/nNAeTmF4CtdSgMDplXTDPOpYzsX.jpg',
     },
     {
-        name: 'The Bride!',
+        name: 'The Forge',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/lV8YHwGkYZsm6EfIqnhaSz2avKt.jpg',
-    },
-    {
-        name: 'The Empire',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/2GQ5GMsx7Ri4gJsMDU2aDLbMg1S.jpg',
-    },
-    {
-        name: 'The Family Plan 2',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/semFxuYx6HcrkZzslgAkBqfJvZk.jpg',
-    },
-    {
-        name: 'The Feast',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/z7qDuUII2IgJ1I7HgElWn44d3JA.jpg',
-    },
-    {
-        name: 'The Flood',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/mvjqqklMpHwOxc40rn7dMhGT0Fc.jpg',
+            'https://image.tmdb.org/t/p/w500/oranxontIQRmhuyQlkoAwxpeBYz.jpg',
     },
     {
         name: 'The Godfather',
@@ -388,34 +393,74 @@ export const movieCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg',
     },
     {
-        name: 'The Good Boy',
+        name: 'The Godfather Part II',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/wWMLpfTmPV3dW4fYF5YJ04j0N4N.jpg',
+            'https://image.tmdb.org/t/p/w500/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg',
     },
     {
-        name: 'The Housemaid',
+        name: 'The Good, the Bad and the Ugly',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/cWsBscZzwu5brg9YjNkGewRUvJX.jpg',
+            'https://image.tmdb.org/t/p/w500/bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg',
     },
     {
-        name: 'The Internship',
+        name: 'The Great Dictator',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/fYqSOkix4rbDiZW0ACNnvZCpT6X.jpg',
+            'https://image.tmdb.org/t/p/w500/1QpO9wo7JWecZ4NiBuu625FiY1j.jpg',
     },
     {
-        name: 'The Rip',
+        name: 'The Green Mile',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/eZo31Dhl5BQ6GfbMNf3oU0tUvPZ.jpg',
+            'https://image.tmdb.org/t/p/w500/8VG8fDNiy50H4FedGwdSVUPoaJe.jpg',
     },
     {
-        name: 'The Running Man',
+        name: 'The Intouchables',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/dKL78O9zxczVgjtNcQ9UkbYLzqX.jpg',
+            'https://image.tmdb.org/t/p/w500/1QU7HKgsQbGpzsJbJK4pAVQV9F5.jpg',
     },
     {
-        name: "The Shadow's Edge",
+        name: 'The Legend of 1900',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/e0RU6KpdnrqFxDKlI3NOqN8nHL6.jpg',
+            'https://image.tmdb.org/t/p/w500/iOcbJ5pxokOPDRgieVDbsFMrCc6.jpg',
+    },
+    {
+        name: 'The Legend of Hei',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/4jfbKKLpqts3i2h2obkrONcjTg1.jpg',
+    },
+    {
+        name: 'The Lion King',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg',
+    },
+    {
+        name: 'The Lord of the Rings: The Fellowship of the Ring',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg',
+    },
+    {
+        name: 'The Lord of the Rings: The Return of the King',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg',
+    },
+    {
+        name: 'The Lord of the Rings: The Two Towers',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg',
+    },
+    {
+        name: 'The Matrix',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/p96dm7sCMn4VYAStA6siNz30G1r.jpg',
+    },
+    {
+        name: 'The Pianist',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/2hFvxCCWrTmCYwfy7yum0GKRi3Y.jpg',
+    },
+    {
+        name: 'The Quintessential Quintuplets Movie',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/sg7klpt1xwK1IJirBI9EHaqQwJ5.jpg',
     },
     {
         name: 'The Shawshank Redemption',
@@ -423,83 +468,38 @@ export const movieCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg',
     },
     {
-        name: 'The Super Mario Galaxy Movie',
+        name: 'The Silence of the Lambs',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/eJGWx219ZcEMVQJhAgMiqo8tYY.jpg',
+            'https://image.tmdb.org/t/p/w500/uS9m8OBk1A8eM9I042bx8XXpqAq.jpg',
     },
     {
-        name: 'The Wrecking Crew',
+        name: 'The Wild Robot',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/gbVwHl4YPSq6BcC92TQpe7qUTh6.jpg',
+            'https://image.tmdb.org/t/p/w500/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg',
     },
     {
-        name: 'Torrente for President',
+        name: 'Violet Evergarden: The Movie',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/yrDKwAdZRJjoQ9RZwzRGPpMC7U1.jpg',
+            'https://image.tmdb.org/t/p/w500/bajajkoErDst0JxdFyBkABiF9rW.jpg',
     },
     {
-        name: 'Trap House',
+        name: 'We All Loved Each Other So Much',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/6tpAPeuuqbVnYWWPoOLEDLSBU7a.jpg',
+            'https://image.tmdb.org/t/p/w500/zGGWYpiKNwjpKxelPxOMqJnUgDs.jpg',
     },
     {
-        name: 'Troll 2',
+        name: 'Whiplash',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/p6xAExLNFbHcLfvSuvLPoM8aqZU.jpg',
+            'https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg',
     },
     {
-        name: 'Turbulence',
+        name: 'Wolf Children',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/jRuiKL4S9UpLma2ZlM47xIu2gbe.jpg',
+            'https://image.tmdb.org/t/p/w500/3Nllh6JgcrFdtOn6iFOWHudNInd.jpg',
     },
     {
-        name: 'Vanaveera',
+        name: 'Your Name.',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/oBYExKI8E3bTzQjPkofhpV2EJon.jpg',
-    },
-    {
-        name: 'War Machine',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/tlPgDzwIE7VYYIIAGCTUOnN4wI1.jpg',
-    },
-    {
-        name: 'Weapons',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/cpf7vsRZ0MYRQcnLWteD5jK9ymT.jpg',
-    },
-    {
-        name: 'Whistle',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/84vAcFwxoObBuMWANWQXCg0Umg8.jpg',
-    },
-    {
-        name: 'Wildcat',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/h893ImjM6Fsv5DFhKJdlZFZIJno.jpg',
-    },
-    {
-        name: 'Worldbreaker',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/4xx25oYs08myEelHiSbOuVi80Ki.jpg',
-    },
-    {
-        name: 'xXx',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/xeEw3eLeSFmJgXZzmF2Efww0q3s.jpg',
-    },
-    {
-        name: 'Your Heart Will Be Broken',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/iGpMm603GUKH2SiXB2S5m4sZ17t.jpg',
-    },
-    {
-        name: 'Zombie Prom',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/6HvTONoBSrToDrHO9x6lk3cAVhx.jpg',
-    },
-    {
-        name: 'Zootopia 2',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg',
+            'https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg',
     },
 ]
