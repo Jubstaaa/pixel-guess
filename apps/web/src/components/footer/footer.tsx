@@ -11,7 +11,9 @@ export const Footer = () => (
                         className="h-6 w-6 rounded-md"
                         src="/android-chrome-192x192.png"
                     />
-                    <span className="text-[14px] font-semibold text-foreground">PIXEL GUESS</span>
+                    <span className="text-[14px] font-semibold text-foreground">
+                        PIXEL GUESS
+                    </span>
                     <span className="text-border">|</span>
                     <span className="text-[13px] text-muted">
                         Made by{' '}
@@ -26,7 +28,8 @@ export const Footer = () => (
                     </span>
                 </div>
                 <p className="text-[12px] text-muted">
-                    &copy; {new Date().getFullYear()} Pixel Guess. All rights reserved.
+                    &copy; {new Date().getFullYear()} Pixel Guess. All rights
+                    reserved.
                 </p>
                 <Link
                     className="text-[12px] text-muted opacity-70 hover:opacity-100 transition-opacity"

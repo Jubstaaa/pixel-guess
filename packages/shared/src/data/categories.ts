@@ -3,16 +3,44 @@ import type { Category } from '../types'
 import {
     dota2Characters,
     flagCharacters,
+    fortniteCharacters,
+    genshinCharacters,
     leagueOfLegendsCharacters,
+    pokemonCharacters,
+    rickAndMortyCharacters,
     valorantCharacters,
 } from './characters'
 
 export const categories: Category[] = [
     {
+        slug: 'pokemon',
+        name: 'Pokémon',
+        icon: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png',
+        characterCount: pokemonCharacters.length,
+    },
+    {
         slug: 'league-of-legends',
         name: 'League of Legends',
         icon: 'https://vignette.wikia.nocookie.net/leagueoflegends/images/1/12/League_of_Legends_Icon.png',
         characterCount: leagueOfLegendsCharacters.length,
+    },
+    {
+        slug: 'valorant',
+        name: 'Valorant',
+        icon: 'https://static.cdnlogo.com/logos/v/87/valorant.svg',
+        characterCount: valorantCharacters.length,
+    },
+    {
+        slug: 'fortnite',
+        name: 'Fortnite',
+        icon: 'https://fortnite-api.com/images/cosmetics/br/character_athena_commando_f_streetops/icon.png',
+        characterCount: fortniteCharacters.length,
+    },
+    {
+        slug: 'genshin-impact',
+        name: 'Genshin Impact',
+        icon: 'https://gi.yatta.moe/assets/UI/UI_AvatarIcon_Lumine.png',
+        characterCount: genshinCharacters.length,
     },
     {
         slug: 'dota-2',
@@ -21,10 +49,10 @@ export const categories: Category[] = [
         characterCount: dota2Characters.length,
     },
     {
-        slug: 'valorant',
-        name: 'Valorant',
-        icon: 'https://static.cdnlogo.com/logos/v/87/valorant.svg',
-        characterCount: valorantCharacters.length,
+        slug: 'rick-and-morty',
+        name: 'Rick & Morty',
+        icon: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+        characterCount: rickAndMortyCharacters.length,
     },
     {
         slug: 'flags',
@@ -38,8 +66,12 @@ export const charactersByCategory: Record<
     string,
     typeof leagueOfLegendsCharacters
 > = {
+    pokemon: pokemonCharacters,
     'league-of-legends': leagueOfLegendsCharacters,
-    'dota-2': dota2Characters,
     valorant: valorantCharacters,
+    fortnite: fortniteCharacters,
+    'genshin-impact': genshinCharacters,
+    'dota-2': dota2Characters,
+    'rick-and-morty': rickAndMortyCharacters,
     flags: flagCharacters,
 }

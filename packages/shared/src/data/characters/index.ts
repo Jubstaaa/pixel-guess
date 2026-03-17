@@ -1,4 +1,8 @@
 export { dota2Characters } from './dota-2'
 export { flagCharacters } from './flags'
+export { fortniteCharacters } from './fortnite'
+export { genshinCharacters } from './genshin'
 export { leagueOfLegendsCharacters } from './league-of-legends'
+export { pokemonCharacters } from './pokemon'
+export { rickAndMortyCharacters } from './rick-and-morty'
 export { valorantCharacters } from './valorant'

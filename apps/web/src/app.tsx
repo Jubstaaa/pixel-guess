@@ -11,8 +11,14 @@ export const App = () => (
             <main className="flex-1">
                 <Routes>
                     <Route element={<HomePage />} path="/" />
-                    <Route element={<PrivacyPolicyPage />} path="/privacy-policy" />
-                    <Route element={<GamePage />} path="/:categorySlug/:difficulty" />
+                    <Route
+                        element={<PrivacyPolicyPage />}
+                        path="/privacy-policy"
+                    />
+                    <Route
+                        element={<GamePage />}
+                        path="/:categorySlug/:difficulty"
+                    />
                 </Routes>
             </main>
             <Footer />

@@ -113,20 +113,115 @@ async function fetchFlags(): Promise<string> {
     )
 }
 
+async function fetchPokemon(): Promise<string> {
+    const data = await fetch(
+        'https://pokeapi.co/api/v2/pokemon?limit=1025',
+    ).then((r) => r.json())
+
+    const characters = (data.results as { name: string; url: string }[]).map(({ name, url }) => {
+        const id = url.split('/').filter(Boolean).pop()!
+        return {
+            name: name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' '),
+            imageUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`,
+        }
+    })
+
+    console.log(`Pokémon: ${characters.length} pokémon`)
+    return (
+        header + `export const pokemonCharacters: Character[] = ${serialize(characters)}\n`
+    )
+}
+
+async function fetchFortnite(): Promise<string> {
+    const data = await fetch(
+        'https://fortnite-api.com/v2/cosmetics/br?language=en',
+    ).then((r) => r.json())
+
+    const characters = (
+        data.data as {
+            name: string
+            type: { value: string }
+            images: { icon?: string; featured?: string }
+        }[]
+    )
+        .filter((x) => x.type?.value === 'outfit' && (x.images?.featured || x.images?.icon))
+        .map(({ name, images }) => ({
+            name,
+            imageUrl: (images.featured ?? images.icon)!,
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name))
+
+    console.log(`Fortnite: ${characters.length} outfits`)
+    return (
+        header + `export const fortniteCharacters: Character[] = ${serialize(characters)}\n`
+    )
+}
+
+async function fetchGenshin(): Promise<string> {
+    const data = await fetch('https://gi.yatta.moe/api/v2/en/avatar').then((r) => r.json())
+
+    const characters = Object.values(
+        data.data.items as Record<string, { name: string; icon: string }>,
+    )
+        .map(({ name, icon }) => ({
+            name,
+            imageUrl: `https://gi.yatta.moe/assets/UI/${icon}.png`,
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name))
+
+    console.log(`Genshin Impact: ${characters.length} characters`)
+    return (
+        header + `export const genshinCharacters: Character[] = ${serialize(characters)}\n`
+    )
+}
+
+async function fetchRickAndMorty(): Promise<string> {
+    const first = await fetch('https://rickandmortyapi.com/api/character').then((r) => r.json())
+    const pages: number = first.info.pages
+
+    const results = [...first.results]
+    await Promise.all(
+        Array.from({ length: pages - 1 }, (_, i) =>
+            fetch(`https://rickandmortyapi.com/api/character?page=${i + 2}`)
+                .then((r) => r.json())
+                .then((d) => results.push(...d.results)),
+        ),
+    )
+
+    const characters = (results as { name: string; image: string }[])
+        .map(({ name, image }) => ({ name, imageUrl: image }))
+        .sort((a, b) => a.name.localeCompare(b.name))
+
+    console.log(`Rick & Morty: ${characters.length} characters`)
+    return (
+        header +
+        `export const rickAndMortyCharacters: Character[] = ${serialize(characters)}\n`
+    )
+}
+
 async function main() {
     console.log('Generating character data...\n')
 
-    const [lol, dota2, valorant, flags] = await Promise.all([
-        fetchLol(),
-        fetchDota2(),
-        fetchValorant(),
-        fetchFlags(),
-    ])
+    const [lol, dota2, valorant, flags, pokemon, fortnite, genshin, rickAndMorty] =
+        await Promise.all([
+            fetchLol(),
+            fetchDota2(),
+            fetchValorant(),
+            fetchFlags(),
+            fetchPokemon(),
+            fetchFortnite(),
+            fetchGenshin(),
+            fetchRickAndMorty(),
+        ])
 
     writeFileSync(join(OUT_DIR, 'league-of-legends.ts'), lol)
     writeFileSync(join(OUT_DIR, 'dota-2.ts'), dota2)
     writeFileSync(join(OUT_DIR, 'valorant.ts'), valorant)
     writeFileSync(join(OUT_DIR, 'flags.ts'), flags)
+    writeFileSync(join(OUT_DIR, 'pokemon.ts'), pokemon)
+    writeFileSync(join(OUT_DIR, 'fortnite.ts'), fortnite)
+    writeFileSync(join(OUT_DIR, 'genshin.ts'), genshin)
+    writeFileSync(join(OUT_DIR, 'rick-and-morty.ts'), rickAndMorty)
 
     console.log('\nDone! Files written to src/data/characters/')
 }
