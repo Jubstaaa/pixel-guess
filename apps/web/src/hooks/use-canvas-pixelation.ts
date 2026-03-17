@@ -52,8 +52,7 @@ export const useCanvasPixelation = (
             const blockSize = computeBlockSize(count, difficulty, shortSide)
             const { grayscale } = DIFFICULTY_CONFIG[difficulty]
 
-            ctx.fillStyle = '#ffffff'
-            ctx.fillRect(0, 0, width, height)
+            ctx.clearRect(0, 0, width, height)
 
             if (count === 6) {
                 ctx.drawImage(img, 0, 0, width, height)
