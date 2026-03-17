@@ -2,6 +2,16 @@ import { Link } from 'react-router'
 
 import type { Category } from '@pixel-guess/shared'
 
+const PROXY_BASE = import.meta.env.DEV ? 'http://localhost:3000/api/proxy' : '/api/proxy'
+
+function proxyIcon(url: string) {
+    const hotlinkProtected = ['logos-world.net', 'wikia.nocookie.net']
+    if (hotlinkProtected.some((h) => url.includes(h))) {
+        return `${PROXY_BASE}?url=${encodeURIComponent(url)}`
+    }
+    return url
+}
+
 interface CategoryCardProps {
     item: Category
 }
@@ -13,7 +23,7 @@ export const CategoryCard = ({ item }: CategoryCardProps) => (
                 <img
                     alt={item.name}
                     className="h-11 w-11 rounded-lg object-contain"
-                    src={item.icon}
+                    src={proxyIcon(item.icon)}
                 />
             </div>
             <div className="flex flex-1 flex-col gap-2.5">
