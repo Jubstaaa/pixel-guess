@@ -1,6 +1,8 @@
 import type { Category } from '../types'
 
 import {
+    attackOnTitanCharacters,
+    demonSlayerCharacters,
     dota2Characters,
     dragonBallCharacters,
     flagCharacters,
@@ -9,6 +11,7 @@ import {
     leagueOfLegendsCharacters,
     movieCharacters,
     narutoCharacters,
+    onePieceCharacters,
     overwatchCharacters,
     peopleCharacters,
     pokemonCharacters,
@@ -102,6 +105,24 @@ export const categories: Category[] = [
         icon: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Tmdb.new.logo.svg',
         characterCount: peopleCharacters.length,
     },
+    {
+        slug: 'one-piece',
+        name: 'One Piece',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/9/90/One_Piece_Logo.svg',
+        characterCount: onePieceCharacters.length,
+    },
+    {
+        slug: 'attack-on-titan',
+        name: 'Attack on Titan',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/AoT_Logo.svg',
+        characterCount: attackOnTitanCharacters.length,
+    },
+    {
+        slug: 'demon-slayer',
+        name: 'Demon Slayer',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/3/thirty/Kimetsu_no_Yaiba_logo.svg',
+        characterCount: demonSlayerCharacters.length,
+    },
 ]
 
 export const charactersByCategory: Record<
@@ -122,4 +143,7 @@ export const charactersByCategory: Record<
     movies: movieCharacters,
     'tv-shows': tvShowCharacters,
     people: peopleCharacters,
+    'one-piece': onePieceCharacters,
+    'attack-on-titan': attackOnTitanCharacters,
+    'demon-slayer': demonSlayerCharacters,
 }

@@ -326,6 +326,42 @@ async function fetchNaruto(): Promise<string> {
     )
 }
 
+async function fetchJikanAnime(animeId: number, limit: number): Promise<{ name: string; imageUrl: string }[]> {
+    const data = await fetch(
+        `https://api.jikan.moe/v4/anime/${animeId}/characters`,
+    ).then((r) => r.json())
+
+    return (data.data as { character: { name: string; images: { jpg: { image_url: string } } }; favorites: number }[])
+        .filter((c) => c.character.images?.jpg?.image_url)
+        .sort((a, b) => b.favorites - a.favorites)
+        .slice(0, limit)
+        .map((c) => ({
+            name: c.character.name.includes(', ')
+                ? c.character.name.split(', ').reverse().join(' ')
+                : c.character.name,
+            imageUrl: c.character.images.jpg.image_url,
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name))
+}
+
+async function fetchOnePiece(): Promise<string> {
+    const characters = await fetchJikanAnime(21, 60)
+    console.log(`One Piece: ${characters.length} characters`)
+    return header + `export const onePieceCharacters: Character[] = ${serialize(characters)}\n`
+}
+
+async function fetchAttackOnTitan(): Promise<string> {
+    const characters = await fetchJikanAnime(16498, 40)
+    console.log(`Attack on Titan: ${characters.length} characters`)
+    return header + `export const attackOnTitanCharacters: Character[] = ${serialize(characters)}\n`
+}
+
+async function fetchDemonSlayer(): Promise<string> {
+    const characters = await fetchJikanAnime(38000, 40)
+    console.log(`Demon Slayer: ${characters.length} characters`)
+    return header + `export const demonSlayerCharacters: Character[] = ${serialize(characters)}\n`
+}
+
 async function main() {
     const tmdbApiKey = process.env.TMDB_API_KEY
     if (!tmdbApiKey) throw new Error('TMDB_API_KEY env variable is required')
@@ -350,6 +386,13 @@ async function main() {
             fetchPeople(tmdbApiKey),
         ])
 
+    // Jikan API has rate limiting, fetch sequentially
+    const onePiece = await fetchOnePiece()
+    await new Promise((r) => setTimeout(r, 1000))
+    const attackOnTitan = await fetchAttackOnTitan()
+    await new Promise((r) => setTimeout(r, 1000))
+    const demonSlayer = await fetchDemonSlayer()
+
     writeFileSync(join(OUT_DIR, 'league-of-legends.ts'), lol)
     writeFileSync(join(OUT_DIR, 'dota-2.ts'), dota2)
     writeFileSync(join(OUT_DIR, 'valorant.ts'), valorant)
@@ -364,6 +407,9 @@ async function main() {
     writeFileSync(join(OUT_DIR, 'movies.ts'), movies)
     writeFileSync(join(OUT_DIR, 'tv-shows.ts'), tvShows)
     writeFileSync(join(OUT_DIR, 'people.ts'), people)
+    writeFileSync(join(OUT_DIR, 'one-piece.ts'), onePiece)
+    writeFileSync(join(OUT_DIR, 'attack-on-titan.ts'), attackOnTitan)
+    writeFileSync(join(OUT_DIR, 'demon-slayer.ts'), demonSlayer)
 
     console.log('\nDone! Files written to src/data/characters/')
 }
