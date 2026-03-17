@@ -2,10 +2,12 @@ import type { Category } from '../types'
 
 import {
     attackOnTitanCharacters,
+    brandCharacters,
     demonSlayerCharacters,
     dota2Characters,
     dragonBallCharacters,
     flagCharacters,
+    footballCharacters,
     fortniteCharacters,
     genshinCharacters,
     leagueOfLegendsCharacters,
@@ -108,20 +110,32 @@ export const categories: Category[] = [
     {
         slug: 'one-piece',
         name: 'One Piece',
-        icon: 'https://upload.wikimedia.org/wikipedia/commons/9/90/One_Piece_Logo.svg',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/3/34/One_piece_logo_1.svg',
         characterCount: onePieceCharacters.length,
     },
     {
         slug: 'attack-on-titan',
         name: 'Attack on Titan',
-        icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/AoT_Logo.svg',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Attack_on_Titan_%28international_anglophone%29_logo.svg',
         characterCount: attackOnTitanCharacters.length,
     },
     {
         slug: 'demon-slayer',
         name: 'Demon Slayer',
-        icon: 'https://upload.wikimedia.org/wikipedia/commons/3/thirty/Kimetsu_no_Yaiba_logo.svg',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Demon_Slayer_logo.svg',
         characterCount: demonSlayerCharacters.length,
+    },
+    {
+        slug: 'football',
+        name: 'Football Clubs',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Football_Sports_Icon.svg',
+        characterCount: footballCharacters.length,
+    },
+    {
+        slug: 'brands',
+        name: 'Brands',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg',
+        characterCount: brandCharacters.length,
     },
 ]
 
@@ -146,4 +160,6 @@ export const charactersByCategory: Record<
     'one-piece': onePieceCharacters,
     'attack-on-titan': attackOnTitanCharacters,
     'demon-slayer': demonSlayerCharacters,
+    football: footballCharacters,
+    brands: brandCharacters,
 }

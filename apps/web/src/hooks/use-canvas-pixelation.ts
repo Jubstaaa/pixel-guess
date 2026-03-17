@@ -31,7 +31,9 @@ export const useCanvasPixelation = (
             imageUrl.includes('steamstatic.com') ||
             imageUrl.includes('flagcdn.com') ||
             imageUrl.includes('cloudfront.net') ||
-            imageUrl.includes('image.tmdb.org')
+            imageUrl.includes('image.tmdb.org') ||
+            imageUrl.includes('logo.clearbit.com') ||
+            imageUrl.includes('crests.football-data.org')
 
         let finalUrl = imageUrl
         if (needsProxy) {

@@ -1,6 +1,8 @@
 export { attackOnTitanCharacters } from './attack-on-titan'
+export { brandCharacters } from './brands'
 export { demonSlayerCharacters } from './demon-slayer'
 export { dota2Characters } from './dota-2'
+export { footballCharacters } from './football'
 export { dragonBallCharacters } from './dragon-ball'
 export { flagCharacters } from './flags'
 export { fortniteCharacters } from './fortnite'
