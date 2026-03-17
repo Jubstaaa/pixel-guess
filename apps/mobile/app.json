@@ -1,0 +1,46 @@
+{
+    "expo": {
+        "name": "Pixel Guess",
+        "slug": "pixelate-game-mobile",
+        "version": "1.1.0",
+        "orientation": "portrait",
+        "icon": "./assets/icon.png",
+        "userInterfaceStyle": "dark",
+        "scheme": "pixelguess",
+        "splash": {
+            "image": "./assets/splash-icon.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#000000"
+        },
+        "ios": {
+            "supportsTablet": false,
+            "bundleIdentifier": "com.haccoo.pixel-guess",
+            "appleTeamId": "67M6SCS9K9",
+            "infoPlist": {
+                "ITSAppUsesNonExemptEncryption": false
+            }
+        },
+        "android": {
+            "adaptiveIcon": {
+                "backgroundColor": "#000000",
+                "foregroundImage": "./assets/android-icon-foreground.png"
+            },
+            "package": "com.haccoo.pixel_guess"
+        },
+        "web": {
+            "favicon": "./assets/favicon.png",
+            "bundler": "metro"
+        },
+        "plugins": ["expo-router", "expo-secure-store"],
+        "experiments": {
+            "typedRoutes": true
+        },
+        "extra": {
+            "router": {},
+            "eas": {
+                "projectId": "ad8c6bb8-7005-4ce7-9ea1-67cfbe1028c0"
+            }
+        },
+        "owner": "jubstaa"
+    }
+}

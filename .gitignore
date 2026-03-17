@@ -1,0 +1,13 @@
+node_modules
+dist
+.turbo
+.expo
+*.tsbuildinfo
+.env
+.env.local
+.DS_Store
+.vercel
+
+# iOS / Android build artifacts
+apps/mobile/ios
+apps/mobile/android
