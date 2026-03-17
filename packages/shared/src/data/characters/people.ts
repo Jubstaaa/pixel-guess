@@ -3,11 +3,6 @@ import type { Character } from '../../types'
 
 export const peopleCharacters: Character[] = [
     {
-        name: 'Adam Pearson',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/xRDaT60nU48yBDD20A2hSmSALZX.jpg',
-    },
-    {
         name: 'Alan Ritchson',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/92YNEEpCyugkTzPprJwZpvVtvuK.jpg',
@@ -28,19 +23,14 @@ export const peopleCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/tkBWBvcLTihUcVf6iwbMQTFqEEv.jpg',
     },
     {
-        name: 'Angelina Jolie',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/nXA9vMvskmIDB5NqHCkTQPmemep.jpg',
-    },
-    {
         name: 'Anne Hathaway',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/nbccV2pMoyLTCeg5DQip24Eq0Jp.jpg',
     },
     {
-        name: 'Anya Taylor-Joy',
+        name: 'Anne-Lise Heimburger',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/qYNofOjlRke2MlJVihmJmEdQI4v.jpg',
+            'https://image.tmdb.org/t/p/w500/tiACLgeJ0omEWIbk6aiR4ScF7la.jpg',
     },
     {
         name: 'Brad Pitt',
@@ -78,6 +68,11 @@ export const peopleCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/e8CUyxQSE99y5IOfzSLtHC0B0Ch.jpg',
     },
     {
+        name: 'Emil Hostina',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/yFBZwxGOHnxi8qokkgTIDdwylUn.jpg',
+    },
+    {
         name: 'Emily Rudd',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/y23GTdDPcryBVtSWjY9q2O9nzwV.jpg',
@@ -88,14 +83,14 @@ export const peopleCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/s7PVcnnA05JcRiMtplwgK49Z2UU.jpg',
     },
     {
+        name: 'Ester Expósito',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/d6ZbK4k612DHKS7ct66QLHl5hfc.jpg',
+    },
+    {
         name: 'Geraldine Farrar',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/qQ6nBwBEoJgdFuCfDq4ZjpMtFpy.jpg',
-    },
-    {
-        name: 'Han Ji-eun',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/zIDcvAITf82sEDqfAcDfHDybEnM.jpg',
     },
     {
         name: 'Holly Cattle',
@@ -113,19 +108,14 @@ export const peopleCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/nraZoTzwJQPHspAVsKfgl3RXKKa.jpg',
     },
     {
-        name: 'Jacqueline Bisset',
+        name: 'Jacob Elordi',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/4exg9F02WamsI67Hww6AZfTX0kI.jpg',
+            'https://image.tmdb.org/t/p/w500/qZNRPWCP2c5d0YaYLTzHXU9Rdoe.jpg',
     },
     {
         name: 'Jason Statham',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/pXGSq2UpcDE2NMF8LR56QZf5U1q.jpg',
-    },
-    {
-        name: 'Javier Bardem',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/p5xjCovj1uzvA2SXrWLH78Nh1Jf.jpg',
     },
     {
         name: 'Jenna Ortega',
@@ -143,6 +133,11 @@ export const peopleCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/sBmHrO5Tn27Ot5hy0yAKniROmNb.jpg',
     },
     {
+        name: 'Kavya Anil',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/xDWp5KQtKrgnwYGLY4H6eXabqKW.jpg',
+    },
+    {
         name: 'Keanu Reeves',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg',
@@ -151,6 +146,11 @@ export const peopleCharacters: Character[] = [
         name: 'Kitty de Hoyos',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/oIVIprBuZZU8nIKzMzZ1ORolIG2.jpg',
+    },
+    {
+        name: 'Leonardo DiCaprio',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg',
     },
     {
         name: 'Margot Robbie',
@@ -166,11 +166,6 @@ export const peopleCharacters: Character[] = [
         name: 'Mauro Negrini',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/nEXMQRqRwO801ol4639a0OU5QUe.jpg',
-    },
-    {
-        name: 'Mckenna Grace',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/zf31olu5LCJ7OZQvfT2kgrpQ1O8.jpg',
     },
     {
         name: 'Megan Fox',
@@ -208,6 +203,11 @@ export const peopleCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/hEUQ8Cj8kTSCAcSMFxutME4MRqv.jpg',
     },
     {
+        name: 'Scarlett Johansson',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/mjReG6rR7NPMEIWb1T4YWtV11ty.jpg',
+    },
+    {
         name: 'Sean Penn',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/9glqNTVpFpdN1nFklKaHPUyCwR6.jpg',
@@ -216,11 +216,6 @@ export const peopleCharacters: Character[] = [
         name: 'Shad Moss',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/xsvJmcOQiocYcKtRmfiQbjzVrVw.jpg',
-    },
-    {
-        name: 'Simone Thomalla',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/qIEz5cDiHoMuoFUjfoi5xcW5KRg.jpg',
     },
     {
         name: 'Stuart Holmes',
@@ -243,13 +238,18 @@ export const peopleCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/dFxpwRpmzpVfP1zjluH68DeQhyj.jpg',
     },
     {
-        name: 'Tom Hardy',
+        name: 'Tom Cruise',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/d81K0RH8UX7tZj49tZaQhZ9ewH.jpg',
+            'https://image.tmdb.org/t/p/w500/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg',
     },
     {
-        name: 'Vin Diesel',
+        name: 'Tom Hanks',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/nZdVry7lnUkE24PnXakok9okvL4.jpg',
+            'https://image.tmdb.org/t/p/w500/eKF1sGJRrZJbfBG1KirPt1cfNd3.jpg',
+    },
+    {
+        name: 'Zhang Linghe',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/qJtnyHBnv7t7sNCei2By1CJ9hwL.jpg',
     },
 ]

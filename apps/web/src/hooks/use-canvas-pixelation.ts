@@ -26,7 +26,10 @@ export const useCanvasPixelation = (
         const img = new Image()
         img.crossOrigin = 'anonymous'
 
-        const finalUrl = `https://images.weserv.nl/?url=${encodeURIComponent(imageUrl)}`
+        const needsProxy = !imageUrl.includes('cdn.myanimelist.net')
+        const finalUrl = needsProxy
+            ? `https://images.weserv.nl/?url=${encodeURIComponent(imageUrl)}`
+            : imageUrl
 
         img.onload = () => {
             const maxSize = 400

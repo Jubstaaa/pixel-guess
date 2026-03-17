@@ -477,6 +477,70 @@ async function fetchDemonSlayer(): Promise<string> {
     return header + `export const demonSlayerCharacters: Character[] = ${serialize(characters)}\n`
 }
 
+async function fetchJujutsuKaisen(): Promise<string> {
+    const characters = await fetchJikanAnime(40748, 40)
+    console.log(`Jujutsu Kaisen: ${characters.length} characters`)
+    return header + `export const jujutsuKaisenCharacters: Character[] = ${serialize(characters)}\n`
+}
+
+async function fetchMyHeroAcademia(): Promise<string> {
+    const characters = await fetchJikanAnime(31964, 40)
+    console.log(`My Hero Academia: ${characters.length} characters`)
+    return header + `export const myHeroAcademiaCharacters: Character[] = ${serialize(characters)}\n`
+}
+
+async function fetchDeathNote(): Promise<string> {
+    const characters = await fetchJikanAnime(1535, 30)
+    console.log(`Death Note: ${characters.length} characters`)
+    return header + `export const deathNoteCharacters: Character[] = ${serialize(characters)}\n`
+}
+
+async function fetchFullmetalAlchemist(): Promise<string> {
+    const characters = await fetchJikanAnime(5114, 40)
+    console.log(`FMA Brotherhood: ${characters.length} characters`)
+    return header + `export const fullmetalAlchemistCharacters: Character[] = ${serialize(characters)}\n`
+}
+
+async function fetchHunterXHunter(): Promise<string> {
+    const characters = await fetchJikanAnime(11061, 40)
+    console.log(`Hunter x Hunter: ${characters.length} characters`)
+    return header + `export const hunterXHunterCharacters: Character[] = ${serialize(characters)}\n`
+}
+
+async function fetchAnimeSeries(tmdbApiKey: string): Promise<string> {
+    const results: { name: string; poster_path: string | null }[] = []
+    for (let page = 1; page <= 4; page++) {
+        const data = await fetch(
+            `https://api.themoviedb.org/3/discover/tv?api_key=${tmdbApiKey}&with_genres=16&with_original_language=ja&sort_by=popularity.desc&page=${page}`,
+        ).then((r) => r.json())
+        results.push(...(data.results ?? []))
+    }
+
+    const characters = results
+        .filter((a) => a.poster_path)
+        .slice(0, 80)
+        .map((a) => ({
+            name: a.name,
+            imageUrl: `https://image.tmdb.org/t/p/w500${a.poster_path}`,
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name))
+
+    console.log(`Anime Series: ${characters.length} anime`)
+    return header + `export const animeSeriesCharacters: Character[] = ${serialize(characters)}\n`
+}
+
+async function fetchHarryPotter(): Promise<string> {
+    const data = await safeJson('https://hp-api.onrender.com/api/characters')
+    const characters = (data as { name: string; image: string }[])
+        .filter((c) => c.image)
+        .slice(0, 50)
+        .map((c) => ({ name: c.name, imageUrl: c.image }))
+        .sort((a, b) => a.name.localeCompare(b.name))
+
+    console.log(`Harry Potter: ${characters.length} characters`)
+    return header + `export const harryPotterCharacters: Character[] = ${serialize(characters)}\n`
+}
+
 async function main() {
     const tmdbApiKey = process.env.TMDB_API_KEY
     if (!tmdbApiKey) throw new Error('TMDB_API_KEY env variable is required')
@@ -485,7 +549,7 @@ async function main() {
 
     console.log('Generating character data...\n')
 
-    const [lol, dota2, valorant, flags, pokemon, fortnite, genshin, rickAndMorty, overwatch, dragonBall, naruto, movies, tvShows, people, brands, football] =
+    const [lol, dota2, valorant, flags, pokemon, fortnite, genshin, rickAndMorty, overwatch, dragonBall, naruto, movies, tvShows, people, brands, football, animeSeries, harryPotter] =
         await Promise.all([
             fetchLol(),
             fetchDota2(),
@@ -503,6 +567,8 @@ async function main() {
             fetchPeople(tmdbApiKey),
             fetchBrands(),
             fetchFootball(footballApiKey),
+            fetchAnimeSeries(tmdbApiKey),
+            fetchHarryPotter(),
         ])
 
     // Jikan API has rate limiting, fetch sequentially
@@ -511,6 +577,16 @@ async function main() {
     const attackOnTitan = await fetchAttackOnTitan()
     await new Promise((r) => setTimeout(r, 1000))
     const demonSlayer = await fetchDemonSlayer()
+    await new Promise((r) => setTimeout(r, 1000))
+    const jujutsuKaisen = await fetchJujutsuKaisen()
+    await new Promise((r) => setTimeout(r, 1000))
+    const myHeroAcademia = await fetchMyHeroAcademia()
+    await new Promise((r) => setTimeout(r, 1000))
+    const deathNote = await fetchDeathNote()
+    await new Promise((r) => setTimeout(r, 1000))
+    const fullmetalAlchemist = await fetchFullmetalAlchemist()
+    await new Promise((r) => setTimeout(r, 1000))
+    const hunterXHunter = await fetchHunterXHunter()
 
     writeFileSync(join(OUT_DIR, 'league-of-legends.ts'), lol)
     writeFileSync(join(OUT_DIR, 'dota-2.ts'), dota2)
@@ -531,6 +607,13 @@ async function main() {
     writeFileSync(join(OUT_DIR, 'one-piece.ts'), onePiece)
     writeFileSync(join(OUT_DIR, 'attack-on-titan.ts'), attackOnTitan)
     writeFileSync(join(OUT_DIR, 'demon-slayer.ts'), demonSlayer)
+    writeFileSync(join(OUT_DIR, 'jujutsu-kaisen.ts'), jujutsuKaisen)
+    writeFileSync(join(OUT_DIR, 'my-hero-academia.ts'), myHeroAcademia)
+    writeFileSync(join(OUT_DIR, 'death-note.ts'), deathNote)
+    writeFileSync(join(OUT_DIR, 'fullmetal-alchemist.ts'), fullmetalAlchemist)
+    writeFileSync(join(OUT_DIR, 'hunter-x-hunter.ts'), hunterXHunter)
+    writeFileSync(join(OUT_DIR, 'anime-series.ts'), animeSeries)
+    writeFileSync(join(OUT_DIR, 'harry-potter.ts'), harryPotter)
 
     console.log('\nDone! Files written to src/data/characters/')
 }
