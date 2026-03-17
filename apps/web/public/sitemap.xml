@@ -6,7 +6,22 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://pixelguessgame.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pixelguessgame.com/how-to-play</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://pixelguessgame.com/privacy-policy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://pixelguessgame.com/terms-of-service</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>

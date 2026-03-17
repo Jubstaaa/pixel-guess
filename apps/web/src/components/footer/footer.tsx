@@ -31,12 +31,32 @@ export const Footer = () => (
                     &copy; {new Date().getFullYear()} Pixel Guess. All rights
                     reserved.
                 </p>
-                <Link
-                    className="text-[12px] text-muted opacity-70 hover:opacity-100 transition-opacity"
-                    to="/privacy-policy"
-                >
-                    Privacy Policy
-                </Link>
+                <div className="flex items-center gap-3">
+                    <Link
+                        className="text-[12px] text-muted opacity-70 transition-opacity hover:opacity-100"
+                        to="/about"
+                    >
+                        About
+                    </Link>
+                    <Link
+                        className="text-[12px] text-muted opacity-70 transition-opacity hover:opacity-100"
+                        to="/how-to-play"
+                    >
+                        How to Play
+                    </Link>
+                    <Link
+                        className="text-[12px] text-muted opacity-70 transition-opacity hover:opacity-100"
+                        to="/privacy-policy"
+                    >
+                        Privacy Policy
+                    </Link>
+                    <Link
+                        className="text-[12px] text-muted opacity-70 transition-opacity hover:opacity-100"
+                        to="/terms-of-service"
+                    >
+                        Terms
+                    </Link>
+                </div>
             </div>
 
             <div className="flex items-center gap-2">
