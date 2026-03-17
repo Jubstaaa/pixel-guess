@@ -30,7 +30,8 @@ export const useCanvasPixelation = (
         const needsProxy =
             imageUrl.includes('steamstatic.com') ||
             imageUrl.includes('flagcdn.com') ||
-            imageUrl.includes('cloudfront.net')
+            imageUrl.includes('cloudfront.net') ||
+            imageUrl.includes('image.tmdb.org')
 
         let finalUrl = imageUrl
         if (needsProxy) {
