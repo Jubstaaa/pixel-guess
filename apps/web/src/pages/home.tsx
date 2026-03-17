@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async'
 import { categories } from '@pixel-guess/shared'
 
 import { CategoryCard } from '@/components/category-card/category-card'
-import { Footer } from '@/components/footer/footer'
 
 export const HomePage = () => (
     <Fragment>
@@ -41,6 +40,5 @@ export const HomePage = () => (
                 ))}
             </div>
         </div>
-        <Footer />
     </Fragment>
 )

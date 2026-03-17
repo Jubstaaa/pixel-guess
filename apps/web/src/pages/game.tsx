@@ -2,7 +2,7 @@ import { Fragment, useCallback, useEffect, useRef, useState } from 'react'
 
 import { ChevronLeft, SkipForward } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
-import { Link, Navigate, useParams } from 'react-router-dom'
+import { Link, Navigate, useParams } from 'react-router'
 
 import {
     categories,
@@ -177,7 +177,7 @@ const GameContent = ({
                 <meta content={category.icon} name="twitter:image" />
             </Helmet>
 
-            <div className="mx-auto flex min-h-screen max-w-md flex-col items-center gap-4 px-4 pt-4 pb-8">
+            <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 pt-4 pb-8">
                 <div className="flex w-full items-center gap-3 rounded-2xl border border-border bg-surface px-3 py-3">
                     <Link
                         className="rounded-xl border border-border bg-surface-hover p-2 transition-opacity hover:opacity-80"

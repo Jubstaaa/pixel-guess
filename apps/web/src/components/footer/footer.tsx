@@ -1,5 +1,5 @@
 import { Coffee, Mail } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 
 export const Footer = () => (
     <footer className="mt-12 border-t border-border pb-8 pt-8">
