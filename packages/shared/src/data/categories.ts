@@ -15,7 +15,7 @@ export const categories: Category[] = [
     {
         slug: 'pokemon',
         name: 'Pokémon',
-        icon: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg',
         characterCount: pokemonCharacters.length,
     },
     {
@@ -27,13 +27,13 @@ export const categories: Category[] = [
     {
         slug: 'valorant',
         name: 'Valorant',
-        icon: 'https://static.cdnlogo.com/logos/v/87/valorant.svg',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version_%28cropped%29.png',
         characterCount: valorantCharacters.length,
     },
     {
         slug: 'fortnite',
         name: 'Fortnite',
-        icon: 'https://fortnite-api.com/images/cosmetics/br/character_jonesyorangefncs/icon.png',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Fortnite_F_lettermark_logo.png',
         characterCount: fortniteCharacters.length,
     },
     {
@@ -51,7 +51,7 @@ export const categories: Category[] = [
     {
         slug: 'rick-and-morty',
         name: 'Rick & Morty',
-        icon: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg',
         characterCount: rickAndMortyCharacters.length,
     },
     {

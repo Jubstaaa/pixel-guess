@@ -118,13 +118,15 @@ async function fetchPokemon(): Promise<string> {
         'https://pokeapi.co/api/v2/pokemon?limit=1025',
     ).then((r) => r.json())
 
-    const characters = (data.results as { name: string; url: string }[]).map(({ name, url }) => {
-        const id = url.split('/').filter(Boolean).pop()!
-        return {
-            name: name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' '),
-            imageUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`,
-        }
-    })
+    const characters = (data.results as { name: string; url: string }[])
+        .slice(0, 151)
+        .map(({ name, url }) => {
+            const id = url.split('/').filter(Boolean).pop()!
+            return {
+                name: name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' '),
+                imageUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`,
+            }
+        })
 
     console.log(`Pokémon: ${characters.length} pokémon`)
     return (
@@ -149,11 +151,11 @@ async function fetchFortnite(): Promise<string> {
             (x) =>
                 x.type?.value === 'outfit' &&
                 x.rarity?.value === 'legendary' &&
-                (x.images?.featured || x.images?.icon),
+                x.images?.featured,
         )
         .map(({ name, images }) => ({
             name,
-            imageUrl: (images.featured ?? images.icon)!,
+            imageUrl: images.featured!,
         }))
         .sort((a, b) => a.name.localeCompare(b.name))
 
