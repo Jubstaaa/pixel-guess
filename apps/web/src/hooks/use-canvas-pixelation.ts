@@ -37,10 +37,7 @@ export const useCanvasPixelation = (
 
         let finalUrl = imageUrl
         if (needsProxy) {
-            const proxyBase = import.meta.env.DEV
-                ? 'http://localhost:3000/api/proxy'
-                : '/api/proxy'
-            finalUrl = `${proxyBase}?url=${encodeURIComponent(imageUrl)}`
+            finalUrl = `/api/proxy?url=${encodeURIComponent(imageUrl)}`
         }
 
         img.onload = () => {
