@@ -25,10 +25,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 .send(`Target error: ${response.statusText}`)
         }
 
-        const arrayBuffer = await response.arrayBuffer()
-        const contentType = response.headers.get('content-type')
+        const contentType = response.headers.get('content-type') || ''
+        if (!contentType.startsWith('image/')) {
+            return res.status(502).send('Non-image response from target')
+        }
 
-        res.setHeader('Content-Type', contentType || 'image/jpeg')
+        const arrayBuffer = await response.arrayBuffer()
+
+        res.setHeader('Content-Type', contentType)
         res.setHeader(
             'Cache-Control',
             'public, s-maxage=86400, stale-while-revalidate=3600'

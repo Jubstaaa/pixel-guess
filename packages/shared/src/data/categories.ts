@@ -128,13 +128,13 @@ export const categories: Category[] = [
     {
         slug: 'football',
         name: 'Football Clubs',
-        icon: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Football_Sports_Icon.svg',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/1/1d/Football_Pallo_valmiina-cropped.jpg',
         characterCount: footballCharacters.length,
     },
     {
         slug: 'brands',
         name: 'Brands',
-        icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg',
         characterCount: brandCharacters.length,
     },
 ]
