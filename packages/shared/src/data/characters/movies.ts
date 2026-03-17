@@ -68,6 +68,11 @@ export const movieCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/bXNvzjULc9jrOVhGfjcc64uKZmZ.jpg',
     },
     {
+        name: 'City Lights',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/bXNvzjULc9jrOVhGfjcc64uKZmZ.jpg',
+    },
+    {
         name: 'City of God',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/k7eYdWvhYQyRQoU2TB2A2Xu2TfD.jpg',
@@ -321,11 +326,6 @@ export const movieCharacters: Character[] = [
         name: 'Radical',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/lOAJYpX608aT0ApIv63ZTnol27Y.jpg',
-    },
-    {
-        name: 'Rascal Does Not Dream of a Dreaming Girl',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/AtFnN4OztDJy8IFwYd5JfU0jlEM.jpg',
     },
     {
         name: 'Rear Window',

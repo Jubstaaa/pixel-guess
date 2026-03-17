@@ -2,15 +2,6 @@ import { Link } from 'react-router'
 
 import type { Category } from '@pixel-guess/shared'
 
-const HOTLINK_HOSTS = ['logos-world.net', 'wikia.nocookie.net']
-
-function iconSrc(url: string) {
-    if (HOTLINK_HOSTS.some((h) => url.includes(h))) {
-        return `/api/proxy?url=${encodeURIComponent(url)}`
-    }
-    return url
-}
-
 interface CategoryCardProps {
     item: Category
 }
@@ -22,7 +13,7 @@ export const CategoryCard = ({ item }: CategoryCardProps) => (
                 <img
                     alt={item.name}
                     className="h-11 w-11 rounded-lg object-contain"
-                    src={iconSrc(item.icon)}
+                    src={item.icon}
                 />
             </div>
             <div className="flex flex-1 flex-col gap-2.5">

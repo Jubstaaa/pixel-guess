@@ -406,7 +406,7 @@ async function fetchBrands(): Promise<string> {
     const characters = BRANDS
         .map(({ name, domain }) => ({
             name,
-            imageUrl: `https://logo.clearbit.com/${domain}`,
+            imageUrl: `https://img.logo.dev/${domain}?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark`,
         }))
         .sort((a, b) => a.name.localeCompare(b.name))
 

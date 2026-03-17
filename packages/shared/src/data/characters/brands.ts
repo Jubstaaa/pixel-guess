@@ -4,238 +4,297 @@ import type { Character } from '../../types'
 export const brandCharacters: Character[] = [
     {
         name: 'Adidas',
-        imageUrl: 'https://logo.clearbit.com/adidas.com',
+        imageUrl:
+            'https://img.logo.dev/adidas.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Airbnb',
-        imageUrl: 'https://logo.clearbit.com/airbnb.com',
+        imageUrl:
+            'https://img.logo.dev/airbnb.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Amazon',
-        imageUrl: 'https://logo.clearbit.com/amazon.com',
+        imageUrl:
+            'https://img.logo.dev/amazon.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'AMD',
-        imageUrl: 'https://logo.clearbit.com/amd.com',
+        imageUrl:
+            'https://img.logo.dev/amd.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Apple',
-        imageUrl: 'https://logo.clearbit.com/apple.com',
+        imageUrl:
+            'https://img.logo.dev/apple.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Audi',
-        imageUrl: 'https://logo.clearbit.com/audi.com',
+        imageUrl:
+            'https://img.logo.dev/audi.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'BMW',
-        imageUrl: 'https://logo.clearbit.com/bmw.com',
+        imageUrl:
+            'https://img.logo.dev/bmw.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Burger King',
-        imageUrl: 'https://logo.clearbit.com/burgerking.com',
+        imageUrl:
+            'https://img.logo.dev/burgerking.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Coca-Cola',
-        imageUrl: 'https://logo.clearbit.com/coca-cola.com',
+        imageUrl:
+            'https://img.logo.dev/coca-cola.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Discord',
-        imageUrl: 'https://logo.clearbit.com/discord.com',
+        imageUrl:
+            'https://img.logo.dev/discord.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Disney',
-        imageUrl: 'https://logo.clearbit.com/disney.com',
+        imageUrl:
+            'https://img.logo.dev/disney.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: "Domino's",
-        imageUrl: 'https://logo.clearbit.com/dominos.com',
+        imageUrl:
+            'https://img.logo.dev/dominos.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'EA Sports',
-        imageUrl: 'https://logo.clearbit.com/ea.com',
+        imageUrl:
+            'https://img.logo.dev/ea.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Epic Games',
-        imageUrl: 'https://logo.clearbit.com/epicgames.com',
+        imageUrl:
+            'https://img.logo.dev/epicgames.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Ferrari',
-        imageUrl: 'https://logo.clearbit.com/ferrari.com',
+        imageUrl:
+            'https://img.logo.dev/ferrari.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Ford',
-        imageUrl: 'https://logo.clearbit.com/ford.com',
+        imageUrl:
+            'https://img.logo.dev/ford.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Google',
-        imageUrl: 'https://logo.clearbit.com/google.com',
+        imageUrl:
+            'https://img.logo.dev/google.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Instagram',
-        imageUrl: 'https://logo.clearbit.com/instagram.com',
+        imageUrl:
+            'https://img.logo.dev/instagram.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Intel',
-        imageUrl: 'https://logo.clearbit.com/intel.com',
+        imageUrl:
+            'https://img.logo.dev/intel.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'KFC',
-        imageUrl: 'https://logo.clearbit.com/kfc.com',
+        imageUrl:
+            'https://img.logo.dev/kfc.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Lamborghini',
-        imageUrl: 'https://logo.clearbit.com/lamborghini.com',
+        imageUrl:
+            'https://img.logo.dev/lamborghini.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'LG',
-        imageUrl: 'https://logo.clearbit.com/lg.com',
+        imageUrl:
+            'https://img.logo.dev/lg.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'LinkedIn',
-        imageUrl: 'https://logo.clearbit.com/linkedin.com',
+        imageUrl:
+            'https://img.logo.dev/linkedin.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Marvel',
-        imageUrl: 'https://logo.clearbit.com/marvel.com',
+        imageUrl:
+            'https://img.logo.dev/marvel.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Mastercard',
-        imageUrl: 'https://logo.clearbit.com/mastercard.com',
+        imageUrl:
+            'https://img.logo.dev/mastercard.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: "McDonald's",
-        imageUrl: 'https://logo.clearbit.com/mcdonalds.com',
+        imageUrl:
+            'https://img.logo.dev/mcdonalds.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Mercedes-Benz',
-        imageUrl: 'https://logo.clearbit.com/mercedes-benz.com',
+        imageUrl:
+            'https://img.logo.dev/mercedes-benz.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Meta',
-        imageUrl: 'https://logo.clearbit.com/meta.com',
+        imageUrl:
+            'https://img.logo.dev/meta.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Microsoft',
-        imageUrl: 'https://logo.clearbit.com/microsoft.com',
+        imageUrl:
+            'https://img.logo.dev/microsoft.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Netflix',
-        imageUrl: 'https://logo.clearbit.com/netflix.com',
+        imageUrl:
+            'https://img.logo.dev/netflix.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Nike',
-        imageUrl: 'https://logo.clearbit.com/nike.com',
+        imageUrl:
+            'https://img.logo.dev/nike.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Nintendo',
-        imageUrl: 'https://logo.clearbit.com/nintendo.com',
+        imageUrl:
+            'https://img.logo.dev/nintendo.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Nvidia',
-        imageUrl: 'https://logo.clearbit.com/nvidia.com',
+        imageUrl:
+            'https://img.logo.dev/nvidia.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'PayPal',
-        imageUrl: 'https://logo.clearbit.com/paypal.com',
+        imageUrl:
+            'https://img.logo.dev/paypal.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Pepsi',
-        imageUrl: 'https://logo.clearbit.com/pepsi.com',
+        imageUrl:
+            'https://img.logo.dev/pepsi.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'PlayStation',
-        imageUrl: 'https://logo.clearbit.com/playstation.com',
+        imageUrl:
+            'https://img.logo.dev/playstation.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Porsche',
-        imageUrl: 'https://logo.clearbit.com/porsche.com',
+        imageUrl:
+            'https://img.logo.dev/porsche.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Puma',
-        imageUrl: 'https://logo.clearbit.com/puma.com',
+        imageUrl:
+            'https://img.logo.dev/puma.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Reddit',
-        imageUrl: 'https://logo.clearbit.com/reddit.com',
+        imageUrl:
+            'https://img.logo.dev/reddit.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Samsung',
-        imageUrl: 'https://logo.clearbit.com/samsung.com',
+        imageUrl:
+            'https://img.logo.dev/samsung.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Shopify',
-        imageUrl: 'https://logo.clearbit.com/shopify.com',
+        imageUrl:
+            'https://img.logo.dev/shopify.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Snapchat',
-        imageUrl: 'https://logo.clearbit.com/snapchat.com',
+        imageUrl:
+            'https://img.logo.dev/snapchat.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Sony',
-        imageUrl: 'https://logo.clearbit.com/sony.com',
+        imageUrl:
+            'https://img.logo.dev/sony.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Spotify',
-        imageUrl: 'https://logo.clearbit.com/spotify.com',
+        imageUrl:
+            'https://img.logo.dev/spotify.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Starbucks',
-        imageUrl: 'https://logo.clearbit.com/starbucks.com',
+        imageUrl:
+            'https://img.logo.dev/starbucks.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Steam',
-        imageUrl: 'https://logo.clearbit.com/steampowered.com',
+        imageUrl:
+            'https://img.logo.dev/steampowered.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Subway',
-        imageUrl: 'https://logo.clearbit.com/subway.com',
+        imageUrl:
+            'https://img.logo.dev/subway.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Tesla',
-        imageUrl: 'https://logo.clearbit.com/tesla.com',
+        imageUrl:
+            'https://img.logo.dev/tesla.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'TikTok',
-        imageUrl: 'https://logo.clearbit.com/tiktok.com',
+        imageUrl:
+            'https://img.logo.dev/tiktok.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Toyota',
-        imageUrl: 'https://logo.clearbit.com/toyota.com',
+        imageUrl:
+            'https://img.logo.dev/toyota.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Twitch',
-        imageUrl: 'https://logo.clearbit.com/twitch.tv',
+        imageUrl:
+            'https://img.logo.dev/twitch.tv?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Twitter',
-        imageUrl: 'https://logo.clearbit.com/twitter.com',
+        imageUrl:
+            'https://img.logo.dev/twitter.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Uber',
-        imageUrl: 'https://logo.clearbit.com/uber.com',
+        imageUrl:
+            'https://img.logo.dev/uber.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Ubisoft',
-        imageUrl: 'https://logo.clearbit.com/ubisoft.com',
+        imageUrl:
+            'https://img.logo.dev/ubisoft.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Visa',
-        imageUrl: 'https://logo.clearbit.com/visa.com',
+        imageUrl:
+            'https://img.logo.dev/visa.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Volkswagen',
-        imageUrl: 'https://logo.clearbit.com/vw.com',
+        imageUrl:
+            'https://img.logo.dev/vw.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'WhatsApp',
-        imageUrl: 'https://logo.clearbit.com/whatsapp.com',
+        imageUrl:
+            'https://img.logo.dev/whatsapp.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'Xbox',
-        imageUrl: 'https://logo.clearbit.com/xbox.com',
+        imageUrl:
+            'https://img.logo.dev/xbox.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
     {
         name: 'YouTube',
-        imageUrl: 'https://logo.clearbit.com/youtube.com',
+        imageUrl:
+            'https://img.logo.dev/youtube.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark',
     },
 ]

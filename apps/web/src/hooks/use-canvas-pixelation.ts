@@ -26,19 +26,7 @@ export const useCanvasPixelation = (
         const img = new Image()
         img.crossOrigin = 'anonymous'
 
-        // Sadece CORS sıkıntısı olan (Steam ve Flagcdn) resimleri proxy'den geçiriyoruz
-        const needsProxy =
-            imageUrl.includes('steamstatic.com') ||
-            imageUrl.includes('flagcdn.com') ||
-            imageUrl.includes('cloudfront.net') ||
-            imageUrl.includes('image.tmdb.org') ||
-            imageUrl.includes('logo.clearbit.com') ||
-            imageUrl.includes('crests.football-data.org')
-
-        let finalUrl = imageUrl
-        if (needsProxy) {
-            finalUrl = `/api/proxy?url=${encodeURIComponent(imageUrl)}`
-        }
+        const finalUrl = `https://images.weserv.nl/?url=${encodeURIComponent(imageUrl)}`
 
         img.onload = () => {
             const maxSize = 400
