@@ -19,6 +19,12 @@ export const categories: Category[] = [
         characterCount: pokemonCharacters.length,
     },
     {
+        slug: 'flags',
+        name: 'Flags',
+        icon: 'https://flagcdn.com/w160/un.png',
+        characterCount: flagCharacters.length,
+    },
+    {
         slug: 'league-of-legends',
         name: 'League of Legends',
         icon: 'https://vignette.wikia.nocookie.net/leagueoflegends/images/1/12/League_of_Legends_Icon.png',
@@ -39,14 +45,8 @@ export const categories: Category[] = [
     {
         slug: 'genshin-impact',
         name: 'Genshin Impact',
-        icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Genshin_Impact_wordmark.svg',
+        icon: 'https://gi.yatta.moe/assets/UI/UI_AvatarIcon_PlayerGirl.png',
         characterCount: genshinCharacters.length,
-    },
-    {
-        slug: 'dota-2',
-        name: 'Dota 2',
-        icon: 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/global/dota2_logo_symbol.png',
-        characterCount: dota2Characters.length,
     },
     {
         slug: 'rick-and-morty',
@@ -55,10 +55,10 @@ export const categories: Category[] = [
         characterCount: rickAndMortyCharacters.length,
     },
     {
-        slug: 'flags',
-        name: 'Flags',
-        icon: 'https://flagcdn.com/w160/un.png',
-        characterCount: flagCharacters.length,
+        slug: 'dota-2',
+        name: 'Dota 2',
+        icon: 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/global/dota2_logo_symbol.png',
+        characterCount: dota2Characters.length,
     },
 ]
 
