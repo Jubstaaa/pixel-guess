@@ -39,7 +39,7 @@ export const categories: Category[] = [
     {
         slug: 'genshin-impact',
         name: 'Genshin Impact',
-        icon: 'https://gi.yatta.moe/assets/UI/UI_AvatarIcon_PlayerGirl.png',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Genshin_Impact_wordmark.svg',
         characterCount: genshinCharacters.length,
     },
     {
