@@ -7,10 +7,13 @@ import {
     fortniteCharacters,
     genshinCharacters,
     leagueOfLegendsCharacters,
+    movieCharacters,
     narutoCharacters,
     overwatchCharacters,
+    peopleCharacters,
     pokemonCharacters,
     rickAndMortyCharacters,
+    tvShowCharacters,
     valorantCharacters,
 } from './characters'
 
@@ -81,6 +84,24 @@ export const categories: Category[] = [
         icon: 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg',
         characterCount: rickAndMortyCharacters.length,
     },
+    {
+        slug: 'movies',
+        name: 'Movies',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg',
+        characterCount: movieCharacters.length,
+    },
+    {
+        slug: 'tv-shows',
+        name: 'TV Shows',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg',
+        characterCount: tvShowCharacters.length,
+    },
+    {
+        slug: 'people',
+        name: 'People',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Tmdb.new.logo.svg',
+        characterCount: peopleCharacters.length,
+    },
 ]
 
 export const charactersByCategory: Record<
@@ -98,4 +119,7 @@ export const charactersByCategory: Record<
     fortnite: fortniteCharacters,
     'genshin-impact': genshinCharacters,
     'rick-and-morty': rickAndMortyCharacters,
+    movies: movieCharacters,
+    'tv-shows': tvShowCharacters,
+    people: peopleCharacters,
 }

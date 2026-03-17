@@ -236,6 +236,68 @@ async function fetchDragonBall(): Promise<string> {
     )
 }
 
+type TmdbItem = { title?: string; name?: string; poster_path?: string; profile_path?: string }
+
+async function fetchTmdb(endpoint: string, apiKey: string, pages: number): Promise<TmdbItem[]> {
+    const results: TmdbItem[] = []
+    await Promise.all(
+        Array.from({ length: pages }, (_, i) =>
+            fetch(
+                `https://api.themoviedb.org/3/${endpoint}?language=en-US&page=${i + 1}`,
+                { headers: { Authorization: `Bearer ${apiKey}` } },
+            )
+                .then((r) => r.json())
+                .then((d) => results.push(...(d.results ?? []))),
+        ),
+    )
+    return results
+}
+
+async function fetchMovies(apiKey: string): Promise<string> {
+    const results = await fetchTmdb('movie/popular', apiKey, 5)
+
+    const characters = results
+        .filter((m) => m.poster_path)
+        .map((m) => ({
+            name: m.title!,
+            imageUrl: `https://image.tmdb.org/t/p/w500${m.poster_path}`,
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name))
+
+    console.log(`Movies: ${characters.length} movies`)
+    return header + `export const movieCharacters: Character[] = ${serialize(characters)}\n`
+}
+
+async function fetchTvShows(apiKey: string): Promise<string> {
+    const results = await fetchTmdb('tv/popular', apiKey, 5)
+
+    const characters = results
+        .filter((s) => s.poster_path)
+        .map((s) => ({
+            name: s.name!,
+            imageUrl: `https://image.tmdb.org/t/p/w500${s.poster_path}`,
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name))
+
+    console.log(`TV Shows: ${characters.length} shows`)
+    return header + `export const tvShowCharacters: Character[] = ${serialize(characters)}\n`
+}
+
+async function fetchPeople(apiKey: string): Promise<string> {
+    const results = await fetchTmdb('person/popular', apiKey, 5)
+
+    const characters = results
+        .filter((p) => p.profile_path)
+        .map((p) => ({
+            name: p.name!,
+            imageUrl: `https://image.tmdb.org/t/p/w500${p.profile_path}`,
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name))
+
+    console.log(`People: ${characters.length} people`)
+    return header + `export const peopleCharacters: Character[] = ${serialize(characters)}\n`
+}
+
 async function fetchNaruto(): Promise<string> {
     const first = await fetch('https://dattebayo-api.onrender.com/characters?limit=100').then(
         (r) => r.json(),
@@ -265,9 +327,12 @@ async function fetchNaruto(): Promise<string> {
 }
 
 async function main() {
+    const tmdbApiKey = process.env.TMDB_API_KEY
+    if (!tmdbApiKey) throw new Error('TMDB_API_KEY env variable is required')
+
     console.log('Generating character data...\n')
 
-    const [lol, dota2, valorant, flags, pokemon, fortnite, genshin, rickAndMorty, overwatch, dragonBall, naruto] =
+    const [lol, dota2, valorant, flags, pokemon, fortnite, genshin, rickAndMorty, overwatch, dragonBall, naruto, movies, tvShows, people] =
         await Promise.all([
             fetchLol(),
             fetchDota2(),
@@ -280,6 +345,9 @@ async function main() {
             fetchOverwatch(),
             fetchDragonBall(),
             fetchNaruto(),
+            fetchMovies(tmdbApiKey),
+            fetchTvShows(tmdbApiKey),
+            fetchPeople(tmdbApiKey),
         ])
 
     writeFileSync(join(OUT_DIR, 'league-of-legends.ts'), lol)
@@ -293,6 +361,9 @@ async function main() {
     writeFileSync(join(OUT_DIR, 'overwatch.ts'), overwatch)
     writeFileSync(join(OUT_DIR, 'dragon-ball.ts'), dragonBall)
     writeFileSync(join(OUT_DIR, 'naruto.ts'), naruto)
+    writeFileSync(join(OUT_DIR, 'movies.ts'), movies)
+    writeFileSync(join(OUT_DIR, 'tv-shows.ts'), tvShows)
+    writeFileSync(join(OUT_DIR, 'people.ts'), people)
 
     console.log('\nDone! Files written to src/data/characters/')
 }

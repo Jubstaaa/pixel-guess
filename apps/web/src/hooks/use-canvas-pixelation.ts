@@ -29,7 +29,8 @@ export const useCanvasPixelation = (
         // Sadece CORS sıkıntısı olan (Steam ve Flagcdn) resimleri proxy'den geçiriyoruz
         const needsProxy =
             imageUrl.includes('steamstatic.com') ||
-            imageUrl.includes('flagcdn.com')
+            imageUrl.includes('flagcdn.com') ||
+            imageUrl.includes('overfast-api.tekrop.fr')
 
         let finalUrl = imageUrl
         if (needsProxy) {
