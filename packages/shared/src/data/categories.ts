@@ -15,7 +15,7 @@ export const categories: Category[] = [
     {
         slug: 'pokemon',
         name: 'Pokémon',
-        icon: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png',
+        icon: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png',
         characterCount: pokemonCharacters.length,
     },
     {
@@ -33,13 +33,13 @@ export const categories: Category[] = [
     {
         slug: 'fortnite',
         name: 'Fortnite',
-        icon: 'https://fortnite-api.com/images/cosmetics/br/character_athena_commando_f_streetops/icon.png',
+        icon: 'https://fortnite-api.com/images/cosmetics/br/character_jonesyorangefncs/icon.png',
         characterCount: fortniteCharacters.length,
     },
     {
         slug: 'genshin-impact',
         name: 'Genshin Impact',
-        icon: 'https://gi.yatta.moe/assets/UI/UI_AvatarIcon_Lumine.png',
+        icon: 'https://gi.yatta.moe/assets/UI/UI_AvatarIcon_PlayerGirl.png',
         characterCount: genshinCharacters.length,
     },
     {

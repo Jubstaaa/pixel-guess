@@ -72,7 +72,6 @@ const GameContent = ({
             const pick = getRandomCharacter(characters, newState.seenIndices)
             const seenIndices =
                 pick === null ? [] : [...newState.seenIndices, pick.index]
-
             const nextPick = pick ?? getRandomCharacter(characters, [])
 
             setState({

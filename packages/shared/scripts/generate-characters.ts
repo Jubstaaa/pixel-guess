@@ -141,10 +141,16 @@ async function fetchFortnite(): Promise<string> {
         data.data as {
             name: string
             type: { value: string }
+            rarity: { value: string }
             images: { icon?: string; featured?: string }
         }[]
     )
-        .filter((x) => x.type?.value === 'outfit' && (x.images?.featured || x.images?.icon))
+        .filter(
+            (x) =>
+                x.type?.value === 'outfit' &&
+                x.rarity?.value === 'legendary' &&
+                (x.images?.featured || x.images?.icon),
+        )
         .map(({ name, images }) => ({
             name,
             imageUrl: (images.featured ?? images.icon)!,
@@ -188,7 +194,8 @@ async function fetchRickAndMorty(): Promise<string> {
         ),
     )
 
-    const characters = (results as { name: string; image: string }[])
+    const characters = (results as { name: string; image: string; episode: string[] }[])
+        .filter((c) => c.episode.length >= 3)
         .map(({ name, image }) => ({ name, imageUrl: image }))
         .sort((a, b) => a.name.localeCompare(b.name))
 

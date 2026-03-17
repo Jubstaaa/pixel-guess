@@ -3,11 +3,6 @@ import type { Character } from '../../types'
 
 export const fortniteCharacters: Character[] = [
     {
-        name: "'Mato Marauder",
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_448_athena_commando_m_pennantseasone_c/featured.png',
-    },
-    {
         name: '1-Ball',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_stagecue_chalk/icon.png',
@@ -23,21 +18,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_shortrack/featured.png',
     },
     {
-        name: '212th Battalion Trooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_grandscheme_yellow/icon.png',
-    },
-    {
-        name: '2D',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pajamasoar/featured.png',
-    },
-    {
-        name: '501st Trooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_grandscheme_blue/icon.png',
-    },
-    {
         name: '7-Ball',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_luckyseven/featured.png',
@@ -46,11 +26,6 @@ export const fortniteCharacters: Character[] = [
         name: '8-Ball vs Scratch',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_566_athena_commando_m_crazyeight/icon.png',
-    },
-    {
-        name: 'A Goat',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_billy/featured.png',
     },
     {
         name: 'A.I.M.',
@@ -66,16 +41,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Aang',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_doubleduty/icon.png',
-    },
-    {
-        name: 'Absenz',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_296_athena_commando_m_darkpit/icon.png',
-    },
-    {
-        name: 'Absolute Zero',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_036_athena_commando_m_wintercamo/featured.png',
     },
     {
         name: 'Abstrakt',
@@ -98,16 +63,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_heistfncs/featured.png',
     },
     {
-        name: 'Adanna of the Deep',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_steammarauder/featured.png',
-    },
-    {
-        name: 'Adeline',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_825_athena_commando_f_sportsfashion/featured.png',
-    },
-    {
         name: 'Adira',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_427_athena_commando_f_fuchsia/icon.png',
@@ -128,24 +83,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_stormaviator/icon.png',
     },
     {
-        name: 'Aerial Assault Trooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_017_athena_commando_m/icon.png',
-    },
-    {
-        name: 'Aerial Threat',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_146_athena_commando_m_soccerdudec/featured.png',
-    },
-    {
         name: 'Aerobic Assassin',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_189_athena_commando_f_exercise/featured.png',
-    },
-    {
-        name: 'Aeronaut',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_518_athena_commando_m_wwii_pilotscifi/featured.png',
     },
     {
         name: 'Afterburn',
@@ -156,16 +96,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Aftermath',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_327_athena_commando_m_skullpunk_9qtqi/featured.png',
-    },
-    {
-        name: 'Ágata',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_dodgyoven/featured.png',
-    },
-    {
-        name: 'Agency Ace',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pennantseasglare/featured.png',
     },
     {
         name: 'Agent Blanc',
@@ -198,31 +128,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_antizappo/featured.png',
     },
     {
-        name: 'Agente Colorado',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_234_athena_commando_m_grasshopper_a_57ark/featured.png',
-    },
-    {
-        name: 'Agony',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_soupgoal/icon.png',
-    },
-    {
-        name: "Ahsoka's Clone Trooper",
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_grandscheme_orange/icon.png',
-    },
-    {
-        name: 'Airhead',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_432_athena_commando_m_balloonhead/featured.png',
-    },
-    {
-        name: 'Airheart',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_224_athena_commando_f_dieselpunk/featured.png',
-    },
-    {
         name: 'Airie',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_lastvoicesteel/icon.png',
@@ -243,19 +148,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_hornedwretch/featured.png',
     },
     {
-        name: 'Alan Wake',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_slicedbread/featured.png',
-    },
-    {
         name: 'Alexandra Sharpe',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_spyhandler/featured.png',
-    },
-    {
-        name: 'Ali-A',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_415_athena_commando_m_alfredo/featured.png',
     },
     {
         name: 'Alias',
@@ -273,11 +168,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_emeraldglasstransform/icon.png',
     },
     {
-        name: "All-Hallow's Steve",
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_228_athena_commando_m_disguiseblack/featured.png',
-    },
-    {
         name: 'Allen the Alien',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_cabbagesugar/featured.png',
@@ -286,11 +176,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Alli',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_044_athena_commando_f_neoncatfashion_64jw3/featured.png',
-    },
-    {
-        name: 'Aloy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_062_athena_commando_f_alchemy_xd6gp/featured.png',
     },
     {
         name: 'Alphonse',
@@ -353,39 +238,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_powerspin/featured.png',
     },
     {
-        name: 'Amazona Colorada',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_240_athena_commando_f_grasshopper_b_9rsi1/featured.png',
-    },
-    {
         name: 'Amber Moxie',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_calmshimmer/featured.png',
-    },
-    {
-        name: 'AMP KAI',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_essayviewpier/featured.png',
-    },
-    {
-        name: 'Amplitude',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_170_athena_commando_f_stands_c/icon.png',
-    },
-    {
-        name: 'Anakin Skywalker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_plottwist/featured.png',
-    },
-    {
-        name: 'Anarchy Agent',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_470_athena_commando_m_anarchy/featured.png',
-    },
-    {
-        name: 'Anderson .Paak',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_335_athena_commando_m_sleekglasses_8syx2/featured.png',
     },
     {
         name: 'Andre',
@@ -413,11 +268,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_kobolobo/icon.png',
     },
     {
-        name: 'Ani Konda',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_ivycross/icon.png',
-    },
-    {
         name: 'Anima',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_skilledskull/featured.png',
@@ -426,11 +276,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Aniyah',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_dyedduelist/featured.png',
-    },
-    {
-        name: 'Ant-Man',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_033_athena_commando_m_smallfry_z73ek/featured.png',
     },
     {
         name: 'Anthea',
@@ -443,11 +288,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_866_athena_commando_f_myth/featured.png',
     },
     {
-        name: 'Anwar',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_paperblaze/featured.png',
-    },
-    {
         name: 'Aphrodite',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_liftingaura_wave/icon.png',
@@ -458,24 +298,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_daffodilsong/featured.png',
     },
     {
-        name: 'Apprentice Evie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_platypusbranch/icon.png',
-    },
-    {
-        name: 'Apprentice Rey',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_forwardlake_dire/featured.png',
-    },
-    {
         name: "April O'Neil",
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_palmtree/featured.png',
-    },
-    {
-        name: 'Aquaman',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_772_athena_commando_m_sandcastle/icon.png',
     },
     {
         name: 'Arachne',
@@ -488,54 +313,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_893_athena_commando_f_blackwidowjacket/icon.png',
     },
     {
-        name: 'Arcane Jinx',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_256_athena_commando_f_uproarbraids_8iozw/featured.png',
-    },
-    {
-        name: 'Arcane Vi',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_329_athena_commando_f_uproar_i5n5z/featured.png',
-    },
-    {
         name: 'Archetype',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_182_athena_commando_m_modernmilitary/featured.png',
     },
     {
-        name: 'Arctic Adeline',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_sportsfashion_winter/icon.png',
-    },
-    {
-        name: 'Arctic Assassin',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_037_athena_commando_f_wintercamo/icon.png',
-    },
-    {
-        name: 'Arctic Intel',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_668_athena_commando_m_arcticcamo_gray/featured.png',
-    },
-    {
-        name: 'Arctica',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_648_athena_commando_f_msalpine/featured.png',
-    },
-    {
-        name: 'Ares',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_goldaccomplishment/icon.png',
-    },
-    {
         name: 'Ares (TRON)',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_yuzucrank/featured.png',
-    },
-    {
-        name: 'Ariana Grande',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_158_athena_commando_f_buffet_yc20h/featured.png',
     },
     {
         name: 'Ark',
@@ -551,16 +336,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Arkon',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_partygold/featured.png',
-    },
-    {
-        name: 'Armadillo',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_201_athena_commando_m_desertops/featured.png',
-    },
-    {
-        name: 'Armored Batman Zero',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_124_athena_commando_m_cavernarmored/featured.png',
     },
     {
         name: 'Art the Clown',
@@ -588,21 +363,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_troops/icon.png',
     },
     {
-        name: 'Asmodeus',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_427_athena_commando_m_demonhunter/featured.png',
-    },
-    {
-        name: 'Aspen',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_064_athena_commando_f_survivalspecialistautumn/featured.png',
-    },
-    {
-        name: 'Assault Trooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_015_athena_commando_f/featured.png',
-    },
-    {
         name: 'Assist Maven',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_firstclasssecond_e/featured.png',
@@ -618,34 +378,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_477_athena_commando_f_spacesuit/featured.png',
     },
     {
-        name: 'Astro Jack',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_761_athena_commando_m_cyclonespace/featured.png',
-    },
-    {
-        name: 'Athleisure Assassin',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_824_athena_commando_f_raiderpink/featured.png',
-    },
-    {
-        name: 'Atlantean Fishstick',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_813_athena_commando_m_teriyakiatlantis/featured.png',
-    },
-    {
         name: 'Atom Eve',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_timeinterval/featured.png',
-    },
-    {
-        name: 'Attenuator',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_166_athena_commando_m_stands_d/featured.png',
-    },
-    {
-        name: 'Aubrey',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_democrook/featured.png',
     },
     {
         name: 'Audacious Adventurer',
@@ -656,16 +391,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Augury',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_tidalninja/icon.png',
-    },
-    {
-        name: 'Aura',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_397_athena_commando_f_treasurehunterfashion/featured.png',
-    },
-    {
-        name: 'Aura Analyzer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_910_athena_commando_f_york/featured.png',
     },
     {
         name: 'Autumn',
@@ -683,24 +408,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_doubledutydart/icon.png',
     },
     {
-        name: 'AWR Trooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_sagetwig/featured.png',
-    },
-    {
-        name: 'Axiom',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_363_athena_commando_m_sciops/featured.png',
-    },
-    {
         name: 'Axion Sentinel ',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_galaxyknight/icon.png',
-    },
-    {
-        name: 'Axo',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_834_athena_commando_m_axl/featured.png',
     },
     {
         name: 'Ayida',
@@ -713,46 +423,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_bluntwhimsy/icon.png',
     },
     {
-        name: 'Azuki',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_318_athena_commando_m_kittywarrior/featured.png',
-    },
-    {
-        name: 'B.R.I.T.E.',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_388_athena_commando_f_lyrical/icon.png',
-    },
-    {
-        name: 'B.R.U.T.E. Gunner',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_495_athena_commando_f_mechpilotshark/featured.png',
-    },
-    {
-        name: 'B.R.U.T.E. Navigator',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_494_athena_commando_m_mechpilotshark/featured.png',
-    },
-    {
-        name: 'Baba Yaga',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_919_athena_commando_f_babayaga/featured.png',
-    },
-    {
-        name: 'Babbit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_053_athena_commando_f_bunnyfashion_b/featured.png',
-    },
-    {
-        name: 'Bachii',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_471_athena_commando_f_bani/featured.png',
-    },
-    {
-        name: 'Backbone',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_196_athena_commando_m_biker/featured.png',
-    },
-    {
         name: 'Backlash',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_861_athena_commando_f_elastic_b/featured.png',
@@ -763,59 +433,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_badcat/featured.png',
     },
     {
-        name: 'Ballistics Tech',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_f_placeholder_f/icon.png',
-    },
-    {
-        name: 'Ballistics Tech',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_waterfallcharm_f/icon.png',
-    },
-    {
-        name: 'Ballistics Tech',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_277_athena_commando_f_prime_f/icon.png',
-    },
-    {
-        name: 'Band Pass',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_169_athena_commando_f_stands_b/icon.png',
-    },
-    {
-        name: 'Bandolette',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_353_athena_commando_f_bandolier/featured.png',
-    },
-    {
         name: 'Bandolier',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_131_athena_commando_m_warpaint/featured.png',
     },
     {
-        name: 'Bandwidth',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_021_athena_commando_f_mainframe_e_l34e4/featured.png',
-    },
-    {
-        name: 'Banner Trooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_442_athena_commando_f_bannera/featured.png',
-    },
-    {
         name: 'Bao Bros',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_338_athena_commando_m_dumplingman/featured.png',
-    },
-    {
-        name: 'Barracuda',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_816_athena_commando_f_dirtydocks/featured.png',
-    },
-    {
-        name: 'Barrett',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_prisonbreak/featured.png',
     },
     {
         name: 'Bart Simpson',
@@ -831,76 +456,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Bathany',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_splishsplash/featured.png',
-    },
-    {
-        name: 'Batman Beyond',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_guidequiz/featured.png',
-    },
-    {
-        name: 'Batman Comic Book Outfit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_528_athena_commando_m_blackmondayhouston_7dgbt/icon.png',
-    },
-    {
-        name: 'Batman Zero',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_070_athena_commando_m_cavern_3i6i1/featured.png',
-    },
-    {
-        name: 'Battalion Brawler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_habitatsecurity/icon.png',
-    },
-    {
-        name: 'Battalion Brawler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_m_placeholder/icon.png',
-    },
-    {
-        name: 'Battalion Brawler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_primeredux/icon.png',
-    },
-    {
-        name: 'Battalion Brawler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_primeredux_b/icon.png',
-    },
-    {
-        name: 'Battalion Brawler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_primeredux_c/icon.png',
-    },
-    {
-        name: 'Battalion Brawler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_primeredux_d/icon.png',
-    },
-    {
-        name: 'Battalion Brawler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_primeredux_e/icon.png',
-    },
-    {
-        name: 'Battalion Brawler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_279_athena_commando_m_prime/icon.png',
-    },
-    {
-        name: 'Battalion Leader',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_f_placeholder_g/icon.png',
-    },
-    {
-        name: 'Battalion Leader',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_waterfallcharm_g/icon.png',
-    },
-    {
-        name: 'Battalion Leader',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_278_athena_commando_f_prime_g/icon.png',
     },
     {
         name: 'Battle Gamer Mae',
@@ -931,26 +486,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Bay',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_scubadasher/icon.png',
-    },
-    {
-        name: 'Beach Bomber',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_460_athena_commando_f_britebombersummer/featured.png',
-    },
-    {
-        name: 'Beach Brutus',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_130_athena_commando_m_henchmansummer/featured.png',
-    },
-    {
-        name: 'Beach Jules',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_127_athena_commando_f_mechanicalengineersummer/featured.png',
-    },
-    {
-        name: 'Beast Boy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_092_athena_commando_m_broccoli_pr297/featured.png',
     },
     {
         name: 'Beastmode',
@@ -988,24 +523,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_464_athena_commando_m_staminacat/featured.png',
     },
     {
-        name: 'Belle Berry',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_456_athena_commando_f_fruitcake/featured.png',
-    },
-    {
-        name: 'Ben Grimm',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_flavorstock/featured.png',
-    },
-    {
         name: 'Bender Bending Rodríguez',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_mindpinch/featured.png',
-    },
-    {
-        name: 'Bendie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_325_athena_commando_m_wavyman/featured.png',
     },
     {
         name: 'Bernie',
@@ -1018,16 +538,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_brainmatter/featured.png',
     },
     {
-        name: 'Bichota Season Karol G',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_elegantlilyankle/featured.png',
-    },
-    {
-        name: 'Big Chuggus',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_620_athena_commando_l_bigchuggus/featured.png',
-    },
-    {
         name: 'Big Dill',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_wartybrine_sus/icon.png',
@@ -1038,49 +548,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_597_athena_commando_m_freak/featured.png',
     },
     {
-        name: 'Bigfoot',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_463_athena_commando_m_hairy/featured.png',
-    },
-    {
         name: 'Billy',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_craneanchor/featured.png',
-    },
-    {
-        name: 'Birch',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_talonhime/featured.png',
-    },
-    {
-        name: 'Birdie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_387_athena_commando_f_golf/featured.png',
-    },
-    {
-        name: 'Bitstream',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_017_athena_commando_f_mainframe_cyl17/featured.png',
-    },
-    {
-        name: 'Biz',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_459_athena_commando_f_zodiac/featured.png',
-    },
-    {
-        name: 'Black Adam',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_sahara/featured.png',
-    },
-    {
-        name: 'Black Belt Brawler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_301_athena_commando_m_slither_d_o7bm2/featured.png',
-    },
-    {
-        name: 'Black Cat',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_sweetletter/featured.png',
     },
     {
         name: 'Black Dino Ranger',
@@ -1093,29 +563,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_035_athena_commando_m_medieval/icon.png',
     },
     {
-        name: 'Black Manta',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_809_athena_commando_m_seaweed_ixrlq/featured.png',
-    },
-    {
-        name: 'Black Panther',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_986_athena_commando_m_plumretro_4aja2/icon.png',
-    },
-    {
         name: 'Black Ranger',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_fumefleeceshack/featured.png',
-    },
-    {
-        name: 'Black Widow (Snow Suit)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_925_athena_commando_f_tapdance/featured.png',
-    },
-    {
-        name: 'Black Widow Outfit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_399_athena_commando_f_ashtonboardwalk/featured.png',
     },
     {
         name: 'Blackheart',
@@ -1128,34 +578,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_603_athena_commando_m_spookyneon/icon.png',
     },
     {
-        name: 'Blade',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_868_athena_commando_m_backspin_3u6ca/featured.png',
-    },
-    {
         name: 'Blair',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_sugarbubble/featured.png',
     },
     {
-        name: 'Blanka',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_384_athena_commando_m_rumble/featured.png',
-    },
-    {
         name: 'Blastoff',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_857_athena_commando_m_elastic_c/featured.png',
-    },
-    {
-        name: 'Blaze',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_784_athena_commando_f_renegaderaiderfire/featured.png',
-    },
-    {
-        name: 'Blinky',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_984_athena_commando_m_holidaylights/featured.png',
     },
     {
         name: 'Blinky Fishstick',
@@ -1178,31 +608,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_feudallord/featured.png',
     },
     {
-        name: 'Blizzabelle',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_311_athena_commando_f_scholarfestivewinter/icon.png',
-    },
-    {
-        name: 'Blizzard Bomber',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_421_athena_commando_f_blizzardbomber/icon.png',
-    },
-    {
-        name: 'Blockade Runner',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_723_athena_commando_f_spytech/featured.png',
-    },
-    {
-        name: 'Blood-Red Commander Igris',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_birchpalace/featured.png',
-    },
-    {
-        name: 'Bloodsport',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_160_athena_commando_m_seesawslipper/featured.png',
-    },
-    {
         name: 'Bloom',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_191_athena_commando_m_alienflora/featured.png',
@@ -1213,19 +618,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_fumefleececlap/featured.png',
     },
     {
-        name: 'Blue Squire',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_032_athena_commando_m_medieval/icon.png',
-    },
-    {
         name: 'Blue Striker',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_138_athena_commando_m_psburnout/icon.png',
-    },
-    {
-        name: 'Blue Team Leader',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_052_athena_commando_f_psblue/icon.png',
     },
     {
         name: 'Board Crasher',
@@ -1233,34 +628,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_firstclass_b/featured.png',
     },
     {
-        name: 'Boardwalk Ruby',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_135_athena_commando_f_streetfashionsummer/featured.png',
-    },
-    {
         name: 'Bob Belcher',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_cyclopsprey/featured.png',
-    },
-    {
-        name: 'Boba Fett',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_309_athena_commando_m_orbitteal_9rbjl/featured.png',
-    },
-    {
-        name: 'Bogey Basher',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_119_athena_commando_m_golf/featured.png',
-    },
-    {
-        name: 'Bogstick',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_swampfish/featured.png',
-    },
-    {
-        name: 'Bolt',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_431_athena_commando_f_stormpilot/featured.png',
     },
     {
         name: 'Bone Boss',
@@ -1281,11 +651,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Bonehead',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_662_athena_commando_m_flameskull/featured.png',
-    },
-    {
-        name: 'Bonejamin',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_humanbeing/featured.png',
     },
     {
         name: 'Bones',
@@ -1313,56 +678,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_vanceguard/featured.png',
     },
     {
-        name: 'Boxer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_739_athena_commando_m_cardboardcrew/featured.png',
-    },
-    {
-        name: 'Boxy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_740_athena_commando_f_cardboardcrew/featured.png',
-    },
-    {
-        name: 'Bracer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_414_athena_commando_f_militaryfashion/featured.png',
-    },
-    {
-        name: 'Brainiac',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_254_athena_commando_m_zombie/featured.png',
-    },
-    {
-        name: 'Brainstorm',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_190_athena_commando_m_alienagent/featured.png',
-    },
-    {
-        name: 'Branded Brawler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_448_athena_commando_m_bannerc/featured.png',
-    },
-    {
-        name: 'Branded Brigadier',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_444_athena_commando_f_bannerc/featured.png',
-    },
-    {
-        name: 'Bravo Leader',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_490_athena_commando_m_bluebadass/featured.png',
-    },
-    {
-        name: 'Brawler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_021_athena_commando_f/featured.png',
-    },
-    {
-        name: 'Breacher',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tacticmushroom_b/featured.png',
-    },
-    {
         name: 'Breakaway',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_999_athena_commando_m_globalfb_e_oisu6/featured.png',
@@ -1371,11 +686,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Breakaway Boss',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_impulse_d/featured.png',
-    },
-    {
-        name: 'Breakpoint',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_429_athena_commando_f_neonlines/featured.png',
     },
     {
         name: 'Breezabelle',
@@ -1388,39 +698,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_thornededen/featured.png',
     },
     {
-        name: 'Brilliant Bomber',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_619_athena_commando_f_techllama/featured.png',
-    },
-    {
-        name: 'Brilliant Striker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_092_athena_commando_f_redshirt/featured.png',
-    },
-    {
-        name: 'Brite Agent',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_akimboenvoy/icon.png',
-    },
-    {
-        name: 'Brite Blaster',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_553_athena_commando_m_brightgunnerremix/featured.png',
-    },
-    {
-        name: 'Brite Bomber',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_044_athena_commando_f_scipop/featured.png',
-    },
-    {
         name: 'Brite Gunner',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_112_athena_commando_m_brite/featured.png',
-    },
-    {
-        name: 'Brite Hunter',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_britedino/featured.png',
     },
     {
         name: 'Brite Raider',
@@ -1428,19 +708,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_shiverflame_ace/icon.png',
     },
     {
-        name: 'BriteStar',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_shinystar/featured.png',
-    },
-    {
         name: 'Britestorm Bomber',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_027_athena_commando_f_casualbomberlight/featured.png',
-    },
-    {
-        name: 'Brix Barton',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_hydroignite/featured.png',
     },
     {
         name: 'Brock',
@@ -1448,74 +718,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_blobrock/icon.png',
     },
     {
-        name: 'Bronto',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_492_athena_commando_m_bronto/featured.png',
-    },
-    {
-        name: 'Bruno Mars',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_334_athena_commando_m_sleek_u06kf/featured.png',
-    },
-    {
-        name: 'Bruno-San',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_dryerasetoro/icon.png',
-    },
-    {
         name: 'Brutus',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_692_athena_commando_m_henchmantough/icon.png',
     },
     {
-        name: 'Bryce 3000',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_800_athena_commando_m_robro/featured.png',
-    },
-    {
-        name: 'Bryne',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_835_athena_commando_f_ladyatlantis/featured.png',
-    },
-    {
-        name: 'Bubble Bomber',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_480_athena_commando_f_bubblegum/featured.png',
-    },
-    {
-        name: 'Buccaneer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_372_athena_commando_f_pirate01/featured.png',
-    },
-    {
-        name: 'Budge',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_cosmicsquatter/featured.png',
-    },
-    {
         name: 'Bug Punk Sunny',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_bugbeliever/featured.png',
-    },
-    {
-        name: 'Bugha',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_140_athena_commando_m_bluecheese/featured.png',
-    },
-    {
-        name: 'Bull Shark',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_677_athena_commando_m_sharkattack/featured.png',
-    },
-    {
-        name: 'Bullseye',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_242_athena_commando_f_bullseye/featured.png',
-    },
-    {
-        name: 'Bulma',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_465_athena_commando_f_stamina/featured.png',
     },
     {
         name: 'Bumblebee',
@@ -1528,11 +738,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_742_athena_commando_m_chocobunny/featured.png',
     },
     {
-        name: 'Bundles',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_627_athena_commando_f_snufflesleader/featured.png',
-    },
-    {
         name: 'Bunker Jonesy',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_409_athena_commando_m_bunkerman/icon.png',
@@ -1543,24 +748,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_104_athena_commando_f_bunny/featured.png',
     },
     {
-        name: 'Bunnymoon',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_255_athena_commando_f_halloweenbunny/featured.png',
-    },
-    {
         name: 'Bunnywolf',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_639_athena_commando_f_neonanimal/featured.png',
-    },
-    {
-        name: 'Bunya',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_056_athena_commando_f_bunnyfashion_e/featured.png',
-    },
-    {
-        name: 'Burial Threat',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_591_athena_commando_m_soccerzombiec/featured.png',
     },
     {
         name: 'Burnoff',
@@ -1571,11 +761,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Burnout',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_094_athena_commando_m_rider/featured.png',
-    },
-    {
-        name: 'Bushranger',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_611_athena_commando_m_weepingwoods/featured.png',
     },
     {
         name: 'Butt-Head',
@@ -1598,21 +783,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_bites/icon.png',
     },
     {
-        name: 'Cabbie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_331_athena_commando_m_taxi/featured.png',
-    },
-    {
-        name: 'Cable',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_738_athena_commando_m_donutcup/featured.png',
-    },
-    {
-        name: 'Cade',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_188_athena_commando_m_colorblock/featured.png',
-    },
-    {
         name: 'Cake the Cat',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_slopetramp/featured.png',
@@ -1621,16 +791,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Calamity',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_237_athena_commando_f_cowgirl/icon.png',
-    },
-    {
-        name: 'Callisto',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_426_athena_commando_f_demonhunter/featured.png',
-    },
-    {
-        name: 'Camber',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_plankcoverway_b/featured.png',
     },
     {
         name: 'Cameo vs Chic',
@@ -1643,11 +803,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_mouse/featured.png',
     },
     {
-        name: 'Cammy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_162_athena_commando_f_quarrel_e5d63/featured.png',
-    },
-    {
         name: 'Candyman',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_700_athena_commando_m_candy/featured.png',
@@ -1658,29 +813,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_jumpsuit_scrap_mutable/featured.png',
     },
     {
-        name: 'Capitana Colorada',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_239_athena_commando_f_grasshopper_h6lb7/featured.png',
-    },
-    {
-        name: 'Captain America',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_807_athena_commando_m_candyapple_b1u7x/featured.png',
-    },
-    {
-        name: 'Captain America - Sam Wilson (MCU)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_elevate/featured.png',
-    },
-    {
         name: 'Captain Barbossa',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_domeroof/featured.png',
-    },
-    {
-        name: 'Captain Carlos',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_407_athena_commando_m_rebirthfresh_b/featured.png',
     },
     {
         name: 'Captain Hook',
@@ -1693,24 +828,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_scarletbionic/icon.png',
     },
     {
-        name: 'Captain Jones',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_herbhutch_breath/icon.png',
-    },
-    {
         name: 'Captain Levi',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_nighthawk/featured.png',
-    },
-    {
-        name: 'Captain Marvel',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_975_athena_commando_f_cherry_b8xn5/icon.png',
-    },
-    {
-        name: 'Captain Phasma',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_bingrass/icon.png',
     },
     {
         name: 'Captain Talon',
@@ -1721,11 +841,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Carbide',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_115_athena_commando_m_carbideblue/icon.png',
-    },
-    {
-        name: 'Carbon Commando',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_360_athena_commando_m_techopsblue/featured.png',
     },
     {
         name: 'Carey',
@@ -1748,21 +863,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_rangegawker/icon.png',
     },
     {
-        name: 'Carnage',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_197_athena_commando_m_clash/icon.png',
-    },
-    {
-        name: 'Carolina',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_elegantlilycharm/featured.png',
-    },
-    {
-        name: 'Cart Champion',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_123_athena_commando_m_golf_e/featured.png',
-    },
-    {
         name: 'Carter Wu',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_zencrash/icon.png',
@@ -1783,11 +883,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_casinoreaper_die/icon.png',
     },
     {
-        name: 'Castaway Jonesy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_836_athena_commando_m_jonesyflare/featured.png',
-    },
-    {
         name: 'Castor',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_269_athena_commando_m_wizard/featured.png',
@@ -1801,11 +896,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Catalyst',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_486_athena_commando_f_streetracerdrift/icon.png',
-    },
-    {
-        name: 'Catastrophe',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_514_athena_commando_f_toxickitty/featured.png',
     },
     {
         name: 'Cate Meowdy',
@@ -1823,54 +913,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_585_athena_commando_f_flowerskeleton/icon.png',
     },
     {
-        name: 'Catwoman Comic Book Outfit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_530_athena_commando_f_blackmonday_1bv6j/featured.png',
-    },
-    {
-        name: 'Catwoman Zero',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_094_athena_commando_f_cavern_33lmc/featured.png',
-    },
-    {
-        name: 'Caution',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_685_athena_commando_m_tundrayellow/featured.png',
-    },
-    {
-        name: 'Cavalry Captain',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_habitatsecurity_f/icon.png',
-    },
-    {
-        name: 'Cavalry Captain',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_m_placeholder_f/icon.png',
-    },
-    {
-        name: 'Cavalry Captain',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_284_athena_commando_m_prime_f/icon.png',
-    },
-    {
-        name: 'CeeCee',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_055_athena_commando_f_bunnyfashion_d/featured.png',
-    },
-    {
-        name: 'Celeste',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_117_athena_commando_f_rockstar/featured.png',
-    },
-    {
         name: 'Cell',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_moonshock/featured.png',
-    },
-    {
-        name: 'Centurion',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_035_athena_commando_m_lionsoldier/icon.png',
     },
     {
         name: 'Cepha',
@@ -1881,11 +926,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Cerberus',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_gatehound_spectral/icon.png',
-    },
-    {
-        name: 'Cha Hae-In',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_quirkluster/featured.png',
     },
     {
         name: 'Champion Bugha',
@@ -1903,19 +943,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_rowdydevilfncs/featured.png',
     },
     {
-        name: 'Champion Drake',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_mallardvantagefncs/featured.png',
-    },
-    {
         name: 'Champion Kuno',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_bandageninjafncs/featured.png',
-    },
-    {
-        name: 'Champion Kyra',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_greenjacketfncs/featured.png',
     },
     {
         name: 'Champion Lachlan',
@@ -1928,44 +958,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_ponyshore/featured.png',
     },
     {
-        name: 'Champion PJ',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_waywardrebelfncs/featured.png',
-    },
-    {
-        name: 'Champion Siren',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_hitmanfncs/featured.png',
-    },
-    {
         name: 'Champion Sparkplug',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_garbagefncs/featured.png',
     },
     {
-        name: "Champion Stash'd",
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_bestdressedfncs/featured.png',
-    },
-    {
         name: 'Champion Surf Witch',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_punkdevilsummerfncs/featured.png',
-    },
-    {
-        name: 'Championship Aura',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_treasurehunterfashionsfncs/featured.png',
-    },
-    {
-        name: 'Championship Jonesy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_jonesyorangefncs/featured.png',
-    },
-    {
-        name: 'Chance',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_720_athena_commando_f_streetfashionemerald/featured.png',
     },
     {
         name: 'Chani',
@@ -1993,34 +993,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_788_athena_commando_m_mastermind_ghost/featured.png',
     },
     {
-        name: 'Chaos Explorer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_mastermindsummer/featured.png',
-    },
-    {
         name: 'Chaos Origins',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_211_athena_commando_m_psyche_jwqp3/featured.png',
     },
     {
-        name: 'Chappell Roan',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_forestjeanwink/icon.png',
-    },
-    {
         name: 'Charlotte',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_203_athena_commando_f_punkkoi/icon.png',
-    },
-    {
-        name: 'Charon',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_coppertoll/icon.png',
-    },
-    {
-        name: 'Chase',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_blueglaze/featured.png',
     },
     {
         name: 'Cheeks',
@@ -2033,29 +1013,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_grumblewoof/featured.png',
     },
     {
-        name: 'Chewbacca',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_guineapig/featured.png',
-    },
-    {
-        name: 'Chiara',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_097_athena_commando_f_wastelandwarrior/featured.png',
-    },
-    {
         name: 'Chic Commodore',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_146_athena_commando_m_pliant_e/featured.png',
-    },
-    {
-        name: 'Chica',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_377_athena_commando_f_littleegg_omnb5/featured.png',
-    },
-    {
-        name: 'Chicane',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_plankcoverage_e/featured.png',
     },
     {
         name: 'Chief Hopper',
@@ -2063,24 +1023,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_467_athena_commando_m_weirdobjectspolice/featured.png',
     },
     {
-        name: 'Chigusa',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_048_athena_commando_f_sailorsquadleader/icon.png',
-    },
-    {
         name: 'Chill Challenger',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_upbeatiguana/featured.png',
-    },
-    {
-        name: 'Chill Count',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_673_athena_commando_f_arcticcamo_slate/featured.png',
-    },
-    {
-        name: 'Chillout',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_669_athena_commando_m_arcticcamo_slate/featured.png',
     },
     {
         name: 'Chilly',
@@ -2098,54 +1043,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_343_athena_commando_f_rover_kr41g/featured.png',
     },
     {
-        name: 'Chloe Kim',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_375_athena_commando_f_snowfall_wxw2t/featured.png',
-    },
-    {
         name: 'Chomp Sr.',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_168_athena_commando_m_shark/featured.png',
-    },
-    {
-        name: 'Chopper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_197_athena_commando_f_biker/featured.png',
-    },
-    {
-        name: 'Chord Kahele',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_wonderclef/icon.png',
-    },
-    {
-        name: 'Chris Redfield',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_221_athena_commando_m_relish_8364h/featured.png',
-    },
-    {
-        name: 'CHROMAKOPIAN',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_caninecronutdig/featured.png',
-    },
-    {
-        name: 'Chromatica Armor Gaga',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pastasaucemarinara/featured.png',
-    },
-    {
-        name: 'Chrome Punk',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pumpkinpunk_glitch/icon.png',
-    },
-    {
-        name: 'Chromium',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_123_athena_commando_f_metal/featured.png',
-    },
-    {
-        name: 'Chun-Li',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_024_athena_commando_f_skirmish_qw2bq/featured.png',
     },
     {
         name: 'Cinder',
@@ -2153,74 +1053,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_stronghibiscus/icon.png',
     },
     {
-        name: 'Cipher',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_110_athena_commando_f_circuitbreaker/featured.png',
-    },
-    {
-        name: 'Circuit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_plankcoverage_b/featured.png',
-    },
-    {
-        name: 'Circuit Breaker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_042_athena_commando_m_cyberpunk/featured.png',
-    },
-    {
-        name: 'Ciri',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_highbeam/featured.png',
-    },
-    {
-        name: 'Claire Redfield',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_fallvalleycharge/featured.png',
-    },
-    {
-        name: 'Clara',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_balletassassin/icon.png',
-    },
-    {
         name: 'Clarity',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_missmissile/featured.png',
     },
     {
-        name: 'Clark Kent',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_109_athena_commando_m_emperor/icon.png',
-    },
-    {
-        name: 'Clash',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_663_athena_commando_f_frogman/featured.png',
-    },
-    {
         name: 'Cleveland Brown',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_liverromaine/featured.png',
-    },
-    {
-        name: 'Clinical Crosser',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_151_athena_commando_f_soccergirld/featured.png',
-    },
-    {
-        name: 'Clint Barton',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_330_athena_commando_m_keen_2dtxm/featured.png',
-    },
-    {
-        name: 'Clip',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_roseform/icon.png',
-    },
-    {
-        name: 'Clix',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_twilightspotspell/featured.png',
     },
     {
         name: 'Cloaked Shadow',
@@ -2233,29 +1073,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_203_athena_commando_m_cloakedstar/featured.png',
     },
     {
-        name: 'Clone Trooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_grandscheme/icon.png',
-    },
-    {
         name: 'Cloud Striker',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_926_athena_commando_f_streetfashiondiamond/featured.png',
     },
     {
-        name: 'Cloudbreaker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_291_athena_commando_m_dieselpunk02/featured.png',
-    },
-    {
         name: 'Clover Swift',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_slyjudge/featured.png',
-    },
-    {
-        name: 'Clover Team Leader',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_718_athena_commando_f_luckyhero/featured.png',
     },
     {
         name: 'Cluck',
@@ -2288,16 +1113,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_snowninjadark/icon.png',
     },
     {
-        name: 'Cobb',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_959_athena_commando_m_corny/featured.png',
-    },
-    {
-        name: 'Codename E.L.F.',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_051_athena_commando_m_holidayelf/icon.png',
-    },
-    {
         name: 'Codi Cottontail',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_powerfluff/icon.png',
@@ -2308,59 +1123,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_buttoncase/featured.png',
     },
     {
-        name: 'Colby',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_nox/icon.png',
-    },
-    {
-        name: 'Cole',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_401_athena_commando_m_miner/featured.png',
-    },
-    {
-        name: 'Color Crush',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_179_athena_commando_f_tiedyefashion_d/featured.png',
-    },
-    {
         name: 'Color Splash Jellie',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_tubagummi/icon.png',
-    },
-    {
-        name: 'Colossus',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_potterywheel/featured.png',
-    },
-    {
-        name: 'Combat Tech Jules',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_mechanicalengineerrev/icon.png',
-    },
-    {
-        name: 'Comet',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_brightion/featured.png',
-    },
-    {
-        name: 'Comfy Chomps',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_804_athena_commando_m_sharksuit/featured.png',
-    },
-    {
-        name: 'Commander Zavala',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_467_athena_commando_m_wayfare/featured.png',
-    },
-    {
-        name: 'Commandline',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_018_athena_commando_f_mainframe_b_t6gy4/featured.png',
-    },
-    {
-        name: 'Commando ',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_016_athena_commando_f/featured.png',
     },
     {
         name: 'Constable Sprinkle',
@@ -2368,34 +1133,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_thinglaze/featured.png',
     },
     {
-        name: 'Containment Specialist',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_906_athena_commando_m_york_b/featured.png',
-    },
-    {
-        name: 'Contract Giller',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_722_athena_commando_m_teriyakifishassassin/icon.png',
-    },
-    {
         name: 'Control',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_tacticalonyx/featured.png',
     },
     {
-        name: 'Convergence Captain',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pennantseasshade_d/featured.png',
-    },
-    {
         name: 'Copper Wasp',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_473_athena_commando_m_cyberkarate/featured.png',
-    },
-    {
-        name: 'Core Knight Talus',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_birufang/featured.png',
     },
     {
         name: 'Corrupted Arachne',
@@ -2418,11 +1163,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_499_athena_commando_f_astronautevil/featured.png',
     },
     {
-        name: 'Coruscant Guard',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_grandscheme_red/icon.png',
-    },
-    {
         name: 'Corvida',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_plumedstare/icon.png',
@@ -2436,26 +1176,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Cosma',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_relaystickbounty/featured.png',
-    },
-    {
-        name: 'Cosmic Infinity',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_starwalkerfncs/featured.png',
-    },
-    {
-        name: 'Countess Daraku',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_ichorincisor/featured.png',
-    },
-    {
-        name: 'CouRage',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_bolddormrise/featured.png',
-    },
-    {
-        name: 'Courageous Knight',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_bolddormwork/icon.png',
     },
     {
         name: 'Court Commander',
@@ -2483,26 +1203,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_bluemystery_dark/icon.png',
     },
     {
-        name: 'Cozy Chomps',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_803_athena_commando_f_sharksuit/featured.png',
-    },
-    {
-        name: 'Cozy Commander',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_652_athena_commando_f_holidaypj_d/featured.png',
-    },
-    {
-        name: 'Cozy Jonesy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_981_athena_commando_m_jonesyholiday/featured.png',
-    },
-    {
-        name: 'Cozy Knit Jonesy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_313_athena_commando_m_blizzardbomber/featured.png',
-    },
-    {
         name: 'Crackabella',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_302_athena_commando_f_nutcracker/featured.png',
@@ -2513,24 +1213,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_050_athena_commando_m_holidaynutcracker/featured.png',
     },
     {
-        name: 'Craggy Champion',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pennantseasglare_d/featured.png',
-    },
-    {
         name: 'Creature Caretaker',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_toadcycle_e/featured.png',
-    },
-    {
-        name: 'Crimson Elite',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_733_athena_commando_m_bannerred/featured.png',
-    },
-    {
-        name: 'Crimson Scout',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_086_athena_commando_m_redsilk/featured.png',
     },
     {
         name: 'Criterion',
@@ -2541,11 +1226,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Crossbar Crusher',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_944_athena_commando_f_football20_c_fo6iy/featured.png',
-    },
-    {
-        name: 'Crossheart',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_bonemarrow/featured.png',
     },
     {
         name: 'Crossover Champion',
@@ -2563,31 +1243,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_freshwave/icon.png',
     },
     {
-        name: 'Crusher',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_699_athena_commando_f_brokenheart/featured.png',
-    },
-    {
-        name: 'Crustina',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_831_athena_commando_f_pizzapitmascot/featured.png',
-    },
-    {
-        name: 'Crypt Crosser',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_596_athena_commando_f_soccerzombied/featured.png',
-    },
-    {
-        name: 'Cryptic',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_413_athena_commando_m_streetdemon/featured.png',
-    },
-    {
-        name: 'Crystal',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_493_athena_commando_f_jurassicarchaeology/featured.png',
-    },
-    {
         name: 'CRZ-8',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_260_athena_commando_m_crazyeighttech/icon.png',
@@ -2596,11 +1251,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Cube Assassin',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_865_athena_commando_f_cloakedassassin_1xkht/icon.png',
-    },
-    {
-        name: 'Cuddle King',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_011_athena_commando_m_streetcuddles/featured.png',
     },
     {
         name: 'Cuddle Team Leader',
@@ -2618,29 +1268,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_sacredcuddle/icon.png',
     },
     {
-        name: 'Cuddlepool',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_746_athena_commando_f_fuzzybear/featured.png',
-    },
-    {
         name: 'Culture Club Commander',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_pencil_cherry/featured.png',
-    },
-    {
-        name: 'Curdle Scream Leader',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_213_athena_commando_m_crittercuddle/featured.png',
-    },
-    {
-        name: 'Curious',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_felinewarrior/featured.png',
-    },
-    {
-        name: 'Curse Buster',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_913_athena_commando_f_york_d/featured.png',
     },
     {
         name: 'Cursed Jack Sparrow',
@@ -2658,19 +1288,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_150_athena_commando_f_pliant_d/featured.png',
     },
     {
-        name: 'Cutiepie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_646_athena_commando_f_elfattack/featured.png',
-    },
-    {
         name: 'Cybernetic Assault Bomber',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_dimeaviator/featured.png',
-    },
-    {
-        name: 'Cyborg',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_floralcardinal/featured.png',
     },
     {
         name: 'Cyclo',
@@ -2678,39 +1298,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_750_athena_commando_m_hurricane/featured.png',
     },
     {
-        name: 'Cyclops',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_saladdressing/featured.png',
-    },
-    {
-        name: 'Cypher',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_012_athena_commando_m_mainframe_v7q8r/featured.png',
-    },
-    {
-        name: 'Cyprus Nell',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_032_athena_commando_m_spacewarrior/featured.png',
-    },
-    {
-        name: "D'Ark",
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_194_athena_commando_f_angeldark/icon.png',
-    },
-    {
-        name: "D'ugh",
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_090_athena_commando_m_caveman/featured.png',
-    },
-    {
         name: 'Dabi',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_earthlane/featured.png',
-    },
-    {
-        name: 'Dagobah Luke',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_wideplane/featured.png',
     },
     {
         name: 'Dahlia',
@@ -2731,11 +1321,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Dali',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_dollenthusiast/icon.png',
-    },
-    {
-        name: 'Danger Zone',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_542_athena_commando_f_carbidefrostmystery/icon.png',
     },
     {
         name: 'Danica',
@@ -2763,74 +1348,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_goldenpleats/icon.png',
     },
     {
-        name: 'Dare',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_457_athena_commando_f_spacegirl/featured.png',
-    },
-    {
-        name: 'Daredevil',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_895_athena_commando_m_delisandwich/featured.png',
-    },
-    {
         name: 'Daring Duelist',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_396_athena_commando_f_swashbuckler/featured.png',
     },
     {
-        name: 'Dark Bomber',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_229_athena_commando_f_darkbomber/featured.png',
-    },
-    {
         name: 'Dark Doggo',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_hazardedge/icon.png',
-    },
-    {
-        name: 'Dark Jonesy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_513_athena_commando_m_cubepaintjonesy/icon.png',
-    },
-    {
-        name: 'Dark Phoenix',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_231_athena_commando_f_ashes_tkgk9/featured.png',
-    },
-    {
-        name: 'Dark Power Chord',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_574_athena_commando_f_cuberockerpunk/icon.png',
-    },
-    {
-        name: 'Dark Priestess Naomi',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_362_athena_commando_f_thrivespirit/featured.png',
-    },
-    {
-        name: 'Dark Red Knight ',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_512_athena_commando_f_cubepaintredknight/icon.png',
-    },
-    {
-        name: 'Dark Rex',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_581_athena_commando_m_darkdino/featured.png',
-    },
-    {
-        name: 'Dark Ruby',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_darkvogue/featured.png',
-    },
-    {
-        name: 'Dark Skully',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_850_athena_commando_f_skullbritecube/featured.png',
-    },
-    {
-        name: 'Dark Tricera Ops',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_582_athena_commando_f_darkdino/featured.png',
     },
     {
         name: 'Dark Vanguard',
@@ -2853,44 +1378,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_spaceplunge/icon.png',
     },
     {
-        name: 'Dark Wild Card',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_511_athena_commando_m_cubepaintwildcard/icon.png',
-    },
-    {
-        name: 'Darkheart',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_799_athena_commando_f_cupiddark/featured.png',
-    },
-    {
-        name: 'Darth Jar Jar',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_moleacornpecan/featured.png',
-    },
-    {
-        name: 'Darth Maul',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_cirrusvine/featured.png',
-    },
-    {
-        name: 'Darth Vader',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_422_athena_commando_m_realm/icon.png',
-    },
-    {
-        name: 'Darth Vader Samurai',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_sequinpie/featured.png',
-    },
-    {
         name: 'Daryl Dixon',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_977_athena_commando_m_wombat_r7q8k/featured.png',
-    },
-    {
-        name: 'Datapath',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_015_athena_commando_m_mainframe_d_s625d/featured.png',
     },
     {
         name: 'Davy Jones',
@@ -2903,11 +1393,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_308_athena_commando_f_sunshine/featured.png',
     },
     {
-        name: 'Dazzle',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_076_athena_commando_f_sup/featured.png',
-    },
-    {
         name: 'Ddakji Defender',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_timberstakedrift/icon.png',
@@ -2918,44 +1403,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_600_athena_commando_m_skeletonhunter/featured.png',
     },
     {
-        name: 'Deadfall',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_550_athena_commando_m_yellowcamoc/featured.png',
-    },
-    {
         name: 'Deadfire',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_250_athena_commando_m_evilcowboy/featured.png',
-    },
-    {
-        name: 'Deadlock',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_689_athena_commando_m_spytechhacker/featured.png',
-    },
-    {
-        name: 'deadmau5',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_farespore/featured.png',
-    },
-    {
-        name: 'Deadpool',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_705_athena_commando_m_donut/icon.png',
-    },
-    {
-        name: 'Deadpool (Pen & Ink)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_driedsilk/icon.png',
-    },
-    {
-        name: 'Deathstroke Zero',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_103_athena_commando_m_grim_vm52m/featured.png',
-    },
-    {
-        name: 'Decaying Dribbler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_593_athena_commando_f_soccerzombiea/featured.png',
     },
     {
         name: 'Dee',
@@ -2976,21 +1426,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Deep Sea Dominator',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_319_athena_commando_f_nautilus/featured.png',
-    },
-    {
-        name: 'Default',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_defaultoutfit/icon.png',
-    },
-    {
-        name: 'Defensor Colorado',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_238_athena_commando_m_grasshopper_e_q14k1/featured.png',
-    },
-    {
-        name: 'Defensora Colorada',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_243_athena_commando_f_grasshopper_e_l6i24/featured.png',
     },
     {
         name: 'Deimos',
@@ -3018,11 +1453,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_skullarcana/featured.png',
     },
     {
-        name: 'Demogorgon',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_466_athena_commando_m_weirdobjectscreature/featured.png',
-    },
-    {
         name: 'Demonic Grunt Dark',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_robedsledge_cross_npc/icon.png',
@@ -3038,11 +1468,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_830_athena_commando_m_spacewanderer/featured.png',
     },
     {
-        name: 'Depth Dealer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_622_athena_commando_m_bulletblue/featured.png',
-    },
-    {
         name: 'Derby Dominator',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_003_athena_commando_f_globalfb_c_j4h5j/featured.png',
@@ -3053,59 +1478,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_833_athena_commando_f_triplescoop/icon.png',
     },
     {
-        name: 'Desdemona',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_466_athena_commando_f_chaos/featured.png',
-    },
-    {
         name: 'Desert Dawn Lyric',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_tigerrootfame/featured.png',
     },
     {
-        name: 'Desert Dominator',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_433_athena_commando_f_tacticaldesert/featured.png',
-    },
-    {
-        name: 'Designer Tsuki',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_fauxvenom/featured.png',
-    },
-    {
-        name: 'Desperado',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_026_athena_commando_m/featured.png',
-    },
-    {
-        name: 'Devastator',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_040_athena_commando_m_district/featured.png',
-    },
-    {
         name: 'Dex Diamond',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_astrallilac/featured.png',
-    },
-    {
-        name: 'Diamond Diva',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_936_athena_commando_f_raidersilver/icon.png',
-    },
-    {
-        name: 'Diamond Hanz',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_060_athena_commando_m_daytrader_8mro2/featured.png',
-    },
-    {
-        name: 'Die With A Smile Bruno',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_dryerasecod/icon.png',
-    },
-    {
-        name: 'Diecast',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_122_athena_commando_m_metal/featured.png',
     },
     {
         name: 'Dino Megazord',
@@ -3116,21 +1496,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Dire',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_230_athena_commando_m_werewolf/icon.png',
-    },
-    {
-        name: 'Disco Diva',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_312_athena_commando_f_funkops/featured.png',
-    },
-    {
-        name: 'Disco Tek Manic',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tacticalred_disco/featured.png',
-    },
-    {
-        name: 'Dizzie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_099_athena_commando_f_shrapnel/icon.png',
     },
     {
         name: 'DJ Bop',
@@ -3148,11 +1513,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_pintpiano/featured.png',
     },
     {
-        name: 'Doctor Doom',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_846_athena_commando_m_hightowerdate/icon.png',
-    },
-    {
         name: 'Doctor Malachite',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_greenhazard/featured.png',
@@ -3163,44 +1523,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_113_athena_commando_f_innovator/icon.png',
     },
     {
-        name: 'Doctor Strange',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_367_athena_commando_m_mystic/icon.png',
-    },
-    {
         name: 'Doggo',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_419_athena_commando_m_pug/featured.png',
     },
     {
-        name: 'Doja Cat',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tangyradishflame/featured.png',
-    },
-    {
-        name: 'Dojo Defender',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_299_athena_commando_m_slither_b_1x28d/featured.png',
-    },
-    {
-        name: 'Dolph',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_641_athena_commando_m_sweaterweather/featured.png',
-    },
-    {
-        name: 'Dominator',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_041_athena_commando_f_district/featured.png',
-    },
-    {
         name: 'Dominion',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_587_athena_commando_m_devilrock/featured.png',
-    },
-    {
-        name: 'Domino',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_736_athena_commando_f_donutdish/featured.png',
     },
     {
         name: 'Don Eggcracker',
@@ -3213,24 +1543,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_qualitycreek/featured.png',
     },
     {
-        name: 'Doom',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_anglepatch_lodge/icon.png',
-    },
-    {
-        name: 'Doom 2099',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_snailaisle/featured.png',
-    },
-    {
         name: 'Doom Dancer',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_249_athena_commando_f_zombieelastic/featured.png',
-    },
-    {
-        name: 'Doom Slayer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_redpepper/icon.png',
     },
     {
         name: 'Doombot Agent',
@@ -3263,24 +1578,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_183_athena_commando_m_modernmilitaryred/icon.png',
     },
     {
-        name: 'Doublecross',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_456_athena_commando_f_sarong/featured.png',
-    },
-    {
         name: 'Doughberman',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_batterboi/featured.png',
-    },
-    {
-        name: 'Downforce',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_plankcoverage_d/featured.png',
-    },
-    {
-        name: 'Dozer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_930_athena_commando_m_nauticalpajamas_d/featured.png',
     },
     {
         name: 'Dozy Dreamer',
@@ -3313,11 +1613,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_rankedspeeder/featured.png',
     },
     {
-        name: 'Drax',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_speakerbox/icon.png',
-    },
-    {
         name: 'Dread Fate',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_848_athena_commando_f_darkninjapurple/featured.png',
@@ -3326,16 +1621,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Dread Omen',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_849_athena_commando_m_darkeaglepurple/featured.png',
-    },
-    {
-        name: 'Dream',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_395_athena_commando_f_shatterfly/featured.png',
-    },
-    {
-        name: 'Dreamer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_475_athena_commando_f_platinumblue/featured.png',
     },
     {
         name: 'Dreamflower',
@@ -3353,16 +1638,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_230_athena_commando_m_drifthorror/icon.png',
     },
     {
-        name: 'Drop Dee',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_rockerpunkalt/featured.png',
-    },
-    {
-        name: 'Drosera',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pirouetteweld/featured.png',
-    },
-    {
         name: 'Dude',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_159_athena_commando_m_cashier_7k3f0/featured.png',
@@ -3371,16 +1646,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Duke',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_pointwoof/featured.png',
-    },
-    {
-        name: 'Dummy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_795_athena_commando_m_dummeez/featured.png',
-    },
-    {
-        name: 'Dummy Supreme',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_dummy_fncs/featured.png',
     },
     {
         name: 'Dupli-Kate',
@@ -3408,44 +1673,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_chainmail/icon.png',
     },
     {
-        name: 'Dusty Daredevil',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_442_athena_commando_f_pennantseasone_b/featured.png',
-    },
-    {
-        name: 'Dutch',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_051_athena_commando_m_hiphare/featured.png',
-    },
-    {
         name: 'Dwight Schrute',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_oxidehoard/featured.png',
     },
     {
-        name: 'Dyed Breeze',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_177_athena_commando_f_tiedyefashion_b/featured.png',
-    },
-    {
         name: 'Dynamic Dreamer',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_droveray/featured.png',
-    },
-    {
-        name: 'Dynamic Dribbler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_148_athena_commando_f_soccergirla/featured.png',
-    },
-    {
-        name: 'Dynamic Hush',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_noiseless/icon.png',
-    },
-    {
-        name: 'Dynamo',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_170_athena_commando_f_luchador/featured.png',
     },
     {
         name: 'Dynamo Dancer',
@@ -3463,19 +1698,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_boomshot_blam/icon.png',
     },
     {
-        name: 'Eagle Enforcer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_121_athena_commando_m_golf_c/featured.png',
-    },
-    {
         name: 'EARTH Master Cole',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_scalloplava/icon.png',
-    },
-    {
-        name: 'Echo',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_715_athena_commando_f_twindark/featured.png',
     },
     {
         name: 'Eclipse',
@@ -3488,19 +1713,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_068_athena_commando_m_terrainman/featured.png',
     },
     {
-        name: 'Ecto Expert',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_907_athena_commando_m_york_c/featured.png',
-    },
-    {
         name: 'Ed',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_inchescape/featured.png',
-    },
-    {
-        name: 'Eddie Brock',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_204_athena_commando_m_clashv_sqnvj/featured.png',
     },
     {
         name: 'Edward Scissorhands',
@@ -3511,16 +1726,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Eijiro Kirishima',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_parrotpen/featured.png',
-    },
-    {
-        name: 'Eivor Varinsdottir',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_376_athena_commando_f_journeymentor_66vfp/featured.png',
-    },
-    {
-        name: 'El Chapulín Colorado',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_233_athena_commando_m_grasshopper_5gtt3/featured.png',
     },
     {
         name: 'Eleven',
@@ -3538,16 +1743,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_straymanta/icon.png',
     },
     {
-        name: 'Elite Linesman',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_951_athena_commando_m_football20referee_e_qbiba/featured.png',
-    },
-    {
-        name: 'Elite Striker Sephira',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_camerashake/featured.png',
-    },
-    {
         name: 'Elite Zadie',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_rankedtroopernoble/icon.png',
@@ -3556,11 +1751,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Elizabeth Swann',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_stonelion/featured.png',
-    },
-    {
-        name: 'Ella Slurp',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_strikinglybright/featured.png',
     },
     {
         name: 'Ellen Ripley',
@@ -3583,34 +1773,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_351_athena_commando_f_fireelf/icon.png',
     },
     {
-        name: 'Emma Frost',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pipershelf_pearl/icon.png',
-    },
-    {
-        name: 'Emmy Elite',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_405_athena_commando_f_rebirthfresh_d/featured.png',
-    },
-    {
-        name: 'Emperor Palpatine',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_clawpad_host/icon.png',
-    },
-    {
         name: 'End Zone',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_207_athena_commando_m_footballdudea/featured.png',
-    },
-    {
-        name: 'End Zone Expert',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_953_athena_commando_f_football20referee_b_5sv7q/featured.png',
-    },
-    {
-        name: 'Endless Ned',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_looper/icon.png',
     },
     {
         name: 'Enforcer',
@@ -3618,24 +1783,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_200_athena_commando_m_darkpaintballer/featured.png',
     },
     {
-        name: 'Enigmatic Gaga',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pastasaucespice/featured.png',
-    },
-    {
         name: 'Ennui',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_fondbreak/featured.png',
-    },
-    {
-        name: 'Envision',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_754_athena_commando_f_raveninja/featured.png',
-    },
-    {
-        name: 'Envoy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_725_athena_commando_f_agentx/featured.png',
     },
     {
         name: 'Eon',
@@ -3683,19 +1833,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_489_athena_commando_m_voyagerremix/icon.png',
     },
     {
-        name: 'Eternal Wanderer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_419_athena_commando_f_eternalvanguard/featured.png',
-    },
-    {
         name: 'Ether',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_410_athena_commando_m_cyberscavenger/featured.png',
-    },
-    {
-        name: 'Etheria',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_091_athena_commando_f_darkelf/featured.png',
     },
     {
         name: 'Eva',
@@ -3713,16 +1853,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_redjay/featured.png',
     },
     {
-        name: 'Ex',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_702_athena_commando_m_assassinx/featured.png',
-    },
-    {
-        name: 'Exo Stranger',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_469_athena_commando_f_wayfaremask/featured.png',
-    },
-    {
         name: 'Explorer Emilie',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_vitalinventorblock/icon.png',
@@ -3738,16 +1868,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_251_athena_commando_f_zombieelastic_c/featured.png',
     },
     {
-        name: 'Ezio Auditore',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_363_athena_commando_m_journey/featured.png',
-    },
-    {
-        name: 'Fa-La-La-La-Fishstick',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_968_athena_commando_m_teriyakifishelf/featured.png',
-    },
-    {
         name: 'Fabio Sparklemane',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_198_athena_commando_m_cerealbox/icon.png',
@@ -3756,11 +1876,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Fable',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_231_athena_commando_f_redriding/icon.png',
-    },
-    {
-        name: 'Facet',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_481_athena_commando_f_geode/featured.png',
     },
     {
         name: 'Fade',
@@ -3773,29 +1888,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_084_athena_commando_m_hardwood_e_ii9ys/featured.png',
     },
     {
-        name: 'Fair Play',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_947_athena_commando_m_football20referee_in7ey/featured.png',
-    },
-    {
-        name: 'Fallen Love Ranger',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_343_athena_commando_m_cupiddark/featured.png',
-    },
-    {
-        name: 'Fanatic',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_768_athena_commando_f_hardcoresportz/featured.png',
-    },
-    {
         name: 'Far Out Man',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_192_athena_commando_m_hippie/featured.png',
-    },
-    {
-        name: 'Farmer Steel',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_714_athena_commando_m_anarchyacresfarmer/featured.png',
     },
     {
         name: 'Fashion Banshee',
@@ -3813,16 +1908,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_080_athena_commando_m_hardwood_i15al/featured.png',
     },
     {
-        name: 'Fastball',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_381_athena_commando_f_baseballkitbash/featured.png',
-    },
-    {
-        name: 'Fatal Finisher',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_595_athena_commando_f_soccerzombiec/featured.png',
-    },
-    {
         name: 'Fate',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_143_athena_commando_f_darkninja/featured.png',
@@ -3836,11 +1921,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Faye Valentine',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_kneelens/featured.png',
-    },
-    {
-        name: 'Fearless Flusher',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_446_athena_commando_m_pennantseasone/featured.png',
     },
     {
         name: 'Fearless Friend',
@@ -3858,49 +1938,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_rankedbayonet/icon.png',
     },
     {
-        name: 'Fennec Shand',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_338_athena_commando_f_galactic_hn9do/featured.png',
-    },
-    {
-        name: 'Fennix',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_504_athena_commando_m_lopex/featured.png',
-    },
-    {
-        name: 'Festival Lace',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_streetgothsummer/featured.png',
-    },
-    {
-        name: 'Festival Phaedra',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_melodyurchin/featured.png',
-    },
-    {
         name: 'Fetch',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_fluffwoof/featured.png',
-    },
-    {
-        name: 'FFC Chloe Kim',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_redoasisapricot/featured.png',
-    },
-    {
-        name: 'FFC LeBron James',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_redoasisjackfruit/featured.png',
-    },
-    {
-        name: 'FFC Neymar Jr',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_redoasisgooseberry/featured.png',
-    },
-    {
-        name: 'FFC Sparkplug',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_redoasispomegranate/featured.png',
     },
     {
         name: 'FFC Striker Sparkplug',
@@ -3908,29 +1948,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_oasischeck/icon.png',
     },
     {
-        name: 'FFC TheGrefg',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_redoasisblackberry/featured.png',
-    },
-    {
         name: 'Field Agent Kyra',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_slimytune/featured.png',
-    },
-    {
-        name: 'Field Commander',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_habitatsecurity_c/icon.png',
-    },
-    {
-        name: 'Field Commander',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_m_placeholder_c/icon.png',
-    },
-    {
-        name: 'Field Commander',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_281_athena_commando_m_prime_c/icon.png',
     },
     {
         name: 'Field Favorite',
@@ -3943,19 +1963,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_216_athena_commando_f_medic/featured.png',
     },
     {
-        name: 'Finesse Finisher',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_150_athena_commando_f_soccergirlc/featured.png',
-    },
-    {
         name: 'Finesse Forward',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_firstclass_c/featured.png',
-    },
-    {
-        name: 'Finn',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_633_athena_commando_m_galileoferry_pa3e1/featured.png',
     },
     {
         name: 'Finn Maw',
@@ -3983,34 +1993,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_862_athena_commando_f_elastic_c/featured.png',
     },
     {
-        name: 'Firelock',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tacticmushroom_e/featured.png',
-    },
-    {
-        name: 'Firewalker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_336_athena_commando_m_dragonmask/featured.png',
-    },
-    {
-        name: 'Firewall',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_013_athena_commando_m_mainframe_b_70z5m/featured.png',
-    },
-    {
         name: 'Fireworks Team Leader',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_156_athena_commando_f_fuzzybearind/featured.png',
-    },
-    {
-        name: 'First Order Stormtrooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_kernelruse/icon.png',
-    },
-    {
-        name: 'First strike Specialist',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_025_athena_commando_m/featured.png',
     },
     {
         name: 'Fishdrift',
@@ -4018,29 +2003,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_driftavatar/icon.png',
     },
     {
-        name: 'Fishpool',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_steaksting/featured.png',
-    },
-    {
         name: 'Fishskull',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_918_athena_commando_m_teriyakifishskull/icon.png',
-    },
-    {
-        name: 'Fishstick',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_315_athena_commando_m_teriyakifish/featured.png',
-    },
-    {
-        name: 'Fixer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_101_athena_commando_m_tacticalwoodlandblue/icon.png',
-    },
-    {
-        name: 'Flakes Power',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_oceanbreeze/icon.png',
     },
     {
         name: 'Flakey the Snowbird',
@@ -4056,16 +2021,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Flare',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_454_athena_commando_m_glowbro/featured.png',
-    },
-    {
-        name: 'Flashbang',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tactickale_c/featured.png',
-    },
-    {
-        name: 'Flatfoot',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_655_athena_commando_f_barefoot/featured.png',
     },
     {
         name: 'Fletcher Kane',
@@ -4093,11 +2048,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_731_athena_commando_f_neon/featured.png',
     },
     {
-        name: 'Flutter',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_450_athena_commando_f_butterfly/featured.png',
-    },
-    {
         name: 'Flying Stone Fighter',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_timberstakesoul_d/icon.png',
@@ -4108,31 +2058,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_132_athena_commando_m_venus/featured.png',
     },
     {
-        name: 'FNCS 3:1 Champion',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_365_athena_commando_f_fncs_blue/featured.png',
-    },
-    {
-        name: 'FNCS Champion Seeker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_410_athena_commando_m_maskeddancer_fncs/featured.png',
-    },
-    {
-        name: 'FNCS Renegade',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_headhunterstarfncs/featured.png',
-    },
-    {
-        name: 'Focus',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_452_athena_commando_f_cyberfu/featured.png',
-    },
-    {
-        name: 'Folly',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_amour/featured.png',
-    },
-    {
         name: 'Formal Lucien West',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_prodigyhaughty/icon.png',
@@ -4141,26 +2066,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Formation Fighter',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_942_athena_commando_f_football20_yqupk/featured.png',
-    },
-    {
-        name: 'Fortune',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_172_athena_commando_f_sharpdresser/featured.png',
-    },
-    {
-        name: 'Fox Fire',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_436_athena_commando_m_redsleeves/featured.png',
-    },
-    {
-        name: "Frankenstein's Bride",
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_232_athena_commando_f_critterstreak_yilhr/featured.png',
-    },
-    {
-        name: "Frankenstein's Monster",
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_214_athena_commando_m_critterfrenzy_ydm1l/featured.png',
     },
     {
         name: 'Fred Jones',
@@ -4183,11 +2088,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_502_athena_commando_f_reverb/featured.png',
     },
     {
-        name: 'Frenzied Fighter',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pennantseasshade_e/featured.png',
-    },
-    {
         name: 'Fresh Aura',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_154_athena_commando_f_treasurehunterfashionmint/icon.png',
@@ -4198,29 +2098,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_cleveredge/featured.png',
     },
     {
-        name: 'Frigid Foregoer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_315_athena_commando_m_nightcapsule_b31l1/featured.png',
-    },
-    {
         name: 'Front Man',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_autumnfern/featured.png',
-    },
-    {
-        name: 'Frontier',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_498_athena_commando_m_wildwest/featured.png',
-    },
-    {
-        name: 'Frost Broker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_987_athena_commando_m_frostbyte/icon.png',
-    },
-    {
-        name: 'Frost Squad',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_972_athena_commando_f_arcticcamowoods/featured.png',
     },
     {
         name: 'Frostbite',
@@ -4228,39 +2108,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_261_athena_commando_m_raptorarcticcamo/icon.png',
     },
     {
-        name: 'Frosted Flurry',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_654_athena_commando_f_giftwrap/featured.png',
-    },
-    {
         name: 'Froststorm Bomber',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_lunargum/featured.png',
-    },
-    {
-        name: 'Frozen Fishstick',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_656_athena_commando_m_teriyakifishfreezerburn/icon.png',
-    },
-    {
-        name: 'Frozen Love Ranger',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_295_athena_commando_m_cupidwinter/icon.png',
-    },
-    {
-        name: 'Frozen Nog Ops',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_653_athena_commando_f_uglysweaterfrozen/icon.png',
-    },
-    {
-        name: 'Frozen Raven',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_293_athena_commando_m_ravenwinter/icon.png',
-    },
-    {
-        name: 'Frozen Red Knight',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_294_athena_commando_f_redknightwinter/icon.png',
     },
     {
         name: 'Frozone',
@@ -4291,11 +2141,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Gaara',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_434_athena_commando_m_ensemblemaroon/featured.png',
-    },
-    {
-        name: 'Gage',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_465_athena_commando_m_puffyvest/featured.png',
     },
     {
         name: 'Gala Glimmer',
@@ -4338,21 +2183,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_frozentouch/icon.png',
     },
     {
-        name: 'Gambit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_340_athena_commando_m_gimmick_hk68x/featured.png',
-    },
-    {
-        name: 'Gambit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_340_athena_commando_m_gimmick_hk68x_forswitchlod1/featured.png',
-    },
-    {
-        name: 'Game Knight',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_207_athena_commando_m_textileknight_9te8l/featured.png',
-    },
-    {
         name: 'Games Guard',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_timberstakeclub/icon.png',
@@ -4363,39 +2193,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_timberstakepurse/icon.png',
     },
     {
-        name: 'Gamora',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_157_athena_commando_f_stereo_3a08z/featured.png',
-    },
-    {
-        name: 'Gan',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_681_athena_commando_m_martialartist/featured.png',
-    },
-    {
-        name: 'Garog',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tractorfair/icon.png',
-    },
-    {
-        name: 'Garrison',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_218_athena_commando_m_greenberet/featured.png',
-    },
-    {
         name: 'Gear Specialist Maya',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_695_athena_commando_f_desertopscamo/icon.png',
-    },
-    {
-        name: 'General Banshee',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_403_athena_commando_f_rebirthfresh_b/featured.png',
-    },
-    {
-        name: 'General Grievous',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_muffinladle_gas/icon.png',
     },
     {
         name: 'Genos',
@@ -4406,21 +2206,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Geometrik',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_870_athena_commando_m_kevincouture/featured.png',
-    },
-    {
-        name: 'Geralt of Rivia',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_magicmeadow/icon.png',
-    },
-    {
-        name: 'GHOST Beach Brawler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_779_athena_commando_m_henchmangoodshorts/icon.png',
-    },
-    {
-        name: 'GHOST Enforcer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_707_athena_commando_m_henchmangood_9obh6/featured.png',
     },
     {
         name: 'Ghost Face',
@@ -4438,16 +2223,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_toymonkeyorca/icon.png',
     },
     {
-        name: 'Ghost Ri-Durrr',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_freedrive/featured.png',
-    },
-    {
-        name: 'Ghost Rider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_924_athena_commando_m_embers/featured.png',
-    },
-    {
         name: 'Ghoul',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_scalybutcher/featured.png',
@@ -4458,19 +2233,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_029_athena_commando_f_halloween/featured.png',
     },
     {
-        name: 'Gi Guardian',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_300_athena_commando_m_slither_c_ij94b/featured.png',
-    },
-    {
         name: 'Gia',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_076_athena_commando_f_dinocollector/featured.png',
-    },
-    {
-        name: 'Giannis Antetokounmpo',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_coyotetrail/featured.png',
     },
     {
         name: 'Giddy-up',
@@ -4503,16 +2268,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_048_athena_commando_f_holidaygingerbread/featured.png',
     },
     {
-        name: 'Gingerbread Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_970_athena_commando_f_renegaderaiderholiday/featured.png',
-    },
-    {
-        name: 'Glacial Dummy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_frostiron/icon.png',
-    },
-    {
         name: 'Glam Gunner',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_upbeatiguana_b/featured.png',
@@ -4543,16 +2298,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_479_athena_commando_f_davinci/featured.png',
     },
     {
-        name: 'Glumbunny',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_312_athena_commando_f_rainbowhat/featured.png',
-    },
-    {
-        name: 'GM08',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_stridemicedeep/featured.png',
-    },
-    {
         name: 'Gnash',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_894_athena_commando_m_palespooky/featured.png',
@@ -4578,16 +2323,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_dualparadox/featured.png',
     },
     {
-        name: 'Gold Blooded Ace',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_heistsleek/featured.png',
-    },
-    {
-        name: 'Golden Archetype',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_modernmilitary_crisp/featured.png',
-    },
-    {
         name: 'Golden Focus',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_cyberfu_brigade/icon.png',
@@ -4598,34 +2333,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_390_athena_commando_m_blackbird/icon.png',
     },
     {
-        name: 'Golden Mira',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_lowerdrop/featured.png',
-    },
-    {
-        name: 'Golden Rumi',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_turnvortex/featured.png',
-    },
-    {
-        name: 'Golden Zoey',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_hybridboot/featured.png',
-    },
-    {
-        name: 'Goldie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_759_athena_commando_f_rapvillainess/featured.png',
-    },
-    {
         name: 'Gong-gi Great',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_timberstakesoul_e/icon.png',
-    },
-    {
-        name: 'Grace Ashcroft',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_gongfiddle/featured.png',
     },
     {
         name: 'Grave',
@@ -4638,24 +2348,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_043_athena_commando_m_darkminion/featured.png',
     },
     {
-        name: 'Graveheart',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_virtuous/featured.png',
-    },
-    {
         name: 'Graven',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_217_athena_commando_m_critterraven/featured.png',
-    },
-    {
-        name: 'Green Arrow',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_985_athena_commando_m_tiptoe_5l424/featured.png',
-    },
-    {
-        name: 'Green Goblin',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_328_athena_commando_m_foe_s31za/featured.png',
     },
     {
         name: 'Green Jade',
@@ -4673,11 +2368,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_satirecane_ode/icon.png',
     },
     {
-        name: 'Green Roots Billie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_phonecharger/featured.png',
-    },
-    {
         name: 'Greta Grim',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_wingedeye/icon.png',
@@ -4688,19 +2378,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_208_athena_commando_m_footballdudeb/featured.png',
     },
     {
-        name: 'Grill Sergeant',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_184_athena_commando_m_durrburgerworker/featured.png',
-    },
-    {
         name: 'Grim Fable',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_579_athena_commando_f_redridingremix/featured.png',
-    },
-    {
-        name: 'Grimbles',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_304_athena_commando_m_gnome/featured.png',
     },
     {
         name: 'Grimey',
@@ -4718,21 +2398,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_424_athena_commando_m_vigilante/featured.png',
     },
     {
-        name: 'Grisabelle',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_224_athena_commando_f_scholarghoul/featured.png',
-    },
-    {
-        name: 'Grit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_496_athena_commando_m_survivalspecialist/featured.png',
-    },
-    {
-        name: 'Groot',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_840_athena_commando_m_hightowergrape/icon.png',
-    },
-    {
         name: 'Growler',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_264_athena_commando_m_animaljackets/featured.png',
@@ -4741,11 +2406,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Grriz',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_badbear/icon.png',
-    },
-    {
-        name: 'Guaco',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_538_athena_commando_m_taco/featured.png',
     },
     {
         name: 'Guan Yu',
@@ -4758,41 +2418,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_400_athena_commando_f_shinycreature/icon.png',
     },
     {
-        name: 'Guardian Lin',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_fiercebraid/featured.png',
-    },
-    {
-        name: 'Guerilla',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tactickale_d/featured.png',
-    },
-    {
-        name: 'Guernsey',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_118_athena_commando_m_jonesycattle/featured.png',
-    },
-    {
-        name: 'Guerrera Colorada',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_241_athena_commando_f_grasshopper_c_qgv1i/featured.png',
-    },
-    {
-        name: 'Guerrero Colorado',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_236_athena_commando_m_grasshopper_c_47tz8/featured.png',
-    },
-    {
-        name: 'Guff',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_752_athena_commando_m_comet/featured.png',
-    },
-    {
-        name: 'Guff Gringle',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_cometwinter/icon.png',
-    },
-    {
         name: 'Guffmas Tree',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_cometholiday/featured.png',
@@ -4803,16 +2428,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_115_athena_commando_m_antique/icon.png',
     },
     {
-        name: 'Guild',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_398_athena_commando_m_treasurehunterfashion/featured.png',
-    },
-    {
-        name: 'Guile',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_161_athena_commando_m_quarrel_slxqg/featured.png',
-    },
-    {
         name: 'Gumbo',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_289_athena_commando_m_gumball/icon.png',
@@ -4821,11 +2436,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Gummi Team Leader',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_sweetcuddle/icon.png',
-    },
-    {
-        name: 'Gummy Fishstick',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_226_athena_commando_m_sweetteriyakired/featured.png',
     },
     {
         name: 'Gumshoe',
@@ -4848,11 +2458,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_505_athena_commando_m_militiamascotburger/featured.png',
     },
     {
-        name: 'Gwenpool',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pillowmill_mastery/icon.png',
-    },
-    {
         name: 'Hacivat',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_219_athena_commando_m_hacivat/featured.png',
@@ -4861,16 +2466,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Hades',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_darkstance_inferno/icon.png',
-    },
-    {
-        name: 'Hael',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_chaoslightning/featured.png',
-    },
-    {
-        name: 'Hailstorm',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_672_athena_commando_f_arcticcamo_gray/featured.png',
     },
     {
         name: 'Hairpin',
@@ -4888,19 +2483,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_081_athena_commando_m_hardwood_b_jrp29/featured.png',
     },
     {
-        name: 'Halley',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_360_athena_commando_f_leatherjacketpurple/featured.png',
-    },
-    {
         name: 'Hallway Hero',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_toadcycle_b/featured.png',
-    },
-    {
-        name: 'Han Solo',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_distantechopilot/featured.png',
     },
     {
         name: 'Hana',
@@ -4913,11 +2498,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_saxopop/icon.png',
     },
     {
-        name: 'Hangfire',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tacticmushroom_d/featured.png',
-    },
-    {
         name: 'Hangtime',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_269_athena_commando_f_hastestreet_b563i/icon.png',
@@ -4928,34 +2508,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_hedgesprig/featured.png',
     },
     {
-        name: 'Hard Charger ',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_521_athena_commando_m_tacticalbiker/featured.png',
-    },
-    {
-        name: 'Harley Quinn',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_704_athena_commando_f_lollipoptrickster/featured.png',
-    },
-    {
         name: 'Harlowe',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_290_athena_commando_f_motorcyclist/icon.png',
-    },
-    {
-        name: 'Harmonizer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_171_athena_commando_f_stands_d/featured.png',
-    },
-    {
-        name: 'Harpy Haze',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_fabulouswind/icon.png',
-    },
-    {
-        name: 'Harry Kane',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_107_athena_commando_m_lasso_jhza3/featured.png',
     },
     {
         name: 'Haruka of the Masks',
@@ -4963,19 +2518,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_anodizedmetal/icon.png',
     },
     {
-        name: 'Hatsune Miku',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_jadetowelgloss/featured.png',
-    },
-    {
         name: 'Hattie Chirps',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_rinkhat_trick/featured.png',
-    },
-    {
-        name: 'Haunt Officer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_908_athena_commando_m_york_d/featured.png',
     },
     {
         name: 'Haunted Hunter',
@@ -4993,11 +2538,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_089_athena_commando_m_retrogrey/icon.png',
     },
     {
-        name: 'Hawk Classic',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_885_athena_commando_m_chonehawk/featured.png',
-    },
-    {
         name: 'Hay Man',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_235_athena_commando_m_scarecrow/featured.png',
@@ -5006,11 +2546,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Haylee Skye',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_bentbaton/icon.png',
-    },
-    {
-        name: 'Hayseed',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_355_athena_commando_m_farmer/featured.png',
     },
     {
         name: 'Hazard Agent',
@@ -5023,36 +2558,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_happyhopper/featured.png',
     },
     {
-        name: 'Haze',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_586_athena_commando_f_punkdevil/featured.png',
-    },
-    {
-        name: 'Headhunter Prime',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_890_athena_commando_f_choneheadhunter/featured.png',
-    },
-    {
-        name: 'Headlock',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_900_athena_commando_m_famine/featured.png',
-    },
-    {
-        name: 'Heart-Stopper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_957_athena_commando_f_ponytail/featured.png',
-    },
-    {
-        name: 'Heartbreak Ranger',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_cupidevil/icon.png',
-    },
-    {
-        name: 'Heartbreaker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_345_athena_commando_m_lovellama/featured.png',
-    },
-    {
         name: 'Heartbreaker Shadow',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_rebarghoul/featured.png',
@@ -5063,19 +2568,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_liftingrays/featured.png',
     },
     {
-        name: 'Heavy Elite Legionnaire',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_echonyx/featured.png',
-    },
-    {
         name: 'Heavy Grunt Wastelander',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_furynyx/featured.png',
-    },
-    {
-        name: 'Heavy Hitter Hector',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_408_athena_commando_m_rebirthfresh_c/featured.png',
     },
     {
         name: 'Hedron',
@@ -5086,16 +2581,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Heidi',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_226_athena_commando_f_octoberfest/featured.png',
-    },
-    {
-        name: 'Heist',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_462_athena_commando_m_heistsummer/featured.png',
-    },
-    {
-        name: 'Hela Odinsdottir',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_cowboyhat/featured.png',
     },
     {
         name: 'Helsie',
@@ -5123,29 +2608,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_oysterknock/icon.png',
     },
     {
-        name: 'Hero Outfit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_stwhero/icon.png',
-    },
-    {
-        name: 'Héroe Colorado',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_237_athena_commando_m_grasshopper_d_5oeik/featured.png',
-    },
-    {
         name: 'Heroic Hope',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_brightdisk/featured.png',
-    },
-    {
-        name: 'Heroína Colorada',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_242_athena_commando_f_grasshopper_d_eiq7x/featured.png',
-    },
-    {
-        name: 'Heron Stance Hero',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_307_athena_commando_f_slither_e_cspz8/featured.png',
     },
     {
         name: 'Hesper King',
@@ -5158,19 +2623,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_gothdevil/featured.png',
     },
     {
-        name: 'Hi-Hat',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_163_athena_commando_m_stands/featured.png',
-    },
-    {
         name: 'Highland Warrior',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_099_athena_commando_f_scathach/featured.png',
-    },
-    {
-        name: 'Highrise Assault Trooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_078_athena_commando_m_camo/featured.png',
     },
     {
         name: 'Highwire',
@@ -5198,29 +2653,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_726_athena_commando_m_targetpractice/featured.png',
     },
     {
-        name: 'Holiday Boxy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_cardboardcrew_holiday/icon.png',
-    },
-    {
         name: 'Hollowhead',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_243_athena_commando_m_pumpkinslice/featured.png',
-    },
-    {
-        name: 'Holly Hero',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pennantseasglare_b/featured.png',
-    },
-    {
-        name: 'Holly Jammer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_650_athena_commando_f_holidaypj_b/featured.png',
-    },
-    {
-        name: 'Holly Striker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_974_athena_commando_f_streetfashionholiday/featured.png',
     },
     {
         name: 'Homer Simpson',
@@ -5243,21 +2678,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_voidredemption_rebel/icon.png',
     },
     {
-        name: 'Hoplite Giannis',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_coyotetraildark/featured.png',
-    },
-    {
-        name: 'Hopper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_391_athena_commando_m_hoppityheist/featured.png',
-    },
-    {
-        name: 'Hopscotch',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_054_athena_commando_f_bunnyfashion_c/featured.png',
-    },
-    {
         name: 'Horizon',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_relaystick/featured.png',
@@ -5268,16 +2688,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_245_athena_commando_m_zombieelastic_b/featured.png',
     },
     {
-        name: 'Hoshimachi Suisei',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_flinttwirl/featured.png',
-    },
-    {
-        name: 'Hot Zone',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_501_athena_commando_m_frostmystery/icon.png',
-    },
-    {
         name: 'Hothouse ',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_506_athena_commando_m_militiamascottomato/featured.png',
@@ -5286,26 +2696,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Hotwire',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_537_athena_commando_m_jumpstart/featured.png',
-    },
-    {
-        name: 'Huddle Hero',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_952_athena_commando_f_football20referee_zx4ic/featured.png',
-    },
-    {
-        name: 'Huggy Wuggy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_shyturkey/featured.png',
-    },
-    {
-        name: 'Hugo',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_712_athena_commando_m_spy/featured.png',
-    },
-    {
-        name: 'Hulk',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_basilstrong/featured.png',
     },
     {
         name: 'Human Bill',
@@ -5323,11 +2713,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_855_athena_commando_m_elastic/featured.png',
     },
     {
-        name: 'Huntmaster Saber',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_masterkeyorder/icon.png',
-    },
-    {
         name: 'Huntress',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_163_athena_commando_f_viking/icon.png',
@@ -5338,39 +2723,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_prodigysage/icon.png',
     },
     {
-        name: 'Hush',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_616_athena_commando_f_cavalrybandit/featured.png',
-    },
-    {
         name: 'Hybrid',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_346_athena_commando_m_dragonninja/icon.png',
     },
     {
-        name: 'Hyperion',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_077_athena_commando_m_sup/featured.png',
-    },
-    {
-        name: 'Hypernova',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_357_athena_commando_m_orangecamo/featured.png',
-    },
-    {
         name: 'Hypersonic',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_856_athena_commando_m_elastic_b/featured.png',
-    },
-    {
-        name: 'Ice Crystal',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_321_athena_commando_f_jurassicarchaeologywinter/featured.png',
-    },
-    {
-        name: 'Ice Intercept',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_671_athena_commando_f_arcticcamo_dark/featured.png',
     },
     {
         name: 'Ice King',
@@ -5383,29 +2743,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_ticketpoke/icon.png',
     },
     {
-        name: 'Ice Spice',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_berrytartriver/featured.png',
-    },
-    {
-        name: 'Ice Stalker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_667_athena_commando_m_arcticcamo_dark/featured.png',
-    },
-    {
-        name: 'Icebound Midas',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_320_athena_commando_m_catburglarwinter/icon.png',
-    },
-    {
         name: 'Ichigo Kurosaki',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_lattestir/featured.png',
-    },
-    {
-        name: 'Iconic Kim Kardashian',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_quichelorrainelime/featured.png',
     },
     {
         name: 'Iconica Prime',
@@ -5418,44 +2758,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_pilestripes/icon.png',
     },
     {
-        name: 'Icy Metal Mouth',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_glacialtrooper/featured.png',
-    },
-    {
-        name: 'IG-11',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_gallonbag/featured.png',
-    },
-    {
         name: 'IKONIK',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_313_athena_commando_m_kpopfashion/featured.png',
     },
     {
-        name: 'Ikora Rey',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_468_athena_commando_f_wayfare/featured.png',
-    },
-    {
         name: 'Imani',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_dazzle/icon.png',
-    },
-    {
-        name: 'Impact',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tacticmushroom/featured.png',
-    },
-    {
-        name: 'Imperial Stormtrooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_613_athena_commando_m_columbus_7y4qe/featured.png',
-    },
-    {
-        name: 'Incinerator Kuno',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_134_athena_commando_f_bandageninjafire/icon.png',
     },
     {
         name: 'Indiana Jones',
@@ -5473,54 +2783,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_660_athena_commando_f_bandageninjablue/icon.png',
     },
     {
-        name: 'Infantry Commander',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_f_placeholder_d/icon.png',
-    },
-    {
-        name: 'Infantry Commander',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_waterfallcharm_d/icon.png',
-    },
-    {
-        name: 'Infantry Commander',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_275_athena_commando_f_prime_d/icon.png',
-    },
-    {
         name: 'Inferno',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_370_athena_commando_m_evilsuit/featured.png',
     },
     {
-        name: 'Inferno Skeleton Balvin',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_keychain/featured.png',
-    },
-    {
-        name: 'Infiltrator',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_019_athena_commando_m/featured.png',
-    },
-    {
         name: 'Infinity',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_507_athena_commando_m_starwalker/featured.png',
-    },
-    {
-        name: 'Innovator Slone',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_innovatorsand/featured.png',
-    },
-    {
-        name: 'Insight',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_276_athena_commando_f_sniperhood/featured.png',
-    },
-    {
-        name: 'Instinct',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_260_athena_commando_f_streetops/featured.png',
     },
     {
         name: 'Interceptor',
@@ -5533,59 +2803,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_openended/featured.png',
     },
     {
-        name: 'Io',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_020_athena_commando_f_mainframe_d_zhvem/featured.png',
-    },
-    {
-        name: 'Ione',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_209_athena_commando_f_werewolf/featured.png',
-    },
-    {
         name: 'Iridia Vayne',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_azureblade/featured.png',
     },
     {
-        name: 'Iris',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_674_athena_commando_f_hoodiebandit/icon.png',
-    },
-    {
-        name: 'Iron Man',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_agilerug/featured.png',
-    },
-    {
-        name: 'Iron Man Mk 45',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_bikemold/featured.png',
-    },
-    {
-        name: 'Iron Man Zero',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_mercurialstorm/featured.png',
-    },
-    {
-        name: 'Iron Spider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_middlesock/featured.png',
-    },
-    {
-        name: 'Isaac Clarke',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_crimsonpeak/icon.png',
-    },
-    {
         name: 'Isabelle',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_042_athena_commando_f_scholar/featured.png',
-    },
-    {
-        name: 'IShowSpeed',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_honorbracejoust/featured.png',
     },
     {
         name: 'Island Adventure Peely',
@@ -5598,11 +2823,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_732_athena_commando_f_stars/featured.png',
     },
     {
-        name: 'ISuperSpeed',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_honorbraceleap/featured.png',
-    },
-    {
         name: 'Itachi Uchiha',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_432_athena_commando_m_ensemble/featured.png',
@@ -5613,16 +2833,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_emeraldglassgreen/icon.png',
     },
     {
-        name: 'J Balvin',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_182_athena_commando_m_vivid_lzgq3/featured.png',
-    },
-    {
-        name: 'J Balvin Redux',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_galaxylevel/featured.png',
-    },
-    {
         name: 'J.B. Chimpanski',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_199_athena_commando_m_spacechimp/icon.png',
@@ -5631,11 +2841,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Jack Gourdon',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_244_athena_commando_m_pumpkinsuit/featured.png',
-    },
-    {
-        name: "Jack O'Sassin",
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pumpkinskeleton/featured.png',
     },
     {
         name: 'Jack Skellington',
@@ -5658,11 +2863,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_polishedjade_mind/icon.png',
     },
     {
-        name: 'Jade Racer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_684_athena_commando_f_dragonracer/featured.png',
-    },
-    {
         name: 'Jaeger',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_323_athena_commando_m_barbarian/featured.png',
@@ -5683,11 +2883,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_twinkleloop/featured.png',
     },
     {
-        name: 'James Hetfield',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_greatpool/icon.png',
-    },
-    {
         name: 'Jamila',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_chicleveil/featured.png',
@@ -5703,19 +2898,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_183_athena_commando_m_antiquepal_s7a9w/featured.png',
     },
     {
-        name: 'Jar Jar Binks',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_moleacorngloam/featured.png',
-    },
-    {
         name: 'Jason ',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_gnatgala/featured.png',
-    },
-    {
-        name: 'Jawbreaker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_583_athena_commando_f_noshhunter/featured.png',
     },
     {
         name: 'Jax Spade',
@@ -5733,34 +2918,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_partyjelly/featured.png',
     },
     {
-        name: 'Jellie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_664_athena_commando_m_gummi/featured.png',
-    },
-    {
-        name: 'Jennifer Walters',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_842_athena_commando_f_hightowerhoneydew/icon.png',
-    },
-    {
-        name: 'Jersey KizunaAI',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_marchtreatbay/featured.png',
-    },
-    {
-        name: 'Jett',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_220_athena_commando_f_pinkemo/featured.png',
-    },
-    {
         name: 'Jewel',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_radiantmove/featured.png',
-    },
-    {
-        name: 'Jill Valentine',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_222_athena_commando_f_relish_g6s5t/featured.png',
     },
     {
         name: 'Jin',
@@ -5771,11 +2931,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Jing',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_sphericaldefense/icon.png',
-    },
-    {
-        name: 'Jinu',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_bountypond/featured.png',
     },
     {
         name: 'Jittershock',
@@ -5803,21 +2958,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_416_athena_commando_m_assassinsuit/featured.png',
     },
     {
-        name: 'Johnny Silverhand',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_mustardtoast/featured.png',
-    },
-    {
-        name: 'Johnny Storm',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_eggnogfaucet/icon.png',
-    },
-    {
-        name: 'Jolly Jammer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_651_athena_commando_f_holidaypj_c/featured.png',
-    },
-    {
         name: 'Joltara',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_864_athena_commando_f_elastic_e/featured.png',
@@ -5826,31 +2966,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Jolterror',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_253_athena_commando_f_zombieelastic_e/featured.png',
-    },
-    {
-        name: 'Jones Unchained',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_431_athena_commando_m_jonesyorange/featured.png',
-    },
-    {
-        name: 'Jonesy The First',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_883_athena_commando_m_chonejonesy/featured.png',
-    },
-    {
-        name: 'Jonesy The First',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_883_athena_m_3l_lod2/featured.png',
-    },
-    {
-        name: 'Jonesy The First',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_883_athena_m_fn_jonesy/featured.png',
-    },
-    {
-        name: 'Jonesy the Secondst',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_406_athena_commando_m_rebirthfresh/featured.png',
     },
     {
         name: 'Joni the Red',
@@ -5866,26 +2981,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Joss',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_traffichat_boba/icon.png',
-    },
-    {
-        name: 'Journey vs Hazard',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_565_athena_commando_f_rockclimber/icon.png',
-    },
-    {
-        name: 'Joy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_192_athena_commando_f_suspenders/featured.png',
-    },
-    {
-        name: 'Jubilee',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_sodamug/featured.png',
-    },
-    {
-        name: 'Juice WRLD',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_kelplinencalcium/featured.png',
     },
     {
         name: 'Juke',
@@ -5908,21 +3003,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_lacedcrimp/icon.png',
     },
     {
-        name: 'Jumpshot',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_136_athena_commando_m_streetbasketball/featured.png',
-    },
-    {
-        name: 'Jun-Hwan',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_bluejet/icon.png',
-    },
-    {
-        name: 'Jungle Scout',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_074_athena_commando_f_stripe/featured.png',
-    },
-    {
         name: 'Kaeru',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_toadleaf/featured.png',
@@ -5931,16 +3011,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Kafka Hibino',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_surebamboo/icon.png',
-    },
-    {
-        name: 'Kai Cenat',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_essayviewmyth/featured.png',
-    },
-    {
-        name: 'Kait Diaz',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_294_athena_commando_f_rustybolt_db20x/featured.png',
     },
     {
         name: 'Kakashi Hatake',
@@ -5953,11 +3023,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_crispseason/featured.png',
     },
     {
-        name: 'Kalia',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_823_athena_commando_f_islander/featured.png',
-    },
-    {
         name: 'Kane',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_630_athena_commando_m_kane/featured.png',
@@ -5968,29 +3033,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_corvidstomp/featured.png',
     },
     {
-        name: 'Karateka Jones',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_298_athena_commando_m_slither_ej6db/featured.png',
-    },
-    {
         name: 'Karl Keyes',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_smoothbeanie/featured.png',
-    },
-    {
-        name: 'Karuta Harley Quinn',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_cordsyrup/featured.png',
-    },
-    {
-        name: 'Karve',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_979_athena_commando_m_snowboarder/featured.png',
-    },
-    {
-        name: 'Kata Captain',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_303_athena_commando_f_slither_d0yx9/featured.png',
     },
     {
         name: 'Katalina',
@@ -6003,11 +3048,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_directcontact/icon.png',
     },
     {
-        name: 'Kate Bishop',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_331_athena_commando_f_keen_b4lf5/featured.png',
-    },
-    {
         name: 'Katsuki Bakugo',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_emeraldglassrebel/icon.png',
@@ -6016,21 +3056,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Katt',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_spacefeline/icon.png',
-    },
-    {
-        name: 'Kavel',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_novelguard/featured.png',
-    },
-    {
-        name: 'KAWS Skeleton',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_223_athena_commando_m_glitz_mj5wq/featured.png',
-    },
-    {
-        name: 'KAWSPEELY',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_437_athena_commando_m_chiselmashup/featured.png',
     },
     {
         name: 'Keisha Cross',
@@ -6068,16 +3093,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_pacificsweater/featured.png',
     },
     {
-        name: 'Keri Commander',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_306_athena_commando_f_slither_d_i6d2o/featured.png',
-    },
-    {
-        name: 'Kernel Poppy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_254_athena_commando_m_butterjack/featured.png',
-    },
-    {
         name: 'Khari',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_451_athena_commando_f_rays/featured.png',
@@ -6088,49 +3103,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_371_athena_commando_f_cadet/icon.png',
     },
     {
-        name: 'Kickdown',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_plankcoverage_c/featured.png',
-    },
-    {
         name: 'Kikoru Shinomiya',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_cafestove/featured.png',
     },
     {
-        name: 'Killian',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_strontiumspark/featured.png',
-    },
-    {
         name: 'Killswitch',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_ashenmagnusslant/icon.png',
-    },
-    {
-        name: 'Kim Kardashian',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_quichelorrainecrisp/featured.png',
-    },
-    {
-        name: 'Kimiko Five-Tails',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_sunbeamquest/featured.png',
-    },
-    {
-        name: 'King Flamingo',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_464_athena_commando_m_flamingo/featured.png',
-    },
-    {
-        name: 'King Krab',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_826_athena_commando_m_floatillacaptain/featured.png',
-    },
-    {
-        name: 'King Vamp Carti',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_summitreedmolt/featured.png',
     },
     {
         name: 'Kingsley',
@@ -6143,29 +3123,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_floralmane_sand/icon.png',
     },
     {
-        name: 'Kirk Hammett',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_plasticfork/icon.png',
-    },
-    {
         name: 'Kit',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_776_athena_commando_m_professorpup/icon.png',
     },
     {
-        name: 'Kitana (MK3)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_garlicwhisk/featured.png',
-    },
-    {
         name: 'Kitbash',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_334_athena_commando_m_scrapyard/featured.png',
-    },
-    {
-        name: 'KizunaAI',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_marchtreatcup/featured.png',
     },
     {
         name: 'Knight Conqueror',
@@ -6176,11 +3141,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Knightmare',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_bucketkick/featured.png',
-    },
-    {
-        name: 'Knockout',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_549_athena_commando_m_yellowcamob/featured.png',
     },
     {
         name: 'Knowledge Keeper',
@@ -6206,11 +3166,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Koi Striker Envoy',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_agentxkoi/icon.png',
-    },
-    {
-        name: 'Komplex',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_665_athena_commando_f_neongraffiti/featured.png',
     },
     {
         name: 'Kondor',
@@ -6248,29 +3203,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_crumbviolin/icon.png',
     },
     {
-        name: 'Kratos',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_964_athena_commando_m_historian_869bc/featured.png',
-    },
-    {
-        name: 'Krisabelle',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_310_athena_commando_f_scholarfestive/icon.png',
-    },
-    {
-        name: 'Krrsantan',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_333_athena_commando_m_solstice_c1yp3/featured.png',
-    },
-    {
         name: 'Krusty the Clown',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_climbspill/featured.png',
-    },
-    {
-        name: 'Kumite Clasher',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_302_athena_commando_m_slither_e_u47bk/featured.png',
     },
     {
         name: 'Kuno',
@@ -6293,19 +3228,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_lemurclam/icon.png',
     },
     {
-        name: 'Kylo Ren',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_631_athena_commando_m_galileokayak_vxldb/featured.png',
-    },
-    {
         name: 'Kymera',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_110_athena_commando_m_alientrooper/icon.png',
-    },
-    {
-        name: 'Kyra',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_806_athena_commando_f_greenjacket/featured.png',
     },
     {
         name: 'Kyran Aryk',
@@ -6318,16 +3243,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_310_athena_commando_f_streetgoth/featured.png',
     },
     {
-        name: 'Lachlan',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_891_athena_commando_m_lunchbox/featured.png',
-    },
-    {
-        name: 'Lada',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_797_athena_commando_f_taco/featured.png',
-    },
-    {
         name: 'Lady Marigold',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_brutalburglar/featured.png',
@@ -6338,49 +3253,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_cranelaugh/icon.png',
     },
     {
-        name: 'Laguna',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_367_athena_commando_f_tropical/featured.png',
-    },
-    {
         name: 'Lana Llane',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_rainbowstraps/icon.png',
     },
     {
-        name: 'Lando Calrissian',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_sesameseed/featured.png',
-    },
-    {
         name: 'Lapin',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_jadedhare/featured.png',
-    },
-    {
-        name: 'Lara Croft',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_040_athena_commando_f_temple/icon.png',
-    },
-    {
-        name: 'Lara Croft (2000s)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_gnocchitea/featured.png',
-    },
-    {
-        name: 'Lars',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_186_athena_commando_m_lars/featured.png',
-    },
-    {
-        name: 'Lars Ulrich',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_crowcall/icon.png',
-    },
-    {
-        name: 'Launch Day Lewis Hamilton',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_instantgravelnoble/featured.png',
     },
     {
         name: 'Lavendra',
@@ -6393,16 +3273,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_firstclasssecond/featured.png',
     },
     {
-        name: 'Lazarbeam',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_031_athena_commando_m_builder/featured.png',
-    },
-    {
-        name: "LBC '93 Dogg",
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_lemoncartcleaner/icon.png',
-    },
-    {
         name: 'Leading Laddy',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_rowliaison_drysquash/icon.png',
@@ -6411,21 +3281,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Leatherface',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_jazzshoes/featured.png',
-    },
-    {
-        name: 'LeBron James',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_136_athena_commando_m_majesty_yr1gj/featured.png',
-    },
-    {
-        name: 'Leelah',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_359_athena_commando_f_bunnypurple/featured.png',
-    },
-    {
-        name: 'Leia Organa',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_distantechocastle/featured.png',
     },
     {
         name: 'Leilani',
@@ -6438,11 +3293,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_pinkspike/icon.png',
     },
     {
-        name: 'Leon S. Kennedy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_fallvalleyblink/featured.png',
-    },
-    {
         name: 'Leonardo',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_quietpeanuts/featured.png',
@@ -6451,11 +3301,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Leviathan',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_108_athena_commando_m_fishhead/featured.png',
-    },
-    {
-        name: 'Lewis Hamilton',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_instantgravel/featured.png',
     },
     {
         name: 'Lexa',
@@ -6488,34 +3333,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_344_athena_commando_m_icecream/featured.png',
     },
     {
-        name: 'Limelight',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_525_athena_commando_f_lemonlime/featured.png',
-    },
-    {
-        name: 'Lina Scorch',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_retrowheels/icon.png',
-    },
-    {
-        name: 'Lionel Messi',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_feathermudlounge/featured.png',
-    },
-    {
-        name: 'LISA',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_chimecurlcorn/featured.png',
-    },
-    {
         name: 'Lisa Simpson',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_frostgalore/featured.png',
-    },
-    {
-        name: 'Liteshow',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_126_athena_commando_m_auroraglow/featured.png',
     },
     {
         name: 'Lizzik',
@@ -6533,26 +3353,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_638_athena_commando_m_neonanimal/featured.png',
     },
     {
-        name: 'Lok-Bot',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_102_athena_commando_m_assemblel/icon.png',
-    },
-    {
-        name: 'Loki Laufeyson',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_126_athena_commando_m_linguini_px0qu/featured.png',
-    },
-    {
-        name: 'Loki, God of Stories',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_carrotcake/featured.png',
-    },
-    {
-        name: 'Longshot',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_275_athena_commando_m_sniperhood/featured.png',
-    },
-    {
         name: 'Lord Zedd',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_glowfang/featured.png',
@@ -6563,11 +3363,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_crisprover/icon.png',
     },
     {
-        name: 'Loserfruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_764_athena_commando_f_loofah/featured.png',
-    },
-    {
         name: 'Love Ranger',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_070_athena_commando_m_cupid/featured.png',
@@ -6576,11 +3371,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Loveless',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_478_athena_commando_f_wildcard/icon.png',
-    },
-    {
-        name: 'Lovely',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_022_athena_commando_f_crush/featured.png',
     },
     {
         name: 'Lovethorn',
@@ -6596,11 +3386,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Lt. John Llama',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_288_athena_commando_m_buffllama/icon.png',
-    },
-    {
-        name: 'Lt. Logo',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_449_athena_commando_m_bannerd/featured.png',
     },
     {
         name: 'Lt. Look',
@@ -6623,19 +3408,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_dolphingill/icon.png',
     },
     {
-        name: 'Lucien West',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_sparrow/featured.png',
-    },
-    {
         name: 'Lucky Envoy',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_luckyagent/featured.png',
-    },
-    {
-        name: 'Lucky Leader',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_445_athena_commando_f_pennantseasone_e/featured.png',
     },
     {
         name: 'Lucky Rider',
@@ -6648,16 +3423,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_225_athena_commando_m_octoberfest/featured.png',
     },
     {
-        name: 'Luke Skywalker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_distantechopro/featured.png',
-    },
-    {
-        name: 'Lumi Jellie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_gelatingummi/icon.png',
-    },
-    {
         name: 'Luminary Hypatia',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_brightbionic/icon.png',
@@ -6666,11 +3431,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Luminos',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_394_athena_commando_m_moonlightassassin/featured.png',
-    },
-    {
-        name: 'Luna Snow',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_paddleharp_gap/featured.png',
     },
     {
         name: 'Lunelle',
@@ -6713,34 +3473,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_381_athena_commando_f_cactusrocker_3htbv/featured.png',
     },
     {
-        name: 'Mace Windu',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_geneaglet/icon.png',
-    },
-    {
-        name: 'Machinist Mina',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_973_athena_commando_f_mechstructor/icon.png',
-    },
-    {
         name: 'Mad Mochi',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_mochi/featured.png',
     },
     {
-        name: 'Mad Moxxi',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_giraffescallion/featured.png',
-    },
-    {
         name: 'Madcap',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_610_athena_commando_m_shiitakeshaolin/featured.png',
-    },
-    {
-        name: 'Magik',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_drapeultra/featured.png',
     },
     {
         name: 'Magius',
@@ -6761,31 +3501,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Mahito',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_wormchalk/featured.png',
-    },
-    {
-        name: 'Mahomes Saucy Style',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_471_athena_commando_m_apexwildred/featured.png',
-    },
-    {
-        name: 'Major Glory',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_196_athena_commando_f_fncsgreen/featured.png',
-    },
-    {
-        name: 'Major Lazer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_474_athena_commando_m_lasagna/featured.png',
-    },
-    {
-        name: 'Major Mancake',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_412_athena_commando_m_flappygreen/featured.png',
-    },
-    {
-        name: 'Maki Master',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_271_athena_commando_f_sushichef/featured.png',
     },
     {
         name: 'Mal',
@@ -6823,31 +3538,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_962_athena_commando_m_flapjackwrangler/icon.png',
     },
     {
-        name: 'Mandalorian',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_960_athena_commando_m_cosmos/featured.png',
-    },
-    {
-        name: 'Mandalorian Warrior',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_wingbath/featured.png',
-    },
-    {
-        name: 'Manic',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_546_athena_commando_f_tacticalred/featured.png',
-    },
-    {
-        name: 'Mantis',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_samerabbit/icon.png',
-    },
-    {
-        name: 'Maranello Racer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_139_athena_commando_m_foray_sd8aa/featured.png',
-    },
-    {
         name: 'Marble Maven',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_timberstakedrift_c/icon.png',
@@ -6858,24 +3548,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_cajuntaco/featured.png',
     },
     {
-        name: 'Marco Reus',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_108_athena_commando_m_lassopolo_8gam0/featured.png',
-    },
-    {
-        name: 'Marcus Fenix',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_295_athena_commando_m_rustybolt_fehj0/featured.png',
-    },
-    {
         name: 'Marge Simpson',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_fruitfire_nudge/icon.png',
-    },
-    {
-        name: 'Mariah Carey',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pastelglazegrain/featured.png',
     },
     {
         name: 'Mariana',
@@ -6893,49 +3568,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_nanochain/icon.png',
     },
     {
-        name: 'Marino',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_366_athena_commando_m_tropical/featured.png',
-    },
-    {
         name: 'Mariposa',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_agentsherbert/icon.png',
-    },
-    {
-        name: 'Marius',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_095_athena_commando_m_doubleagentgrey/featured.png',
-    },
-    {
-        name: 'Marked Marauder',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_445_athena_commando_f_bannerd/featured.png',
-    },
-    {
-        name: 'Marsha',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_337_athena_commando_f_zest_zbxgn/featured.png',
-    },
-    {
-        name: 'Marshal',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_plankcoverway_e/featured.png',
-    },
-    {
-        name: 'Marshall Never More',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_bravebuild/featured.png',
-    },
-    {
-        name: 'MARSHINOBI',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_336_athena_commando_m_zest_66jc5/featured.png',
-    },
-    {
-        name: 'Marshmello',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_333_athena_commando_m_squishy/featured.png',
     },
     {
         name: 'Marty McFly',
@@ -6943,29 +3578,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_creamskull_dove/icon.png',
     },
     {
-        name: 'Mary Jane Watson',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_358_athena_commando_f_lurk/featured.png',
-    },
-    {
         name: 'Mask Maker Daigo',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_solidmist/featured.png',
     },
     {
-        name: 'Masked Fury',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_169_athena_commando_m_luchador/featured.png',
-    },
-    {
         name: 'Massai',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_venice/icon.png',
-    },
-    {
-        name: 'Master Chief',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_971_athena_commando_m_jupiter_s0z6m/featured.png',
     },
     {
         name: 'Master Key',
@@ -6978,39 +3598,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_728_athena_commando_m_minotaurluck/featured.png',
     },
     {
-        name: 'Mat Master',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_304_athena_commando_f_slither_b_mo4vz/featured.png',
-    },
-    {
-        name: 'Match Point',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_468_athena_commando_f_tenniswhite/featured.png',
-    },
-    {
-        name: 'Matius',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_speedkidd/icon.png',
-    },
-    {
         name: 'Mave',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_961_athena_commando_f_shapeshifter/icon.png',
     },
     {
-        name: 'Maven',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_297_athena_commando_f_math/featured.png',
-    },
-    {
         name: 'Maverick',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_177_athena_commando_m_streetracercobra/featured.png',
-    },
-    {
-        name: 'Maximilian',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_223_athena_commando_m_dieselpunk/featured.png',
     },
     {
         name: 'Maxx Speed',
@@ -7021,16 +3616,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Maxxed Out Max',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_lastvoicedive/icon.png',
-    },
-    {
-        name: 'Mayhem',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_263_athena_commando_f_madcommander/featured.png',
-    },
-    {
-        name: 'Mazy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_476_athena_commando_f_neonjam/featured.png',
     },
     {
         name: 'Mecha Cuddle Master',
@@ -7068,24 +3653,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_475_athena_commando_m_multibot/featured.png',
     },
     {
-        name: 'Mecha Team Shadow',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_827_athena_commando_m_multibotstealth/featured.png',
-    },
-    {
-        name: 'Mecha-Pop',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_366_athena_commando_m_assemblep/icon.png',
-    },
-    {
         name: 'Mechagodzilla',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_butterplate/featured.png',
-    },
-    {
-        name: 'Medley',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_455_athena_commando_f_summerstride/featured.png',
     },
     {
         name: 'Medusa',
@@ -7108,34 +3678,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_highmotion/icon.png',
     },
     {
-        name: 'Megg',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_058_athena_commando_f_wickedduck/featured.png',
-    },
-    {
-        name: 'Megumi',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_049_athena_commando_f_sailorsquadrebel/icon.png',
-    },
-    {
         name: 'Megumi Fushiguro',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_vectorspark/featured.png',
-    },
-    {
-        name: 'Mel',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_325_athena_commando_f_scout/featured.png',
-    },
-    {
-        name: 'Melodie Mars',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_wonderhill/icon.png',
-    },
-    {
-        name: 'Melody Maverick',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_168_athena_commando_f_stands/featured.png',
     },
     {
         name: 'Menace',
@@ -7158,44 +3703,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_693_athena_commando_m_buffcat/icon.png',
     },
     {
-        name: 'Meowtooth',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_cattlejar/featured.png',
-    },
-    {
-        name: 'Mephisto',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_elbowchat/featured.png',
-    },
-    {
         name: 'Mercenary Kor',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_moralkoreline/featured.png',
     },
     {
-        name: 'Mercenary Mansu',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_409_athena_commando_m_rebirthfresh_d/featured.png',
-    },
-    {
         name: 'Merry Marauder',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_049_athena_commando_m_holidaygingerbread/featured.png',
-    },
-    {
-        name: 'Metal Mouth',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_626_athena_commando_m_pinktrooper/featured.png',
-    },
-    {
-        name: 'Metal Team Leader',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_781_athena_commando_f_fuzzybearteddy/featured.png',
-    },
-    {
-        name: 'Mezmer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_358_athena_commando_m_aztec/featured.png',
     },
     {
         name: 'Michael Myers',
@@ -7228,29 +3743,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_923_athena_commando_m_parcelgold/icon.png',
     },
     {
-        name: 'Midfield Maestro',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_145_athena_commando_m_soccerdudeb/featured.png',
-    },
-    {
         name: 'Midfield Master',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_995_athena_commando_m_globalfb_h5oij/featured.png',
     },
     {
-        name: 'Midfield Monstrosity',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_590_athena_commando_m_soccerzombieb/featured.png',
-    },
-    {
         name: 'Midnight Dusk',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_892_athena_commando_f_vampirecasual/icon.png',
-    },
-    {
-        name: 'Midnight Ops',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_101_athena_commando_m_stealth/featured.png',
     },
     {
         name: 'Midnight Thorn',
@@ -7273,16 +3773,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_impulsespring/featured.png',
     },
     {
-        name: 'Mighty Thor',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_440_athena_commando_f_parfait/icon.png',
-    },
-    {
-        name: 'Mika',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_476_athena_commando_f_futurebiker/featured.png',
-    },
-    {
         name: 'Mikasa Ackermann',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_splitdiamond/featured.png',
@@ -7303,19 +3793,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_derangedmile_side/icon.png',
     },
     {
-        name: 'Min-joon',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_414_athena_commando_m_modninja/icon.png',
-    },
-    {
         name: 'Mina Ashido',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_recordscratch/featured.png',
-    },
-    {
-        name: 'Mina Park',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pinkjet/icon.png',
     },
     {
         name: 'Minato Hakaru',
@@ -7338,34 +3818,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_twinginger/featured.png',
     },
     {
-        name: 'Mira (HUNTR/X)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_quailwink/featured.png',
-    },
-    {
         name: 'Mischief Maker',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_toadcycle_d/featured.png',
     },
     {
-        name: 'Miss Bunny Penny',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_bunnybr/featured.png',
-    },
-    {
         name: 'Mission Specialist',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_080_athena_commando_m_space/icon.png',
-    },
-    {
-        name: 'Mister Terrific',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_shirttilapia/featured.png',
-    },
-    {
-        name: 'Misty Mercenary',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pennantseasshade/featured.png',
     },
     {
         name: 'Miyako',
@@ -7378,29 +3838,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_nitroflow/icon.png',
     },
     {
-        name: 'MJ (No Way Home)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_317_athena_commando_f_lateral_hikn9/featured.png',
-    },
-    {
         name: 'Mod Marauder',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_147_athena_commando_f_pliant/featured.png',
     },
     {
-        name: 'Modena Icon',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_138_athena_commando_f_foray_yqpb0/featured.png',
-    },
-    {
         name: 'Moe Szyslak',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_duckcoast/featured.png',
-    },
-    {
-        name: 'Moff Gideon',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tireswing/featured.png',
     },
     {
         name: 'Mogul Master',
@@ -7448,54 +3893,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_130_athena_commando_m_merman/featured.png',
     },
     {
-        name: 'Molten Battle Hound',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_379_athena_commando_m_battlehoundfire/featured.png',
-    },
-    {
-        name: 'Molten Metal Mouth',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_infernaltrooper/featured.png',
-    },
-    {
-        name: 'Molten Omen',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_517_athena_commando_m_darkeaglefire/icon.png',
-    },
-    {
-        name: 'Molten Ragnarok',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_133_athena_commando_m_darkvikingfire/icon.png',
-    },
-    {
-        name: 'Molten Valkyrie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_380_athena_commando_f_darkviking_fire/featured.png',
-    },
-    {
-        name: 'Monarch',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_354_athena_commando_f_shatterflyeclipse/icon.png',
-    },
-    {
-        name: 'Moniker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_171_athena_commando_m_sharpdresser/featured.png',
-    },
-    {
-        name: 'Monks',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_658_athena_commando_f_toymonkey/featured.png',
-    },
-    {
         name: 'Montague',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_diamondheart_chic/icon.png',
-    },
-    {
-        name: 'Moon Knight',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_386_athena_commando_m_croissant/featured.png',
     },
     {
         name: 'Moon Punk Ione',
@@ -7528,11 +3928,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_867_athena_commando_m_myth/featured.png',
     },
     {
-        name: 'Mother of Thorns Doja',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tangyradishmagma/featured.png',
-    },
-    {
         name: 'Mothmando',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_277_athena_commando_m_moth/featured.png',
@@ -7541,16 +3936,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Mothmando Elite',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_bugbandit/featured.png',
-    },
-    {
-        name: 'Moxie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_532_athena_commando_f_punchy/featured.png',
-    },
-    {
-        name: 'Mr. Dappermint',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_978_athena_commando_m_fancycandy/featured.png',
     },
     {
         name: 'Mr. Incredible',
@@ -7563,59 +3948,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_geniusblob/featured.png',
     },
     {
-        name: 'MrBeast',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_lettuce/featured.png',
-    },
-    {
-        name: 'MrBeast6000',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_lettucecat/featured.png',
-    },
-    {
         name: 'Mrs. Incredible',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_nutmegmayo/featured.png',
     },
     {
-        name: 'MrSavage',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pinetrimpack/featured.png',
-    },
-    {
         name: 'Mullet Marauder',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_186_athena_commando_m_exercise/featured.png',
-    },
-    {
-        name: 'Munitions Expert',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_023_athena_commando_f/featured.png',
-    },
-    {
-        name: 'Munitions Major',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_354_athena_commando_m_munitionsexpert/featured.png',
-    },
-    {
-        name: 'Munitions Master',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_habitatsecurity_d/icon.png',
-    },
-    {
-        name: 'Munitions Master',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_m_placeholder_d/icon.png',
-    },
-    {
-        name: 'Munitions Master',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_282_athena_commando_m_prime_d/icon.png',
-    },
-    {
-        name: 'Murdoc',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_gatorceladon/featured.png',
     },
     {
         name: 'Musha',
@@ -7628,49 +3968,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_332_athena_commando_f_primalfalcon_3itkm/icon.png',
     },
     {
-        name: 'Mysterio',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_soilblend_haunt/icon.png',
-    },
-    {
-        name: 'Mysterious Fate',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_darkninjawhite/featured.png',
-    },
-    {
-        name: 'Mystery Zone',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_frostmystery/featured.png',
-    },
-    {
         name: 'Mystica',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_nebula/icon.png',
-    },
-    {
-        name: 'Mystify',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_697_athena_commando_f_graffitifuture/featured.png',
-    },
-    {
-        name: 'Mystique',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_844_athena_commando_f_hightowermango/icon.png',
-    },
-    {
-        name: 'Nalia',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_314_athena_commando_f_nightcapsule_tak2p/featured.png',
-    },
-    {
-        name: 'Naomi Osaka',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_361_athena_commando_f_thrive/featured.png',
-    },
-    {
-        name: "Nap Cap'n",
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_928_athena_commando_m_nauticalpajamas_b/featured.png',
     },
     {
         name: 'Nara',
@@ -7693,56 +3993,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_342_athena_commando_m_rover_wka61/featured.png',
     },
     {
-        name: 'NBA 75 Baller',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_348_athena_commando_m_treycozy_e_vh8p6/featured.png',
-    },
-    {
-        name: 'NBA 75 Clutch',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_350_athena_commando_f_treycozy_b_8th8c/featured.png',
-    },
-    {
-        name: 'NBA 75 Dunk',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_346_athena_commando_m_treycozy_c_7p9hu/featured.png',
-    },
-    {
-        name: 'NBA 75 Fit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_344_athena_commando_m_treycozy_6zk7h/featured.png',
-    },
-    {
-        name: 'NBA 75 Flash',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_345_athena_commando_m_treycozy_b_4ep38/featured.png',
-    },
-    {
-        name: 'NBA 75 Flex',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_349_athena_commando_f_treycozy_y4d2w/featured.png',
-    },
-    {
-        name: 'NBA 75 High-Flyer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_353_athena_commando_f_treycozy_e_jrl60/featured.png',
-    },
-    {
-        name: 'NBA 75 Shot-Caller',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_347_athena_commando_m_treycozy_d_okju9/featured.png',
-    },
-    {
-        name: 'NBA 75 Slam',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_352_athena_commando_f_treycozy_d_2clr3/featured.png',
-    },
-    {
-        name: 'NBA 75 Swish',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_351_athena_commando_f_treycozy_c_a9q45/featured.png',
-    },
-    {
         name: 'Ned Flanders',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_coolslice_golf/icon.png',
@@ -7751,11 +4001,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Negan',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_crumplefold/featured.png',
-    },
-    {
-        name: 'Neko Hatsune Miku',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_jadetowelhope/icon.png',
     },
     {
         name: 'Neko-RX1',
@@ -7783,11 +4028,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_258_athena_commando_f_neoncattech/icon.png',
     },
     {
-        name: 'Neymar Jr',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_078_athena_commando_m_bicycle/featured.png',
-    },
-    {
         name: 'Neytiri',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_finecheek/featured.png',
@@ -7796,21 +4036,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Nezumi',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_apprentice/icon.png',
-    },
-    {
-        name: 'Nia',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_473_athena_commando_f_fog/icon.png',
-    },
-    {
-        name: 'Nick Eh 30',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_weaveharbor/featured.png',
-    },
-    {
-        name: 'Nick Fury',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_267_athena_commando_m_nucleus_xvivu/featured.png',
     },
     {
         name: 'Night Artist Abstrakt',
@@ -7838,29 +4063,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_377_athena_commando_f_darkshaman/featured.png',
     },
     {
-        name: 'Nike Goddess',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_coatcheck/featured.png',
-    },
-    {
-        name: 'Ninja',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_605_athena_commando_m_tourbus/featured.png',
-    },
-    {
-        name: 'Ninja Knight Batman',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_swisskale/featured.png',
-    },
-    {
         name: 'Nisha',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_ceremonialguard_fencer/icon.png',
-    },
-    {
-        name: 'Nite Gunner',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_782_athena_commando_m_brightgunnereclipse/featured.png',
     },
     {
         name: 'Nite Nite',
@@ -7888,11 +4093,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_390_athena_commando_m_evilbunny/featured.png',
     },
     {
-        name: 'Nitelite',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_124_athena_commando_f_auroraglow/featured.png',
-    },
-    {
         name: 'Nitrojerry',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_125_athena_commando_m_firecracker/featured.png',
@@ -7908,44 +4108,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_roostermelt/featured.png',
     },
     {
-        name: 'Nog Ops',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_046_athena_commando_f_holidaysweater/featured.png',
-    },
-    {
         name: 'Noir',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_159_athena_commando_m_gumshoedark/featured.png',
-    },
-    {
-        name: 'Noodle',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_degreeproper/featured.png',
-    },
-    {
-        name: 'Noorah',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_paperglow/featured.png',
-    },
-    {
-        name: 'Nord Warrior',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_folkevening/featured.png',
-    },
-    {
-        name: 'NPC',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_madamemoth_npc/icon.png',
-    },
-    {
-        name: 'NPC',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_robedminer_gold_npc/icon.png',
-    },
-    {
-        name: 'NPC',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_robedminer_ruby_npc/icon.png',
     },
     {
         name: 'NPC UmbraMolt',
@@ -7983,11 +4148,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_mrmite/featured.png',
     },
     {
-        name: 'Obi-Wan Kenobi',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_411_athena_commando_m_noble/featured.png',
-    },
-    {
         name: 'Oblivion',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_153_athena_commando_f_carbideblack/featured.png',
@@ -8006,21 +4166,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Odyssey',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_rankedolympus/featured.png',
-    },
-    {
-        name: 'Offense Overseer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_955_athena_commando_f_football20referee_d_ofzil/featured.png',
-    },
-    {
-        name: 'Offside Officer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_949_athena_commando_m_football20referee_c_smmey/featured.png',
-    },
-    {
-        name: 'Oleander',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_hornettavine/featured.png',
     },
     {
         name: 'Olympian',
@@ -8073,11 +4218,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_limettamech/featured.png',
     },
     {
-        name: 'Opal',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_casualcherie/featured.png',
-    },
-    {
         name: 'Oppressor',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_508_athena_commando_m_syko/featured.png',
@@ -8093,29 +4233,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_loudphoenix/icon.png',
     },
     {
-        name: 'Order Remnant',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_061_athena_commando_m_paddedarmororder/featured.png',
-    },
-    {
         name: 'Orelia',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_057_athena_commando_f_thegoldenskeleton/featured.png',
     },
     {
-        name: 'Original Renegade',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_886_athena_commando_m_chonerenegade/featured.png',
-    },
-    {
         name: 'Orihime Inoue',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_tameeagle/featured.png',
-    },
-    {
-        name: 'Orin',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_994_athena_commando_m_lexa/featured.png',
     },
     {
         name: 'Oro',
@@ -8131,11 +4256,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Oscar',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_bengalbasher_suit/icon.png',
-    },
-    {
-        name: 'Outcast',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_578_athena_commando_f_fisherman/featured.png',
     },
     {
         name: 'Outlaw Midas',
@@ -8163,34 +4283,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_187_athena_commando_f_fuzzybearpanda/featured.png',
     },
     {
-        name: 'P.K.E. Ranger',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_905_athena_commando_m_york/featured.png',
-    },
-    {
         name: 'P33LY',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_259_athena_commando_m_peelytech/icon.png',
-    },
-    {
-        name: 'Packet',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_016_athena_commando_m_mainframe_e_kpzjl/featured.png',
-    },
-    {
-        name: 'Padmé Amidala',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_ironblaze/featured.png',
-    },
-    {
-        name: 'Panther',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_398_athena_commando_f_neoncatspeed/featured.png',
-    },
-    {
-        name: 'Par Patroller',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_801_athena_commando_f_golfsummer/featured.png',
     },
     {
         name: 'Paradigm (Reality-659)',
@@ -8201,11 +4296,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Paradox',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_309_athena_commando_m_streetgoth/featured.png',
-    },
-    {
-        name: 'Paranormal Guide',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_909_athena_commando_m_york_e/featured.png',
     },
     {
         name: 'Party Diva',
@@ -8228,39 +4318,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_aurorajump/featured.png',
     },
     {
-        name: 'Party Trooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_920_athena_commando_m_partytrooper/featured.png',
-    },
-    {
         name: 'Pass Rush Ranger',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_937_athena_commando_m_football20_uic2q/featured.png',
-    },
-    {
-        name: 'Pastel',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_392_athena_commando_f_bountybunny/featured.png',
-    },
-    {
-        name: 'Patch',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_901_athena_commando_f_pumpkinspice/featured.png',
-    },
-    {
-        name: 'Patch Patroller',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_256_athena_commando_m_pumpkin/featured.png',
-    },
-    {
-        name: 'Pathfinder ',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_014_athena_commando_f/featured.png',
-    },
-    {
-        name: 'Patrick Mahomes',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_470_athena_commando_m_apexwild/featured.png',
     },
     {
         name: 'Paul Atreides',
@@ -8278,16 +4338,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_biscuitfluff/icon.png',
     },
     {
-        name: 'Paxton Price',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_dapperpunch/featured.png',
-    },
-    {
-        name: 'Payback',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_524_athena_commando_f_futurebikerwhite/featured.png',
-    },
-    {
         name: 'Paz the Wicked',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_peonybellow/featured.png',
@@ -8298,11 +4348,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_speedypeas_sprig/icon.png',
     },
     {
-        name: 'Peacemaker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_camelgram/featured.png',
-    },
-    {
         name: 'Peekaboo',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_220_athena_commando_f_clown/featured.png',
@@ -8311,11 +4356,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Peelosopher Bananocrates',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_bananaphilosopher/featured.png',
-    },
-    {
-        name: 'Peelverine',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_troutwrist_spine/icon.png',
     },
     {
         name: 'Peely',
@@ -8338,34 +4378,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_impulsespring_c/featured.png',
     },
     {
-        name: 'Penny',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_719_athena_commando_f_blonde/featured.png',
-    },
-    {
         name: 'Pentathlon Perfector',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_timberstakesoul_b/icon.png',
     },
     {
-        name: 'Pepper Thorne',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_152_athena_commando_f_musician/featured.png',
-    },
-    {
-        name: 'Perfect Shadow',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_438_athena_commando_m_winterghouleclipse/icon.png',
-    },
-    {
         name: 'Peri',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_cataclysmcity/featured.png',
-    },
-    {
-        name: 'Permafrost Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_322_athena_commando_f_renegaderaiderice/icon.png',
     },
     {
         name: 'Persephone',
@@ -8376,11 +4396,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Perseus',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_precisionmongoose/icon.png',
-    },
-    {
-        name: 'Peter B. Parker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_intensecello/featured.png',
     },
     {
         name: 'Peter Griffin',
@@ -8398,19 +4413,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_472_athena_commando_m_futuresamuraisummer/icon.png',
     },
     {
-        name: 'Phantom Commando',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_912_athena_commando_f_york_c/featured.png',
-    },
-    {
         name: 'Phantom Guff',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_fuzzydarkness/featured.png',
-    },
-    {
-        name: 'Phantom Meowscles',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_ectocat/featured.png',
     },
     {
         name: 'Philip J. Fry',
@@ -8443,16 +4448,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_snoutslice/icon.png',
     },
     {
-        name: 'Pillar',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_451_athena_commando_m_caterpillar/featured.png',
-    },
-    {
-        name: 'Pincera',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_lucidazalea/featured.png',
-    },
-    {
         name: 'Pineapple Pete',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_bittersweet/featured.png',
@@ -8468,19 +4463,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_fumefleecejig/featured.png',
     },
     {
-        name: 'Pinkie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_698_athena_commando_m_cuteduo/featured.png',
-    },
-    {
         name: 'Pitch Patroller',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_005_athena_commando_f_globalfb_e_gth5i/featured.png',
-    },
-    {
-        name: 'Pitstop',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_828_athena_commando_f_valet/featured.png',
     },
     {
         name: 'Pixelle',
@@ -8493,21 +4478,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_bitfight/featured.png',
     },
     {
-        name: 'PJ',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_waywardrebel/featured.png',
-    },
-    {
-        name: 'PJ Patroller',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_649_athena_commando_f_holidaypj/featured.png',
-    },
-    {
-        name: 'PJ Pepperoni',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_482_athena_commando_f_pizzapit/featured.png',
-    },
-    {
         name: 'Plague',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_241_athena_commando_m_plague/featured.png',
@@ -8518,49 +4488,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_wrenchpeel/featured.png',
     },
     {
-        name: 'Plastic Patroller',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_435_athena_commando_m_munitionsexpertgreenplastic/featured.png',
-    },
-    {
-        name: 'Platinum Billie Eilish',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tuckbeetle/icon.png',
-    },
-    {
-        name: 'Platinum Gaga',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_derbyswarm/icon.png',
-    },
-    {
-        name: 'Platinum Karol G',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_sourwire/icon.png',
-    },
-    {
-        name: 'Platinum The Weeknd',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tofuresort/icon.png',
-    },
-    {
-        name: 'Playboi Carti',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_summitreedgrit/featured.png',
-    },
-    {
-        name: 'Pleasant Patroller',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_449_athena_commando_m_pennantseasone_d/featured.png',
-    },
-    {
         name: 'Plungerman',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_pagetruffle/featured.png',
-    },
-    {
-        name: 'Poe Dameron',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_markerdeer_tin/icon.png',
     },
     {
         name: 'Poet',
@@ -8568,29 +4498,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_383_athena_commando_f_cactusdancer/featured.png',
     },
     {
-        name: 'Point Patroller',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_711_athena_commando_m_longshorts/featured.png',
-    },
-    {
-        name: 'Poised Playmaker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_149_athena_commando_f_soccergirlb/featured.png',
-    },
-    {
-        name: 'Poison Ivy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_921_athena_commando_f_parcelpetal/icon.png',
-    },
-    {
         name: 'Polar Patroller',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_640_athena_commando_m_tacticalbear/featured.png',
-    },
-    {
-        name: 'Polar Peely',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_323_athena_commando_m_bananawinter/icon.png',
     },
     {
         name: 'Polarity',
@@ -8613,24 +4523,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_magmabreak/icon.png',
     },
     {
-        name: 'Pop Prodigy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_172_athena_commando_f_stands_e/icon.png',
-    },
-    {
-        name: 'Poseidon',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tideking_regal/icon.png',
-    },
-    {
         name: 'Post Patroller',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_firstclasssecond_c/featured.png',
-    },
-    {
-        name: 'Potassius Peels',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_045_athena_commando_m_bananaleader/featured.png',
     },
     {
         name: 'Powder',
@@ -8653,16 +4548,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_corestreet/icon.png',
     },
     {
-        name: 'Powerhouse',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_932_athena_commando_m_shockwave/icon.png',
-    },
-    {
-        name: 'Powertrain',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_plankcoverway_d/featured.png',
-    },
-    {
         name: 'Prank Prodigy',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_droveray_d/featured.png',
@@ -8678,11 +4563,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_pencil_raspberry/featured.png',
     },
     {
-        name: 'Prickly Patroller',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_383_athena_commando_f_cacti/featured.png',
-    },
-    {
         name: 'Prince Orin',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_orinchai/icon.png',
@@ -8693,54 +4573,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_chiveflake/featured.png',
     },
     {
-        name: 'Princess Felicity Fish',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_872_athena_commando_f_teriyakifishprincess/featured.png',
-    },
-    {
         name: 'Princess Lexa',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_lexaearlgrey/icon.png',
     },
     {
-        name: 'Prodigy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_296_athena_commando_m_math/icon.png',
-    },
-    {
-        name: 'Professor Slurpo',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_716_athena_commando_m_blueflames/featured.png',
-    },
-    {
         name: 'Promenade',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_dameregent/featured.png',
-    },
-    {
-        name: 'Prowler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_368_athena_commando_m_sienna/icon.png',
-    },
-    {
-        name: 'Proxy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_014_athena_commando_m_mainframe_c_yvdol/featured.png',
-    },
-    {
-        name: 'Psion',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_364_athena_commando_f_sciops/featured.png',
-    },
-    {
-        name: 'Psycho Bandit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_515_athena_commando_m_barbequelarry/icon.png',
-    },
-    {
-        name: 'Psylocke',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_737_athena_commando_f_donutplate/featured.png',
     },
     {
         name: 'Pulse',
@@ -8768,54 +4608,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_943_athena_commando_f_football20_b_gr3wn/featured.png',
     },
     {
-        name: 'Puppet Master James',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_greatpoolswim/featured.png',
-    },
-    {
-        name: 'Puppet Master Kirk',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_plasticforkswim/featured.png',
-    },
-    {
-        name: 'Puppet Master Lars',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_crowcallswim/featured.png',
-    },
-    {
-        name: 'Puppet Master Robert',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_corkfloorswim/featured.png',
-    },
-    {
         name: 'Purradise Meowscles',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_buffcatcruise/icon.png',
     },
     {
-        name: 'Putrid Playmaker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_594_athena_commando_f_soccerzombieb/featured.png',
-    },
-    {
         name: 'Putrid Polarity',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_252_athena_commando_f_zombieelastic_d/featured.png',
-    },
-    {
-        name: 'Putt Pursuer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_122_athena_commando_m_golf_d/featured.png',
-    },
-    {
-        name: 'Quackling',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_744_athena_commando_f_duckhero/featured.png',
-    },
-    {
-        name: 'Queen of Hearts',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_339_athena_commando_f_lovequeen/featured.png',
     },
     {
         name: 'Queen Persephone',
@@ -8843,11 +4643,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_droveray_c/featured.png',
     },
     {
-        name: 'Radiant Striker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_091_athena_commando_m_redshirt/featured.png',
-    },
-    {
         name: 'Ragnarok',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_165_athena_commando_m_darkviking/icon.png',
@@ -8856,16 +4651,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Ragsy',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_554_athena_commando_f_militiamascotcuddle/featured.png',
-    },
-    {
-        name: 'Raiden',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_falsevulture/featured.png',
-    },
-    {
-        name: 'Raiden (MK3)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_totalflock/featured.png',
     },
     {
         name: 'Raijū',
@@ -8888,49 +4673,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_pearltote/featured.png',
     },
     {
-        name: 'Rainbow Racer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_096_athena_commando_f_taxiupgradedmulticolor/featured.png',
-    },
-    {
-        name: 'Rally Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_775_athena_commando_f_streetracercobragold/featured.png',
-    },
-    {
-        name: 'Ramirez Redux',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_402_athena_commando_f_rebirthfresh/featured.png',
-    },
-    {
         name: 'Ramses',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_pepperbilly/featured.png',
-    },
-    {
-        name: 'Random',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_random/icon.png',
-    },
-    {
-        name: 'Ranger',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_010_athena_commando_m/featured.png',
-    },
-    {
-        name: 'Rap Boy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_bravebuildsuper/featured.png',
-    },
-    {
-        name: 'Rap Boy Reloaded',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_clayplug/featured.png',
-    },
-    {
-        name: 'Rap Princess Ice Spice',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_berrytartbrunt/featured.png',
     },
     {
         name: 'Raphael',
@@ -8948,19 +4693,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_031_athena_commando_m_retro/featured.png',
     },
     {
-        name: 'Raptorian The Brave',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_079_athena_commando_m_raptorknight/featured.png',
-    },
-    {
         name: 'Ravage',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_194_athena_commando_f_ravenquill/featured.png',
-    },
-    {
-        name: 'Ravemello',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_canvasprint/icon.png',
     },
     {
         name: 'Raven',
@@ -8978,29 +4713,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_fuzzyclaw/featured.png',
     },
     {
-        name: 'Ravenpool',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_745_athena_commando_m_ravenquill/featured.png',
-    },
-    {
-        name: 'Ravina',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_903_athena_commando_f_frankie/featured.png',
-    },
-    {
         name: 'Raz',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_041_athena_commando_m_cubeninja/icon.png',
-    },
-    {
-        name: 'Razor',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_604_athena_commando_f_razor/featured.png',
-    },
-    {
-        name: 'Razor Rae',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_firework/icon.png',
     },
     {
         name: 'Ready Penny',
@@ -9023,16 +4738,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_pencil_guava/featured.png',
     },
     {
-        name: 'Rebirth Harley Quinn',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_063_athena_commando_f_cottoncandy/featured.png',
-    },
-    {
-        name: 'Rebirth Raven',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_036_athena_commando_f_obsidian/icon.png',
-    },
-    {
         name: 'Reboot Man',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_doubleconk/icon.png',
@@ -9053,219 +4758,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_contaminate/featured.png',
     },
     {
-        name: 'Recline Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_450_athena_commando_m_pennantseasone_e/featured.png',
-    },
-    {
-        name: 'Recon Champion',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_reconexpert_fncs/featured.png',
-    },
-    {
-        name: 'Recon Expert',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_022_athena_commando_f/featured.png',
-    },
-    {
-        name: 'Recon Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_f_placeholder/icon.png',
-    },
-    {
-        name: 'Recon Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_primeredux_f/icon.png',
-    },
-    {
-        name: 'Recon Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_primeredux_g/icon.png',
-    },
-    {
-        name: 'Recon Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_primeredux_h/icon.png',
-    },
-    {
-        name: 'Recon Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_primeredux_i/icon.png',
-    },
-    {
-        name: 'Recon Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_primeredux_j/icon.png',
-    },
-    {
-        name: 'Recon Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_waterfallcharm/icon.png',
-    },
-    {
-        name: 'Recon Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_272_athena_commando_f_prime/icon.png',
-    },
-    {
-        name: 'Recon Ranger',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_503_athena_commando_f_tacticalwoodlandfuture/featured.png',
-    },
-    {
         name: 'Recon Raptor',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_excellentbass/icon.png',
-    },
-    {
-        name: 'Recon Scout',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_018_athena_commando_m/featured.png',
-    },
-    {
-        name: 'Recon Specialist',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_024_athena_commando_f/featured.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_001_athena_commando_f_default/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_002_athena_commando_f_default/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_003_athena_commando_f_default/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_004_athena_commando_f_default/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_005_athena_commando_m_default/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_006_athena_commando_m_default/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_007_athena_commando_m_default/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_008_athena_commando_m_default/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_556_athena_commando_f_rebirthdefaulta/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_557_athena_commando_f_rebirthdefaultb/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_558_athena_commando_f_rebirthdefaultc/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_559_athena_commando_f_rebirthdefaultd/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_560_athena_commando_m_rebirthdefaulta/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_561_athena_commando_m_rebirthdefaultb/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_562_athena_commando_m_rebirthdefaultc/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_563_athena_commando_m_rebirthdefaultd/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_873_athena_commando_m_rebirthdefaulte/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_874_athena_commando_m_rebirthdefaultf/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_875_athena_commando_m_rebirthdefaultg/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_876_athena_commando_m_rebirthdefaulth/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_877_athena_commando_m_rebirthdefaulti/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_878_athena_commando_f_rebirthdefault_e/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_879_athena_commando_f_rebirthdefault_f/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_880_athena_commando_f_rebirthdefault_g/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_881_athena_commando_f_rebirthdefault_h/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_882_athena_commando_f_rebirthdefault_i/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_creative_mannequin_m_default/icon.png',
-    },
-    {
-        name: 'Recruit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_npc_athena_commando_f_rebirthdefault_henchman/icon.png',
     },
     {
         name: 'Red Card Renegade',
@@ -9278,11 +4773,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_despair/icon.png',
     },
     {
-        name: 'Red Jade',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_545_athena_commando_f_sushininja/featured.png',
-    },
-    {
         name: 'Red Knight',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_034_athena_commando_f_medieval/featured.png',
@@ -9291,11 +4781,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Red Ranger',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_fumefleecefade/featured.png',
-    },
-    {
-        name: 'Red Roots Billie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_timesquare/featured.png',
     },
     {
         name: 'Red Ruin Joni',
@@ -9313,16 +4798,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_940_athena_commando_m_football20_d_zid7q/featured.png',
     },
     {
-        name: 'Red-Nosed Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_047_athena_commando_f_holidayreindeer/featured.png',
-    },
-    {
-        name: 'Red-nosed Ranger',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_311_athena_commando_m_reindeer/featured.png',
-    },
-    {
         name: 'Redline',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_162_athena_commando_f_streetracer/icon.png',
@@ -9331,16 +4806,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Redline Racer',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_kartrocket/icon.png',
-    },
-    {
-        name: 'Redux',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_743_athena_commando_m_handyman/featured.png',
-    },
-    {
-        name: 'Reed Richards',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_donkeycrib/icon.png',
     },
     {
         name: 'Reef Ranger',
@@ -9353,29 +4818,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_965_athena_commando_f_spacefighter/icon.png',
     },
     {
-        name: 'Reflex',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_259_athena_commando_m_streetops/featured.png',
-    },
-    {
-        name: 'Reina',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_319_athena_commando_f_peppermint/featured.png',
-    },
-    {
-        name: 'Relaxed Fit Jonesy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_798_athena_commando_m_jonesyvagabond/featured.png',
-    },
-    {
         name: 'Relaxed Runner',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_upbeatiguana_e/featured.png',
-    },
-    {
-        name: 'Relay',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_436_athena_commando_m_reconspecialist/featured.png',
     },
     {
         name: 'Relik',
@@ -9383,24 +4828,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_rippedharvester/icon.png',
     },
     {
-        name: 'REM Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_927_athena_commando_m_nauticalpajamas/featured.png',
-    },
-    {
-        name: 'Remedy vs Toxin',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_567_athena_commando_f_rebirthmedic/icon.png',
-    },
-    {
         name: 'Remembrance Salvador',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_rainbowsplash/featured.png',
-    },
-    {
-        name: 'Remi',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_boredom/featured.png',
     },
     {
         name: 'Renard',
@@ -9413,29 +4843,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_266_athena_commando_f_grandeur_9co1m/icon.png',
     },
     {
-        name: 'Renegade',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_013_athena_commando_f/featured.png',
-    },
-    {
         name: 'Renegade Lynx',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_rebelclaw_aviator/icon.png',
     },
     {
-        name: 'Renegade Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_028_athena_commando_f/featured.png',
-    },
-    {
         name: 'Renegade Rebel',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_rushrustle/icon.png',
-    },
-    {
-        name: 'Renegade Runner',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_headhunterstar/featured.png',
     },
     {
         name: 'Renegade Shadow',
@@ -9458,26 +4873,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_inferno/icon.png',
     },
     {
-        name: 'Replay Ranger',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_956_athena_commando_f_football20referee_e_dqtp6/featured.png',
-    },
-    {
-        name: 'Retro Zoe Clash',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_confectionpop/icon.png',
-    },
-    {
-        name: 'Reverb',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_165_athena_commando_m_stands_c/featured.png',
-    },
-    {
-        name: 'Reverie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_goodmood/icon.png',
-    },
-    {
         name: 'Revolt',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_339_athena_commando_m_robottrouble/featured.png',
@@ -9486,11 +4881,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Rex',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_093_athena_commando_m_dinosaur/featured.png',
-    },
-    {
-        name: 'Rey',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_634_athena_commando_f_galileorocket_arveh/featured.png',
     },
     {
         name: 'Rian',
@@ -9528,19 +4918,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_driftswat/icon.png',
     },
     {
-        name: 'Rift Warden Stellan',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_possession/featured.png',
-    },
-    {
         name: 'Riftreaver Drift',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_slickswish/icon.png',
-    },
-    {
-        name: 'Riley',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_612_athena_commando_f_streetopspink/featured.png',
     },
     {
         name: 'Ringmaster Scarr',
@@ -9548,49 +4928,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_strategicspur_blast/icon.png',
     },
     {
-        name: 'Rio Grande',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_497_athena_commando_f_wildwest/featured.png',
-    },
-    {
-        name: 'Riot',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_268_athena_commando_m_rockerpunk/featured.png',
-    },
-    {
-        name: 'Rippley vs Sludge',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_570_athena_commando_m_slurpmonster/icon.png',
-    },
-    {
         name: 'Riptide Raz',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_459_athena_commando_m_suntide/icon.png',
-    },
-    {
-        name: 'Risky Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_443_athena_commando_f_pennantseasone_c/featured.png',
-    },
-    {
-        name: 'Roan of Arc',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_forestjeangrowl/featured.png',
-    },
-    {
-        name: 'Roast Lord',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_132_athena_commando_m_scavengerfire/icon.png',
-    },
-    {
-        name: 'Robert Trujillo',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_corkfloor/icon.png',
-    },
-    {
-        name: 'Robin',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_squidglistenlift/icon.png',
     },
     {
         name: 'Robo-Fishstick',
@@ -9598,24 +4938,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_teriyakitech/featured.png',
     },
     {
-        name: 'Robo-Kevin',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_268_athena_commando_m_assemblek/icon.png',
-    },
-    {
-        name: 'Robo-Ray',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_046_athena_commando_f_assembler/icon.png',
-    },
-    {
         name: 'RoboCop',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_397_athena_commando_m_indigo/featured.png',
-    },
-    {
-        name: 'Rockstar LISA',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_chimecurltell/icon.png',
     },
     {
         name: 'Rocksteady',
@@ -9623,24 +4948,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_inkhoop/icon.png',
     },
     {
-        name: 'Rogue',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_341_athena_commando_f_gimmick_rb41v/featured.png',
-    },
-    {
         name: 'Rogue Agent',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_090_athena_commando_m_tactical/featured.png',
-    },
-    {
-        name: 'Rogue Gunner',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_mechpilotsharkvelocity/featured.png',
-    },
-    {
-        name: 'Rogue Navigator',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_mechpilotsharkspeed/featured.png',
     },
     {
         name: 'Rogue Spider Knight',
@@ -9653,11 +4963,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_173_athena_commando_f_starfishuniform/icon.png',
     },
     {
-        name: 'Rookie Spitfire',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_887_athena_commando_m_chonespitfire/featured.png',
-    },
-    {
         name: 'Rosa',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_251_athena_commando_f_muertos/featured.png',
@@ -9666,16 +4971,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Rose Team Leader',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_096_athena_commando_f_founder/icon.png',
-    },
-    {
-        name: 'Rosette Tigeress',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tigerfashiondale/icon.png',
-    },
-    {
-        name: 'Rosy Rift Goddess Ariana',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_raredelightsail/featured.png',
     },
     {
         name: 'Rotten Penny',
@@ -9698,54 +4993,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_113_athena_commando_m_blueace/icon.png',
     },
     {
-        name: 'Royale Knight',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_033_athena_commando_f_medieval/icon.png',
-    },
-    {
-        name: 'RPM',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_plankcoverway_c/featured.png',
-    },
-    {
         name: 'Rubian',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_persimmonsmoke/featured.png',
     },
     {
-        name: 'Rubius',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_livelydomino/featured.png',
-    },
-    {
-        name: 'Ruby',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_527_athena_commando_f_streetfashionred/featured.png',
-    },
-    {
-        name: 'Ruby Shadows',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_007_athena_commando_f_streetfashioneclipse/icon.png',
-    },
-    {
         name: 'Ruck',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_toughpack/featured.png',
-    },
-    {
-        name: 'Ruckus',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_262_athena_commando_m_madcommander/featured.png',
-    },
-    {
-        name: 'Rue',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_753_athena_commando_f_hostile/featured.png',
-    },
-    {
-        name: 'Rufus',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_feraltrash/featured.png',
     },
     {
         name: 'Ruin',
@@ -9763,24 +5018,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_plankcoverway/featured.png',
     },
     {
-        name: 'Rumi (HUNTR/X)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_loanfloat/featured.png',
-    },
-    {
-        name: 'Runway Racer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_raiderpink_sherbert/featured.png',
-    },
-    {
         name: 'Rush',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_211_athena_commando_f_footballgirlb/featured.png',
-    },
-    {
-        name: 'Russel',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_terriercure/featured.png',
     },
     {
         name: 'Rust',
@@ -9793,11 +5033,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_082_athena_commando_m_scavenger/icon.png',
     },
     {
-        name: 'Rustler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_577_athena_commando_f_codsquadplaid/featured.png',
-    },
-    {
         name: 'Ryker',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_lonedice/featured.png',
@@ -9806,11 +5041,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Ryomen Sukuna',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_pigeonchart/featured.png',
-    },
-    {
-        name: 'Ryu',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_023_athena_commando_m_skirmish_w1n7h/featured.png',
     },
     {
         name: 'Ryūji',
@@ -9823,16 +5053,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_428_athena_commando_f_pinkwidow/icon.png',
     },
     {
-        name: 'Sabrina Carpenter',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_dimeblanketknot/icon.png',
-    },
-    {
-        name: 'Safari',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_802_athena_commando_f_heartbreaker/featured.png',
-    },
-    {
         name: 'Safety First Steve',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_dorsaldance/featured.png',
@@ -9841,11 +5061,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Saff',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_cataclysmtower/featured.png',
-    },
-    {
-        name: 'Sagan',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_871_athena_commando_f_streetfashiongarnet/featured.png',
     },
     {
         name: 'Sage',
@@ -9858,16 +5073,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_igniteegg/featured.png',
     },
     {
-        name: 'Sakaaran Champion Hulk',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_densefog/featured.png',
-    },
-    {
-        name: 'Sakura',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_385_athena_commando_f_rumble/featured.png',
-    },
-    {
         name: 'Sakura Haruno',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_264_athena_commando_f_headbands/featured.png',
@@ -9876,11 +5081,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Sally',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_haybrush/featured.png',
-    },
-    {
-        name: 'Salty Striker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_444_athena_commando_f_pennantseasone_d/featured.png',
     },
     {
         name: 'Salvador',
@@ -9893,59 +5093,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_fearcatch/featured.png',
     },
     {
-        name: 'Samael',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_crystalglobe/featured.png',
-    },
-    {
-        name: 'Samurai Scrapper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_838_athena_commando_m_junksamurai/featured.png',
-    },
-    {
-        name: 'Samurai Shohei',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_velvetdeskfiber/featured.png',
-    },
-    {
         name: 'Sanctum',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_228_athena_commando_m_vampire/featured.png',
-    },
-    {
-        name: 'Sandshark Driver',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_796_athena_commando_f_tank/featured.png',
-    },
-    {
-        name: 'Sandstorm',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_422_athena_commando_f_maskedwarrior/featured.png',
-    },
-    {
-        name: 'Sandy Scout',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pennantseasglare_e/featured.png',
-    },
-    {
-        name: "Santa 'Brina",
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_florabrisk/icon.png',
-    },
-    {
-        name: 'Santa Dogg',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_almondsplash/icon.png',
-    },
-    {
-        name: 'Santa Shaq',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tennisleash/featured.png',
-    },
-    {
-        name: 'Santa Suit Mariah',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pastelglazegift/featured.png',
     },
     {
         name: 'Sarah',
@@ -9956,11 +5106,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Sarah Connor',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_992_athena_commando_f_typhoon_lpfu6/featured.png',
-    },
-    {
-        name: 'Sash Sergeant',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_072_athena_commando_m_scout/featured.png',
     },
     {
         name: 'Saskia',
@@ -9978,59 +5123,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_floodplain/featured.png',
     },
     {
-        name: 'Saura',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_velociteeth/featured.png',
-    },
-    {
-        name: 'Savage Siren',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pinetrimsurge/featured.png',
-    },
-    {
         name: 'Sayara',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_378_athena_commando_f_bacteria_8jygu/icon.png',
     },
     {
-        name: 'Scarlet Commander',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_734_athena_commando_f_bannerred/featured.png',
-    },
-    {
-        name: 'Scarlet Defender',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_087_athena_commando_f_redsilk/featured.png',
-    },
-    {
-        name: 'Scarlet Serpent',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_785_athena_commando_f_python/featured.png',
-    },
-    {
-        name: 'Scarlet Witch',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_399_athena_commando_f_ultralight/featured.png',
-    },
-    {
-        name: 'Scimitar',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_421_athena_commando_m_maskedwarrior/featured.png',
-    },
-    {
         name: 'Scooby-Doo',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_lycheenickel/featured.png',
-    },
-    {
-        name: 'Scorpion',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_202_athena_commando_f_desertops/featured.png',
-    },
-    {
-        name: 'Scorpion (MK3)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_soappocket/featured.png',
     },
     {
         name: 'Scorpius Agent',
@@ -10053,16 +5153,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_240_athena_commando_f_plague/featured.png',
     },
     {
-        name: 'Scout',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_011_athena_commando_m/icon.png',
-    },
-    {
-        name: 'Scrapknight Jules',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_077_athena_commando_f_armoredengineer/featured.png',
-    },
-    {
         name: 'Scrapper Kyle',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_steelstomper/icon.png',
@@ -10083,29 +5173,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_sleepyduck/featured.png',
     },
     {
-        name: 'Scuba Crystal',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_131_athena_commando_f_jurassicarchaeologysummer/featured.png',
-    },
-    {
         name: 'Scuba Jonesy',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_774_athena_commando_m_tacticalscuba/icon.png',
     },
     {
-        name: 'Sea Wolf',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_373_athena_commando_m_pirate01/featured.png',
-    },
-    {
         name: 'Sedona',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_geminilink/icon.png',
-    },
-    {
-        name: 'Seeker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_837_athena_commando_m_maskeddancer/featured.png',
     },
     {
         name: 'Selbi',
@@ -10118,34 +5193,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_sunlit/icon.png',
     },
     {
-        name: 'Semibot',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_servestreet/featured.png',
-    },
-    {
         name: 'Sentinel',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_403_athena_commando_m_rooster/icon.png',
-    },
-    {
-        name: 'Sentry Specialist',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_f_placeholder_b/icon.png',
-    },
-    {
-        name: 'Sentry Specialist',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_waterfallcharm_b/icon.png',
-    },
-    {
-        name: 'Sentry Specialist',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_273_athena_commando_f_prime_b/icon.png',
-    },
-    {
-        name: 'Serenade',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_miragehike/featured.png',
     },
     {
         name: 'Serge',
@@ -10158,44 +5208,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_dangermojo/icon.png',
     },
     {
-        name: 'Set_01_LA_SG',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_vip_athena_commando_m_galileoferry_sg/icon.png',
-    },
-    {
-        name: 'Set_01_TA_SG',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_vip_athena_commando_f_galileorocket_sg/icon.png',
-    },
-    {
-        name: 'Seth',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_mummy/featured.png',
-    },
-    {
         name: 'Seung',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_scuffle/featured.png',
-    },
-    {
-        name: 'Sgt. Drake',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_mallardvantage/featured.png',
-    },
-    {
-        name: 'Sgt. Green Clover',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_098_athena_commando_f_stpatty/featured.png',
-    },
-    {
-        name: 'Sgt. Sigil',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_443_athena_commando_f_bannerb/featured.png',
-    },
-    {
-        name: 'Sgt. Snooze',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_929_athena_commando_m_nauticalpajamas_c/featured.png',
     },
     {
         name: 'Sgt. Sweeper',
@@ -10218,29 +5233,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_178_athena_commando_f_streetracercobra/featured.png',
     },
     {
-        name: 'Shadow Archetype',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_679_athena_commando_m_modernmilitaryeclipse/featured.png',
-    },
-    {
-        name: 'Shadow Ark',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_510_athena_commando_f_angeleclipse/icon.png',
-    },
-    {
-        name: 'SHADOW Beach Brawler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_780_athena_commando_m_henchmanbadshorts/icon.png',
-    },
-    {
         name: 'Shadow Blade Hope',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_ironlilac_sly/icon.png',
-    },
-    {
-        name: 'SHADOW Enforcer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_706_athena_commando_m_henchmanbad_34lvu/featured.png',
     },
     {
         name: 'SHADOW Merc',
@@ -10263,21 +5258,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_043_athena_commando_f_stealth/featured.png',
     },
     {
-        name: 'Shadow Skully',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_439_athena_commando_f_skullbriteeclipse/icon.png',
-    },
-    {
-        name: 'Shadowbird',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_437_athena_commando_f_aztececlipse/icon.png',
-    },
-    {
-        name: 'Shady Doggo',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_208_athena_commando_m_textilepup_c85od/featured.png',
-    },
-    {
         name: 'Shady Zadie',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_pinktrooperdark/icon.png',
@@ -10293,34 +5273,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_376_athena_commando_m_darkshaman/featured.png',
     },
     {
-        name: 'Shang-Chi',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_193_athena_commando_m_dragonfruit_7n3a3/featured.png',
-    },
-    {
         name: 'Shanta',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_292_athena_commando_f_exosuit/icon.png',
-    },
-    {
-        name: 'Shaq (DJ Diesel)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_warmshadewagon/featured.png',
-    },
-    {
-        name: 'She-Venom',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_doughdisk/icon.png',
-    },
-    {
-        name: 'Shifu',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_509_athena_commando_m_wisemaster/featured.png',
-    },
-    {
-        name: 'Shimmer Specialist',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_763_athena_commando_f_shinyjacket/featured.png',
     },
     {
         name: 'Shimmerdusk',
@@ -10353,21 +5308,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_unluckyroll_npc/icon.png',
     },
     {
-        name: 'Shohei Ohtani',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_velvetdeskcam/featured.png',
-    },
-    {
-        name: 'Shore Leave',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_810_athena_commando_m_militaryfashionsummer/featured.png',
-    },
-    {
-        name: 'Shot Caller',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_428_athena_commando_m_urbanscavenger/featured.png',
-    },
-    {
         name: 'Shot Stopper',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_002_athena_commando_f_globalfb_b_0ch64/featured.png',
@@ -10383,59 +5323,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_steampower/featured.png',
     },
     {
-        name: 'Showdown',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_769_athena_commando_m_hardcoresportz/featured.png',
-    },
-    {
         name: 'Shredder',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_peacefulpoem/featured.png',
     },
     {
-        name: 'Shuri',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_snapfreeze_hunt/icon.png',
-    },
-    {
-        name: 'Shuto Striker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_305_athena_commando_f_slither_c_ue2q9/featured.png',
-    },
-    {
-        name: 'Sica',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_028_athena_commando_f_ancientgladiator/featured.png',
-    },
-    {
-        name: 'Sideline Commander',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_948_athena_commando_m_football20referee_b_qpxth/featured.png',
-    },
-    {
         name: 'Sidewinder',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_348_athena_commando_f_medusa/icon.png',
-    },
-    {
-        name: 'Siege',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tactickale_e/featured.png',
-    },
-    {
-        name: 'Siege Sergeant',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_habitatsecurity_e/icon.png',
-    },
-    {
-        name: 'Siege Sergeant',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_m_placeholder_e/icon.png',
-    },
-    {
-        name: 'Siege Sergeant',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_283_athena_commando_m_prime_e/icon.png',
     },
     {
         name: 'Siena Nyte',
@@ -10448,11 +5343,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_255_athena_commando_f_sam_qa7zs/featured.png',
     },
     {
-        name: 'Sig',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_758_athena_commando_m_techexplorer/featured.png',
-    },
-    {
         name: 'Signal',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_staticrewind/featured.png',
@@ -10463,19 +5353,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_streetbee/featured.png',
     },
     {
-        name: 'Signature Sniper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_447_athena_commando_m_bannerb/featured.png',
-    },
-    {
         name: 'Silas Hesk',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_serpentcoil/icon.png',
-    },
-    {
-        name: 'Silver Surfer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_847_athena_commando_m_soy_2as3c/featured.png',
     },
     {
         name: 'Simone',
@@ -10488,16 +5368,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_469_athena_commando_f_battlesuit/featured.png',
     },
     {
-        name: 'Sinister Glare',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_allknowing/featured.png',
-    },
-    {
-        name: 'Sinister Striker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_589_athena_commando_m_soccerzombiea/featured.png',
-    },
-    {
         name: 'Siona',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_765_athena_commando_f_spacewanderer/icon.png',
@@ -10506,31 +5376,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Sir Raven',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_medicrow/icon.png',
-    },
-    {
-        name: 'Siren',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_748_athena_commando_f_hitman/featured.png',
-    },
-    {
-        name: 'Sith Trooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_635_athena_commando_m_galileosled_fhjvm/featured.png',
-    },
-    {
-        name: 'Sizzle',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_815_athena_commando_f_durrburgerhero/featured.png',
-    },
-    {
-        name: 'Sizzle Sgt. ',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_536_athena_commando_f_durrburgerworker/featured.png',
-    },
-    {
-        name: 'Skeletara',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_210_athena_commando_f_renegadeskull/featured.png',
     },
     {
         name: 'Skellemint Oro',
@@ -10563,11 +5408,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_skelflask/icon.png',
     },
     {
-        name: 'Skull Ranger',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_246_athena_commando_f_grave/featured.png',
-    },
-    {
         name: 'Skull Scout',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_skeleprobe/icon.png',
@@ -10593,11 +5433,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_cyborgwarrior/featured.png',
     },
     {
-        name: 'Skully',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_341_athena_commando_f_skullbrite/featured.png',
-    },
-    {
         name: 'Sky Stalker',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_142_athena_commando_m_wwiipilot/featured.png',
@@ -10611,21 +5446,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Slayer Charlotte',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_457_athena_commando_f_punkkoisummer/icon.png',
-    },
-    {
-        name: 'Slayer Juice WRLD',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_kelplinenmagnesium/featured.png',
-    },
-    {
-        name: 'Sled Ready Guff',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_cometdeer/featured.png',
-    },
-    {
-        name: 'Sledge',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_520_athena_commando_m_paddedarmor/featured.png',
     },
     {
         name: 'Sledgehammer',
@@ -10643,54 +5463,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_154_athena_commando_m_gumshoe/featured.png',
     },
     {
-        name: 'Slim Shady',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_heavyroar/featured.png',
-    },
-    {
-        name: 'Slingshot',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_552_athena_commando_f_taxiupgrade/featured.png',
-    },
-    {
-        name: 'Slugger',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_382_athena_commando_m_baseballkitbash/featured.png',
-    },
-    {
         name: 'Slumber ',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_531_athena_commando_m_sleepytime/featured.png',
-    },
-    {
-        name: 'Slumberjack',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_931_athena_commando_m_nauticalpajamas_e/featured.png',
-    },
-    {
-        name: 'Slurp Bandolette',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_709_athena_commando_f_bandolierslurp/icon.png',
-    },
-    {
-        name: 'Slurp Jonesy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_708_athena_commando_m_soldierslurp/icon.png',
-    },
-    {
-        name: 'Slurp Leviathan ',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_710_athena_commando_m_fishheadslurp/icon.png',
-    },
-    {
-        name: 'Slurp Soldier',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pennantseasglare_c/featured.png',
-    },
-    {
-        name: 'Slurpentine',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_717_athena_commando_f_blueflames/featured.png',
     },
     {
         name: 'Slushy Soldier',
@@ -10708,11 +5483,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_006_athena_commando_m_convoytarantula_641pz/featured.png',
     },
     {
-        name: 'Snakepit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_548_athena_commando_m_yellowcamoa/featured.png',
-    },
-    {
         name: 'Snap',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_429_athena_commando_m_collectable/icon.png',
@@ -10723,39 +5493,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_945_athena_commando_f_football20_d_g1uyt/featured.png',
     },
     {
-        name: 'Snoop Dogg',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_lemoncartgranite/featured.png',
-    },
-    {
-        name: 'Snorkel Ops',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_073_athena_commando_f_scuba/featured.png',
-    },
-    {
-        name: 'Snow Drift',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_982_athena_commando_m_driftwinter/icon.png',
-    },
-    {
-        name: 'Snow Miku',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_flossyawn/featured.png',
-    },
-    {
         name: 'Snow Opal',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_serenecherie/featured.png',
-    },
-    {
-        name: 'Snow Patroller',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_659_athena_commando_m_mriceguy/featured.png',
-    },
-    {
-        name: 'Snow Sniper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_670_athena_commando_f_arcticcamo/featured.png',
     },
     {
         name: 'Snow Stealth Slone',
@@ -10763,34 +5503,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_324_athena_commando_f_innovatorfestive_3fuph/icon.png',
     },
     {
-        name: 'Snow Striker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_666_athena_commando_m_arcticcamo/featured.png',
-    },
-    {
-        name: 'Snowbell',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_980_athena_commando_f_elf/featured.png',
-    },
-    {
         name: 'Snowcarver',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_metropunk/featured.png',
     },
     {
-        name: 'Snowdancer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_ballerina/featured.png',
-    },
-    {
         name: 'Snowfoot',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_299_athena_commando_m_snowninja/featured.png',
-    },
-    {
-        name: 'Snowheart',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_983_athena_commando_f_cupidwinter/icon.png',
     },
     {
         name: 'Snowmando',
@@ -10808,11 +5528,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_leatherkey/featured.png',
     },
     {
-        name: 'Snuggs',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_580_athena_commando_m_cuddleteamdark/featured.png',
-    },
-    {
         name: 'Sofia',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_415_athena_commando_f_assassinsuit/featured.png',
@@ -10823,19 +5538,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_auroradart/featured.png',
     },
     {
-        name: 'Soldado Colorado',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_235_athena_commando_m_grasshopper_b_rhquy/featured.png',
-    },
-    {
         name: 'Soleil',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_goldenvalley/icon.png',
-    },
-    {
-        name: 'Solid Snake',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_abstractmirror_rogue/icon.png',
     },
     {
         name: 'Son Gohan',
@@ -10853,11 +5558,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_trendypunk/icon.png',
     },
     {
-        name: 'Sonny',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_safarignome/featured.png',
-    },
-    {
         name: 'Sonor',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_technoawaken/featured.png',
@@ -10868,34 +5568,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_615_athena_commando_f_bane/featured.png',
     },
     {
-        name: 'Sorina',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_379_athena_commando_f_vampirehunter/featured.png',
-    },
-    {
-        name: 'Soulless Sweeper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_592_athena_commando_m_soccerzombied/featured.png',
-    },
-    {
         name: 'Southpaw',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_393_athena_commando_f_forsake/icon.png',
     },
     {
-        name: 'Spacefarer Ariana Grande',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_227_athena_commando_f_bistroastronaut_jjlk5/featured.png',
-    },
-    {
         name: 'Sparkle Diva',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_sparklechop/icon.png',
-    },
-    {
-        name: 'Sparkle Skull',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_173_athena_commando_f_partytrooperbuffet_55z8g/featured.png',
     },
     {
         name: 'Sparkle Specialist',
@@ -10906,31 +5586,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Sparkle Supreme',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_485_athena_commando_f_sparkleremix/icon.png',
-    },
-    {
-        name: 'Sparkplug',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_335_athena_commando_f_scrapyard/featured.png',
-    },
-    {
-        name: 'Spartan Assassin',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_098_athena_commando_f_spartanfuture/featured.png',
-    },
-    {
-        name: 'Sparx',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_twilightspotshine/featured.png',
-    },
-    {
-        name: 'Special Forces',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_020_athena_commando_m/featured.png',
-    },
-    {
-        name: 'Specter Inspector',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_911_athena_commando_f_york_b/featured.png',
     },
     {
         name: 'Spectra Knight',
@@ -10948,51 +5603,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_248_athena_commando_m_blackwidow/featured.png',
     },
     {
-        name: 'Spider-Gwen',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_rosedust/icon.png',
-    },
-    {
-        name: 'Spider-Man',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_293_athena_commando_m_parallelcomic/icon.png',
-    },
-    {
-        name: 'Spider-Man (Miles Morales)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_fearlessflighthero/featured.png',
-    },
-    {
-        name: 'Spider-Man (No Way Home)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_316_athena_commando_m_lateral_k8xd9/featured.png',
-    },
-    {
-        name: 'Spider-Man 2099',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_fearlessflightmenace/featured.png',
-    },
-    {
-        name: 'Spider-Man Noir',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_puffinsmile/featured.png',
-    },
-    {
-        name: 'Spider-Man Zero',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_430_athena_commando_m_spectacleweb/featured.png',
-    },
-    {
-        name: 'Spider-Punk',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_shakecrunch/icon.png',
-    },
-    {
-        name: 'Spider-Woman',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_motormonth/featured.png',
-    },
-    {
         name: 'Spike',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_209_athena_commando_m_footballdudec/featured.png',
@@ -11001,11 +5611,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Spike Spiegel',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_studybench/featured.png',
-    },
-    {
-        name: 'Spiral Specialist',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_954_athena_commando_f_football20referee_c_naq0g/featured.png',
     },
     {
         name: 'Spire Assassin',
@@ -11018,19 +5623,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_104_athena_commando_m_towersentinel/featured.png',
     },
     {
-        name: 'Spire Spy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pennantseasshade_c/featured.png',
-    },
-    {
         name: 'Spirit Hunter Saeko',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_voltaichuntress/icon.png',
-    },
-    {
-        name: 'Spirit Sniper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_914_athena_commando_f_york_e/featured.png',
     },
     {
         name: 'Spirit Tamer Harmonie',
@@ -11041,11 +5636,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Splash Specialist',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_089_athena_commando_f_hardwood_e_4tdwh/featured.png',
-    },
-    {
-        name: 'Splatterella',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_832_athena_commando_f_antillama/featured.png',
     },
     {
         name: 'Splinter',
@@ -11080,22 +5670,7 @@ export const fortniteCharacters: Character[] = [
     {
         name: 'Squad Leader',
         imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_f_placeholder_e/icon.png',
-    },
-    {
-        name: 'Squad Leader',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_waterfallcharm_e/icon.png',
-    },
-    {
-        name: 'Squad Leader',
-        imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_117_athena_commando_m_tacticaljungle/icon.png',
-    },
-    {
-        name: 'Squad Leader',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_276_athena_commando_f_prime_e/icon.png',
     },
     {
         name: 'Squadron Leader',
@@ -11113,11 +5688,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_204_athena_commando_m_garageband/featured.png',
     },
     {
-        name: 'Stalwart Sweeper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_147_athena_commando_m_soccerduded/featured.png',
-    },
-    {
         name: 'Stan Marsh',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_liquidcouch/featured.png',
@@ -11126,26 +5696,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Star Assassin',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_twinklebot/icon.png',
-    },
-    {
-        name: 'Star-Lord Outfit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_400_athena_commando_m_ashtonsaltlake/featured.png',
-    },
-    {
-        name: 'Star-Spangled Ranger',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_158_athena_commando_f_starsandstripes/featured.png',
-    },
-    {
-        name: 'Star-Spangled Trooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_157_athena_commando_m_starsandstripes/featured.png',
-    },
-    {
-        name: 'Starfire',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_474_athena_commando_f_astral/featured.png',
     },
     {
         name: 'Starfish',
@@ -11158,49 +5708,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_808_athena_commando_f_constellationsun/featured.png',
     },
     {
-        name: 'Starlie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_539_athena_commando_f_streetgothcandy/featured.png',
-    },
-    {
-        name: 'Starr Oakley',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_sparkarcher/featured.png',
-    },
-    {
         name: 'Starwalker',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_technohack/featured.png',
-    },
-    {
-        name: "Stash'd",
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_326_athena_commando_m_sharpdresserblack/featured.png',
-    },
-    {
-        name: 'Stealth Reflex',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_386_athena_commando_m_streetopsstealth/featured.png',
-    },
-    {
-        name: 'Stealth Specialist ',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_habitatsecurity_b/icon.png',
-    },
-    {
-        name: 'Stealth Specialist ',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_m_placeholder_b/icon.png',
-    },
-    {
-        name: 'Stealth Specialist ',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_280_athena_commando_m_prime_b/icon.png',
-    },
-    {
-        name: 'Stealthy Surveyor',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pennantseasshade_b/featured.png',
     },
     {
         name: 'Steelsight',
@@ -11208,29 +5718,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_111_athena_commando_f_robo/featured.png',
     },
     {
-        name: 'Stella',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_741_athena_commando_f_halloweenbunnyspring/featured.png',
-    },
-    {
-        name: 'Stellaron Hunter Blade',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_choicecrave/featured.png',
-    },
-    {
-        name: 'Stellaron Hunter Kafka',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tweaksmirk/featured.png',
-    },
-    {
         name: 'Sterling',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_393_athena_commando_m_shiny/featured.png',
-    },
-    {
-        name: 'Stingray',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_623_athena_commando_m_frogman/featured.png',
     },
     {
         name: 'Stix',
@@ -11243,16 +5733,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_523_athena_commando_f_cupid/featured.png',
     },
     {
-        name: 'Storm',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_839_athena_commando_f_hightowersquash/icon.png',
-    },
-    {
-        name: 'Storm Racer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_829_athena_commando_m_valet/featured.png',
-    },
-    {
         name: 'Storm-Wild Raven',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_critterbran/icon.png',
@@ -11261,11 +5741,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Stormfarer',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_394_athena_commando_m_darkstorm/featured.png',
-    },
-    {
-        name: 'Stormtrooper Samurai',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_beettread/featured.png',
     },
     {
         name: 'Story Seeker',
@@ -11293,19 +5768,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_cybermitthomer/icon.png',
     },
     {
-        name: 'Street Striker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_541_athena_commando_m_graffitigold/featured.png',
-    },
-    {
         name: 'Street Wave Teknique',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_graffititon/icon.png',
-    },
-    {
-        name: 'Streetwear Spark Messi',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_feathermudglance/featured.png',
     },
     {
         name: 'Striker Senpai',
@@ -11321,11 +5786,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Striped Slinger',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_upbeatiguana_d/featured.png',
-    },
-    {
-        name: 'Striped Soldier',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_215_athena_commando_m_footballreferee/featured.png',
     },
     {
         name: 'Strong Guard',
@@ -11348,24 +5808,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_085_athena_commando_m_twitch/icon.png',
     },
     {
-        name: 'Sub-Zero (MK3)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_sprocketpoppy_boat/icon.png',
-    },
-    {
-        name: 'Subzero Cryptic',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_snowsoldierfashion/icon.png',
-    },
-    {
         name: 'Sugarplum',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_303_athena_commando_f_snowfairy/featured.png',
-    },
-    {
-        name: 'Sultura',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_297_athena_commando_f_network/icon.png',
     },
     {
         name: 'Summer Drift',
@@ -11393,11 +5838,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_253_athena_commando_m_militaryfashion2/featured.png',
     },
     {
-        name: 'Summitseeker Evie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_iceretreat/featured.png',
-    },
-    {
         name: 'Sun Strider',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_166_athena_commando_f_lifeguard/icon.png',
@@ -11406,26 +5846,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Sun Tan Specialist',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_176_athena_commando_m_lifeguard/featured.png',
-    },
-    {
-        name: 'Sunbird',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_359_athena_commando_f_aztec/featured.png',
-    },
-    {
-        name: 'Sunburst Dawn',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_180_athena_commando_f_tiedyefashion_e/icon.png',
-    },
-    {
-        name: 'Sunflower',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_356_athena_commando_f_farmer/featured.png',
-    },
-    {
-        name: 'Sung Jinwoo',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_rampcanal/featured.png',
     },
     {
         name: 'Sunny',
@@ -11438,29 +5858,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_tigerroothype/featured.png',
     },
     {
-        name: 'Sunspot',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_sunshine/featured.png',
-    },
-    {
-        name: 'Super Shaq',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_warmshadeweasel/featured.png',
-    },
-    {
         name: 'Super Shredder',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_peacefulpoempumped/featured.png',
-    },
-    {
-        name: 'Super Striker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_144_athena_commando_m_soccerdudea/featured.png',
-    },
-    {
-        name: 'Superman',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_wealthlambfate/icon.png',
     },
     {
         name: 'Supersonic',
@@ -11468,79 +5868,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_385_athena_commando_m_pilotskull/featured.png',
     },
     {
-        name: 'Sureshot',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_522_athena_commando_m_bullseye/featured.png',
-    },
-    {
-        name: 'Surf Rider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_606_athena_commando_f_jetski/featured.png',
-    },
-    {
         name: 'Surf Strider',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_783_athena_commando_m_aquajacket/featured.png',
     },
     {
-        name: 'Surf Witch',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_805_athena_commando_f_punkdevilsummer/featured.png',
-    },
-    {
         name: 'Surrr Burger',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_075_athena_commando_m_durrburgerknight/icon.png',
-    },
-    {
-        name: 'Survival Specialist',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_027_athena_commando_f/featured.png',
-    },
-    {
-        name: 'Susan Storm',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_campwrench/icon.png',
-    },
-    {
-        name: 'Sushi Master',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_191_athena_commando_m_sushichef/featured.png',
-    },
-    {
-        name: 'Svenja',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_primeorder/featured.png',
-    },
-    {
-        name: 'Swamp Knight',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_swampknight/featured.png',
-    },
-    {
-        name: 'Swamp Stalker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_526_athena_commando_f_desertopsswamp/featured.png',
-    },
-    {
-        name: 'Swamp Stomper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_778_athena_commando_m_gator/featured.png',
-    },
-    {
-        name: 'Swift',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_680_athena_commando_m_streetrat/featured.png',
-    },
-    {
-        name: 'Swing Sargeant',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_120_athena_commando_m_golf_b/featured.png',
-    },
-    {
-        name: 'Swirl Girl',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_178_athena_commando_f_tiedyefashion_c/featured.png',
     },
     {
         name: 'Swish',
@@ -11553,34 +5888,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_scooppluck/featured.png',
     },
     {
-        name: 'Syd',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_453_athena_commando_f_fuzzybearsummer/featured.png',
-    },
-    {
         name: 'Sylvie',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_emberrae/icon.png',
     },
     {
-        name: 'Sylvie Laufeydottir',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_chessboard/featured.png',
-    },
-    {
-        name: 'Symbol Stalwart',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_446_athena_commando_m_bannera/featured.png',
-    },
-    {
         name: 'Synapse',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_425_athena_commando_f_cyberrunner/featured.png',
-    },
-    {
-        name: 'Syncopator',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_164_athena_commando_m_stands_b/featured.png',
     },
     {
         name: 'Synth',
@@ -11593,24 +5908,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_205_athena_commando_f_garageband/featured.png',
     },
     {
-        name: 'Synth Striker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_167_athena_commando_m_stands_e/featured.png',
-    },
-    {
         name: 'Synthwave',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_polaritywinnfield/icon.png',
-    },
-    {
-        name: 'SypherPK',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_headset/featured.png',
-    },
-    {
-        name: 'T-60 Power Armor',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_radiumfox_flame/icon.png',
     },
     {
         name: 'T-800',
@@ -11633,39 +5933,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_furyangel/featured.png',
     },
     {
-        name: 'Tactical Grunt Legionnaire',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_echoangel/featured.png',
-    },
-    {
         name: 'Tactical Tek',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_mezzoace/featured.png',
-    },
-    {
-        name: 'Tactical Tracker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_f_placeholder_c/icon.png',
-    },
-    {
-        name: 'Tactical Tracker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_waterfallcharm_c/icon.png',
-    },
-    {
-        name: 'Tactical Tracker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_274_athena_commando_f_prime_c/icon.png',
-    },
-    {
-        name: 'Tactician',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tactickale_b/featured.png',
-    },
-    {
-        name: 'Tactics Officer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_075_athena_commando_f_stripe/featured.png',
     },
     {
         name: 'Tailor',
@@ -11683,26 +5953,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_moonsatellite/icon.png',
     },
     {
-        name: 'Tango',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_676_athena_commando_m_codsquadhoodie/featured.png',
-    },
-    {
-        name: 'Tank Gunner',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_habitatsecurity_g/icon.png',
-    },
-    {
-        name: 'Tank Gunner',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_m_placeholder_g/icon.png',
-    },
-    {
-        name: 'Tank Gunner',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_285_athena_commando_m_prime_g/icon.png',
-    },
-    {
         name: 'Tarana',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_037_athena_commando_f_dinohunter/icon.png',
@@ -11713,29 +5963,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_272_athena_commando_m_hornedmask/featured.png',
     },
     {
-        name: 'Tart Tycoon',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_851_athena_commando_m_bittenhead/icon.png',
-    },
-    {
-        name: 'Taskforce Rio',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_404_athena_commando_f_rebirthfresh_c/featured.png',
-    },
-    {
-        name: 'Taskmaster',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_988_athena_commando_m_tiramisu_5khzp/icon.png',
-    },
-    {
         name: 'Tatsuo',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_smokeyalias/icon.png',
-    },
-    {
-        name: 'TB3',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_stridemicegiant/featured.png',
     },
     {
         name: 'TBD',
@@ -11873,34 +6103,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_941_athena_commando_m_football20_e_knwuy/featured.png',
     },
     {
-        name: 'Tech Ops',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_322_athena_commando_m_techops/featured.png',
-    },
-    {
         name: 'Technician Naya',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_magneticplotter/featured.png',
     },
     {
-        name: 'Tectonic Komplex',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_420_athena_commando_f_neongraffitilava/icon.png',
-    },
-    {
         name: 'Teef',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_584_athena_commando_m_nosh/featured.png',
-    },
-    {
-        name: 'Tegan',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_keytracker/icon.png',
-    },
-    {
-        name: 'Tek',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_687_athena_commando_m_agentace/featured.png',
     },
     {
         name: 'Teknique',
@@ -11933,29 +6143,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_618_athena_commando_m_forestdweller/featured.png',
     },
     {
-        name: 'Terra',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_688_athena_commando_f_agentrogue/featured.png',
-    },
-    {
         name: 'Terrible Tornado',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_ivystub/featured.png',
-    },
-    {
-        name: 'Tess',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_008_athena_commando_f_combatdoll/featured.png',
-    },
-    {
-        name: 'Tex Flamingo',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_flamingocountry/featured.png',
-    },
-    {
-        name: 'Thanos',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_128_athena_commando_m_menace/featured.png',
     },
     {
         name: 'The Ace',
@@ -11973,29 +6163,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_citadel/icon.png',
     },
     {
-        name: 'The Ageless Explorer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_watermolecules/featured.png',
-    },
-    {
-        name: 'The Autumn Queen',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_617_athena_commando_f_forestqueen/featured.png',
-    },
-    {
-        name: 'The Batman Who Laughs',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_219_athena_commando_m_giggle_c2uk0/featured.png',
-    },
-    {
         name: 'The Bitey Volt',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_248_athena_commando_m_zombieelastic_e/featured.png',
-    },
-    {
-        name: 'The Brat',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_614_athena_commando_m_missinglink/featured.png',
     },
     {
         name: 'The Bride',
@@ -12013,19 +6183,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_184_athena_commando_m_ninjawolf_f09o3/featured.png',
     },
     {
-        name: 'The Champion',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_106_athena_commando_f_futurepinkgoal/featured.png',
-    },
-    {
         name: 'The Cube Queen',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_225_athena_commando_f_cubequeen/icon.png',
-    },
-    {
-        name: 'The Dark Knight Movie Outfit',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_529_athena_commando_m_blackmondaykansas_hwd90/icon.png',
     },
     {
         name: 'The Dark Maw',
@@ -12038,11 +6198,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_rhombcamo/featured.png',
     },
     {
-        name: 'The Devourer',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_644_athena_commando_m_cattus/icon.png',
-    },
-    {
         name: 'The Diamond',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_hastybandit/featured.png',
@@ -12053,29 +6208,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_fairymochi/featured.png',
     },
     {
-        name: 'The Employee',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tollbridge/featured.png',
-    },
-    {
         name: 'The Engineer',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_booster/featured.png',
     },
     {
-        name: 'The Engineer (DC)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_scraptunnel/featured.png',
-    },
-    {
         name: 'The Final Peel',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_nanaeternal/featured.png',
-    },
-    {
-        name: 'The Flash',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_010_athena_commando_m_tar_46fmc/featured.png',
     },
     {
         name: 'The Foundation',
@@ -12128,21 +6268,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_imitator/icon.png',
     },
     {
-        name: 'The Joker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_922_athena_commando_m_parcelprank/icon.png',
-    },
-    {
-        name: 'The Joker (Beyond)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_finchvisit/featured.png',
-    },
-    {
-        name: 'The Kid LAROI',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_sunburst/icon.png',
-    },
-    {
         name: 'The Machinist',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_prairieskip_forge/icon.png',
@@ -12158,24 +6283,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_dustybun/featured.png',
     },
     {
-        name: 'The Mummy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_218_athena_commando_m_crittermaniac_kv6j0/featured.png',
-    },
-    {
         name: 'The Night Rose',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_rosedepth_seed/icon.png',
-    },
-    {
-        name: 'The Order',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_395_athena_commando_f_binarytwin/featured.png',
-    },
-    {
-        name: 'The Paradigm',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_547_athena_commando_f_meteorwoman/featured.png',
     },
     {
         name: 'The Prisoner',
@@ -12188,11 +6298,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_084_athena_commando_m_assassin/icon.png',
     },
     {
-        name: 'The Rogue LAROI',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_sunburstalt/icon.png',
-    },
-    {
         name: 'The Ron-troller',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_bytegear/icon.png',
@@ -12201,11 +6306,6 @@ export const fortniteCharacters: Character[] = [
         name: 'The Scientist',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_540_athena_commando_m_meteormanremix/featured.png',
-    },
-    {
-        name: 'The Scout',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_campussire/featured.png',
     },
     {
         name: 'The Stylist',
@@ -12228,16 +6328,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_synthcontact/icon.png',
     },
     {
-        name: 'The Weeknd',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_speeddial/featured.png',
-    },
-    {
-        name: 'The Weeknd Combat',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_speeddialbattle/featured.png',
-    },
-    {
         name: 'The Widow',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_flamebride/featured.png',
@@ -12248,34 +6338,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_acrylicstitch/featured.png',
     },
     {
-        name: 'TheGrefg',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_990_athena_commando_m_grilledcheese_snx4k/featured.png',
-    },
-    {
         name: "They're Back-Lash",
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_250_athena_commando_f_zombieelastic_b/featured.png',
     },
     {
-        name: 'Thor',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_845_athena_commando_m_hightowertapas/icon.png',
-    },
-    {
-        name: 'Thor Odinson',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_439_athena_commando_m_trifle/icon.png',
-    },
-    {
         name: 'Thrilldiver',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_summerunsuitable/featured.png',
-    },
-    {
-        name: 'Throwback BG',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_387_athena_commando_m_lyrical/featured.png',
     },
     {
         name: 'Thunder',
@@ -12293,19 +6363,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_jarpmilo/featured.png',
     },
     {
-        name: 'Tigeress',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_683_athena_commando_f_tigerfashion/featured.png',
-    },
-    {
         name: 'Tighty Whities Homer',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_spongehollow/featured.png',
-    },
-    {
-        name: 'Tigress',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_coyotear/featured.png',
     },
     {
         name: 'Tiki Tackler',
@@ -12316,21 +6376,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Tilted Teknique',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_483_athena_commando_f_graffitiremix/icon.png',
-    },
-    {
-        name: 'Tilted Trooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_441_athena_commando_f_pennantseasone/featured.png',
-    },
-    {
-        name: 'Time-Out',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_950_athena_commando_m_football20referee_d_mihme/featured.png',
-    },
-    {
-        name: 'Tinseltoes',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_316_athena_commando_f_winterholiday/featured.png',
     },
     {
         name: 'Titan',
@@ -12363,24 +6408,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_twicebaked/featured.png',
     },
     {
-        name: 'Toni',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_413_athena_commando_m_glare/icon.png',
-    },
-    {
-        name: 'Tony Stark',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_843_athena_commando_m_hightowertomato_casual/icon.png',
-    },
-    {
         name: 'Toon Bushy',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_356_athena_commando_m_weepingwoodstoon/icon.png',
-    },
-    {
-        name: 'Toon Meowscles',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_072_athena_commando_m_buffcatcomic_xg5xc/featured.png',
     },
     {
         name: 'Toon Peely',
@@ -12413,29 +6443,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_plankcoverage/featured.png',
     },
     {
-        name: 'Toshiro',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_rogueninja/featured.png',
-    },
-    {
-        name: 'Tour-Ready Sabrina Carpenter',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_dimeblanketgrace/featured.png',
-    },
-    {
-        name: 'Tower Recon Specialist',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_079_athena_commando_f_camo/featured.png',
-    },
-    {
         name: 'Toxic Fusion',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_toxicstorm/featured.png',
-    },
-    {
-        name: 'Toxic Tagger',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_533_athena_commando_m_streeturchin/featured.png',
     },
     {
         name: 'Toxic Trooper',
@@ -12443,19 +6453,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_127_athena_commando_m_hazmat/featured.png',
     },
     {
-        name: 'Toy Trooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_440_athena_commando_f_bullseyegreenplastic/featured.png',
-    },
-    {
         name: 'Trace',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_zirconsweep/icon.png',
-    },
-    {
-        name: 'Tracker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_009_athena_commando_m/featured.png',
     },
     {
         name: 'Tracy Trouble',
@@ -12468,19 +6468,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_114_athena_commando_f_tacticalwoodland/featured.png',
     },
     {
-        name: 'Trailblazer Lynx',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_catspace/icon.png',
-    },
-    {
         name: 'Trailblazer Tai',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_vitalinventor/icon.png',
-    },
-    {
-        name: 'Travis Scott',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_703_athena_commando_m_cyclone/featured.png',
     },
     {
         name: 'Treasured Aura',
@@ -12488,24 +6478,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_treasurehunter_brigade/icon.png',
     },
     {
-        name: 'Trench Raider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_609_athena_commando_m_submariner/featured.png',
-    },
-    {
         name: 'Trench Runner',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_946_athena_commando_f_football20_e_efkp3/featured.png',
-    },
-    {
-        name: 'Trench Trawler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_773_athena_commando_m_beacon/featured.png',
-    },
-    {
-        name: 'Trespasser Defector',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_alien_robot/featured.png',
     },
     {
         name: 'Trespasser Elite',
@@ -12538,31 +6513,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_107_athena_commando_f_pajamaparty/featured.png',
     },
     {
-        name: 'Tricksy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_229_athena_commando_f_disguiseblack/featured.png',
-    },
-    {
-        name: 'Triggerfish',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_624_athena_commando_m_teriyakiwarrior/featured.png',
-    },
-    {
-        name: 'Trilogy',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_657_athena_commando_f_techopsblue/featured.png',
-    },
-    {
-        name: 'Trinity Trooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_933_athena_commando_f_futurepink/featured.png',
-    },
-    {
-        name: 'Triple Threat',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_137_athena_commando_f_streetbasketball/featured.png',
-    },
-    {
         name: 'Triple-Double',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_083_athena_commando_m_hardwood_d_7s0pn/featured.png',
@@ -12571,11 +6521,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Trog',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_278_athena_commando_m_yeti/icon.png',
-    },
-    {
-        name: 'Trooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_012_athena_commando_m/featured.png',
     },
     {
         name: 'Tropical Punch Zoey',
@@ -12588,11 +6533,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_yogapatio/featured.png',
     },
     {
-        name: 'Tsuki',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_472_athena_commando_f_cyberkarate/featured.png',
-    },
-    {
         name: 'Tsuki 2.0',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_369_athena_commando_f_cyberarmor/icon.png',
@@ -12603,34 +6543,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_timberstakedrift_e/icon.png',
     },
     {
-        name: 'Tune Squad LeBron',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_137_athena_commando_m_majestyblue_3rvjs/featured.png',
-    },
-    {
         name: 'Turanga Leela',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_muteribbon/featured.png',
     },
     {
-        name: 'Turk vs Riptide',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_564_athena_commando_m_tacticalfisherman/icon.png',
-    },
-    {
-        name: 'Twistie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_326_athena_commando_f_wavyman/featured.png',
-    },
-    {
         name: 'Twyn',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_candor/icon.png',
-    },
-    {
-        name: 'Tyler, The Creator',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_caninecronutmix/featured.png',
     },
     {
         name: 'U',
@@ -12678,34 +6598,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_shadenyx/featured.png',
     },
     {
-        name: 'Underworld Desdemona',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_chaosdarkice/icon.png',
-    },
-    {
-        name: 'Undying Sorrow',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_ruins/featured.png',
-    },
-    {
         name: 'Unpeely',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_814_athena_commando_m_bananasummer/icon.png',
     },
     {
-        name: 'UNSC Spartan',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_claimreflect/icon.png',
-    },
-    {
         name: 'Unstuffed Guff',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_458_athena_commando_m_sunstar/icon.png',
-    },
-    {
-        name: 'Upload',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_019_athena_commando_f_mainframe_c_u5ri4/featured.png',
     },
     {
         name: 'Ural the Sage',
@@ -12716,11 +6616,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Uryu Ishida',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_bullkeynote/featured.png',
-    },
-    {
-        name: 'V',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_freightcalf/featured.png',
     },
     {
         name: 'Valentina',
@@ -12743,11 +6638,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_118_athena_commando_f_valor/icon.png',
     },
     {
-        name: 'Vanguard Banshee',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_888_athena_commando_f_chonebanshee/featured.png',
-    },
-    {
         name: 'Vanguard Zadie',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_rankedtrooper/featured.png',
@@ -12761,11 +6651,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Vecna',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_cornerweek/featured.png',
-    },
-    {
-        name: 'Vector',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_458_athena_commando_m_techmage/featured.png',
     },
     {
         name: 'Vega',
@@ -12798,11 +6683,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_undergroundrebel_fashion/icon.png',
     },
     {
-        name: 'Venom',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_934_athena_commando_m_vertigo/featured.png',
-    },
-    {
         name: 'Ventura',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_133_athena_commando_f_deco/featured.png',
@@ -12818,19 +6698,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_elegantheist/featured.png',
     },
     {
-        name: 'Verge',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_321_athena_commando_m_militaryfashion1/featured.png',
-    },
-    {
         name: 'Verity',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_ionvial/featured.png',
-    },
-    {
-        name: 'Veronika',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_477_athena_commando_f_handlebar/icon.png',
     },
     {
         name: 'Versa',
@@ -12846,21 +6716,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Vi',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_a_009_athena_commando_f_foxwarrior_21b9r/featured.png',
-    },
-    {
-        name: 'Vice',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_551_athena_commando_m_yellowcamod/featured.png',
-    },
-    {
-        name: 'Victor Elite',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_271_athena_commando_m_fncs_purple/featured.png',
-    },
-    {
-        name: 'Victoria Saint',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_869_athena_commando_f_cavalry/featured.png',
     },
     {
         name: 'Victory Valedictorian',
@@ -12883,11 +6738,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_yokequick/icon.png',
     },
     {
-        name: 'Vintage Ramirez',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_884_athena_commando_f_choneramirez/featured.png',
-    },
-    {
         name: 'Violet',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_896_athena_commando_f_spookyneon/icon.png',
@@ -12896,16 +6746,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Viridion',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_searedscurf/featured.png',
-    },
-    {
-        name: 'Vivi Chroma',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_scribble/icon.png',
-    },
-    {
-        name: 'Vivica Saint',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_cavalryalt/icon.png',
     },
     {
         name: 'Vix',
@@ -12928,21 +6768,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_mincepounce/icon.png',
     },
     {
-        name: 'Void Warrior Absenz',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_pitglass/icon.png',
-    },
-    {
-        name: 'Volley Girl',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_328_athena_commando_f_tennis/featured.png',
-    },
-    {
-        name: 'Volpez',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_lopexsnow/icon.png',
-    },
-    {
         name: 'Voltaria',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_manicrufus/featured.png',
@@ -12956,16 +6781,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Vulture',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_519_athena_commando_m_raptorblackops/featured.png',
-    },
-    {
-        name: 'Wailing Warrior',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_447_athena_commando_m_pennantseasone_b/featured.png',
-    },
-    {
-        name: 'Wake Rider',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_607_athena_commando_m_jetski/featured.png',
     },
     {
         name: 'Waltz',
@@ -12983,19 +6798,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_858_athena_commando_m_elastic_d/featured.png',
     },
     {
-        name: 'War Machine',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_mooseporch_math/icon.png',
-    },
-    {
         name: 'War Wolf Dire',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_grimhound/icon.png',
-    },
-    {
-        name: 'Warfare',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tacticmushroom_c/featured.png',
     },
     {
         name: 'Warpaint',
@@ -13008,44 +6813,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_ironclash/icon.png',
     },
     {
-        name: 'Wastelander Magneto',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_roundthumb_nail/icon.png',
-    },
-    {
         name: 'Wave Rider Axo',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_caneaxl/featured.png',
-    },
-    {
-        name: 'Wavebreaker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_575_athena_commando_f_bulletblue/icon.png',
-    },
-    {
-        name: 'Waveripper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_817_athena_commando_m_dirtydocks/featured.png',
-    },
-    {
-        name: 'Wavy Warrior',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_176_athena_commando_f_tiedyefashion/featured.png',
-    },
-    {
-        name: 'Waypoint',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_290_athena_commando_f_bluebadass/featured.png',
-    },
-    {
-        name: 'Weapon X',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_hydrobottle/featured.png',
-    },
-    {
-        name: 'Webster',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_059_athena_commando_m_wickedduck/featured.png',
     },
     {
         name: 'Wednesday Addams',
@@ -13053,39 +6823,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_polkaskate/featured.png',
     },
     {
-        name: 'Wendell',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_sirwolf/featured.png',
-    },
-    {
-        name: 'Whiplash',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_106_athena_commando_f_taxi/featured.png',
-    },
-    {
-        name: 'Whiska',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_052_athena_commando_f_bunnyfashion/featured.png',
-    },
-    {
         name: 'Whisper',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_commandospy/featured.png',
     },
     {
-        name: 'Whistle Warrior',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_214_athena_commando_f_footballreferee/featured.png',
-    },
-    {
         name: 'White Dino Ranger',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_wavysignalbanjo/featured.png',
-    },
-    {
-        name: 'White Widow (Pen & Ink)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_lintmermaid/featured.png',
     },
     {
         name: 'Whiteout',
@@ -13096,11 +6841,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Wild Card',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_206_athena_commando_m_bling/featured.png',
-    },
-    {
-        name: 'Wild Gunner',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_762_athena_commando_m_brightgunnerspy/featured.png',
     },
     {
         name: 'Wildcat',
@@ -13118,11 +6858,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_380_athena_commando_m_cactusrocker_sbi3t/featured.png',
     },
     {
-        name: 'Wildstreak One',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_889_athena_commando_f_chonewildcat/featured.png',
-    },
-    {
         name: 'Will Byers',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_lanternfit/icon.png',
@@ -13133,69 +6868,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_601_athena_commando_f_palespooky/icon.png',
     },
     {
-        name: 'Windwalker Echo',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_047_athena_commando_f_windwalker/featured.png',
-    },
-    {
         name: 'Wingman',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_139_athena_commando_m_fighterpilot/featured.png',
     },
     {
-        name: 'Wingtip',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_292_athena_commando_f_dieselpunk02/featured.png',
-    },
-    {
-        name: 'Winter Soldier (Pen & Ink)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_stylusfluff/featured.png',
-    },
-    {
-        name: 'Winter Wonder Skye',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_photographer_holiday/icon.png',
-    },
-    {
-        name: 'Winterfest Bushranger',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_weepingwoodsfestive/icon.png',
-    },
-    {
-        name: 'Wiretap',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_724_athena_commando_m_spytech/featured.png',
-    },
-    {
-        name: 'Wolf',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_755_athena_commando_m_splinter/featured.png',
-    },
-    {
-        name: 'Wolf Pack Trooper',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_grandscheme_grey/icon.png',
-    },
-    {
         name: 'Wolfie',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_glamclaws/icon.png',
-    },
-    {
-        name: 'Wolverine',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_841_athena_commando_m_hightowerwasabi/icon.png',
-    },
-    {
-        name: 'Wolverine (Pen & Ink)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_olivestomp/icon.png',
-    },
-    {
-        name: 'Wolverine Zero',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_461_athena_commando_m_desertshadow/featured.png',
     },
     {
         name: 'Wonder',
@@ -13208,39 +6888,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_solosnooze/icon.png',
     },
     {
-        name: 'Wonder Woman',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_187_athena_commando_f_monarch/icon.png',
-    },
-    {
         name: 'Wonkee',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_royalwonk/featured.png',
     },
     {
-        name: 'Wookiee Team Leader',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_hydratrumpetcoach/icon.png',
-    },
-    {
         name: 'Woolla',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_slysheep/featured.png',
-    },
-    {
-        name: 'Wooly Warrior',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_645_athena_commando_f_wolly/featured.png',
-    },
-    {
-        name: 'World Warrior',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_478_athena_commando_f_worldcup/featured.png',
-    },
-    {
-        name: 'Wrangler',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_576_athena_commando_m_codsquadplaid/featured.png',
     },
     {
         name: 'Wrap Major',
@@ -13258,29 +6913,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/cid_a_144_athena_commando_m_pliant_c/featured.png',
     },
     {
-        name: 'Wrath',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_599_athena_commando_m_phantom/featured.png',
-    },
-    {
         name: 'Wreck Raider',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_180_athena_commando_m_scuba/featured.png',
     },
     {
-        name: 'Wrecker',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_tactickale/featured.png',
-    },
-    {
         name: 'Wukong',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_071_athena_commando_m_wukong/featured.png',
-    },
-    {
-        name: 'X-23',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_darkazalea/featured.png',
     },
     {
         name: 'X-Lord',
@@ -13333,16 +6973,6 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_fumefleecewag/featured.png',
     },
     {
-        name: 'Yellowjacket',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_749_athena_commando_f_graffitiassassin/icon.png',
-    },
-    {
-        name: 'Yennefer of Vengerberg',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_fishbowl/featured.png',
-    },
-    {
         name: 'Yon Dar 3000',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_radiopaca/icon.png',
@@ -13353,19 +6983,9 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_hangspec_screech/icon.png',
     },
     {
-        name: 'Young Adult Groot',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_brakepedal/icon.png',
-    },
-    {
         name: 'Yuji Itadori',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_birdnest/featured.png',
-    },
-    {
-        name: 'Yuki',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_050_athena_commando_f_sailorsquadrose/icon.png',
     },
     {
         name: 'Yuki Yubari',
@@ -13381,16 +7001,6 @@ export const fortniteCharacters: Character[] = [
         name: 'Yulejacket',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_blowwire/icon.png',
-    },
-    {
-        name: 'Yuletide Ranger',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_045_athena_commando_m_holidaysweater/featured.png',
-    },
-    {
-        name: 'Zadie',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_625_athena_commando_f_pinktrooper/featured.png',
     },
     {
         name: 'Zain',
@@ -13428,44 +7038,14 @@ export const fortniteCharacters: Character[] = [
             'https://fortnite-api.com/images/cosmetics/br/character_lazylizzchip/icon.png',
     },
     {
-        name: 'Zina',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_721_athena_commando_f_pineapplebandit/featured.png',
-    },
-    {
-        name: 'Zoe Clash',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_364_athena_commando_f_jade/icon.png',
-    },
-    {
         name: 'Zoey',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/cid_119_athena_commando_f_candy/icon.png',
     },
     {
-        name: 'Zoey (HUNTR/X)',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/character_evokefind/featured.png',
-    },
-    {
-        name: 'Zorgoton',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_535_athena_commando_m_traveler/featured.png',
-    },
-    {
-        name: 'Zorii Bliss',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_632_athena_commando_f_galileozeppelin_sjkpw/featured.png',
-    },
-    {
         name: 'Zuko',
         imageUrl:
             'https://fortnite-api.com/images/cosmetics/br/character_tikitorch/icon.png',
-    },
-    {
-        name: 'Zuri',
-        imageUrl:
-            'https://fortnite-api.com/images/cosmetics/br/cid_a_396_athena_commando_f_raspberry/featured.png',
     },
     {
         name: 'Zyg',
