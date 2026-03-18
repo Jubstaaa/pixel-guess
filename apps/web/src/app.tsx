@@ -5,6 +5,7 @@ import { AboutPage } from './pages/about'
 import { GamePage } from './pages/game'
 import { HomePage } from './pages/home'
 import { HowToPlayPage } from './pages/how-to-play'
+import { NotFoundPage } from './pages/not-found'
 import { PrivacyPolicyPage } from './pages/privacy-policy'
 import { TermsOfServicePage } from './pages/terms-of-service'
 
@@ -31,6 +32,7 @@ export const App = () => (
                         element={<GamePage />}
                         path="/:categorySlug/:difficulty"
                     />
+                    <Route element={<NotFoundPage />} path="*" />
                 </Routes>
             </main>
             <Footer />
