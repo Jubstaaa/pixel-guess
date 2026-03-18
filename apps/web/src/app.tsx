@@ -1,7 +1,11 @@
-import { BrowserRouter, Route, Routes } from 'react-router'
+import {
+    createBrowserRouter,
+    Outlet,
+    RouterProvider,
+    ScrollRestoration,
+} from 'react-router'
 
 import { Footer } from './components/footer/footer'
-import { ScrollToTop } from './components/scroll-to-top/scroll-to-top'
 import { AboutPage } from './pages/about'
 import { GamePage } from './pages/game'
 import { HomePage } from './pages/home'
@@ -10,34 +14,31 @@ import { NotFoundPage } from './pages/not-found'
 import { PrivacyPolicyPage } from './pages/privacy-policy'
 import { TermsOfServicePage } from './pages/terms-of-service'
 
-export const App = () => (
-    <BrowserRouter>
-        <ScrollToTop />
+const Layout = () => (
+    <>
+        <ScrollRestoration />
         <div className="flex min-h-dvh flex-col">
             <main className="flex-1">
-                <Routes>
-                    <Route element={<HomePage />} path="/" />
-                    <Route element={<AboutPage />} path="/about" />
-                    <Route
-                        element={<HowToPlayPage />}
-                        path="/how-to-play"
-                    />
-                    <Route
-                        element={<PrivacyPolicyPage />}
-                        path="/privacy-policy"
-                    />
-                    <Route
-                        element={<TermsOfServicePage />}
-                        path="/terms-of-service"
-                    />
-                    <Route
-                        element={<GamePage />}
-                        path="/:categorySlug/:difficulty"
-                    />
-                    <Route element={<NotFoundPage />} path="*" />
-                </Routes>
+                <Outlet />
             </main>
             <Footer />
         </div>
-    </BrowserRouter>
+    </>
 )
+
+const router = createBrowserRouter([
+    {
+        element: <Layout />,
+        children: [
+            { path: '/', element: <HomePage /> },
+            { path: '/about', element: <AboutPage /> },
+            { path: '/how-to-play', element: <HowToPlayPage /> },
+            { path: '/privacy-policy', element: <PrivacyPolicyPage /> },
+            { path: '/terms-of-service', element: <TermsOfServicePage /> },
+            { path: '/:categorySlug/:difficulty', element: <GamePage /> },
+            { path: '*', element: <NotFoundPage /> },
+        ],
+    },
+])
+
+export const App = () => <RouterProvider router={router} />
