@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 
 import { computeBlockSize, DIFFICULTY_CONFIG } from '@pixel-guess/shared'
-import type { Difficulty } from '@pixel-guess/shared'
+import type { Difficulty, ImageType } from '@pixel-guess/shared'
 
 export const useCanvasPixelation = (
     imageUrl: string | null,
     count: number,
-    difficulty: Difficulty
+    difficulty: Difficulty,
+    imageType: ImageType = 'character'
 ) => {
     const canvasRef = useRef<HTMLCanvasElement>(null)
     const [isImageLoaded, setIsImageLoaded] = useState(false)
@@ -41,7 +42,7 @@ export const useCanvasPixelation = (
             canvas.height = height
 
             const shortSide = Math.min(width, height)
-            const blockSize = computeBlockSize(count, difficulty, shortSide)
+            const blockSize = computeBlockSize(count, difficulty, shortSide, imageType)
             const { grayscale } = DIFFICULTY_CONFIG[difficulty]
 
             ctx.clearRect(0, 0, width, height)
@@ -70,7 +71,7 @@ export const useCanvasPixelation = (
         }
 
         img.src = finalUrl
-    }, [imageUrl, count, difficulty])
+    }, [imageUrl, count, difficulty, imageType])
 
     return { canvasRef, isImageLoaded }
 }

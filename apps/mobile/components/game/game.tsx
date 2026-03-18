@@ -16,6 +16,7 @@ import {
 import ConfettiCannon from 'react-native-confetti-cannon'
 
 import {
+    categories,
     charactersByCategory,
     checkGuess,
     filterCharacters,
@@ -48,6 +49,11 @@ export const Game = ({ categorySlug, levelType }: GameProps) => {
     const [showDropdown, setShowDropdown] = useState(false)
     const [guessedIndices, setGuessedIndices] = useState<number[]>([])
     const [isRevealed, setIsRevealed] = useState(false)
+
+    const category = useMemo(
+        () => categories.find((c) => c.slug === categorySlug),
+        [categorySlug]
+    )
 
     const characters = useMemo(
         () => charactersByCategory[categorySlug] ?? [],
@@ -189,6 +195,7 @@ export const Game = ({ categorySlug, levelType }: GameProps) => {
                         <PixelatedImage
                             key={state.currentCharacter.imageUrl}
                             count={displayCount}
+                            imageType={category?.imageType}
                             imageUrl={state.currentCharacter.imageUrl}
                             levelType={levelType}
                             size={320}

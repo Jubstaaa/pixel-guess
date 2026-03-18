@@ -6,6 +6,12 @@ export const LEVEL_TYPE = {
 } as const
 
 export const DIFFICULTY_CONFIG = {
-    easy: { maxBlockSize: 80, grayscale: false },
-    hard: { maxBlockSize: 24, grayscale: true },
+    easy: { grayscale: false },
+    hard: { grayscale: true },
+} as const
+
+export const IMAGE_TYPE_BLOCK_SIZE = {
+    character: { easy: 80, hard: 24 },
+    poster: { easy: 70, hard: 20 },
+    logo: { easy: 50, hard: 16 },
 } as const

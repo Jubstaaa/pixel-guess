@@ -22,6 +22,7 @@ export const PixelatedImage = ({
     imageUrl,
     count,
     levelType,
+    imageType = 'character',
     size = 320,
 }: PixelatedImageProps) => {
     const image = useImage(imageUrl)
@@ -40,9 +41,10 @@ export const PixelatedImage = ({
             computeBlockSize(
                 count,
                 levelType,
-                Math.min(canvasWidth, canvasHeight)
+                Math.min(canvasWidth, canvasHeight),
+                imageType
             ),
-        [count, levelType, canvasWidth, canvasHeight]
+        [count, levelType, canvasWidth, canvasHeight, imageType]
     )
 
     const isFullyRevealed = count === 6

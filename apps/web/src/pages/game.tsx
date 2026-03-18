@@ -198,6 +198,7 @@ const GameContent = ({
                     <PixelatedCanvas
                         count={displayCount}
                         difficulty={difficulty}
+                        imageType={category.imageType}
                         imageUrl={state.currentCharacter?.imageUrl ?? null}
                     />
                     <button

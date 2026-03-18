@@ -6,11 +6,13 @@ export const PixelatedCanvas = ({
     imageUrl,
     count,
     difficulty,
+    imageType,
 }: PixelatedCanvasProps) => {
     const { canvasRef, isImageLoaded } = useCanvasPixelation(
         imageUrl,
         count,
-        difficulty
+        difficulty,
+        imageType
     )
 
     return (

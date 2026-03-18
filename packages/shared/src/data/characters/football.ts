@@ -31,10 +31,6 @@ export const footballCharacters: Character[] = [
         imageUrl: 'https://crests.football-data.org/99.png',
     },
     {
-        name: 'AFC Ajax',
-        imageUrl: 'https://crests.football-data.org/678.png',
-    },
-    {
         name: 'AFC Bournemouth',
         imageUrl: 'https://crests.football-data.org/bournemouth.png',
     },
@@ -115,10 +111,6 @@ export const footballCharacters: Character[] = [
         imageUrl: 'https://crests.football-data.org/78.png',
     },
     {
-        name: 'Club Brugge KV',
-        imageUrl: 'https://crests.football-data.org/851.png',
-    },
-    {
         name: 'Como 1907',
         imageUrl: 'https://crests.football-data.org/7397.png',
     },
@@ -159,10 +151,6 @@ export const footballCharacters: Character[] = [
         imageUrl: 'https://crests.football-data.org/108.png',
     },
     {
-        name: 'FC København',
-        imageUrl: 'https://crests.football-data.org/1876.png',
-    },
-    {
         name: 'FC Lorient',
         imageUrl: 'https://crests.football-data.org/525.png',
     },
@@ -179,20 +167,8 @@ export const footballCharacters: Character[] = [
         imageUrl: 'https://crests.football-data.org/20.png',
     },
     {
-        name: 'FK Bodø/Glimt',
-        imageUrl: 'https://crests.football-data.org/5721.png',
-    },
-    {
-        name: 'FK Kairat',
-        imageUrl: 'https://crests.football-data.org/10601.png',
-    },
-    {
         name: 'Fulham FC',
         imageUrl: 'https://crests.football-data.org/63.png',
-    },
-    {
-        name: 'Galatasaray SK',
-        imageUrl: 'https://crests.football-data.org/610.png',
     },
     {
         name: 'Genoa CFC',
@@ -267,14 +243,6 @@ export const footballCharacters: Character[] = [
         imageUrl: 'https://crests.football-data.org/523.png',
     },
     {
-        name: 'PAE Olympiakos SFP',
-        imageUrl: 'https://crests.football-data.org/654.png',
-    },
-    {
-        name: 'Paphos FC',
-        imageUrl: 'https://crests.football-data.org/11034.png',
-    },
-    {
         name: 'Paris FC',
         imageUrl: 'https://crests.football-data.org/1045.png',
     },
@@ -285,14 +253,6 @@ export const footballCharacters: Character[] = [
     {
         name: 'Parma Calcio 1913',
         imageUrl: 'https://crests.football-data.org/112.png',
-    },
-    {
-        name: 'PSV',
-        imageUrl: 'https://crests.football-data.org/674.png',
-    },
-    {
-        name: 'Qarabağ Ağdam FK',
-        imageUrl: 'https://crests.football-data.org/611.png',
     },
     {
         name: 'Racing Club de Lens',
@@ -339,28 +299,12 @@ export const footballCharacters: Character[] = [
         imageUrl: 'https://crests.football-data.org/92.png',
     },
     {
-        name: 'Royale Union Saint-Gilloise',
-        imageUrl: 'https://crests.football-data.org/3929.png',
-    },
-    {
         name: 'SC Freiburg',
         imageUrl: 'https://crests.football-data.org/17.png',
     },
     {
         name: 'Sevilla FC',
         imageUrl: 'https://crests.football-data.org/559.png',
-    },
-    {
-        name: 'SK Slavia Praha',
-        imageUrl: 'https://crests.football-data.org/930.png',
-    },
-    {
-        name: 'Sport Lisboa e Benfica',
-        imageUrl: 'https://crests.football-data.org/1903.png',
-    },
-    {
-        name: 'Sporting Clube de Portugal',
-        imageUrl: 'https://crests.football-data.org/498.png',
     },
     {
         name: 'SS Lazio',

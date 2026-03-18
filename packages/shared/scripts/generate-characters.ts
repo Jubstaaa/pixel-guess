@@ -415,7 +415,7 @@ async function fetchBrands(): Promise<string> {
 }
 
 async function fetchFootball(apiKey: string): Promise<string> {
-    const competitions = ['PL', 'PD', 'BL1', 'SA', 'FL1', 'CL']
+    const competitions = ['PL', 'PD', 'BL1', 'SA', 'FL1']
     const teamMap = new Map<number, { name: string; crest: string }>()
 
     await Promise.all(
