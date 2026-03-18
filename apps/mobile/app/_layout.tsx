@@ -4,13 +4,17 @@ import React, { Fragment, useEffect } from 'react'
 
 import { Stack } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
-import mobileAds from 'react-native-google-mobile-ads'
 
 import { COLORS } from '@/constants/colors'
 
 const RootLayout = () => {
     useEffect(() => {
-        mobileAds().initialize()
+        try {
+            const { default: mobileAds } = require('react-native-google-mobile-ads')
+            mobileAds().initialize()
+        } catch {
+            // Native module not available (Expo Go)
+        }
     }, [])
 
     return (
