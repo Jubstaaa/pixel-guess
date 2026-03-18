@@ -27,6 +27,7 @@ import {
 import type { Character, GameState } from '@pixel-guess/shared'
 
 import { COLORS } from '@/constants/colors'
+import { useInterstitialAd } from '@/hooks/use-interstitial-ad'
 import { Image } from '@/lib/image'
 
 import { PixelatedImage } from '../pixelated-image/pixelated-image'
@@ -44,6 +45,8 @@ const CONFETTI_COLORS = [
 export const Game = ({ categorySlug, levelType }: GameProps) => {
     const confettiRef = useRef<ConfettiCannon>(null)
     const timeoutRef = useRef<ReturnType<typeof setTimeout>>(null)
+
+    const { onCorrectGuess } = useInterstitialAd()
 
     const [input, setInput] = useState('')
     const [showDropdown, setShowDropdown] = useState(false)
@@ -107,6 +110,7 @@ export const Game = ({ categorySlug, levelType }: GameProps) => {
                 confettiRef.current?.start()
                 setIsRevealed(true)
                 setState(nextState)
+                onCorrectGuess()
                 timeoutRef.current = setTimeout(() => {
                     setIsRevealed(false)
                     setGuessedIndices([])
@@ -128,7 +132,7 @@ export const Game = ({ categorySlug, levelType }: GameProps) => {
                 }
             }
         },
-        [state, pickNext]
+        [state, pickNext, onCorrectGuess]
     )
 
     const handleSkip = useCallback(() => {

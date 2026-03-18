@@ -17,7 +17,8 @@
       "bundleIdentifier": "com.haccoo.pixel-guess",
       "appleTeamId": "67M6SCS9K9",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSUserTrackingUsageDescription": "This identifier will be used to deliver personalized ads to you."
       },
       "buildNumber": "2"
     },
@@ -34,7 +35,13 @@
     },
     "plugins": [
       "expo-router",
-      "expo-secure-store"
+      "expo-secure-store",
+      [
+        "react-native-google-mobile-ads",
+        {
+          "iosAppId": "ca-app-pub-5250650495212334~5174161665"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
