@@ -91,7 +91,7 @@ export const categories: Category[] = [
         name: 'People',
         icon: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Tmdb.new.logo.svg',
         characterCount: peopleCharacters.length,
-        imageType: 'character',
+        imageType: 'poster',
     },
     {
         slug: 'dragon-ball',

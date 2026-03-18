@@ -270,7 +270,7 @@ async function fetchTmdb(endpoint: string, apiKey: string, pages: number): Promi
 }
 
 async function fetchMovies(apiKey: string): Promise<string> {
-    const results = await fetchTmdb('movie/top_rated', apiKey, 5)
+    const results = await fetchTmdb('movie/popular', apiKey, 5)
 
     const characters = results
         .filter((m) => m.poster_path)
@@ -285,7 +285,7 @@ async function fetchMovies(apiKey: string): Promise<string> {
 }
 
 async function fetchTvShows(apiKey: string): Promise<string> {
-    const results = await fetchTmdb('tv/top_rated', apiKey, 5)
+    const results = await fetchTmdb('tv/popular', apiKey, 5)
 
     const characters = results
         .filter((s) => s.poster_path)
