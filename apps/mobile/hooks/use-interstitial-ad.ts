@@ -4,10 +4,15 @@ const AD_UNIT_ID = __DEV__
     ? 'ca-app-pub-3940256099942544/4411468910'
     : 'ca-app-pub-5250650495212334/6351511966'
 
-const SHOW_EVERY_N = 3
+const MIN_INTERVAL = 4
+const MAX_INTERVAL = 7
+
+const getNextThreshold = () =>
+    MIN_INTERVAL + Math.floor(Math.random() * (MAX_INTERVAL - MIN_INTERVAL + 1))
 
 export const useInterstitialAd = () => {
     const correctCount = useRef(0)
+    const nextShowAt = useRef(getNextThreshold())
     const adRef = useRef<any>(null)
     const isLoaded = useRef(false)
 
@@ -43,8 +48,10 @@ export const useInterstitialAd = () => {
     const onCorrectGuess = useCallback(() => {
         correctCount.current += 1
 
-        if (correctCount.current % SHOW_EVERY_N === 0 && isLoaded.current) {
+        if (correctCount.current >= nextShowAt.current && isLoaded.current) {
             adRef.current?.show()
+            correctCount.current = 0
+            nextShowAt.current = getNextThreshold()
         }
     }, [])
 
