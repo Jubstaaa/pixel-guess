@@ -56,14 +56,14 @@ export const categories: Category[] = [
         name: 'Pokémon',
         icon: 'https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg',
         characterCount: pokemonCharacters.length,
-        imageType: 'character',
+        imageType: 'poster',
     },
     {
         slug: 'harry-potter',
         name: 'Harry Potter',
         icon: 'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2020/04/Harry-Potter-Logo.png',
         characterCount: harryPotterCharacters.length,
-        imageType: 'character',
+        imageType: 'poster',
     },
     {
         slug: 'football',
