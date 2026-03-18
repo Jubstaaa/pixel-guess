@@ -269,8 +269,27 @@ async function fetchTmdb(endpoint: string, apiKey: string, pages: number): Promi
     return results
 }
 
+async function fetchTmdbDiscover(endpoint: string, apiKey: string, pages: number, extraParams: string): Promise<TmdbItem[]> {
+    const results: TmdbItem[] = []
+    await Promise.all(
+        Array.from({ length: pages }, (_, i) =>
+            fetch(
+                `https://api.themoviedb.org/3/${endpoint}?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&page=${i + 1}${extraParams}`,
+            )
+                .then((r) => r.json())
+                .then((d) => results.push(...(d.results ?? []))),
+        ),
+    )
+    return results
+}
+
 async function fetchMovies(apiKey: string): Promise<string> {
-    const results = await fetchTmdb('movie/popular', apiKey, 5)
+    const results = await fetchTmdbDiscover(
+        'discover/movie',
+        apiKey,
+        5,
+        '&vote_count.gte=1000&with_original_language=en'
+    )
 
     const characters = results
         .filter((m) => m.poster_path)
@@ -285,7 +304,12 @@ async function fetchMovies(apiKey: string): Promise<string> {
 }
 
 async function fetchTvShows(apiKey: string): Promise<string> {
-    const results = await fetchTmdb('tv/popular', apiKey, 5)
+    const results = await fetchTmdbDiscover(
+        'discover/tv',
+        apiKey,
+        5,
+        '&vote_count.gte=500&with_original_language=en'
+    )
 
     const characters = results
         .filter((s) => s.poster_path)

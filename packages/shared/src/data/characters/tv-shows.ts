@@ -3,19 +3,29 @@ import type { Character } from '../../types'
 
 export const tvShowCharacters: Character[] = [
     {
+        name: '24',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/iq6yrZ5LEDXf1ArCOYLq8PIUBpV.jpg',
+    },
+    {
         name: '30 Rock',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/eYYQWACx7ttUzRwTNYuo6zveqpE.jpg',
     },
     {
-        name: '7de Laan',
+        name: '9-1-1',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/vQcC4Kcx0ZEXxmj0gUrfkFR14LU.jpg',
+            'https://image.tmdb.org/t/p/w500/6njUqsd3By2mJsdZm1P0moPLzs3.jpg',
     },
     {
-        name: 'Algo personal',
+        name: 'A Knight of the Seven Kingdoms',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/ldh8lOM395dm8NpXtTNfwpUNOe3.jpg',
+            'https://image.tmdb.org/t/p/w500/k8yARbD9iYn2nRX2HvsopfKDN2r.jpg',
+    },
+    {
+        name: 'Adventure Time',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/qk3eQ8jW4opJ48gFWYUXWaMT4l.jpg',
     },
     {
         name: 'American Dad!',
@@ -23,9 +33,14 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/eb9sH2am9IUSQ8GhXTNAVoujk8W.jpg',
     },
     {
-        name: 'Among Friends',
+        name: 'American Horror Story',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/kBBbSgNchtMvsgD6z1oI1RRluHP.jpg',
+            'https://image.tmdb.org/t/p/w500/x2c3AvZeTyNehRZXabTojAxfDuR.jpg',
+    },
+    {
+        name: 'Arrow',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/u8ZHFj1jC384JEkTt3vNg1DfWEb.jpg',
     },
     {
         name: 'Baywatch',
@@ -33,24 +48,19 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/34t8WxHn1OcIVpcTxmjYmjX9tE4.jpg',
     },
     {
-        name: 'Binnelanders',
+        name: 'Better Call Saul',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/3bzECfllho8PphdYujLUIuhncJD.jpg',
+            'https://image.tmdb.org/t/p/w500/fC2HDm5t0kHl7mTm7jxMR31b7by.jpg',
     },
     {
-        name: 'Body Language',
+        name: 'Blue Bloods',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/u6BQZJpidQLN4YkPCYaXyL07EOu.jpg',
+            'https://image.tmdb.org/t/p/w500/q1WlrxnCvNhBjJ4N7V0JQXjnIBN.jpg',
     },
     {
         name: 'Bones',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/eyTu5c8LniVciRZIOSHTvvkkgJa.jpg',
-    },
-    {
-        name: 'Boston Legal',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/b0bXUCfpcsgQ6EVVmucU2G76ixT.jpg',
     },
     {
         name: 'Breaking Bad',
@@ -63,9 +73,14 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/uXTg565ahu9RwonCX1V2Hex1NU6.jpg',
     },
     {
-        name: 'C.I.D.',
+        name: 'Castle',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/3UymnlLfLMKxG8OcFhSnAlnhQfZ.jpg',
+            'https://image.tmdb.org/t/p/w500/diXBeMzvfJb2iJg3G0kCUaMCzEc.jpg',
+    },
+    {
+        name: 'Charmed',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/z4bPJ1BWU2EtV69NII2GVvsugQ2.jpg',
     },
     {
         name: 'Cheers',
@@ -73,9 +88,19 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/nD1ZQBKbgKSmKcrAkWTofohsScj.jpg',
     },
     {
-        name: 'Chibi Maruko-chan',
+        name: 'Chicago Fire',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/bfn54AAMuh47IFqeoco0jgeVH1a.jpg',
+            'https://image.tmdb.org/t/p/w500/r915sk2JpthZSjHEgZKifWxgo6L.jpg',
+    },
+    {
+        name: 'Chicago Med',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/9eym662FRJJb9wdgCiDKPDciZzf.jpg',
+    },
+    {
+        name: 'Chicago P.D.',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/bez40PgT36RUu4gstD2A6GSM0tP.jpg',
     },
     {
         name: 'Chuck',
@@ -83,14 +108,9 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/vEZvGVVMjk1TRs59nfypTI5lAXj.jpg',
     },
     {
-        name: 'Conan',
+        name: 'Columbo',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/oQxrvUhP3ycwnlxIrIMQ9Z3kleq.jpg',
-    },
-    {
-        name: 'Coronation Street',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/5x1HXqYqPyYw7oc7Isu1lvVmwRP.jpg',
+            'https://image.tmdb.org/t/p/w500/2JCD8vab3fircOU8cM2HJCxfv4I.jpg',
     },
     {
         name: 'Criminal Minds',
@@ -101,6 +121,16 @@ export const tvShowCharacters: Character[] = [
         name: 'CSI: Crime Scene Investigation',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/i5hmoRjHNWady4AtAGICTUXknKH.jpg',
+    },
+    {
+        name: 'CSI: Miami',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/pNW64pjaHvf6purNaFhq4SHYRfl.jpg',
+    },
+    {
+        name: 'Designated Survivor',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/5R125JAIh1N38pzHp2dRsBpOVNY.jpg',
     },
     {
         name: 'Desperate Housewives',
@@ -118,19 +148,14 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/w8enSKCf6Zm0topeQ2XPccDqsqp.jpg',
     },
     {
-        name: 'Doraemon',
+        name: 'Elementary',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/bHMqPDsW7Lb71CVHXq4PuEvQ4NY.jpg',
+            'https://image.tmdb.org/t/p/w500/q9dObe29W4bDpgzUfOOH3ZnzDbR.jpg',
     },
     {
-        name: 'Doraemon',
+        name: 'Eureka',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/9ZN1P32SHviL3SV51qLivxycvcx.jpg',
-    },
-    {
-        name: 'EastEnders',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/z4jgyI5TpoRZiJTNchkVkMrGQyz.jpg',
+            'https://image.tmdb.org/t/p/w500/f2l5hUk63hPqYTucnFy2HmElFV0.jpg',
     },
     {
         name: 'Family Guy',
@@ -138,9 +163,14 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/3PFsEuAiyLkWsP4GG6dIV37Q6gu.jpg',
     },
     {
-        name: 'Family Matters',
+        name: 'Fargo',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/lIIPV3te2mxBQBHw2rfhwkUYsHf.jpg',
+            'https://image.tmdb.org/t/p/w500/6U9CPeD8obHzweikFhiLhpc7YBT.jpg',
+    },
+    {
+        name: 'FBI',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/zfKS4WL0OZ9udpNoSYZw91VB3aH.jpg',
     },
     {
         name: 'Frasier',
@@ -153,9 +183,9 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg',
     },
     {
-        name: 'Fuse',
+        name: 'FROM',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/9hdEulzIzfj0M2JBKRRIxWOBXUY.jpg',
+            'https://image.tmdb.org/t/p/w500/cjXLrg4R7FRPFafvuQ3SSznQOd9.jpg',
     },
     {
         name: 'Game of Thrones',
@@ -163,19 +193,9 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg',
     },
     {
-        name: 'Goede Tijden, Slechte Tijden',
+        name: 'Gotham',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/p1oXgtJ0q0wAcEp3tHA5DpiynxL.jpg',
-    },
-    {
-        name: 'Good Mythical Morning',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/jMpBQr2aNOFAI6wsC47zsOG6qOh.jpg',
-    },
-    {
-        name: 'Government Job',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/sceVlRK5RvnU1qjNipyWDHQXB7x.jpg',
+            'https://image.tmdb.org/t/p/w500/zLpSNnVoL2bjQdc1PcaHUPUzttP.jpg',
     },
     {
         name: "Grey's Anatomy",
@@ -183,9 +203,14 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/hjJkrLXhWvGHpLeLBDFznpBTY1S.jpg',
     },
     {
-        name: 'Gute Zeiten, schlechte Zeiten',
+        name: 'Grimm',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/qujVFLAlBnPU9mZElV4NZgL8iXT.jpg',
+            'https://image.tmdb.org/t/p/w500/iOptnt1QHi6bIHmOq6adnZTV0bU.jpg',
+    },
+    {
+        name: 'Hawaii Five-0',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/sIdCKlmM2nU4akIvFQaAIiU8YES.jpg',
     },
     {
         name: 'Heartland',
@@ -193,9 +218,9 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/uc2gtWczT58BiAUJWFz9P5aZmNF.jpg',
     },
     {
-        name: "HK 80's",
+        name: 'Homeland',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/6IpuLrhh7XZfIvz0OmFOSJdSORe.jpg',
+            'https://image.tmdb.org/t/p/w500/6GAvS2e6VIRsms9FpVt33PsCoEW.jpg',
     },
     {
         name: 'House',
@@ -203,44 +228,9 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/3Cz7ySOQJmqiuTdrc6CY0r65yDI.jpg',
     },
     {
-        name: 'Infinite Challenge',
+        name: 'How I Met Your Mother',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/3ZIPTvMnzI5ThmdGeEYQFxJV5Sg.jpg',
-    },
-    {
-        name: 'JUJUTSU KAISEN',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/fHpKWq9ayzSk8nSwqRuaAUemRKh.jpg',
-    },
-    {
-        name: 'Kamen Rider',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/2DIBDFHiKQawz4WPsYekl9DHwyA.jpg',
-    },
-    {
-        name: 'Kangsi Coming',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/bVWEPDZHRSdd7voVled6CLLq1zB.jpg',
-    },
-    {
-        name: 'Knots Landing',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/ohcRf8CyVpQiUw2ZTmGQ2I4fH8D.jpg',
-    },
-    {
-        name: 'La Revuelta',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/4uaguchJwBK0bl4zjluU6af8J7V.jpg',
-    },
-    {
-        name: 'Late Night with Seth Meyers',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/jm95V8XjfvqmEhw0MN09wbg9Mi3.jpg',
-    },
-    {
-        name: 'Late Show with David Letterman',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/3wzEg2MknkM5AGytRrb1DRife6F.jpg',
+            'https://image.tmdb.org/t/p/w500/b34jPzmB0wZy7EjUZoleXOl2RRI.jpg',
     },
     {
         name: 'Law & Order',
@@ -258,14 +248,9 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/og6S0aTZU6YUJAbqxeKjCa3kY1E.jpg',
     },
     {
-        name: 'Men on a Mission',
+        name: 'Lucifer',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/2jIi55JtYKJTL1km8qHMuUilOWo.jpg',
-    },
-    {
-        name: 'Midsomer Murders',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/pz7tsWxe0TTdfJnWPjZAEnrSl5M.jpg',
+            'https://image.tmdb.org/t/p/w500/ekZobS8isE6mA53RAiGDG93hBxL.jpg',
     },
     {
         name: 'Modern Family',
@@ -278,9 +263,9 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/kIi3T7X0kmiV9vGDme146P2d979.jpg',
     },
     {
-        name: 'Na Wspólnej',
+        name: 'Monk',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/uksRhdaOn64bO5d33d7rcTbrhJI.jpg',
+            'https://image.tmdb.org/t/p/w500/3axGMbUecXXOPSeG47v2i9wK5y5.jpg',
     },
     {
         name: 'NCIS',
@@ -288,14 +273,19 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/mBcu8d6x6zB1el3MPNl7cZQEQ31.jpg',
     },
     {
-        name: 'Obake no Q-tarō',
+        name: 'NCIS: Los Angeles',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/acb9g0rlsFhy3LBPDvMF7Tso9Q0.jpg',
+            'https://image.tmdb.org/t/p/w500/TIIgcznwNfNr3KOZvxn26eKV99.jpg',
     },
     {
         name: 'ONE PIECE',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/blWCPEqDGLBuLB9u89CxP9ORQP4.jpg',
+    },
+    {
+        name: 'Outlander',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/bxBmfyzK0ARF9hqf2pbFWsddH14.jpg',
     },
     {
         name: 'PAW Patrol',
@@ -308,44 +298,49 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg',
     },
     {
-        name: 'Pili',
+        name: 'Peppa Pig',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/sBVfyRYPmKSARRTodsTbwHqgcRA.jpg',
+            'https://image.tmdb.org/t/p/w500/iwKVo3HlsyVNXCzFEkd0xHz3kGi.jpg',
     },
     {
-        name: 'Pokémon',
+        name: 'Person of Interest',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/w1g6hUQg0IzXyU7APRfCQbepsKN.jpg',
+            'https://image.tmdb.org/t/p/w500/f8aIvYk5h7Z8EP3dinCmVgQFYow.jpg',
     },
     {
-        name: 'Radio Star',
+        name: 'Prison Break',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/uRUZDsvUfIP3JUEgOC8ReBlQQUU.jpg',
+            'https://image.tmdb.org/t/p/w500/wnmNPaLvhnMeOqnWlhNkYCZxtda.jpg',
     },
     {
-        name: 'Raw',
+        name: 'Reacher',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/pv5WNnLUo7mpT8k901Lo8UovrqI.jpg',
+            'https://image.tmdb.org/t/p/w500/31GlRQMiDunO8cl3NxTz34U64rf.jpg',
     },
     {
-        name: 'Running Man',
+        name: 'Regular Show',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/2Wmmu1MkqxJ48J7aySET9EKEjXz.jpg',
+            'https://image.tmdb.org/t/p/w500/mS5SLxMYcKfUxA0utBSR5MOAWWr.jpg',
     },
     {
-        name: 'Scarpetta',
+        name: 'Rick and Morty',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/zvkcHCJUPqv7R9ukaiDNkm75jy.jpg',
+            'https://image.tmdb.org/t/p/w500/WGRQ8FpjkDTzivQJ43t94bOuY0.jpg',
     },
     {
-        name: 'Secret Lives',
+        name: 'Rugrats',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/ugYAGyxwajuplDUUYT8Bzbj8eNR.jpg',
+            'https://image.tmdb.org/t/p/w500/wmsINbZuEBLNP2Z26Xffx5NHJpW.jpg',
     },
     {
-        name: 'Sesame Street',
+        name: 'S.W.A.T.',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/14k9BfZ2p4rQBMeJ5crKTfUZVwD.jpg',
+            'https://image.tmdb.org/t/p/w500/ttzrYMdsKWR8PTRLw7uo4noqaOJ.jpg',
+    },
+    {
+        name: 'Seinfeld',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/aCw8ONfyz3AhngVQa1E2Ss4KSUQ.jpg',
     },
     {
         name: 'Shameless',
@@ -353,19 +348,19 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/ifo31fMWLmyOVpdak9K0kY4jldQ.jpg',
     },
     {
-        name: 'Shortland Street',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/7T7TphnK6yvz9J5sMbJ5UyquYWK.jpg',
-    },
-    {
-        name: 'Sliders',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/9cBXIPl83fE2yQusoEt6vMpSjIJ.jpg',
-    },
-    {
         name: 'Smallville',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/mHZSq8LA5Dt48JjaOZ5tcPXQRVN.jpg',
+    },
+    {
+        name: 'South Park',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/1CGwZCFX2qerXaXQJJUB3qUvxq7.jpg',
+    },
+    {
+        name: 'Star Trek: The Next Generation',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/vkLzXddgUKH5VcpnYiRzpJFrZhz.jpg',
     },
     {
         name: 'Stargate SG-1',
@@ -378,9 +373,9 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg',
     },
     {
-        name: 'Sturm der Liebe',
+        name: 'Suits',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/jfFNydakwvbeACEwSd2Gh8UWtba.jpg',
+            'https://image.tmdb.org/t/p/w500/vQiryp6LioFxQThywxbC6TuoDjy.jpg',
     },
     {
         name: 'Supernatural',
@@ -388,14 +383,19 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/u40gJarLPlIkwouKlzGdobQOV9k.jpg',
     },
     {
-        name: 'Tagesschau',
+        name: 'Teen Wolf',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/7dFZJ2ZJJdcmkp05B9NWlqTJ5tq.jpg',
+            'https://image.tmdb.org/t/p/w500/f8vfN4ziStFVcTp8n6WYLftad5c.jpg',
     },
     {
-        name: 'The Blacklist',
+        name: 'The Boys',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/4HTfd1PhgFUenJxVuBDNdLmdr0c.jpg',
+            'https://image.tmdb.org/t/p/w500/in1R2dDc421JxsoRWaIIAqVI2KE.jpg',
+    },
+    {
+        name: 'The Chosen',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/dqVUFuNrMFWt7uGNWlpo91VKYOI.jpg',
     },
     {
         name: 'The Chosen',
@@ -408,19 +408,19 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/ixcfyK7it6FjRM36Te4OdblAq4X.jpg',
     },
     {
-        name: 'The Goldbergs',
+        name: 'The Flash',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/3aQipkhSCHUmaHjImqEqT80k6GP.jpg',
+            'https://image.tmdb.org/t/p/w500/yZevl2vHQgmosfwUdVNzviIfaWS.jpg',
     },
     {
-        name: 'The Late Late Show with Craig Ferguson',
+        name: 'The Good Doctor',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/gGC7zSDgG0FY0MbM1pjfhTCWQBI.jpg',
+            'https://image.tmdb.org/t/p/w500/luhKkdD80qe62fwop6sdrXK9jUT.jpg',
     },
     {
-        name: 'The Late Show with Stephen Colbert',
+        name: 'The Good Wife',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/9jkThAGYj2yp8jsS6Nriy5mzKFT.jpg',
+            'https://image.tmdb.org/t/p/w500/lasNCd45fpPLirlA7QxkuopWro.jpg',
     },
     {
         name: 'The Mentalist',
@@ -431,6 +431,11 @@ export const tvShowCharacters: Character[] = [
         name: 'The Office',
         imageUrl:
             'https://image.tmdb.org/t/p/w500/7DJKHzAi83BmQrWLrYYOqcoKfhR.jpg',
+    },
+    {
+        name: 'The Pitt',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/kvFSpESyBZMjaeOJDx7RS3P1jey.jpg',
     },
     {
         name: 'The Rookie',
@@ -448,24 +453,14 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/rTc7ZXdroqjkKivFPvCPX0Ru7uw.jpg',
     },
     {
-        name: 'The Talk',
+        name: 'The Vampire Diaries',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/7sizkzLu7RNowjfojv6eUn2tAzA.jpg',
+            'https://image.tmdb.org/t/p/w500/b3vl6wV1W8PBezFfntKTrhrehCY.jpg',
     },
     {
-        name: 'The Tonight Show Starring Jimmy Fallon',
+        name: 'The Walking Dead',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/1N4o5PmmqhlVDrcdJ2RlCFWbLGX.jpg',
-    },
-    {
-        name: 'The Tonight Show Starring Johnny Carson',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/uSvET5YUvHNDIeoCpErrbSmasFb.jpg',
-    },
-    {
-        name: 'The Waltons',
-        imageUrl:
-            'https://image.tmdb.org/t/p/w500/51HX9eNn5ZPjRIngDvnk4KzFb1a.jpg',
+            'https://image.tmdb.org/t/p/w500/ng3cMtxYKt1OSQYqFlnKWnVsqNO.jpg',
     },
     {
         name: 'The Wire',
@@ -478,19 +473,29 @@ export const tvShowCharacters: Character[] = [
             'https://image.tmdb.org/t/p/w500/rcBx0p8h51LHceyhquYMxbspJQu.jpg',
     },
     {
-        name: 'Watch What Happens Live with Andy Cohen',
+        name: 'Two and a Half Men',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/onSD9UXfJwrMXWhq7UY7hGF2S1h.jpg',
+            'https://image.tmdb.org/t/p/w500/xgfjxyV3g1S68opzuvG6G87muDp.jpg',
     },
     {
-        name: 'Will Trent',
+        name: 'Vikings',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/qG5O46gUxxYGImld03tl2zLhvrg.jpg',
+            'https://image.tmdb.org/t/p/w500/bQLrHIRNEkE3PdIWQrZHynQZazu.jpg',
     },
     {
-        name: 'Young Hearts',
+        name: 'White Collar',
         imageUrl:
-            'https://image.tmdb.org/t/p/w500/bF24r2FxsjzgkJcrbBU8RC9JVoU.jpg',
+            'https://image.tmdb.org/t/p/w500/417XNiGvdzCsG9kDnnQJYaBsIrx.jpg',
+    },
+    {
+        name: 'X-Men',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/2OFwsFhAobczgJWnVdwd9oZAF2N.jpg',
+    },
+    {
+        name: 'Yellowstone',
+        imageUrl:
+            'https://image.tmdb.org/t/p/w500/vOYfRZ0NpUK5hG2CB2dJFnYJlGe.jpg',
     },
     {
         name: 'Young Sheldon',
