@@ -59,22 +59,35 @@ export const Footer = () => (
                 </div>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col items-center gap-3 sm:items-end">
                 <a
-                    className="flex items-center gap-1.5 rounded-xl border border-border bg-surface px-3 py-2 text-[13px] text-muted transition-colors hover:border-primary/50 hover:text-foreground"
-                    href="mailto:ilkerbalcilartr@gmail.com"
-                >
-                    <Mail className="h-4 w-4" />
-                </a>
-                <a
-                    className="flex items-center gap-1.5 rounded-xl border border-border bg-surface px-3 py-2 text-[13px] text-muted transition-colors hover:border-primary/50 hover:text-foreground"
-                    href="https://buymeacoffee.com/jubstaa"
+                    href="https://apps.apple.com/app/pixel-guess/id6760237625"
                     rel="noopener noreferrer"
                     target="_blank"
                 >
-                    <Coffee className="h-4 w-4" />
-                    <span>Buy me a coffee</span>
+                    <img
+                        alt="Download on the App Store"
+                        className="h-[36px]"
+                        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                    />
                 </a>
+                <div className="flex items-center gap-2">
+                    <a
+                        className="flex items-center gap-1.5 rounded-xl border border-border bg-surface px-3 py-2 text-[13px] text-muted transition-colors hover:border-primary/50 hover:text-foreground"
+                        href="mailto:ilkerbalcilartr@gmail.com"
+                    >
+                        <Mail className="h-4 w-4" />
+                    </a>
+                    <a
+                        className="flex items-center gap-1.5 rounded-xl border border-border bg-surface px-3 py-2 text-[13px] text-muted transition-colors hover:border-primary/50 hover:text-foreground"
+                        href="https://buymeacoffee.com/jubstaa"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        <Coffee className="h-4 w-4" />
+                        <span>Buy me a coffee</span>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>

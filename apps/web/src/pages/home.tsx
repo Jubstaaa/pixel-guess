@@ -33,6 +33,18 @@ export const HomePage = () => (
                     The free image guessing game. Pick a category, guess the
                     hidden image pixel by pixel, and build your streak!
                 </p>
+                <a
+                    className="mt-4"
+                    href="https://apps.apple.com/app/pixel-guess/id6760237625"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    <img
+                        alt="Download on the App Store"
+                        className="h-[40px]"
+                        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                    />
+                </a>
             </div>
 
             <h2 className="mb-4 text-xl font-bold text-foreground">
