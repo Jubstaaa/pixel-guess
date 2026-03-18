@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router'
 
 import { Footer } from './components/footer/footer'
+import { ScrollToTop } from './components/scroll-to-top/scroll-to-top'
 import { AboutPage } from './pages/about'
 import { GamePage } from './pages/game'
 import { HomePage } from './pages/home'
@@ -11,6 +12,7 @@ import { TermsOfServicePage } from './pages/terms-of-service'
 
 export const App = () => (
     <BrowserRouter>
+        <ScrollToTop />
         <div className="flex min-h-dvh flex-col">
             <main className="flex-1">
                 <Routes>
