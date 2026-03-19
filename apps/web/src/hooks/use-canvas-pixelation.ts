@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from 'react'
 import { computeBlockSize, DIFFICULTY_CONFIG } from '@pixel-guess/shared'
 import type { Difficulty, ImageType } from '@pixel-guess/shared'
 
+import { getImageUrl } from '@/lib/image-url'
+
 export const useCanvasPixelation = (
     imageUrl: string | null,
     count: number,
@@ -25,12 +27,7 @@ export const useCanvasPixelation = (
         if (!ctx) return
 
         const img = new Image()
-        img.crossOrigin = 'anonymous'
-
-        const needsProxy = !imageUrl.includes('cdn.myanimelist.net')
-        const finalUrl = needsProxy
-            ? `https://images.weserv.nl/?url=${encodeURIComponent(imageUrl)}`
-            : imageUrl
+        const finalUrl = getImageUrl(imageUrl)
 
         img.onload = () => {
             const maxSize = 400
@@ -53,8 +50,6 @@ export const useCanvasPixelation = (
                     applyGrayscale(ctx, width, height)
                 }
             } else {
-                // Pikselleştirme işlemi
-                // Önce resmi görünmez bir şekilde çizip veriyi alıyoruz
                 ctx.drawImage(img, 0, 0, width, height)
                 applyPixelation(ctx, width, height, blockSize, grayscale)
             }
@@ -63,11 +58,7 @@ export const useCanvasPixelation = (
         }
 
         img.onerror = () => {
-            if (img.src !== imageUrl) {
-                img.src = imageUrl
-            } else {
-                setIsImageLoaded(false)
-            }
+            setIsImageLoaded(false)
         }
 
         img.src = finalUrl
@@ -97,18 +88,13 @@ const applyPixelation = (
     blockSize: number,
     grayscale: boolean
 ) => {
-    // 1. Orijinal veriyi al
     const imageData = ctx.getImageData(0, 0, width, height)
     const { data } = imageData
 
-    // 2. Canvas'ı temizle ki eski resim arkadan sızmasın
     ctx.clearRect(0, 0, width, height)
 
-    // 3. Blok blok çiz
     for (let y = 0; y < height; y += blockSize) {
         for (let x = 0; x < width; x += blockSize) {
-            // Blok içindeki piksellerin ortalamasını almak yerine
-            // performans için bloğun merkezindeki pikseli alıyoruz
             const centerX = Math.min(x + Math.floor(blockSize / 2), width - 1)
             const centerY = Math.min(y + Math.floor(blockSize / 2), height - 1)
             const i = (centerY * width + centerX) * 4
@@ -124,7 +110,6 @@ const applyPixelation = (
             }
 
             ctx.fillStyle = `rgba(${r},${g},${b},${a / 255})`
-            // Bloğun tamamını boya
             ctx.fillRect(x, y, blockSize, blockSize)
         }
     }

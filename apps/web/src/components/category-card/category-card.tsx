@@ -2,6 +2,8 @@ import { Link } from 'react-router'
 
 import type { Category } from '@pixel-guess/shared'
 
+import { getImageUrl } from '@/lib/image-url'
+
 interface CategoryCardProps {
     item: Category
 }
@@ -13,7 +15,7 @@ export const CategoryCard = ({ item }: CategoryCardProps) => (
                 <img
                     alt={item.name}
                     className="h-11 w-11 rounded-lg object-contain"
-                    src={item.icon}
+                    src={getImageUrl(item.icon)}
                 />
             </div>
             <div className="flex flex-1 flex-col gap-2.5">

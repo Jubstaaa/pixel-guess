@@ -4,6 +4,8 @@ import { Search } from 'lucide-react'
 
 import { filterCharacters } from '@pixel-guess/shared'
 
+import { getImageUrl } from '@/lib/image-url'
+
 import type { CharacterSearchProps } from './character-search.types'
 
 export const CharacterSearch = ({
@@ -115,7 +117,7 @@ export const CharacterSearch = ({
                                     <img
                                         alt={character.name}
                                         className="h-full w-full object-cover"
-                                        src={character.imageUrl}
+                                        src={getImageUrl(character.imageUrl)}
                                     />
                                 </div>
                                 <span className="flex-1 truncate text-left text-[15px] font-medium">

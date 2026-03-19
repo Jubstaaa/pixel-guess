@@ -1,23 +1,21 @@
 # Pixel Guess Monorepo
 
-Welcome to the **Pixel Guess** monorepo! This project is a fun, image-guessing game built with **React (Web)** and **React Native (Expo)**, all sharing a single logic package.
+A fun, image-guessing game built with **React (Web)** and **React Native (Expo)**, sharing a single logic package.
 
-## 🚀 Projects
+## Projects
 
-- **`apps/web`**: A React + Vite SPA for the web.
-- **`apps/mobile`**: An Expo + React Native app for mobile devices.
-- **`packages/shared`**: Shared logic, types, and data used by both web and mobile apps.
+- **`apps/web`**: React + Vite SPA
+- **`apps/mobile`**: Expo + React Native app
+- **`packages/shared`**: Shared logic, types, and data
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Monorepo**: Turborepo + Bun Workspaces
-- **Web**: React, Vite, Tailwind CSS (v4), Framer Motion
-- **Mobile**: React Native, Expo, React Native Skia (for pixelation)
-- **Shared Logic**: TypeScript, Zod (for validation)
-- **Data**: Static data for Flags, Dota 2, LoL, and Valorant.
-- **CDN**: Flag images from [Flagpedia](https://flagpedia.net).
+- **Web**: React, Vite, Tailwind CSS v4
+- **Mobile**: React Native, Expo, React Native Skia
+- **Shared**: TypeScript
 
-## 📦 Getting Started
+## Getting Started
 
 1. **Install dependencies**:
 
@@ -25,22 +23,34 @@ Welcome to the **Pixel Guess** monorepo! This project is a fun, image-guessing g
     bun install
     ```
 
-2. **Run web app**:
+2. **Generate character data and images** (required before first run):
 
     ```bash
-    bun dev:web
+    # Requires TMDB_API_KEY and FOOTBALL_DATA_API_KEY in packages/shared/.env
+    bun run generate
     ```
 
-3. **Run mobile app**:
+    This fetches character data from external APIs, downloads all images, optimizes them to WebP with sharp, and generates:
+    - `packages/shared/assets/images/` — optimized game images (~25MB)
+    - `packages/shared/src/data/characters/` — character data files
+    - `packages/shared/src/data/categories.ts` — category definitions
+    - `apps/mobile/generated/image-map.ts` — mobile asset require map
+
+3. **Run web app**:
+
     ```bash
-    bun dev:mobile
+    bun run dev:web
     ```
 
-## 📐 Coding Standards
+4. **Run mobile app**:
 
-- **Kebab-case**: All files and folders use kebab-case.
-- **Flat Structure**: Components and features follow a flat directory structure.
-- **SSOT**: All game logic and data reside in `@pixel-guess/shared`.
-- **No Backend**: The game is fully client-side with local storage for streaks and leaderboards.
+    ```bash
+    bun run dev:mobile
+    ```
 
-Enjoy guessing! 🎮
+## Coding Standards
+
+- **Kebab-case**: All files and folders
+- **Flat Structure**: No nested subdirectories in feature folders
+- **SSOT**: All game logic and data in `@pixel-guess/shared`
+- **No Backend**: Fully client-side, images bundled at build time

@@ -29,6 +29,7 @@ import type { Character, GameState } from '@pixel-guess/shared'
 import { COLORS } from '@/constants/colors'
 import { useInterstitialAd } from '@/hooks/use-interstitial-ad'
 import { Image } from '@/lib/image'
+import { getImageSource } from '@/lib/image-resolver'
 
 import { PixelatedImage } from '../pixelated-image/pixelated-image'
 
@@ -257,9 +258,7 @@ export const Game = ({ categorySlug, levelType }: GameProps) => {
                                             >
                                                 <Image
                                                     contentFit="cover"
-                                                    source={{
-                                                        uri: character.imageUrl,
-                                                    }}
+                                                    source={getImageSource(character.imageUrl)}
                                                     style={{
                                                         width: 40,
                                                         height: 40,

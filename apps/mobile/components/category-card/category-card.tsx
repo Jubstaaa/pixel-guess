@@ -4,7 +4,7 @@ import { useRouter } from 'expo-router'
 import { Text, TouchableOpacity, View } from 'react-native'
 
 import { Image } from '@/lib/image'
-import { addImageResizeParams } from '@/lib/image-url'
+import { getImageSource } from '@/lib/image-resolver'
 
 import type { CategoryCardProps } from './category-card.types'
 
@@ -35,9 +35,7 @@ export const CategoryCard = ({ item }: CategoryCardProps) => {
                 <View className="rounded-xl bg-primary/10 p-3">
                     <Image
                         contentFit="contain"
-                        source={{
-                            uri: addImageResizeParams(item.icon, 128, 128),
-                        }}
+                        source={getImageSource(item.icon)}
                         style={{ width: 44, height: 44, borderRadius: 8 }}
                     />
                 </View>
