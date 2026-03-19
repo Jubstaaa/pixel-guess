@@ -23,30 +23,26 @@ A fun, image-guessing game built with **React (Web)** and **React Native (Expo)*
     bun install
     ```
 
-2. **Generate character data and images** (required before first run):
-
-    ```bash
-    # Requires TMDB_API_KEY and FOOTBALL_DATA_API_KEY in packages/shared/.env
-    bun run generate
-    ```
-
-    This fetches character data from external APIs, downloads all images, optimizes them to WebP with sharp, and generates:
-    - `packages/shared/assets/images/` — optimized game images (~25MB)
-    - `packages/shared/src/data/characters/` — character data files
-    - `packages/shared/src/data/categories.ts` — category definitions
-    - `apps/mobile/generated/image-map.ts` — mobile asset require map
-
-3. **Run web app**:
+2. **Run web app**:
 
     ```bash
     bun run dev:web
     ```
 
-4. **Run mobile app**:
+3. **Run mobile app**:
 
     ```bash
     bun run dev:mobile
     ```
+
+### Updating Game Data
+
+To refresh character data and images from external APIs:
+
+```bash
+# Requires TMDB_API_KEY and FOOTBALL_DATA_API_KEY in packages/shared/.env
+bun run generate
+```
 
 ## Coding Standards
 
