@@ -7,20 +7,20 @@ export const peopleCharacters: Character[] = [
         imageUrl: 'people/adam-pearson.webp',
     },
     {
+        name: 'Alan Ritchson',
+        imageUrl: 'people/alan-ritchson.webp',
+    },
+    {
         name: 'Alexandra Daddario',
         imageUrl: 'people/alexandra-daddario.webp',
     },
     {
-        name: 'Ana de Armas',
-        imageUrl: 'people/ana-de-armas.webp',
+        name: 'Amy Madigan',
+        imageUrl: 'people/amy-madigan.webp',
     },
     {
         name: 'Angelina Jolie',
         imageUrl: 'people/angelina-jolie.webp',
-    },
-    {
-        name: 'Anne Hathaway',
-        imageUrl: 'people/anne-hathaway.webp',
     },
     {
         name: 'Anne-Lise Heimburger',
@@ -55,20 +55,12 @@ export const peopleCharacters: Character[] = [
         imageUrl: 'people/emil-hostina.webp',
     },
     {
-        name: 'Emily Rudd',
-        imageUrl: 'people/emily-rudd.webp',
-    },
-    {
         name: 'Emma Stone',
         imageUrl: 'people/emma-stone.webp',
     },
     {
         name: 'Ester Expósito',
         imageUrl: 'people/ester-exposito.webp',
-    },
-    {
-        name: 'Holly Cattle',
-        imageUrl: 'people/holly-cattle.webp',
     },
     {
         name: "Jack O'Connell",
@@ -87,8 +79,12 @@ export const peopleCharacters: Character[] = [
         imageUrl: 'people/jason-statham.webp',
     },
     {
-        name: 'Jenna Ortega',
-        imageUrl: 'people/jenna-ortega.webp',
+        name: 'Jessie Buckley',
+        imageUrl: 'people/jessie-buckley.webp',
+    },
+    {
+        name: 'Ji Chang-wook',
+        imageUrl: 'people/ji-chang-wook.webp',
     },
     {
         name: 'Kaori Asô',
@@ -99,16 +95,16 @@ export const peopleCharacters: Character[] = [
         imageUrl: 'people/kavya-anil.webp',
     },
     {
-        name: 'Keanu Reeves',
-        imageUrl: 'people/keanu-reeves.webp',
-    },
-    {
         name: 'Kitty de Hoyos',
         imageUrl: 'people/kitty-de-hoyos.webp',
     },
     {
         name: 'Laura Yenga',
         imageUrl: 'people/laura-yenga.webp',
+    },
+    {
+        name: 'Leonardo DiCaprio',
+        imageUrl: 'people/leonardo-dicaprio.webp',
     },
     {
         name: 'Lin Muran',
@@ -131,6 +127,10 @@ export const peopleCharacters: Character[] = [
         imageUrl: 'people/megan-fox.webp',
     },
     {
+        name: 'Melville Cooper',
+        imageUrl: 'people/melville-cooper.webp',
+    },
+    {
         name: 'Michael B. Jordan',
         imageUrl: 'people/michael-b-jordan.webp',
     },
@@ -141,10 +141,6 @@ export const peopleCharacters: Character[] = [
     {
         name: 'Millie Bobby Brown',
         imageUrl: 'people/millie-bobby-brown.webp',
-    },
-    {
-        name: 'Minami Hamabe',
-        imageUrl: 'people/minami-hamabe.webp',
     },
     {
         name: 'Pedro Pascal',
@@ -159,12 +155,8 @@ export const peopleCharacters: Character[] = [
         imageUrl: 'people/ryan-gosling.webp',
     },
     {
-        name: 'Sadie Sink',
-        imageUrl: 'people/sadie-sink.webp',
-    },
-    {
-        name: 'Sean Penn',
-        imageUrl: 'people/sean-penn.webp',
+        name: 'Scarlett Johansson',
+        imageUrl: 'people/scarlett-johansson.webp',
     },
     {
         name: 'Shad Moss',
@@ -175,12 +167,20 @@ export const peopleCharacters: Character[] = [
         imageUrl: 'people/sydney-sweeney.webp',
     },
     {
+        name: 'Tian Xiwei',
+        imageUrl: 'people/tian-xiwei.webp',
+    },
+    {
         name: 'Timothée Chalamet',
         imageUrl: 'people/timothee-chalamet.webp',
     },
     {
         name: 'Tom Cruise',
         imageUrl: 'people/tom-cruise.webp',
+    },
+    {
+        name: 'Tom Hanks',
+        imageUrl: 'people/tom-hanks.webp',
     },
     {
         name: 'Tom Hardy',
@@ -191,15 +191,15 @@ export const peopleCharacters: Character[] = [
         imageUrl: 'people/tom-holland.webp',
     },
     {
-        name: 'Vin Diesel',
-        imageUrl: 'people/vin-diesel.webp',
-    },
-    {
         name: 'Yui Koike',
         imageUrl: 'people/yui-koike.webp',
     },
     {
         name: 'Zendaya',
         imageUrl: 'people/zendaya.webp',
+    },
+    {
+        name: 'Zhang Linghe',
+        imageUrl: 'people/zhang-linghe.webp',
     },
 ]

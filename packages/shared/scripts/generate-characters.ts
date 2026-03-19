@@ -1,4 +1,5 @@
-import { existsSync, mkdirSync, rmSync, writeFileSync } from 'fs'
+import { createHash } from 'crypto'
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'fs'
 import { join } from 'path'
 
 import PQueue from 'p-queue'
@@ -7,6 +8,7 @@ import sharp from 'sharp'
 
 const OUT_DIR = join(import.meta.dir, '../src/data/characters')
 const IMAGES_DIR = join(import.meta.dir, '../assets/images')
+const MANIFEST_PATH = join(IMAGES_DIR, '.manifest.json')
 const MOBILE_GENERATED_DIR = join(import.meta.dir, '../../../apps/mobile/generated')
 
 const MAX_IMAGE_SIZE = 400
@@ -72,9 +74,26 @@ function toFileName(name: string): string {
         || 'unnamed'
 }
 
-async function downloadBatch(tasks: DownloadTask[]): Promise<DownloadTask[]> {
+function loadManifest(): Record<string, string> {
+    if (!existsSync(MANIFEST_PATH)) return {}
+    try { return JSON.parse(readFileSync(MANIFEST_PATH, 'utf-8')) } catch { return {} }
+}
+
+function saveManifest(manifest: Record<string, string>) {
+    writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2))
+}
+
+function md5(buf: Buffer): string {
+    return createHash('md5').update(buf).digest('hex')
+}
+
+async function downloadBatch(
+    tasks: DownloadTask[],
+    manifest: Record<string, string>,
+): Promise<{ failed: DownloadTask[]; skipped: number }> {
     const failed: DownloadTask[] = []
     let completed = 0
+    let skipped = 0
     const queue = new PQueue({ concurrency: 30 })
 
     const jobs = tasks.map((task) =>
@@ -88,10 +107,17 @@ async function downloadBatch(tasks: DownloadTask[]): Promise<DownloadTask[]> {
                         if (res.status === 429) throw new Error('rate limited')
                         if (!res.ok) throw new pRetry.AbortError(`HTTP ${res.status}`)
                         const buf = Buffer.from(await res.arrayBuffer())
-                        await sharp(buf)
-                            .resize(MAX_IMAGE_SIZE, MAX_IMAGE_SIZE, { fit: 'inside', withoutEnlargement: true })
-                            .webp({ quality: IMAGE_QUALITY })
-                            .toFile(task.outPath)
+                        const hash = md5(buf)
+
+                        if (manifest[task.localKey] === hash && existsSync(task.outPath)) {
+                            skipped++
+                        } else {
+                            await sharp(buf)
+                                .resize(MAX_IMAGE_SIZE, MAX_IMAGE_SIZE, { fit: 'inside', withoutEnlargement: true })
+                                .webp({ quality: IMAGE_QUALITY })
+                                .toFile(task.outPath)
+                            manifest[task.localKey] = hash
+                        }
                     },
                     { retries: 3, minTimeout: 1000, factor: 2 },
                 )
@@ -107,23 +133,35 @@ async function downloadBatch(tasks: DownloadTask[]): Promise<DownloadTask[]> {
 
     await Promise.all(jobs)
     console.log('')
-    return failed
+    return { failed, skipped }
 }
 
 const MAX_RETRY_ROUNDS = 3
 
 async function downloadAll(tasks: DownloadTask[]): Promise<Set<string>> {
-    let remaining = await downloadBatch(tasks)
+    const manifest = loadManifest()
+    let { failed: remaining, skipped } = await downloadBatch(tasks, manifest)
 
     for (let round = 1; round <= MAX_RETRY_ROUNDS && remaining.length > 0; round++) {
         console.log(`\n⚠ ${remaining.length} failed — retry round ${round}/${MAX_RETRY_ROUNDS}...`)
-        remaining = await downloadBatch(remaining)
+        const result = await downloadBatch(remaining, manifest)
+        remaining = result.failed
+        skipped += result.skipped
     }
+
+    if (skipped > 0) console.log(`\n✓ ${skipped} images unchanged (skipped)`)
 
     if (remaining.length > 0) {
         console.warn(`\n⚠ ${remaining.length} images permanently failed (will be excluded):`)
         for (const t of remaining) console.warn(`  - ${t.localKey} (${t.url})`)
     }
+
+    // Clean up manifest entries for removed images
+    const validKeys = new Set(tasks.map((t) => t.localKey))
+    for (const key of Object.keys(manifest)) {
+        if (!validKeys.has(key)) delete manifest[key]
+    }
+    saveManifest(manifest)
 
     return new Set(remaining.map((t) => t.localKey))
 }
@@ -1051,9 +1089,8 @@ async function main() {
     }
 
     // ━━━ DOWNLOAD + OPTIMIZE ━━━
-    const newTasks = downloadTasks.filter((t) => !existsSync(t.outPath))
-    console.log(`\nDownloading and optimizing ${newTasks.length} new images (${downloadTasks.length - newTasks.length} cached)...`)
-    const failed = await downloadAll(newTasks)
+    console.log(`\nDownloading and optimizing ${downloadTasks.length} images...`)
+    const failed = await downloadAll(downloadTasks)
 
     // ━━━ WRITE CHARACTER DATA FILES ━━━
     console.log('\nWriting data files...')
