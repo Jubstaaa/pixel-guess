@@ -268,43 +268,6 @@ async function fetchPokemon(): Promise<CategoryResult> {
     }
 }
 
-async function fetchFortnite(): Promise<CategoryResult> {
-    const data = await fetch(
-        'https://fortnite-api.com/v2/cosmetics/br?language=en',
-    ).then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
-
-    const characters = (
-        data.data as {
-            name: string
-            type: { value: string }
-            rarity: { value: string }
-            images: { icon?: string; featured?: string }
-        }[]
-    )
-        .filter(
-            (x) =>
-                x.type?.value === 'outfit' &&
-                x.rarity?.value === 'legendary' &&
-                x.images?.featured,
-        )
-        .map(({ name, images }) => ({
-            name,
-            remoteUrl: images.featured!,
-        }))
-        .sort((a, b) => a.name.localeCompare(b.name))
-
-    console.log(`Fortnite: ${characters.length} outfits`)
-    return {
-        meta: {
-            slug: 'fortnite',
-            name: 'Fortnite',
-            exportName: 'fortniteCharacters',
-            imageType: 'character',
-            iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Fortnite_F_lettermark_logo.png',
-        },
-        characters,
-    }
-}
 
 async function fetchGenshin(): Promise<CategoryResult> {
     const data = await fetch('https://gi.yatta.moe/api/v2/en/avatar').then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
@@ -895,7 +858,7 @@ const CATEGORY_ORDER = [
     'football', 'brands', 'flags', 'people', 'dragon-ball', 'naruto',
     'one-piece', 'attack-on-titan', 'demon-slayer', 'jujutsu-kaisen',
     'death-note', 'my-hero-academia', 'fullmetal-alchemist', 'hunter-x-hunter',
-    'league-of-legends', 'valorant', 'fortnite', 'dota-2', 'overwatch',
+    'league-of-legends', 'valorant', 'dota-2', 'overwatch',
     'genshin-impact', 'rick-and-morty',
 ]
 
@@ -998,7 +961,6 @@ async function main() {
         fetchCategory('Valorant', () => fetchValorant()),
         fetchCategory('Flags', () => fetchFlags()),
         fetchCategory('Pokémon', () => fetchPokemon()),
-        fetchCategory('Fortnite', () => fetchFortnite()),
         fetchCategory('Genshin', () => fetchGenshin()),
         fetchCategory('Rick & Morty', () => fetchRickAndMorty()),
         fetchCategory('Overwatch', () => fetchOverwatch()),

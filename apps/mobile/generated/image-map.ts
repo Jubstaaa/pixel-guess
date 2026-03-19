@@ -190,7 +190,6 @@ map['categories/dota-2.webp'] = require('../../../packages/shared/assets/images/
 map['categories/dragon-ball.webp'] = require('../../../packages/shared/assets/images/categories/dragon-ball.webp')
 map['categories/flags.webp'] = require('../../../packages/shared/assets/images/categories/flags.webp')
 map['categories/football.webp'] = require('../../../packages/shared/assets/images/categories/football.webp')
-map['categories/fortnite.webp'] = require('../../../packages/shared/assets/images/categories/fortnite.webp')
 map['categories/fullmetal-alchemist.webp'] = require('../../../packages/shared/assets/images/categories/fullmetal-alchemist.webp')
 map['categories/genshin-impact.webp'] = require('../../../packages/shared/assets/images/categories/genshin-impact.webp')
 map['categories/harry-potter.webp'] = require('../../../packages/shared/assets/images/categories/harry-potter.webp')
