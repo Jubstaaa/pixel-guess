@@ -17,4 +17,4 @@ packages/shared/assets/images/
 packages/shared/src/data/characters/
 packages/shared/src/data/categories.ts
 apps/mobile/generated/
-apps/web/public/game-images
+apps/web/public/game-images/
