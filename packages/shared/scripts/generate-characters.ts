@@ -1006,7 +1006,6 @@ async function main() {
 
     if (existsSync(OUT_DIR)) rmSync(OUT_DIR, { recursive: true })
     mkdirSync(OUT_DIR, { recursive: true })
-    if (existsSync(IMAGES_DIR)) rmSync(IMAGES_DIR, { recursive: true })
     mkdirSync(IMAGES_DIR, { recursive: true })
 
     const downloadTasks: DownloadTask[] = []
@@ -1052,8 +1051,9 @@ async function main() {
     }
 
     // ━━━ DOWNLOAD + OPTIMIZE ━━━
-    console.log(`\nDownloading and optimizing ${downloadTasks.length} images...`)
-    const failed = await downloadAll(downloadTasks)
+    const newTasks = downloadTasks.filter((t) => !existsSync(t.outPath))
+    console.log(`\nDownloading and optimizing ${newTasks.length} new images (${downloadTasks.length - newTasks.length} cached)...`)
+    const failed = await downloadAll(newTasks)
 
     // ━━━ WRITE CHARACTER DATA FILES ━━━
     console.log('\nWriting data files...')
