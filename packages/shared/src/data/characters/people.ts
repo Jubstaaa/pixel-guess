@@ -7,24 +7,16 @@ export const peopleCharacters: Character[] = [
         imageUrl: 'people/adam-pearson.webp',
     },
     {
-        name: 'Adam Pearson',
-        imageUrl: 'people/adam-pearson-1.webp',
-    },
-    {
-        name: 'Alan Ritchson',
-        imageUrl: 'people/alan-ritchson.webp',
-    },
-    {
         name: 'Alexandra Daddario',
         imageUrl: 'people/alexandra-daddario.webp',
     },
     {
-        name: 'Amy Madigan',
-        imageUrl: 'people/amy-madigan.webp',
-    },
-    {
         name: 'Ana de Armas',
         imageUrl: 'people/ana-de-armas.webp',
+    },
+    {
+        name: 'Angelina Jolie',
+        imageUrl: 'people/angelina-jolie.webp',
     },
     {
         name: 'Anne Hathaway',
@@ -35,8 +27,8 @@ export const peopleCharacters: Character[] = [
         imageUrl: 'people/anne-lise-heimburger.webp',
     },
     {
-        name: 'Anne-Lise Heimburger',
-        imageUrl: 'people/anne-lise-heimburger-1.webp',
+        name: 'Anya Taylor-Joy',
+        imageUrl: 'people/anya-taylor-joy.webp',
     },
     {
         name: 'Brad Pitt',
@@ -99,8 +91,8 @@ export const peopleCharacters: Character[] = [
         imageUrl: 'people/jenna-ortega.webp',
     },
     {
-        name: 'Jessie Buckley',
-        imageUrl: 'people/jessie-buckley.webp',
+        name: 'Kaori Asô',
+        imageUrl: 'people/kaori-aso.webp',
     },
     {
         name: 'Kavya Anil',
@@ -119,10 +111,6 @@ export const peopleCharacters: Character[] = [
         imageUrl: 'people/laura-yenga.webp',
     },
     {
-        name: 'Leonardo DiCaprio',
-        imageUrl: 'people/leonardo-dicaprio.webp',
-    },
-    {
         name: 'Lin Muran',
         imageUrl: 'people/lin-muran.webp',
     },
@@ -135,12 +123,20 @@ export const peopleCharacters: Character[] = [
         imageUrl: 'people/matt-clark.webp',
     },
     {
+        name: 'Mckenna Grace',
+        imageUrl: 'people/mckenna-grace.webp',
+    },
+    {
         name: 'Megan Fox',
         imageUrl: 'people/megan-fox.webp',
     },
     {
         name: 'Michael B. Jordan',
         imageUrl: 'people/michael-b-jordan.webp',
+    },
+    {
+        name: 'Mila Kunis',
+        imageUrl: 'people/mila-kunis.webp',
     },
     {
         name: 'Millie Bobby Brown',
@@ -155,6 +151,10 @@ export const peopleCharacters: Character[] = [
         imageUrl: 'people/pedro-pascal.webp',
     },
     {
+        name: 'Romina Power',
+        imageUrl: 'people/romina-power.webp',
+    },
+    {
         name: 'Ryan Gosling',
         imageUrl: 'people/ryan-gosling.webp',
     },
@@ -163,12 +163,12 @@ export const peopleCharacters: Character[] = [
         imageUrl: 'people/sadie-sink.webp',
     },
     {
-        name: 'Scarlett Johansson',
-        imageUrl: 'people/scarlett-johansson.webp',
-    },
-    {
         name: 'Sean Penn',
         imageUrl: 'people/sean-penn.webp',
+    },
+    {
+        name: 'Shad Moss',
+        imageUrl: 'people/shad-moss.webp',
     },
     {
         name: 'Sydney Sweeney',
@@ -183,8 +183,12 @@ export const peopleCharacters: Character[] = [
         imageUrl: 'people/tom-cruise.webp',
     },
     {
-        name: 'Tom Hanks',
-        imageUrl: 'people/tom-hanks.webp',
+        name: 'Tom Hardy',
+        imageUrl: 'people/tom-hardy.webp',
+    },
+    {
+        name: 'Tom Holland',
+        imageUrl: 'people/tom-holland.webp',
     },
     {
         name: 'Vin Diesel',
@@ -197,9 +201,5 @@ export const peopleCharacters: Character[] = [
     {
         name: 'Zendaya',
         imageUrl: 'people/zendaya.webp',
-    },
-    {
-        name: 'Zhang Linghe',
-        imageUrl: 'people/zhang-linghe.webp',
     },
 ]

@@ -72,8 +72,8 @@ function toFileName(name: string): string {
         || 'unnamed'
 }
 
-async function downloadAll(tasks: DownloadTask[]): Promise<Set<string>> {
-    const failed = new Set<string>()
+async function downloadBatch(tasks: DownloadTask[]): Promise<DownloadTask[]> {
+    const failed: DownloadTask[] = []
     let completed = 0
     const queue = new PQueue({ concurrency: 30 })
 
@@ -82,7 +82,9 @@ async function downloadAll(tasks: DownloadTask[]): Promise<Set<string>> {
             try {
                 await pRetry(
                     async () => {
-                        const res = await fetch(task.url)
+                        const res = await fetch(task.url, {
+                            headers: { 'User-Agent': 'Mozilla/5.0 (compatible; PixelGuess/1.0)' },
+                        })
                         if (res.status === 429) throw new Error('rate limited')
                         if (!res.ok) throw new pRetry.AbortError(`HTTP ${res.status}`)
                         const buf = Buffer.from(await res.arrayBuffer())
@@ -94,7 +96,7 @@ async function downloadAll(tasks: DownloadTask[]): Promise<Set<string>> {
                     { retries: 3, minTimeout: 1000, factor: 2 },
                 )
             } catch {
-                failed.add(task.localKey)
+                failed.push(task)
             }
             completed++
             if (completed % 200 === 0 || completed === tasks.length) {
@@ -106,6 +108,24 @@ async function downloadAll(tasks: DownloadTask[]): Promise<Set<string>> {
     await Promise.all(jobs)
     console.log('')
     return failed
+}
+
+const MAX_RETRY_ROUNDS = 3
+
+async function downloadAll(tasks: DownloadTask[]): Promise<Set<string>> {
+    let remaining = await downloadBatch(tasks)
+
+    for (let round = 1; round <= MAX_RETRY_ROUNDS && remaining.length > 0; round++) {
+        console.log(`\n⚠ ${remaining.length} failed — retry round ${round}/${MAX_RETRY_ROUNDS}...`)
+        remaining = await downloadBatch(remaining)
+    }
+
+    if (remaining.length > 0) {
+        console.warn(`\n⚠ ${remaining.length} images permanently failed (will be excluded):`)
+        for (const t of remaining) console.warn(`  - ${t.localKey} (${t.url})`)
+    }
+
+    return new Set(remaining.map((t) => t.localKey))
 }
 
 // ━━━ DATA FETCHERS ━━━
@@ -1022,6 +1042,8 @@ async function main() {
     // ━━━ PREPARE IMAGE DOWNLOADS ━━━
     console.log('\nPreparing image downloads...')
 
+    if (existsSync(OUT_DIR)) rmSync(OUT_DIR, { recursive: true })
+    mkdirSync(OUT_DIR, { recursive: true })
     if (existsSync(IMAGES_DIR)) rmSync(IMAGES_DIR, { recursive: true })
     mkdirSync(IMAGES_DIR, { recursive: true })
 
@@ -1070,10 +1092,6 @@ async function main() {
     // ━━━ DOWNLOAD + OPTIMIZE ━━━
     console.log(`\nDownloading and optimizing ${downloadTasks.length} images...`)
     const failed = await downloadAll(downloadTasks)
-
-    if (failed.size > 0) {
-        console.warn(`\n⚠ ${failed.size} images failed to download`)
-    }
 
     // ━━━ WRITE CHARACTER DATA FILES ━━━
     console.log('\nWriting data files...')
