@@ -18,12 +18,17 @@
         },
         "production": {
             "autoIncrement": true,
+            "distribution": "store",
             "env": {
                 "EXPO_NO_DOCTOR": "1"
             }
         }
     },
     "submit": {
-        "production": {}
+        "production": {
+            "android": {
+                "track": "production"
+            }
+        }
     }
 }

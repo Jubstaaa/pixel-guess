@@ -27,7 +27,8 @@
         "backgroundColor": "#000000",
         "foregroundImage": "./assets/android-icon-foreground.png"
       },
-      "package": "com.haccoo.pixel_guess"
+      "package": "com.haccoo.pixel_guess",
+      "permissions": ["com.google.android.gms.permission.AD_ID"]
     },
     "web": {
       "favicon": "./assets/favicon.png",
