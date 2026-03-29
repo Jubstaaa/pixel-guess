@@ -11,7 +11,7 @@ export const DIFFICULTY_CONFIG = {
 } as const
 
 export const IMAGE_TYPE_BLOCK_SIZE = {
-    character: { easy: 56, hard: 28 },
-    poster: { easy: 48, hard: 22 },
-    logo: { easy: 36, hard: 16 },
+    character: { easy: 48, hard: 24 },
+    poster: { easy: 24, hard: 12 },
+    logo: { easy: 36, hard: 18 },
 } as const
