@@ -3,8 +3,9 @@ import React, { useCallback } from 'react'
 import { useRouter } from 'expo-router'
 import { Text, TouchableOpacity, View } from 'react-native'
 
+import { getImageUrl } from '@pixel-guess/shared'
+
 import { Image } from '@/lib/image'
-import { getImageSource } from '@/lib/image-resolver'
 
 import type { CategoryCardProps } from './category-card.types'
 
@@ -35,7 +36,7 @@ export const CategoryCard = ({ item }: CategoryCardProps) => {
                 <View className="rounded-xl bg-primary/10 p-3">
                     <Image
                         contentFit="contain"
-                        source={getImageSource(item.icon)}
+                        source={getImageUrl(item.icon)}
                         style={{ width: 44, height: 44, borderRadius: 8 }}
                     />
                 </View>

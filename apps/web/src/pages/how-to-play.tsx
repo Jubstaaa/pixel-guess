@@ -43,9 +43,7 @@ export const HowToPlayPage = () => (
                     Hard mode uses grayscale with extreme pixelation.
                 </li>
                 <li>
-                    <strong className="text-foreground">
-                        Guess the image
-                    </strong>{' '}
+                    <strong className="text-foreground">Guess the image</strong>{' '}
                     — A heavily pixelated image appears on screen. Type your
                     guess in the search bar and select from the suggestions.
                 </li>
@@ -90,8 +88,8 @@ export const HowToPlayPage = () => (
                         <li>Grayscale images (no color hints)</li>
                         <li>Extreme starting pixelation</li>
                         <li>
-                            Smaller pixel blocks that keep the image
-                            challenging longer
+                            Smaller pixel blocks that keep the image challenging
+                            longer
                         </li>
                         <li>For experts who know their category well</li>
                     </ul>
@@ -133,9 +131,7 @@ export const HowToPlayPage = () => (
                     move to the next image and keep your momentum going.
                 </li>
                 <li>
-                    <strong className="text-foreground">
-                        Start with Easy
-                    </strong>{' '}
+                    <strong className="text-foreground">Start with Easy</strong>{' '}
                     — If you&apos;re new to a category, play Easy mode first to
                     learn the characters before attempting Hard mode.
                 </li>

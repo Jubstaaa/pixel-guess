@@ -29,11 +29,10 @@ export const TermsOfServicePage = () => (
             </h2>
             <p className="mb-6 text-[15px] leading-relaxed text-muted">
                 Pixel Guess is a free online game provided for entertainment
-                purposes. You may use the Service for personal,
-                non-commercial use. You agree not to misuse the Service,
-                including but not limited to attempting to access unauthorized
-                areas, interfering with other users, or using automated tools
-                to scrape content.
+                purposes. You may use the Service for personal, non-commercial
+                use. You agree not to misuse the Service, including but not
+                limited to attempting to access unauthorized areas, interfering
+                with other users, or using automated tools to scrape content.
             </p>
 
             <h2 className="mb-3 mt-8 text-xl font-bold text-foreground">
@@ -42,19 +41,18 @@ export const TermsOfServicePage = () => (
             <p className="mb-6 text-[15px] leading-relaxed text-muted">
                 The Pixel Guess name, logo, and original game code are the
                 property of Pixel Guess. Character images, logos, and other
-                media displayed in the game belong to their respective
-                copyright holders and are used for educational and
-                entertainment purposes under fair use. All trademarks,
-                service marks, and trade names are the property of their
-                respective owners.
+                media displayed in the game belong to their respective copyright
+                holders and are used for educational and entertainment purposes
+                under fair use. All trademarks, service marks, and trade names
+                are the property of their respective owners.
             </p>
 
             <h2 className="mb-3 mt-8 text-xl font-bold text-foreground">
                 User Data
             </h2>
             <p className="mb-6 text-[15px] leading-relaxed text-muted">
-                Pixel Guess stores game progress (streaks and scores) locally
-                in your browser using localStorage. We do not collect personal
+                Pixel Guess stores game progress (streaks and scores) locally in
+                your browser using localStorage. We do not collect personal
                 information or require account creation. For more details,
                 please see our{' '}
                 <Link className="text-primary underline" to="/privacy-policy">
@@ -77,8 +75,8 @@ export const TermsOfServicePage = () => (
             </h2>
             <p className="mb-6 text-[15px] leading-relaxed text-muted">
                 In no event shall Pixel Guess be liable for any indirect,
-                incidental, special, or consequential damages arising out of
-                or in connection with the use of the Service.
+                incidental, special, or consequential damages arising out of or
+                in connection with the use of the Service.
             </p>
 
             <h2 className="mb-3 mt-8 text-xl font-bold text-foreground">

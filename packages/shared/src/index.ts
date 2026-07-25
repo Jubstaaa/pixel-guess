@@ -1,5 +1,12 @@
 export * from './types'
-export { MAX_COUNT, DIFFICULTY_CONFIG, IMAGE_TYPE_BLOCK_SIZE, LEVEL_TYPE } from './constants'
+export {
+    MAX_COUNT,
+    DIFFICULTY_CONFIG,
+    IMAGE_CDN_BASE_URL,
+    IMAGE_TYPE_BLOCK_SIZE,
+    LEVEL_TYPE,
+} from './constants'
+export { getImageUrl } from './lib/image-url'
 export { COLORS, type ThemeColors } from './constants/theme'
 export { categories, charactersByCategory } from './data/categories'
 export {

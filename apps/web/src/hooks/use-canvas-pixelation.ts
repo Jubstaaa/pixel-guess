@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 
-import { computeBlockSize, DIFFICULTY_CONFIG } from '@pixel-guess/shared'
+import {
+    computeBlockSize,
+    DIFFICULTY_CONFIG,
+    getImageUrl,
+} from '@pixel-guess/shared'
 import type { Difficulty, ImageType } from '@pixel-guess/shared'
-
-import { getImageUrl } from '@/lib/image-url'
 
 export const useCanvasPixelation = (
     imageUrl: string | null,
@@ -27,6 +29,12 @@ export const useCanvasPixelation = (
         if (!ctx) return
 
         const img = new Image()
+        // The images are served from the CDN, so every one of them is
+        // cross-origin. Without this the canvas is tainted and the getImageData
+        // calls below throw a SecurityError, which breaks the whole game rather
+        // than just one frame. Requires the bucket to send an
+        // Access-Control-Allow-Origin header, which it does.
+        img.crossOrigin = 'anonymous'
         const finalUrl = getImageUrl(imageUrl)
 
         img.onload = () => {
@@ -39,7 +47,12 @@ export const useCanvasPixelation = (
             canvas.height = height
 
             const shortSide = Math.min(width, height)
-            const blockSize = computeBlockSize(count, difficulty, shortSide, imageType)
+            const blockSize = computeBlockSize(
+                count,
+                difficulty,
+                shortSide,
+                imageType
+            )
             const { grayscale } = DIFFICULTY_CONFIG[difficulty]
 
             ctx.clearRect(0, 0, width, height)

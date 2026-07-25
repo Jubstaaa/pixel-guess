@@ -32,7 +32,12 @@ export const computeBlockSize = (
     size: number = 400,
     imageType: ImageType = 'character'
 ): number =>
-    sharedComputeBlockSize(count, levelType === 1 ? 'hard' : 'easy', size, imageType)
+    sharedComputeBlockSize(
+        count,
+        levelType === 1 ? 'hard' : 'easy',
+        size,
+        imageType
+    )
 
 export const usePixelateShader = () =>
     useMemo(() => {

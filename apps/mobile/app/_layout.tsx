@@ -10,7 +10,9 @@ import { COLORS } from '@/constants/colors'
 const RootLayout = () => {
     useEffect(() => {
         try {
-            const { default: mobileAds } = require('react-native-google-mobile-ads')
+            const {
+                default: mobileAds,
+            } = require('react-native-google-mobile-ads')
             mobileAds().initialize()
         } catch {
             // Native module not available (Expo Go)
@@ -30,6 +32,5 @@ const RootLayout = () => {
         </Fragment>
     )
 }
-
 
 export default RootLayout

@@ -1,0 +1,77 @@
+name: CI / Deploy web
+
+# Only the web app is deployed from here. The mobile app ships through EAS, and
+# the game images are published separately with `bun run sync:images`.
+on:
+    push:
+        branches: [main]
+        paths:
+            - 'apps/web/**'
+            - 'packages/shared/**'
+            - 'bun.lock'
+            - 'package.json'
+            - 'turbo.json'
+            - '.github/workflows/deploy-web.yml'
+    pull_request:
+        branches: [main]
+    workflow_dispatch:
+
+concurrency:
+    group: deploy-web-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: oven-sh/setup-bun@v2
+              with:
+                  bun-version: latest
+
+            # Installs the mobile workspace too, which is heavier than this job
+            # needs, but --frozen-lockfile is what keeps the lockfile honest.
+            - run: bun install --frozen-lockfile
+            - run: bun run lint
+            - run: bun run type-check
+            - run: bun run build --filter=@pixel-guess/web
+
+            # Guards before rsync --delete: an empty or half-written dist would
+            # otherwise wipe the live site. The grep is the important one — if the
+            # CDN base URL ever falls out of the bundle, every game image 404s
+            # while the build still looks perfectly healthy.
+            - name: Sanity-check the build
+              run: |
+                  test -s apps/web/dist/index.html
+                  test "$(find apps/web/dist -type f | wc -l)" -ge 10
+                  grep -rq 'pixelguess.fra1.cdn.digitaloceanspaces.com' apps/web/dist/assets/
+
+            # Served straight off disk by the shared Caddy — no container, so there
+            # is nothing to restart. New files are live the moment rsync finishes.
+            - name: Deploy to droplet
+              if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+              env:
+                  DO_SSH_KEY: ${{ secrets.DO_SSH_KEY }}
+                  DO_HOST: ${{ secrets.DO_HOST }}
+                  DO_USER: ${{ secrets.DO_USER }}
+              run: |
+                  mkdir -p ~/.ssh
+                  echo "$DO_SSH_KEY" > ~/.ssh/id_ed25519
+                  chmod 600 ~/.ssh/id_ed25519
+                  ssh-keyscan -H "$DO_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+                  rsync -az --delete -e "ssh -i ~/.ssh/id_ed25519" \
+                    apps/web/dist/ "$DO_USER@$DO_HOST:/opt/proxy/sites/pixelguess/"
+
+            # Asks the origin directly, bypassing Cloudflare, so a cached edge
+            # response cannot make a failed deploy look successful. -k because the
+            # origin presents a Cloudflare origin certificate, which is deliberately
+            # not trusted by the public PKI; the IP is pinned by --resolve, so this
+            # is checking that the files landed, not who the server is.
+            - name: Verify the origin is serving the new build
+              if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+              env:
+                  DO_HOST: ${{ secrets.DO_HOST }}
+              run: |
+                  curl -sfk --resolve "pixelguessgame.com:443:$DO_HOST" \
+                    https://pixelguessgame.com/ -o /tmp/deployed.html
+                  grep -q '<div id="root">' /tmp/deployed.html
