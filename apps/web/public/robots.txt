@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /game-images/
 
 Sitemap: https://pixelguessgame.com/sitemap.xml

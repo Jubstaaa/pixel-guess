@@ -8,6 +8,7 @@ import {
     categories,
     charactersByCategory,
     checkGuess,
+    getImageUrl,
     getNextState,
     getRandomCharacter,
     getSkipState,
@@ -18,7 +19,6 @@ import type { Character, Difficulty, GameState } from '@pixel-guess/shared'
 import { CharacterSearch } from '@/components/character-search/character-search'
 import { PixelatedCanvas } from '@/components/pixelated-canvas/pixelated-canvas'
 import { triggerConfetti } from '@/lib/confetti'
-import { getImageUrl } from '@/lib/image-url'
 
 import type { GameContentProps } from './game.types'
 
@@ -165,7 +165,10 @@ const GameContent = ({
                     content={`https://pixelguessgame.com/${category.slug}/${difficulty}`}
                     property="og:url"
                 />
-                <meta content={getImageUrl(category.icon)} property="og:image" />
+                <meta
+                    content={getImageUrl(category.icon)}
+                    property="og:image"
+                />
                 <meta
                     content={`Pixel Guess: ${category.name} Category | Fun Image Guessing Game`}
                     name="twitter:title"
@@ -174,7 +177,10 @@ const GameContent = ({
                     content={`${category.name} Category: Guess hidden images in the ${category.name} category. Challenge yourself!`}
                     name="twitter:description"
                 />
-                <meta content={getImageUrl(category.icon)} name="twitter:image" />
+                <meta
+                    content={getImageUrl(category.icon)}
+                    name="twitter:image"
+                />
             </Helmet>
 
             <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 pt-4 pb-8">

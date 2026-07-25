@@ -10,6 +10,17 @@
         <meta name="author" content="Pixel Guess" />
         <meta name="apple-itunes-app" content="app-id=6760237625" />
 
+        <!-- Every game image is fetched from this origin, so pay the DNS,
+             TCP and TLS cost up front instead of on the first guess. The
+             crossorigin attribute has to be here too: the images are loaded
+             in CORS mode, and a non-CORS preconnect would open a second,
+             unused connection. -->
+        <link
+            rel="preconnect"
+            href="https://pixelguess.fra1.cdn.digitaloceanspaces.com"
+            crossorigin
+        />
+
         <link
             rel="icon"
             type="image/png"

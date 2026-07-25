@@ -7,7 +7,7 @@ import { Text, TouchableOpacity, View } from 'react-native'
 
 import { COLORS } from '@/constants/colors'
 import { Image } from '@/lib/image'
-import { getImageSource } from '@/lib/image-resolver'
+import { getImageUrl } from '@pixel-guess/shared'
 import type { Category } from '@pixel-guess/shared'
 
 interface HeaderProps {
@@ -31,7 +31,7 @@ export const Header = ({ category }: HeaderProps) => {
                 <View className="rounded-xl bg-primary/10 p-2">
                     <Image
                         contentFit="contain"
-                        source={getImageSource(category.icon)}
+                        source={getImageUrl(category.icon)}
                         style={{ width: 22, height: 22 }}
                     />
                 </View>

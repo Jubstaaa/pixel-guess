@@ -12,5 +12,8 @@ dist
 apps/mobile/ios
 apps/mobile/android
 
-# Symlink — contents served from packages/shared/assets/images
-apps/web/public/game-images/
+# Game images live in the `pixelguess` Space, not in this repo — ~1900 files and
+# 26MB that bloated both the app binary and the web build. This stays as a local
+# working directory: `bun run generate` writes into it and `bun run sync:images`
+# publishes it. See packages/shared/src/constants IMAGE_CDN_BASE_URL.
+packages/shared/assets/images/

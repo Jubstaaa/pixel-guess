@@ -10,12 +10,12 @@ import {
 import { ActivityIndicator, View } from 'react-native'
 
 import { COLORS } from '@/constants/colors'
+import { useCachedImageUri } from '@/hooks/use-cached-image'
 import {
     computeBlockSize,
     GRAYSCALE_MATRIX,
     usePixelateShader,
 } from '@/hooks/use-skia-pixelation'
-import { getImageSource } from '@/lib/image-resolver'
 
 import type { PixelatedImageProps } from './pixelated-image.types'
 
@@ -26,8 +26,8 @@ export const PixelatedImage = ({
     imageType = 'character',
     size = 320,
 }: PixelatedImageProps) => {
-    const source = getImageSource(imageUrl)
-    const image = useImage(source ?? null)
+    const source = useCachedImageUri(imageUrl)
+    const image = useImage(source)
     const shader = usePixelateShader()
 
     const { canvasWidth, canvasHeight } = useMemo(() => {

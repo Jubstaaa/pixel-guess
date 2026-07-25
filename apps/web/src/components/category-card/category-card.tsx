@@ -1,8 +1,7 @@
 import { Link } from 'react-router'
 
+import { getImageUrl } from '@pixel-guess/shared'
 import type { Category } from '@pixel-guess/shared'
-
-import { getImageUrl } from '@/lib/image-url'
 
 interface CategoryCardProps {
     item: Category

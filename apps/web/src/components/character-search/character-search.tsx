@@ -2,9 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 
 import { Search } from 'lucide-react'
 
-import { filterCharacters } from '@pixel-guess/shared'
-
-import { getImageUrl } from '@/lib/image-url'
+import { filterCharacters, getImageUrl } from '@pixel-guess/shared'
 
 import type { CharacterSearchProps } from './character-search.types'
 

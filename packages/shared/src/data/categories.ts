@@ -207,21 +207,18 @@ export const categories: Category[] = [
     },
 ]
 
-export const charactersByCategory: Record<
-    string,
-    typeof movieCharacters
-> = {
-    'movies': movieCharacters,
+export const charactersByCategory: Record<string, typeof movieCharacters> = {
+    movies: movieCharacters,
     'tv-shows': tvShowCharacters,
     'anime-series': animeSeriesCharacters,
-    'pokemon': pokemonCharacters,
+    pokemon: pokemonCharacters,
     'harry-potter': harryPotterCharacters,
-    'football': footballCharacters,
-    'brands': brandCharacters,
-    'flags': flagCharacters,
-    'people': peopleCharacters,
+    football: footballCharacters,
+    brands: brandCharacters,
+    flags: flagCharacters,
+    people: peopleCharacters,
     'dragon-ball': dragonBallCharacters,
-    'naruto': narutoCharacters,
+    naruto: narutoCharacters,
     'one-piece': onePieceCharacters,
     'attack-on-titan': attackOnTitanCharacters,
     'demon-slayer': demonSlayerCharacters,
@@ -231,9 +228,9 @@ export const charactersByCategory: Record<
     'fullmetal-alchemist': fullmetalAlchemistCharacters,
     'hunter-x-hunter': hunterXHunterCharacters,
     'league-of-legends': leagueOfLegendsCharacters,
-    'valorant': valorantCharacters,
+    valorant: valorantCharacters,
     'dota-2': dota2Characters,
-    'overwatch': overwatchCharacters,
+    overwatch: overwatchCharacters,
     'genshin-impact': genshinCharacters,
     'rick-and-morty': rickAndMortyCharacters,
 }
