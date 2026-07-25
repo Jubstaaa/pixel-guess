@@ -22,8 +22,8 @@ export const AboutPage = () => (
                 Pixel Guess is a free online image guessing game where players
                 try to identify characters, logos, flags, and more from their
                 pixelated versions. The game progressively reveals the image
-                with each wrong guess, giving you up to 6 attempts to figure
-                out what&apos;s hidden behind the pixels.
+                with each wrong guess, giving you up to 6 attempts to figure out
+                what&apos;s hidden behind the pixels.
             </p>
 
             <h2 className="mb-3 mt-8 text-xl font-bold text-foreground">
@@ -34,8 +34,8 @@ export const AboutPage = () => (
                 goal is to guess what the image shows before running out of
                 attempts. With each wrong guess, the pixelation decreases and
                 the image becomes clearer. On your 6th and final attempt, the
-                image is fully revealed. The game tracks your streak — how
-                many correct guesses you can make in a row.
+                image is fully revealed. The game tracks your streak — how many
+                correct guesses you can make in a row.
             </p>
 
             <h2 className="mb-3 mt-8 text-xl font-bold text-foreground">
@@ -113,9 +113,8 @@ export const AboutPage = () => (
                 Open Source
             </h2>
             <p className="mb-6 text-[15px] leading-relaxed text-muted">
-                Pixel Guess is open source and built with React, Vite,
-                Tailwind CSS, and Expo for mobile. The entire codebase is
-                available on{' '}
+                Pixel Guess is open source and built with React, Vite, Tailwind
+                CSS, and Expo for mobile. The entire codebase is available on{' '}
                 <a
                     className="text-primary underline"
                     href="https://github.com/Jubstaaa/pixel-guess"
