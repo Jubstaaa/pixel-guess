@@ -18,7 +18,7 @@
       "appleTeamId": "67M6SCS9K9",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
-        "NSUserTrackingUsageDescription": "This identifier will be used to deliver personalized ads to you."
+        "NSUserTrackingUsageDescription": "Pixel Guess uses your device's advertising identifier so the ads between rounds match the kinds of games you already play, and so the same ad is not repeated at you. Decline and you will still see ads, just untargeted ones."
       },
       "buildNumber": "3"
     },
@@ -36,7 +36,6 @@
     },
     "plugins": [
       "expo-router",
-      "expo-secure-store",
       [
         "react-native-google-mobile-ads",
         {
