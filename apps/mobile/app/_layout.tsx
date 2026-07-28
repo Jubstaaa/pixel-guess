@@ -6,17 +6,11 @@ import { Stack } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
 
 import { COLORS } from '@/constants/colors'
+import { initializeAds } from '@/lib/ads'
 
 const RootLayout = () => {
     useEffect(() => {
-        try {
-            const {
-                default: mobileAds,
-            } = require('react-native-google-mobile-ads')
-            mobileAds().initialize()
-        } catch {
-            // Native module not available (Expo Go)
-        }
+        void initializeAds()
     }, [])
 
     return (

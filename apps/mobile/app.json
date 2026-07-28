@@ -40,9 +40,11 @@
         "react-native-google-mobile-ads",
         {
           "iosAppId": "ca-app-pub-5250650495212334~5174161665",
-          "androidAppId": "ca-app-pub-5250650495212334~5174161665"
+          "androidAppId": "ca-app-pub-5250650495212334~5174161665",
+          "delayAppMeasurementInit": true
         }
-      ]
+      ],
+      "expo-tracking-transparency"
     ],
     "experiments": {
       "typedRoutes": true

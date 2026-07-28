@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useRef } from 'react'
 
+import { initializeAds } from '@/lib/ads'
+
 const AD_UNIT_ID = __DEV__
     ? 'ca-app-pub-3940256099942544/4411468910'
     : 'ca-app-pub-5250650495212334/6351511966'
@@ -15,6 +17,7 @@ export const useInterstitialAd = () => {
     const nextShowAt = useRef(getNextThreshold())
     const adRef = useRef<any>(null)
     const isLoaded = useRef(false)
+    const isTrackingGranted = useRef(false)
 
     const loadAd = useCallback(() => {
         try {
@@ -23,7 +26,9 @@ export const useInterstitialAd = () => {
                 AdEventType,
             } = require('react-native-google-mobile-ads')
 
-            const ad = InterstitialAd.createForAdRequest(AD_UNIT_ID)
+            const ad = InterstitialAd.createForAdRequest(AD_UNIT_ID, {
+                requestNonPersonalizedAdsOnly: !isTrackingGranted.current,
+            })
 
             ad.addAdEventListener(AdEventType.LOADED, () => {
                 isLoaded.current = true
@@ -42,7 +47,18 @@ export const useInterstitialAd = () => {
     }, [])
 
     useEffect(() => {
-        loadAd()
+        let isMounted = true
+
+        void initializeAds().then((granted) => {
+            if (!isMounted) return
+
+            isTrackingGranted.current = granted
+            loadAd()
+        })
+
+        return () => {
+            isMounted = false
+        }
     }, [loadAd])
 
     const onCorrectGuess = useCallback(() => {
