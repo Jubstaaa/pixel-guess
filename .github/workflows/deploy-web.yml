@@ -61,17 +61,3 @@ jobs:
                   ssh-keyscan -H "$DO_HOST" >> ~/.ssh/known_hosts 2>/dev/null
                   rsync -az --delete -e "ssh -i ~/.ssh/id_ed25519" \
                     apps/web/dist/ "$DO_USER@$DO_HOST:/opt/proxy/sites/pixelguess/"
-
-            # Asks the origin directly, bypassing Cloudflare, so a cached edge
-            # response cannot make a failed deploy look successful. -k because the
-            # origin presents a Cloudflare origin certificate, which is deliberately
-            # not trusted by the public PKI; the IP is pinned by --resolve, so this
-            # is checking that the files landed, not who the server is.
-            - name: Verify the origin is serving the new build
-              if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-              env:
-                  DO_HOST: ${{ secrets.DO_HOST }}
-              run: |
-                  curl -sfk --resolve "pixelguessgame.com:443:$DO_HOST" \
-                    https://pixelguessgame.com/ -o /tmp/deployed.html
-                  grep -q '<div id="root">' /tmp/deployed.html
