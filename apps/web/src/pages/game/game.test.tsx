@@ -1,4 +1,6 @@
 import { act, fireEvent, render, screen } from '@testing-library/react'
+import { setMedia } from 'mock-match-media'
+import { mockAllIsIntersecting } from 'react-intersection-observer/test-utils'
 import { createMemoryRouter, RouterProvider } from 'react-router'
 import { beforeEach, describe, expect, test, vi } from 'vitest'
 
@@ -7,8 +9,11 @@ import { charactersByCategory } from '@pixel-guess/shared'
 import { GamePage } from './game'
 
 vi.mock('./confetti', () => ({ triggerConfetti: vi.fn() }))
-vi.mock('../../ads/ad-slots', () => ({
-    adSlots: { game: '1234567890', home: null },
+vi.mock('../../ads/ad-placements', () => ({
+    adPlacements: {
+        gameMobile: { size: 'mobileBanner', slot: '2222222222' },
+        gameSidebar: { size: 'wideSkyscraper', slot: '1111111111' },
+    },
 }))
 
 const flags = charactersByCategory.flags!
@@ -94,16 +99,96 @@ describe('GamePage', () => {
         expect(screen.getByRole('option', { name: wrong })).toBeTruthy()
         vi.useRealTimers()
     })
+})
 
-    test('the ad sits below the game, never between the header and the image', () => {
+const ads = () =>
+    screen.queryAllByRole('complementary', { name: 'Advertisement' })
+const requestedSlots = () =>
+    [...document.querySelectorAll('ins.adsbygoogle')].map((ins) =>
+        ins.getAttribute('data-ad-slot')
+    )
+const follows = (a: Node, b: Node) =>
+    Boolean(a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING)
+
+// Loads every ad the page has mounted: the visitor has interacted and
+// every slot is on screen.
+const loadAds = async () => {
+    fireEvent.keyDown(window)
+    act(() => mockAllIsIntersecting(true))
+    await vi.waitFor(() => expect(requestedSlots().length).toBeGreaterThan(0))
+}
+
+describe.each([1440, 1920])('GamePage ads at %ipx', (width) => {
+    beforeEach(() => setMedia({ width }))
+
+    test('puts a 160x600 ad in each gutter beside the game', () => {
         renderGame()
-        const ad = screen.getByRole('complementary', { name: 'Advertisement' })
-        const image = document.querySelector('canvas')!
-        const follows = (a: Node, b: Node) =>
-            Boolean(
-                a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING
+        const [left, right] = ads()
+        expect(ads()).toHaveLength(2)
+        const canvas = document.querySelector('canvas')!
+        expect(follows(left!, canvas)).toBe(true)
+        expect(follows(canvas, right!)).toBe(true)
+        for (const ad of ads()) {
+            expect(ad.querySelector('[data-ad-box]')?.classList).toContain(
+                'h-150'
             )
-        expect(follows(image, ad)).toBe(true)
-        expect(follows(search(), ad)).toBe(true)
+        }
+    })
+
+    test('requests only the sidebar ads, never the mobile banner', async () => {
+        renderGame()
+        await loadAds()
+        expect(requestedSlots()).toEqual(['1111111111', '1111111111'])
+    })
+})
+
+describe.each([390, 1279])('GamePage ads at %ipx', (width) => {
+    beforeEach(() => setMedia({ width }))
+
+    test('shows one 320x50 banner below the guess input', () => {
+        renderGame()
+        expect(ads()).toHaveLength(1)
+        const box = ads()[0]!.querySelector('[data-ad-box]')
+        expect(box?.classList).toContain('w-80')
+        expect(box?.classList).toContain('h-12.5')
+        expect(follows(search(), ads()[0]!)).toBe(true)
+    })
+
+    test('requests only the banner, never the hidden sidebar ads', async () => {
+        renderGame()
+        await loadAds()
+        expect(requestedSlots()).toEqual(['2222222222'])
+    })
+})
+
+describe('GamePage ads', () => {
+    test.each([390, 1440])(
+        'no ad sits between the header and the image at %ipx',
+        (width) => {
+            setMedia({ width })
+            renderGame()
+            const header = screen.getByRole('link', {
+                name: 'Back to categories',
+            })
+            const canvas = document.querySelector('canvas')!
+            for (const ad of ads()) {
+                expect(follows(header, ad) && follows(ad, canvas)).toBe(false)
+            }
+        }
+    )
+
+    test('swaps the placements when the screen crosses the breakpoint', () => {
+        setMedia({ width: 1440 })
+        renderGame()
+        expect(ads()).toHaveLength(2)
+
+        act(() => setMedia({ width: 390 }))
+        expect(ads()).toHaveLength(1)
+        expect(ads()[0]!.querySelector('[data-ad-box]')?.classList).toContain(
+            'h-12.5'
+        )
+
+        act(() => setMedia({ width: 1440 }))
+        expect(ads()).toHaveLength(2)
     })
 })

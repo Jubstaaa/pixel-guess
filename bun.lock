@@ -87,6 +87,7 @@
         "@types/react-dom": "^19.3.0",
         "@typescript/native": "npm:typescript@^7.0.2",
         "jsdom": "^31.0.1",
+        "mock-match-media": "^1.0.3",
         "tailwindcss": "^4.1.7",
         "typescript": "npm:@typescript/typescript6@^6.0.2",
         "vite": "^8.3.8",
@@ -1481,6 +1482,8 @@
     "mimic-fn": ["mimic-fn@1.2.0", "", {}, "sha512-jf84uxzwiuiIVKiOLpfYk7N46TSy8ubTonmneY9vrpHNAnp0QBt2BxWV9dO3/j+BoVAb+a5G6YDPW3M5HOdMWQ=="],
 
     "minimatch": ["minimatch@11.0.9", "", { "dependencies": { "@isaacs/nonrecursive-glob-match": "^1.1.0", "brace-expansion": "^5.0.12" } }, "sha512-KCFkfyjqerNlSstjlhIGNXIKZGA/6O4V4RlhZ+Dsr621SPPw0mzlypE9D9ZOoPiVefHID+j7/XuMMlqfD/F60Q=="],
+
+    "mock-match-media": ["mock-match-media@1.0.3", "", {}, "sha512-f7wFizlZ9pE19xxzp1lYKIEp1Va2ghszE0tOToSfrTOcK1ZNg+vEkUGnJcEg1S8cqdQx3/rkimADQQHPs+hK4A=="],
 
     "ms": ["ms@2.1.3", "", {}, "sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA=="],
 

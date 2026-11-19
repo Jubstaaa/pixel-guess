@@ -22,11 +22,17 @@ import type {
 } from '@pixel-guess/shared'
 
 import { AdSlot } from '../../ads/ad-slot'
-import { adSlots } from '../../ads/ad-slots'
+import { adPlacements } from '../../ads/ad-placements'
+import { useMediaQuery } from '../../ads/use-media-query'
 
 import { CharacterSearch } from './character-search'
 import { triggerConfetti } from './confetti'
 import { PixelatedCanvas } from './pixelated-canvas'
+
+// The game column is 448px wide; two 160px sidebars and their gaps need
+// about 900px. From 1280px the gutters are genuinely empty desktop space, so
+// tablets and small laptops get the banner instead.
+const SIDEBAR_ADS_QUERY = '(min-width: 1280px)'
 
 interface GameContentProps {
     category: Category
@@ -138,6 +144,12 @@ const GameContent = ({
     }, [state, pickNext])
 
     const displayCount = isRevealed ? MAX_COUNT : state.count
+    const hasSidebarAds = useMediaQuery(SIDEBAR_ADS_QUERY)
+    // Not sticky: the 600px ad is taller than the game column, so it already
+    // sets the row height and would have nowhere to stick.
+    const sidebarAd = hasSidebarAds && (
+        <AdSlot placement={adPlacements.gameSidebar} />
+    )
 
     return (
         <Fragment>
@@ -147,61 +159,70 @@ const GameContent = ({
                 name="description"
             />
 
-            <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 pt-4 pb-8">
-                <div className="flex w-full items-center gap-3 rounded-2xl border border-border bg-surface px-3 py-3">
-                    <Link
-                        className="rounded-xl border border-border bg-surface-hover p-2 transition-opacity hover:opacity-80"
-                        aria-label="Back to categories"
-                        to="/"
-                    >
-                        <ChevronLeft
-                            aria-hidden="true"
-                            className="h-[18px] w-[18px] text-foreground"
+            <div className="flex items-start justify-center gap-12 px-4 pt-4 pb-8">
+                {sidebarAd}
+                <div className="flex w-full max-w-md flex-col items-center gap-4">
+                    <div className="flex w-full items-center gap-3 rounded-2xl border border-border bg-surface px-3 py-3">
+                        <Link
+                            className="rounded-xl border border-border bg-surface-hover p-2 transition-opacity hover:opacity-80"
+                            aria-label="Back to categories"
+                            to="/"
+                        >
+                            <ChevronLeft
+                                aria-hidden="true"
+                                className="h-[18px] w-[18px] text-foreground"
+                            />
+                        </Link>
+                        <img
+                            alt=""
+                            className="h-[22px] w-[22px] rounded-lg object-contain"
+                            height={22}
+                            width={22}
+                            src={getImageUrl(category.icon)}
                         />
-                    </Link>
-                    <img
-                        alt=""
-                        className="h-[22px] w-[22px] rounded-lg object-contain"
-                        height={22}
-                        width={22}
-                        src={getImageUrl(category.icon)}
-                    />
-                    <span className="flex-1 truncate text-[14px] font-semibold text-foreground">
-                        {category.name}
-                    </span>
-                </div>
+                        <span className="flex-1 truncate text-[14px] font-semibold text-foreground">
+                            {category.name}
+                        </span>
+                    </div>
 
-                <div className="relative w-full max-w-xs overflow-hidden rounded-2xl border border-border shadow-lg">
-                    <PixelatedCanvas
-                        count={displayCount}
-                        difficulty={difficulty}
-                        imageType={category.imageType}
-                        imageUrl={state.currentCharacter?.imageUrl ?? null}
-                    />
-                    <button
-                        className="absolute right-2 top-2 flex items-center gap-1.5 rounded-xl border border-border/50 bg-background/80 px-3 py-1.5 text-xs font-medium text-muted backdrop-blur-sm transition-opacity hover:opacity-80 disabled:opacity-50"
-                        disabled={isRevealed}
-                        type="button"
-                        onClick={handleSkip}
-                    >
-                        <SkipForward
-                            aria-hidden="true"
-                            className="h-3.5 w-3.5"
+                    <div className="relative w-full max-w-xs overflow-hidden rounded-2xl border border-border shadow-lg">
+                        <PixelatedCanvas
+                            count={displayCount}
+                            difficulty={difficulty}
+                            imageType={category.imageType}
+                            imageUrl={state.currentCharacter?.imageUrl ?? null}
                         />
-                        Skip
-                    </button>
-                </div>
+                        <button
+                            className="absolute right-2 top-2 flex items-center gap-1.5 rounded-xl border border-border/50 bg-background/80 px-3 py-1.5 text-xs font-medium text-muted backdrop-blur-sm transition-opacity hover:opacity-80 disabled:opacity-50"
+                            disabled={isRevealed}
+                            type="button"
+                            onClick={handleSkip}
+                        >
+                            <SkipForward
+                                aria-hidden="true"
+                                className="h-3.5 w-3.5"
+                            />
+                            Skip
+                        </button>
+                    </div>
 
-                <div className="w-full">
-                    <CharacterSearch
-                        characters={characters}
-                        disabled={isRevealed}
-                        excludeIndices={guessedIndices}
-                        onSelect={handleSelect}
-                    />
-                </div>
+                    <div className="w-full">
+                        <CharacterSearch
+                            characters={characters}
+                            disabled={isRevealed}
+                            excludeIndices={guessedIndices}
+                            onSelect={handleSelect}
+                        />
+                    </div>
 
-                <AdSlot className="mt-8" slot={adSlots.game} />
+                    {!hasSidebarAds && (
+                        <AdSlot
+                            className="mt-8"
+                            placement={adPlacements.gameMobile}
+                        />
+                    )}
+                </div>
+                {sidebarAd}
             </div>
         </Fragment>
     )

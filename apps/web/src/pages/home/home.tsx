@@ -4,12 +4,15 @@ import { Link } from 'react-router'
 import { categories } from '@pixel-guess/shared'
 
 import { AdSlot } from '../../ads/ad-slot'
-import { adSlots } from '../../ads/ad-slots'
+import { adPlacements } from '../../ads/ad-placements'
 
 import { CategoryCard } from './category-card'
 
-// Below the first screen of categories on a phone, never above them.
-const AD_AFTER_CATEGORY = 5
+// Even, so on the two-column grid every ad follows whole rows of cards.
+export const AD_EVERY_N_CATEGORIES = 4
+
+const hasAdAfter = (index: number) =>
+    (index + 1) % AD_EVERY_N_CATEGORIES === 0 && index < categories.length - 1
 
 export const HomePage = () => (
     <Fragment>
@@ -61,10 +64,10 @@ export const HomePage = () => (
                 {categories.map((item, index) => (
                     <Fragment key={item.slug}>
                         <CategoryCard item={item} />
-                        {index === AD_AFTER_CATEGORY && (
+                        {hasAdAfter(index) && (
                             <AdSlot
-                                className="py-3 sm:col-span-2"
-                                slot={adSlots.home}
+                                className="col-span-full py-3"
+                                placement={adPlacements.homeInList}
                             />
                         )}
                     </Fragment>
