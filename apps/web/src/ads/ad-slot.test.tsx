@@ -26,7 +26,7 @@ beforeEach(async () => {
 const renderAt = (
     slot: string | null,
     path = '/movies/easy',
-    size: AdSize = 'mediumRectangle'
+    size: AdSize = 'largeMobileBanner'
 ) => {
     const router = createMemoryRouter(
         [{ path: '*', element: <AdSlot placement={{ size, slot }} /> }],
@@ -48,9 +48,10 @@ describe('AdSlot', () => {
     // Each box is exactly the fixed size of its unit, so the ad that arrives
     // later shifts nothing.
     test.each([
-        ['mediumRectangle', 'w-75 h-62.5', 300, 250],
-        ['wideSkyscraper', 'w-40 h-150', 160, 600],
+        ['banner', 'w-117 h-15', 468, 60],
+        ['largeMobileBanner', 'w-80 h-25', 320, 100],
         ['mobileBanner', 'w-80 h-12.5', 320, 50],
+        ['wideSkyscraper', 'w-40 h-150', 160, 600],
     ] as const)(
         'reserves the %s box before anything loads and fills it exactly',
         async (size, classes, width, height) => {

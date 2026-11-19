@@ -162,6 +162,21 @@ describe.each([390, 1279])('GamePage ads at %ipx', (width) => {
 })
 
 describe('GamePage ads', () => {
+    // The sidebars sit in the gutters out of the layout flow, so the game is
+    // exactly as wide and placed exactly as it is without them.
+    test('the game column is the same with and without the sidebars', () => {
+        const column = () =>
+            screen.getByRole('link', { name: 'Back to categories' })
+                .parentElement!.parentElement!
+        setMedia({ width: 390 })
+        renderGame()
+        const narrow = column().className
+
+        act(() => setMedia({ width: 1440 }))
+        expect(column().className).toBe(narrow)
+        for (const ad of ads()) expect(ad.classList).toContain('absolute')
+    })
+
     test.each([390, 1440])(
         'no ad sits between the header and the image at %ipx',
         (width) => {

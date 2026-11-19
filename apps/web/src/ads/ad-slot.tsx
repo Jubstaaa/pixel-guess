@@ -10,7 +10,8 @@ const AD_SCRIPT = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.j
 // The standard fixed sizes of the units in ad-placements.ts. The classes are
 // spelled out so Tailwind finds them.
 const adSizes = {
-    mediumRectangle: { box: 'w-75 h-62.5', height: 250, width: 300 },
+    banner: { box: 'w-117 h-15', height: 60, width: 468 },
+    largeMobileBanner: { box: 'w-80 h-25', height: 100, width: 320 },
     mobileBanner: { box: 'w-80 h-12.5', height: 50, width: 320 },
     wideSkyscraper: { box: 'w-40 h-150', height: 600, width: 160 },
 }
@@ -41,9 +42,9 @@ export const AdSlot = ({
     return (
         <aside
             aria-label="Advertisement"
-            className={`flex flex-col items-center gap-1 ${className}`}
+            className={`flex flex-col items-center justify-center gap-1 ${className}`}
         >
-            <span className="text-[11px] uppercase tracking-wide text-muted">
+            <span className="text-[11px] leading-none uppercase tracking-wide text-muted">
                 Advertisement
             </span>
             {/* A new page of the single-page app gets a new ad unit. */}
