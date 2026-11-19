@@ -50,3 +50,16 @@ bun run generate
 - **Flat Structure**: No nested subdirectories in feature folders
 - **SSOT**: All game logic and data in `@pixel-guess/shared`
 - **No Backend**: Fully client-side, images bundled at build time
+
+## Dependency audit
+
+CI runs `bun run audit` (`bun audit --audit-level=high`) and fails on any high or critical advisory, except these, which all sit in the **mobile** app's Expo toolchain and need an Expo SDK upgrade (`npx expo install --fix` and a new EAS build) rather than a lockfile bump:
+
+| Advisory                                 | Package                | Comes from                                                               |
+| ---------------------------------------- | ---------------------- | ------------------------------------------------------------------------ |
+| GHSA-6g55-p6wh-862q, GHSA-r28c-9q8g-f849 | `postcss@8.4.49`       | `@expo/metro-config` (build time)                                        |
+| GHSA-mrhx-c7xc-m3w5                      | `zod@3.25.76`          | `@expo/cli` (build time)                                                 |
+| GHSA-5p2g-fcmc-qvqq, GHSA-w3rx-r6r6-pgpr | `image-size`           | `metro` (build time)                                                     |
+| GHSA-qr28-fpjm-wq7f                      | `decode-uri-component` | `query-string` ← `@react-navigation/core` (deep-link parsing in the app) |
+
+Remove them with the next Expo SDK upgrade.

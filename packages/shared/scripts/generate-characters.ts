@@ -46,17 +46,27 @@ async function fetchJson(url: string, options?: RequestInit): Promise<any> {
             if (!r.ok) throw new pRetry.AbortError(`HTTP ${r.status}: ${url}`)
             return r.json()
         },
-        { retries: 3, minTimeout: 2000, factor: 2, onFailedAttempt: (e) => console.warn(`  ↻ ${url} attempt ${e.attemptNumber} failed`) },
+        {
+            retries: 3,
+            minTimeout: 2000,
+            factor: 2,
+            onFailedAttempt: (e) =>
+                console.warn(`  ↻ ${url} attempt ${e.attemptNumber} failed`),
+        }
     )
 }
 
-async function fetchCategory(label: string, fn: () => Promise<CategoryResult>): Promise<CategoryResult | null> {
+async function fetchCategory(
+    label: string,
+    fn: () => Promise<CategoryResult>
+): Promise<CategoryResult | null> {
     try {
         return await pRetry(fn, {
             retries: 2,
             minTimeout: 3000,
             factor: 2,
-            onFailedAttempt: (e) => console.warn(`  ↻ ${label} attempt ${e.attemptNumber} failed`),
+            onFailedAttempt: (e) =>
+                console.warn(`  ↻ ${label} attempt ${e.attemptNumber} failed`),
         })
     } catch (e) {
         console.error(`✗ ${label} failed: ${(e as Error).message}`)
@@ -65,13 +75,14 @@ async function fetchCategory(label: string, fn: () => Promise<CategoryResult>): 
 }
 
 function toFileName(name: string): string {
-    return name
-        .toLowerCase()
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/^-+|-+$/g, '')
-        || 'unnamed'
+    return (
+        name
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '') || 'unnamed'
+    )
 }
 
 async function downloadBatch(tasks: DownloadTask[]): Promise<DownloadTask[]> {
@@ -85,17 +96,24 @@ async function downloadBatch(tasks: DownloadTask[]): Promise<DownloadTask[]> {
                 await pRetry(
                     async () => {
                         const res = await fetch(task.url, {
-                            headers: { 'User-Agent': 'Mozilla/5.0 (compatible; PixelGuess/1.0)' },
+                            headers: {
+                                'User-Agent':
+                                    'Mozilla/5.0 (compatible; PixelGuess/1.0)',
+                            },
                         })
                         if (res.status === 429) throw new Error('rate limited')
-                        if (!res.ok) throw new pRetry.AbortError(`HTTP ${res.status}`)
+                        if (!res.ok)
+                            throw new pRetry.AbortError(`HTTP ${res.status}`)
                         const buf = Buffer.from(await res.arrayBuffer())
                         await sharp(buf)
-                            .resize(MAX_IMAGE_SIZE, MAX_IMAGE_SIZE, { fit: 'inside', withoutEnlargement: true })
+                            .resize(MAX_IMAGE_SIZE, MAX_IMAGE_SIZE, {
+                                fit: 'inside',
+                                withoutEnlargement: true,
+                            })
                             .webp({ quality: IMAGE_QUALITY })
                             .toFile(task.outPath)
                     },
-                    { retries: 3, minTimeout: 1000, factor: 2 },
+                    { retries: 3, minTimeout: 1000, factor: 2 }
                 )
             } catch {
                 failed.push(task)
@@ -104,7 +122,7 @@ async function downloadBatch(tasks: DownloadTask[]): Promise<DownloadTask[]> {
             if (completed % 200 === 0 || completed === tasks.length) {
                 process.stdout.write(`\r  ${completed}/${tasks.length}`)
             }
-        }),
+        })
     )
 
     await Promise.all(jobs)
@@ -117,13 +135,21 @@ const MAX_RETRY_ROUNDS = 3
 async function downloadAll(tasks: DownloadTask[]): Promise<Set<string>> {
     let remaining = await downloadBatch(tasks)
 
-    for (let round = 1; round <= MAX_RETRY_ROUNDS && remaining.length > 0; round++) {
-        console.log(`\n⚠ ${remaining.length} failed — retry round ${round}/${MAX_RETRY_ROUNDS}...`)
+    for (
+        let round = 1;
+        round <= MAX_RETRY_ROUNDS && remaining.length > 0;
+        round++
+    ) {
+        console.log(
+            `\n⚠ ${remaining.length} failed — retry round ${round}/${MAX_RETRY_ROUNDS}...`
+        )
         remaining = await downloadBatch(remaining)
     }
 
     if (remaining.length > 0) {
-        console.warn(`\n⚠ ${remaining.length} images permanently failed (will be excluded):`)
+        console.warn(
+            `\n⚠ ${remaining.length} images permanently failed (will be excluded):`
+        )
         for (const t of remaining) console.warn(`  - ${t.localKey} (${t.url})`)
     }
 
@@ -134,14 +160,22 @@ async function downloadAll(tasks: DownloadTask[]): Promise<Set<string>> {
 
 async function fetchLol(): Promise<CategoryResult> {
     const versions: string[] = await fetch(
-        'https://ddragon.leagueoflegends.com/api/versions.json',
-    ).then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
+        'https://ddragon.leagueoflegends.com/api/versions.json'
+    ).then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`)
+        return r.json()
+    })
     const version = versions[0]
     const data = await fetch(
-        `https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`,
-    ).then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
+        `https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`
+    ).then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`)
+        return r.json()
+    })
 
-    const characters = Object.values(data.data as Record<string, { name: string; id: string }>)
+    const characters = Object.values(
+        data.data as Record<string, { name: string; id: string }>
+    )
         .map(({ name, id }) => ({
             name,
             remoteUrl: `https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${id}.png`,
@@ -155,7 +189,8 @@ async function fetchLol(): Promise<CategoryResult> {
             name: 'League of Legends',
             exportName: 'leagueOfLegendsCharacters',
             imageType: 'character',
-            iconUrl: 'https://images.weserv.nl/?url=vignette.wikia.nocookie.net/leagueoflegends/images/1/12/League_of_Legends_Icon.png',
+            iconUrl:
+                'https://images.weserv.nl/?url=vignette.wikia.nocookie.net/leagueoflegends/images/1/12/League_of_Legends_Icon.png',
         },
         characters,
     }
@@ -163,8 +198,11 @@ async function fetchLol(): Promise<CategoryResult> {
 
 async function fetchDota2(): Promise<CategoryResult> {
     const heroes: { localized_name: string; name: string }[] = await fetch(
-        'https://api.opendota.com/api/heroes',
-    ).then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
+        'https://api.opendota.com/api/heroes'
+    ).then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`)
+        return r.json()
+    })
 
     const characters = heroes
         .map(({ localized_name, name }) => ({
@@ -180,7 +218,8 @@ async function fetchDota2(): Promise<CategoryResult> {
             name: 'Dota 2',
             exportName: 'dota2Characters',
             imageType: 'character',
-            iconUrl: 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/global/dota2_logo_symbol.png',
+            iconUrl:
+                'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/global/dota2_logo_symbol.png',
         },
         characters,
     }
@@ -188,8 +227,11 @@ async function fetchDota2(): Promise<CategoryResult> {
 
 async function fetchValorant(): Promise<CategoryResult> {
     const data = await fetch(
-        'https://valorant-api.com/v1/agents?isPlayableCharacter=true',
-    ).then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
+        'https://valorant-api.com/v1/agents?isPlayableCharacter=true'
+    ).then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`)
+        return r.json()
+    })
 
     const characters = (data.data as { displayName: string; uuid: string }[])
         .map(({ displayName, uuid }) => ({
@@ -205,7 +247,8 @@ async function fetchValorant(): Promise<CategoryResult> {
             name: 'Valorant',
             exportName: 'valorantCharacters',
             imageType: 'character',
-            iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version_%28cropped%29.png',
+            iconUrl:
+                'https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version_%28cropped%29.png',
         },
         characters,
     }
@@ -213,12 +256,31 @@ async function fetchValorant(): Promise<CategoryResult> {
 
 async function fetchFlags(): Promise<CategoryResult> {
     const codes: Record<string, string> = await fetch(
-        'https://flagcdn.com/en/codes.json',
-    ).then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
+        'https://flagcdn.com/en/codes.json'
+    ).then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`)
+        return r.json()
+    })
 
     const exclude = new Set([
-        'ac', 'cp', 'dg', 'ea', 'eu', 'hm', 'ic', 'sh', 'sj', 'ta', 'un',
-        'xk', 'bv', 'aq', 'tf', 'gs', 'io', 'um',
+        'ac',
+        'cp',
+        'dg',
+        'ea',
+        'eu',
+        'hm',
+        'ic',
+        'sh',
+        'sj',
+        'ta',
+        'un',
+        'xk',
+        'bv',
+        'aq',
+        'tf',
+        'gs',
+        'io',
+        'um',
     ])
 
     const characters = Object.entries(codes)
@@ -244,15 +306,20 @@ async function fetchFlags(): Promise<CategoryResult> {
 
 async function fetchPokemon(): Promise<CategoryResult> {
     const data = await fetch(
-        'https://pokeapi.co/api/v2/pokemon?limit=1025',
-    ).then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
+        'https://pokeapi.co/api/v2/pokemon?limit=1025'
+    ).then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`)
+        return r.json()
+    })
 
     const characters = (data.results as { name: string; url: string }[])
         .slice(0, 151)
         .map(({ name, url }) => {
             const id = url.split('/').filter(Boolean).pop()!
             return {
-                name: name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' '),
+                name:
+                    name.charAt(0).toUpperCase() +
+                    name.slice(1).replace(/-/g, ' '),
                 remoteUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`,
             }
         })
@@ -264,18 +331,23 @@ async function fetchPokemon(): Promise<CategoryResult> {
             name: 'Pokémon',
             exportName: 'pokemonCharacters',
             imageType: 'poster',
-            iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/400px-International_Pok%C3%A9mon_logo.svg.png',
+            iconUrl:
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/400px-International_Pok%C3%A9mon_logo.svg.png',
         },
         characters,
     }
 }
 
-
 async function fetchGenshin(): Promise<CategoryResult> {
-    const data = await fetch('https://gi.yatta.moe/api/v2/en/avatar').then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
+    const data = await fetch('https://gi.yatta.moe/api/v2/en/avatar').then(
+        (r) => {
+            if (!r.ok) throw new Error(`HTTP ${r.status}`)
+            return r.json()
+        }
+    )
 
     const characters = Object.values(
-        data.data.items as Record<string, { name: string; icon: string }>,
+        data.data.items as Record<string, { name: string; icon: string }>
     )
         .map(({ name, icon }) => ({
             name,
@@ -290,26 +362,37 @@ async function fetchGenshin(): Promise<CategoryResult> {
             name: 'Genshin Impact',
             exportName: 'genshinCharacters',
             imageType: 'character',
-            iconUrl: 'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2024/01/Genshin-Impact-Logo.png',
+            iconUrl:
+                'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2024/01/Genshin-Impact-Logo.png',
         },
         characters,
     }
 }
 
 async function fetchRickAndMorty(): Promise<CategoryResult> {
-    const first = await fetch('https://rickandmortyapi.com/api/character').then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
+    const first = await fetch('https://rickandmortyapi.com/api/character').then(
+        (r) => {
+            if (!r.ok) throw new Error(`HTTP ${r.status}`)
+            return r.json()
+        }
+    )
     const pages: number = first.info.pages
 
     const results = [...first.results]
     await Promise.all(
         Array.from({ length: pages - 1 }, (_, i) =>
             fetch(`https://rickandmortyapi.com/api/character?page=${i + 2}`)
-                .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
-                .then((d) => results.push(...d.results)),
-        ),
+                .then((r) => {
+                    if (!r.ok) throw new Error(`HTTP ${r.status}`)
+                    return r.json()
+                })
+                .then((d) => results.push(...d.results))
+        )
     )
 
-    const characters = (results as { name: string; image: string; episode: string[] }[])
+    const characters = (
+        results as { name: string; image: string; episode: string[] }[]
+    )
         .filter((c) => c.episode.length >= 3)
         .map(({ name, image }) => ({ name, remoteUrl: image }))
         .sort((a, b) => a.name.localeCompare(b.name))
@@ -321,14 +404,20 @@ async function fetchRickAndMorty(): Promise<CategoryResult> {
             name: 'Rick & Morty',
             exportName: 'rickAndMortyCharacters',
             imageType: 'poster',
-            iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/400px-Rick_and_Morty.svg.png',
+            iconUrl:
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/400px-Rick_and_Morty.svg.png',
         },
         characters,
     }
 }
 
 async function fetchOverwatch(): Promise<CategoryResult> {
-    const data = await fetch('https://overfast-api.tekrop.fr/heroes').then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
+    const data = await fetch('https://overfast-api.tekrop.fr/heroes').then(
+        (r) => {
+            if (!r.ok) throw new Error(`HTTP ${r.status}`)
+            return r.json()
+        }
+    )
 
     const characters = (data as { name: string; portrait: string }[])
         .map(({ name, portrait }) => ({ name, remoteUrl: portrait }))
@@ -341,7 +430,8 @@ async function fetchOverwatch(): Promise<CategoryResult> {
             name: 'Overwatch',
             exportName: 'overwatchCharacters',
             imageType: 'character',
-            iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Overwatch_2_logo.svg/400px-Overwatch_2_logo.svg.png',
+            iconUrl:
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Overwatch_2_logo.svg/400px-Overwatch_2_logo.svg.png',
         },
         characters,
     }
@@ -349,8 +439,11 @@ async function fetchOverwatch(): Promise<CategoryResult> {
 
 async function fetchDragonBall(): Promise<CategoryResult> {
     const data = await fetch(
-        'https://dragonball-api.com/api/characters?limit=100',
-    ).then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
+        'https://dragonball-api.com/api/characters?limit=100'
+    ).then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`)
+        return r.json()
+    })
 
     const characters = (data.items as { name: string; image: string }[])
         .map(({ name, image }) => ({ name, remoteUrl: image }))
@@ -363,38 +456,59 @@ async function fetchDragonBall(): Promise<CategoryResult> {
             name: 'Dragon Ball',
             exportName: 'dragonBallCharacters',
             imageType: 'poster',
-            iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/9b/Dragon_Ball_Z_Logo.png',
+            iconUrl:
+                'https://upload.wikimedia.org/wikipedia/commons/9/9b/Dragon_Ball_Z_Logo.png',
         },
         characters,
     }
 }
 
-type TmdbItem = { title?: string; name?: string; poster_path?: string; profile_path?: string }
+type TmdbItem = {
+    title?: string
+    name?: string
+    poster_path?: string
+    profile_path?: string
+}
 
-async function fetchTmdb(endpoint: string, apiKey: string, pages: number): Promise<TmdbItem[]> {
+async function fetchTmdb(
+    endpoint: string,
+    apiKey: string,
+    pages: number
+): Promise<TmdbItem[]> {
     const results: TmdbItem[] = []
     await Promise.all(
         Array.from({ length: pages }, (_, i) =>
             fetch(
-                `https://api.themoviedb.org/3/${endpoint}?api_key=${apiKey}&language=en-US&page=${i + 1}`,
+                `https://api.themoviedb.org/3/${endpoint}?api_key=${apiKey}&language=en-US&page=${i + 1}`
             )
-                .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
-                .then((d) => results.push(...(d.results ?? []))),
-        ),
+                .then((r) => {
+                    if (!r.ok) throw new Error(`HTTP ${r.status}`)
+                    return r.json()
+                })
+                .then((d) => results.push(...(d.results ?? [])))
+        )
     )
     return results
 }
 
-async function fetchTmdbDiscover(endpoint: string, apiKey: string, pages: number, extraParams: string): Promise<TmdbItem[]> {
+async function fetchTmdbDiscover(
+    endpoint: string,
+    apiKey: string,
+    pages: number,
+    extraParams: string
+): Promise<TmdbItem[]> {
     const results: TmdbItem[] = []
     await Promise.all(
         Array.from({ length: pages }, (_, i) =>
             fetch(
-                `https://api.themoviedb.org/3/${endpoint}?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&page=${i + 1}${extraParams}`,
+                `https://api.themoviedb.org/3/${endpoint}?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&page=${i + 1}${extraParams}`
             )
-                .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
-                .then((d) => results.push(...(d.results ?? []))),
-        ),
+                .then((r) => {
+                    if (!r.ok) throw new Error(`HTTP ${r.status}`)
+                    return r.json()
+                })
+                .then((d) => results.push(...(d.results ?? [])))
+        )
     )
     return results
 }
@@ -404,7 +518,7 @@ async function fetchMovies(apiKey: string): Promise<CategoryResult> {
         'discover/movie',
         apiKey,
         5,
-        '&vote_count.gte=1000&with_original_language=en',
+        '&vote_count.gte=1000&with_original_language=en'
     )
 
     const characters = results
@@ -422,7 +536,8 @@ async function fetchMovies(apiKey: string): Promise<CategoryResult> {
             name: 'Movies',
             exportName: 'movieCharacters',
             imageType: 'poster',
-            iconUrl: 'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2020/04/Netflix-Logo.png',
+            iconUrl:
+                'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2020/04/Netflix-Logo.png',
         },
         characters,
     }
@@ -433,7 +548,7 @@ async function fetchTvShows(apiKey: string): Promise<CategoryResult> {
         'discover/tv',
         apiKey,
         5,
-        '&vote_count.gte=500&with_original_language=en',
+        '&vote_count.gte=500&with_original_language=en'
     )
 
     const characters = results
@@ -451,7 +566,8 @@ async function fetchTvShows(apiKey: string): Promise<CategoryResult> {
             name: 'TV Shows',
             exportName: 'tvShowCharacters',
             imageType: 'poster',
-            iconUrl: 'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2020/04/Netflix-Logo.png',
+            iconUrl:
+                'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2020/04/Netflix-Logo.png',
         },
         characters,
     }
@@ -476,22 +592,26 @@ async function fetchPeople(apiKey: string): Promise<CategoryResult> {
             name: 'People',
             exportName: 'peopleCharacters',
             imageType: 'poster',
-            iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tmdb.new.logo.svg/400px-Tmdb.new.logo.svg.png',
+            iconUrl:
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tmdb.new.logo.svg/400px-Tmdb.new.logo.svg.png',
         },
         characters,
     }
 }
 
 async function fetchNaruto(): Promise<CategoryResult> {
-    const first = await fetchJson('https://dattebayo-api.onrender.com/characters?limit=100')
+    const first = await fetchJson(
+        'https://dattebayo-api.onrender.com/characters?limit=100'
+    )
     const results = [...first.characters]
     const totalPages = Math.ceil(first.total / 100)
 
     await Promise.all(
         Array.from({ length: totalPages - 1 }, (_, i) =>
-            fetchJson(`https://dattebayo-api.onrender.com/characters?limit=100&page=${i + 2}`)
-                .then((d) => results.push(...d.characters)),
-        ),
+            fetchJson(
+                `https://dattebayo-api.onrender.com/characters?limit=100&page=${i + 2}`
+            ).then((d) => results.push(...d.characters))
+        )
     )
 
     const characters = (results as { name: string; images: string[] }[])
@@ -507,7 +627,8 @@ async function fetchNaruto(): Promise<CategoryResult> {
             name: 'Naruto',
             exportName: 'narutoCharacters',
             imageType: 'poster',
-            iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Naruto_logo.svg/400px-Naruto_logo.svg.png',
+            iconUrl:
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Naruto_logo.svg/400px-Naruto_logo.svg.png',
         },
         characters,
     }
@@ -542,7 +663,7 @@ const BRANDS = [
     { name: 'KFC', domain: 'kfc.com' },
     { name: 'Burger King', domain: 'burgerking.com' },
     { name: 'Subway', domain: 'subway.com' },
-    { name: 'Domino\'s', domain: 'dominos.com' },
+    { name: "Domino's", domain: 'dominos.com' },
     { name: 'Disney', domain: 'disney.com' },
     { name: 'Marvel', domain: 'marvel.com' },
     { name: 'Nintendo', domain: 'nintendo.com' },
@@ -576,12 +697,10 @@ const BRANDS = [
 ]
 
 async function fetchBrands(): Promise<CategoryResult> {
-    const characters = BRANDS
-        .map(({ name, domain }) => ({
-            name,
-            remoteUrl: `https://img.logo.dev/${domain}?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark`,
-        }))
-        .sort((a, b) => a.name.localeCompare(b.name))
+    const characters = BRANDS.map(({ name, domain }) => ({
+        name,
+        remoteUrl: `https://img.logo.dev/${domain}?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png&theme=dark`,
+    })).sort((a, b) => a.name.localeCompare(b.name))
 
     console.log(`Brands: ${characters.length} brands`)
     return {
@@ -590,7 +709,8 @@ async function fetchBrands(): Promise<CategoryResult> {
             name: 'Brands',
             exportName: 'brandCharacters',
             imageType: 'logo',
-            iconUrl: 'https://img.logo.dev/google.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png',
+            iconUrl:
+                'https://img.logo.dev/google.com?token=pk_eQWznTEVSQWtTwGzi_p5Qg&format=png',
         },
         characters,
     }
@@ -602,17 +722,24 @@ async function fetchFootball(apiKey: string): Promise<CategoryResult> {
 
     await Promise.all(
         competitions.map((code) =>
-            fetchJson(`https://api.football-data.org/v4/competitions/${code}/teams`, {
-                headers: { 'X-Auth-Token': apiKey },
-            })
-                .then((d) => {
-                    if (d.teams) {
-                        for (const t of d.teams as { id: number; name: string; crest: string }[]) {
-                            if (t.crest) teamMap.set(t.id, { name: t.name, crest: t.crest })
-                        }
+            fetchJson(
+                `https://api.football-data.org/v4/competitions/${code}/teams`,
+                {
+                    headers: { 'X-Auth-Token': apiKey },
+                }
+            ).then((d) => {
+                if (d.teams) {
+                    for (const t of d.teams as {
+                        id: number
+                        name: string
+                        crest: string
+                    }[]) {
+                        if (t.crest)
+                            teamMap.set(t.id, { name: t.name, crest: t.crest })
                     }
-                }),
-        ),
+                }
+            })
+        )
     )
 
     const characters = Array.from(teamMap.values())
@@ -626,18 +753,30 @@ async function fetchFootball(apiKey: string): Promise<CategoryResult> {
             name: 'Football Clubs',
             exportName: 'footballCharacters',
             imageType: 'logo',
-            iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/1d/Football_Pallo_valmiina-cropped.jpg',
+            iconUrl:
+                'https://upload.wikimedia.org/wikipedia/commons/1/1d/Football_Pallo_valmiina-cropped.jpg',
         },
         characters,
     }
 }
 
-async function fetchJikanAnime(animeId: number, limit: number): Promise<CharacterEntry[]> {
+async function fetchJikanAnime(
+    animeId: number,
+    limit: number
+): Promise<CharacterEntry[]> {
     const data = await fetch(
-        `https://api.jikan.moe/v4/anime/${animeId}/characters`,
-    ).then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
+        `https://api.jikan.moe/v4/anime/${animeId}/characters`
+    ).then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`)
+        return r.json()
+    })
 
-    return (data.data as { character: { name: string; images: { jpg: { image_url: string } } }; favorites: number }[])
+    return (
+        data.data as {
+            character: { name: string; images: { jpg: { image_url: string } } }
+            favorites: number
+        }[]
+    )
         .filter((c) => c.character.images?.jpg?.image_url)
         .sort((a, b) => b.favorites - a.favorites)
         .slice(0, limit)
@@ -659,7 +798,8 @@ async function fetchOnePiece(): Promise<CategoryResult> {
             name: 'One Piece',
             exportName: 'onePieceCharacters',
             imageType: 'poster',
-            iconUrl: 'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2021/09/One-Piece-Logo.png',
+            iconUrl:
+                'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2021/09/One-Piece-Logo.png',
         },
         characters,
     }
@@ -674,7 +814,8 @@ async function fetchAttackOnTitan(): Promise<CategoryResult> {
             name: 'Attack on Titan',
             exportName: 'attackOnTitanCharacters',
             imageType: 'poster',
-            iconUrl: 'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2022/01/Attack-on-Titan-Logo.png',
+            iconUrl:
+                'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2022/01/Attack-on-Titan-Logo.png',
         },
         characters,
     }
@@ -689,7 +830,8 @@ async function fetchDemonSlayer(): Promise<CategoryResult> {
             name: 'Demon Slayer',
             exportName: 'demonSlayerCharacters',
             imageType: 'poster',
-            iconUrl: 'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2021/12/Demon-Slayer-Logo.png',
+            iconUrl:
+                'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2021/12/Demon-Slayer-Logo.png',
         },
         characters,
     }
@@ -704,7 +846,8 @@ async function fetchJujutsuKaisen(): Promise<CategoryResult> {
             name: 'Jujutsu Kaisen',
             exportName: 'jujutsuKaisenCharacters',
             imageType: 'poster',
-            iconUrl: 'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2024/08/Jujutsu-Kaisen-Logo.png',
+            iconUrl:
+                'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2024/08/Jujutsu-Kaisen-Logo.png',
         },
         characters,
     }
@@ -719,7 +862,8 @@ async function fetchMyHeroAcademia(): Promise<CategoryResult> {
             name: 'My Hero Academia',
             exportName: 'myHeroAcademiaCharacters',
             imageType: 'poster',
-            iconUrl: 'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2021/09/My-Hero-Academia-Logo.png',
+            iconUrl:
+                'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2021/09/My-Hero-Academia-Logo.png',
         },
         characters,
     }
@@ -734,7 +878,8 @@ async function fetchDeathNote(): Promise<CategoryResult> {
             name: 'Death Note',
             exportName: 'deathNoteCharacters',
             imageType: 'poster',
-            iconUrl: 'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2023/12/Death-Note-Logo.png',
+            iconUrl:
+                'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2023/12/Death-Note-Logo.png',
         },
         characters,
     }
@@ -749,7 +894,8 @@ async function fetchFullmetalAlchemist(): Promise<CategoryResult> {
             name: 'Fullmetal Alchemist',
             exportName: 'fullmetalAlchemistCharacters',
             imageType: 'poster',
-            iconUrl: 'https://images.weserv.nl/?url=media.themoviedb.org/t/p/w1280/1uxD6336yvySlaNqAuCl5XuGt3U.png',
+            iconUrl:
+                'https://images.weserv.nl/?url=media.themoviedb.org/t/p/w1280/1uxD6336yvySlaNqAuCl5XuGt3U.png',
         },
         characters,
     }
@@ -764,7 +910,8 @@ async function fetchHunterXHunter(): Promise<CategoryResult> {
             name: 'Hunter x Hunter',
             exportName: 'hunterXHunterCharacters',
             imageType: 'poster',
-            iconUrl: 'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2021/08/Hunter-x-Hunter-Logo-1.png',
+            iconUrl:
+                'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2021/08/Hunter-x-Hunter-Logo-1.png',
         },
         characters,
     }
@@ -774,8 +921,11 @@ async function fetchAnimeSeries(tmdbApiKey: string): Promise<CategoryResult> {
     const results: { name: string; poster_path: string | null }[] = []
     for (let page = 1; page <= 4; page++) {
         const data = await fetch(
-            `https://api.themoviedb.org/3/discover/tv?api_key=${tmdbApiKey}&with_genres=16&with_original_language=ja&sort_by=popularity.desc&page=${page}`,
-        ).then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
+            `https://api.themoviedb.org/3/discover/tv?api_key=${tmdbApiKey}&with_genres=16&with_original_language=ja&sort_by=popularity.desc&page=${page}`
+        ).then((r) => {
+            if (!r.ok) throw new Error(`HTTP ${r.status}`)
+            return r.json()
+        })
         results.push(...(data.results ?? []))
     }
 
@@ -795,7 +945,8 @@ async function fetchAnimeSeries(tmdbApiKey: string): Promise<CategoryResult> {
             name: 'Anime Series',
             exportName: 'animeSeriesCharacters',
             imageType: 'poster',
-            iconUrl: 'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2021/04/Crunchyroll-Logo.png',
+            iconUrl:
+                'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2021/04/Crunchyroll-Logo.png',
         },
         characters,
     }
@@ -816,7 +967,8 @@ async function fetchHarryPotter(): Promise<CategoryResult> {
             name: 'Harry Potter',
             exportName: 'harryPotterCharacters',
             imageType: 'poster',
-            iconUrl: 'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2020/04/Harry-Potter-Logo.png',
+            iconUrl:
+                'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2020/04/Harry-Potter-Logo.png',
         },
         characters,
     }
@@ -827,13 +979,14 @@ async function fetchHarryPotter(): Promise<CategoryResult> {
 const PRINT_WIDTH = 80
 
 function serializeString(s: string): string {
-    if (s.includes("'")) return `"${s.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`
+    if (s.includes("'"))
+        return `"${s.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`
     return `'${s.replace(/\\/g, '\\\\')}'`
 }
 
 function serializeCharacters(
     exportName: string,
-    chars: { name: string; localKey: string }[],
+    chars: { name: string; localKey: string }[]
 ): string {
     const header = `// Auto-generated by scripts/generate-characters.ts — do not edit manually
 import type { Character } from '../../types'
@@ -856,22 +1009,39 @@ import type { Character } from '../../types'
 // ━━━ OUTPUT GENERATORS ━━━
 
 const CATEGORY_ORDER = [
-    'movies', 'tv-shows', 'anime-series', 'pokemon', 'harry-potter',
-    'football', 'brands', 'flags', 'people', 'dragon-ball', 'naruto',
-    'one-piece', 'attack-on-titan', 'demon-slayer', 'jujutsu-kaisen',
-    'death-note', 'my-hero-academia', 'fullmetal-alchemist', 'hunter-x-hunter',
-    'league-of-legends', 'valorant', 'dota-2', 'overwatch',
-    'genshin-impact', 'rick-and-morty',
+    'movies',
+    'tv-shows',
+    'anime-series',
+    'pokemon',
+    'harry-potter',
+    'football',
+    'brands',
+    'flags',
+    'people',
+    'dragon-ball',
+    'naruto',
+    'one-piece',
+    'attack-on-titan',
+    'demon-slayer',
+    'jujutsu-kaisen',
+    'death-note',
+    'my-hero-academia',
+    'fullmetal-alchemist',
+    'hunter-x-hunter',
+    'league-of-legends',
+    'valorant',
+    'dota-2',
+    'overwatch',
+    'genshin-impact',
+    'rick-and-morty',
 ]
 
 function writeCategoriesFile(results: CategoryResult[]) {
-    const sorted = CATEGORY_ORDER
-        .map((slug) => results.find((r) => r.meta.slug === slug)!)
-        .filter(Boolean)
+    const sorted = CATEGORY_ORDER.map(
+        (slug) => results.find((r) => r.meta.slug === slug)!
+    ).filter(Boolean)
 
-    const imports = sorted
-        .map((r) => `    ${r.meta.exportName},`)
-        .join('\n')
+    const imports = sorted.map((r) => `    ${r.meta.exportName},`).join('\n')
 
     const entries = sorted
         .map((r) => {
@@ -919,7 +1089,9 @@ ${charsByCategory}
 }
 
 function writeCharactersIndex(results: CategoryResult[]) {
-    const sorted = [...results].sort((a, b) => a.meta.slug.localeCompare(b.meta.slug))
+    const sorted = [...results].sort((a, b) =>
+        a.meta.slug.localeCompare(b.meta.slug)
+    )
     const exports = sorted
         .map((r) => `export { ${r.meta.exportName} } from './${r.meta.slug}'`)
         .join('\n')
@@ -935,7 +1107,8 @@ async function main() {
     const tmdbApiKey = process.env.TMDB_API_KEY
     if (!tmdbApiKey) throw new Error('TMDB_API_KEY env variable is required')
     const footballApiKey = process.env.FOOTBALL_DATA_API_KEY
-    if (!footballApiKey) throw new Error('FOOTBALL_DATA_API_KEY env variable is required')
+    if (!footballApiKey)
+        throw new Error('FOOTBALL_DATA_API_KEY env variable is required')
 
     console.log('Fetching character data...\n')
 
@@ -976,7 +1149,7 @@ async function main() {
     }
 
     const allResults = [...parallelResults, ...jikanResults].filter(
-        (r): r is CategoryResult => r !== null,
+        (r): r is CategoryResult => r !== null
     )
 
     if (allResults.length === 0) {
@@ -994,7 +1167,10 @@ async function main() {
     mkdirSync(IMAGES_DIR, { recursive: true })
 
     const downloadTasks: DownloadTask[] = []
-    const characterLocalKeys = new Map<CategoryResult, Map<CharacterEntry, string>>()
+    const characterLocalKeys = new Map<
+        CategoryResult,
+        Map<CharacterEntry, string>
+    >()
 
     for (const result of allResults) {
         const dir = join(IMAGES_DIR, result.meta.slug)
@@ -1040,10 +1216,13 @@ async function main() {
         ? downloadTasks
         : downloadTasks.filter((t) => !existsSync(t.outPath))
     const cached = downloadTasks.length - tasksToDownload.length
-    console.log(`\nDownloading ${tasksToDownload.length} images${cached > 0 ? ` (${cached} cached)` : ''}...`)
-    const failed = tasksToDownload.length > 0
-        ? await downloadAll(tasksToDownload)
-        : new Set<string>()
+    console.log(
+        `\nDownloading ${tasksToDownload.length} images${cached > 0 ? ` (${cached} cached)` : ''}...`
+    )
+    const failed =
+        tasksToDownload.length > 0
+            ? await downloadAll(tasksToDownload)
+            : new Set<string>()
 
     // ━━━ WRITE CHARACTER DATA FILES ━━━
     console.log('\nWriting data files...')
