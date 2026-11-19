@@ -1,0 +1,16 @@
+version: 2
+updates:
+    - package-ecosystem: bun
+      directory: /
+      schedule:
+          interval: weekly
+      # Expo pins its own toolchain; upgrade it with `npx expo install --fix`.
+      ignore:
+          - dependency-name: expo
+          - dependency-name: "expo-*"
+          - dependency-name: "@expo/*"
+          - dependency-name: react-native
+    - package-ecosystem: github-actions
+      directory: /
+      schedule:
+          interval: weekly
