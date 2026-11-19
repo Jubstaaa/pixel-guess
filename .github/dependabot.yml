@@ -21,6 +21,10 @@ updates:
           - dependency-name: 'expo-*'
           - dependency-name: '@expo/*'
           - dependency-name: react-native
+          # A native module's major needs a device build to verify; take it with the
+          # next Expo SDK upgrade.
+          - dependency-name: react-native-google-mobile-ads
+            update-types: ['version-update:semver-major']
           # typescript-eslint does not support TypeScript 7 yet.
           - dependency-name: typescript
             versions: ['>=7']

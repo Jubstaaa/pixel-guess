@@ -2,7 +2,7 @@ import { existsSync, mkdirSync, rmSync, writeFileSync } from 'fs'
 import { join } from 'path'
 
 import PQueue from 'p-queue'
-import pRetry from 'p-retry'
+import pRetry, { AbortError } from 'p-retry'
 import sharp from 'sharp'
 
 const OUT_DIR = join(import.meta.dir, '../src/data/characters')
@@ -43,7 +43,7 @@ async function fetchJson(url: string, options?: RequestInit): Promise<any> {
         async () => {
             const r = await fetch(url, options)
             if (r.status === 429) throw new Error(`Rate limited: ${url}`)
-            if (!r.ok) throw new pRetry.AbortError(`HTTP ${r.status}: ${url}`)
+            if (!r.ok) throw new AbortError(`HTTP ${r.status}: ${url}`)
             return r.json()
         },
         {
@@ -102,8 +102,7 @@ async function downloadBatch(tasks: DownloadTask[]): Promise<DownloadTask[]> {
                             },
                         })
                         if (res.status === 429) throw new Error('rate limited')
-                        if (!res.ok)
-                            throw new pRetry.AbortError(`HTTP ${res.status}`)
+                        if (!res.ok) throw new AbortError(`HTTP ${res.status}`)
                         const buf = Buffer.from(await res.arrayBuffer())
                         await sharp(buf)
                             .resize(MAX_IMAGE_SIZE, MAX_IMAGE_SIZE, {
