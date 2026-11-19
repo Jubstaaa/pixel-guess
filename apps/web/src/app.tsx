@@ -6,13 +6,8 @@ import {
 } from 'react-router'
 
 import { Footer } from './components/footer/footer'
-import { AboutPage } from './pages/about'
 import { GamePage } from './pages/game'
 import { HomePage } from './pages/home'
-import { HowToPlayPage } from './pages/how-to-play'
-import { NotFoundPage } from './pages/not-found'
-import { PrivacyPolicyPage } from './pages/privacy-policy'
-import { TermsOfServicePage } from './pages/terms-of-service'
 
 const Layout = () => (
     <>
@@ -26,17 +21,48 @@ const Layout = () => (
     </>
 )
 
+// Home and the game are where visitors land, so they stay in the entry chunk:
+// a lazy game route would add a request waterfall to every shared game link.
+// The text pages load their own chunk on navigation.
 const router = createBrowserRouter([
     {
         element: <Layout />,
         children: [
             { path: '/', element: <HomePage /> },
-            { path: '/about', element: <AboutPage /> },
-            { path: '/how-to-play', element: <HowToPlayPage /> },
-            { path: '/privacy-policy', element: <PrivacyPolicyPage /> },
-            { path: '/terms-of-service', element: <TermsOfServicePage /> },
+            {
+                path: '/about',
+                lazy: async () => ({
+                    Component: (await import('./pages/about')).AboutPage,
+                }),
+            },
+            {
+                path: '/how-to-play',
+                lazy: async () => ({
+                    Component: (await import('./pages/how-to-play'))
+                        .HowToPlayPage,
+                }),
+            },
+            {
+                path: '/privacy-policy',
+                lazy: async () => ({
+                    Component: (await import('./pages/privacy-policy'))
+                        .PrivacyPolicyPage,
+                }),
+            },
+            {
+                path: '/terms-of-service',
+                lazy: async () => ({
+                    Component: (await import('./pages/terms-of-service'))
+                        .TermsOfServicePage,
+                }),
+            },
             { path: '/:categorySlug/:difficulty', element: <GamePage /> },
-            { path: '*', element: <NotFoundPage /> },
+            {
+                path: '*',
+                lazy: async () => ({
+                    Component: (await import('./pages/not-found')).NotFoundPage,
+                }),
+            },
         ],
     },
 ])
