@@ -4,6 +4,7 @@ import {
     computeBlockSize,
     DIFFICULTY_CONFIG,
     getImageUrl,
+    MAX_COUNT,
 } from '@pixel-guess/shared'
 import type { Difficulty, ImageType } from '@pixel-guess/shared'
 
@@ -28,6 +29,9 @@ export const useCanvasPixelation = (
         const ctx = canvas.getContext('2d', { willReadFrequently: true })
         if (!ctx) return
 
+        // A newer image or attempt count supersedes this one; its late load
+        // must not paint over what is on screen now.
+        let isStale = false
         const img = new Image()
         // The images are served from the CDN, so every one of them is
         // cross-origin. Without this the canvas is tainted and the getImageData
@@ -38,6 +42,7 @@ export const useCanvasPixelation = (
         const finalUrl = getImageUrl(imageUrl)
 
         img.onload = () => {
+            if (isStale) return
             const maxSize = 400
             const aspect = img.width / img.height
             const width = aspect >= 1 ? maxSize : Math.round(maxSize * aspect)
@@ -57,7 +62,7 @@ export const useCanvasPixelation = (
 
             ctx.clearRect(0, 0, width, height)
 
-            if (count === 6) {
+            if (count === MAX_COUNT) {
                 ctx.drawImage(img, 0, 0, width, height)
                 if (grayscale) {
                     applyGrayscale(ctx, width, height)
@@ -71,10 +76,15 @@ export const useCanvasPixelation = (
         }
 
         img.onerror = () => {
+            if (isStale) return
             setIsImageLoaded(false)
         }
 
         img.src = finalUrl
+
+        return () => {
+            isStale = true
+        }
     }, [imageUrl, count, difficulty, imageType])
 
     return { canvasRef, isImageLoaded }

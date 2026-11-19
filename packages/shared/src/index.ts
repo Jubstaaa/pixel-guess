@@ -16,6 +16,8 @@ export {
     valorantCharacters,
 } from './data/characters'
 export {
+    advanceToNextCharacter,
+    createInitialState,
     getRandomCharacter,
     getNextState,
     getSkipState,
