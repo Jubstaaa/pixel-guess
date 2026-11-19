@@ -6,7 +6,7 @@ import { charactersByCategory } from '@pixel-guess/shared'
 
 import { GamePage } from './game'
 
-vi.mock('@/lib/confetti', () => ({ triggerConfetti: vi.fn() }))
+vi.mock('./confetti', () => ({ triggerConfetti: vi.fn() }))
 
 const flags = charactersByCategory.flags!
 // Math.random() === 0 always picks the first unseen character.
