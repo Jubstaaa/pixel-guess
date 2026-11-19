@@ -3,7 +3,13 @@ import { Link } from 'react-router'
 
 import { categories } from '@pixel-guess/shared'
 
+import { AdSlot } from '../../ads/ad-slot'
+import { adSlots } from '../../ads/ad-slots'
+
 import { CategoryCard } from './category-card'
+
+// Below the first screen of categories on a phone, never above them.
+const AD_AFTER_CATEGORY = 5
 
 export const HomePage = () => (
     <Fragment>
@@ -52,8 +58,16 @@ export const HomePage = () => (
             </h2>
 
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                {categories.map((item) => (
-                    <CategoryCard key={item.slug} item={item} />
+                {categories.map((item, index) => (
+                    <Fragment key={item.slug}>
+                        <CategoryCard item={item} />
+                        {index === AD_AFTER_CATEGORY && (
+                            <AdSlot
+                                className="py-3 sm:col-span-2"
+                                slot={adSlots.home}
+                            />
+                        )}
+                    </Fragment>
                 ))}
             </div>
 

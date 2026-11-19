@@ -23,8 +23,10 @@ export default defineConfig({
                 client: {
                     enabled: true,
                     include: [
+                        '@ctrl/react-adsense',
                         '@testing-library/react',
                         'lucide-react',
+                        'react-intersection-observer',
                         'react-router',
                     ],
                 },
