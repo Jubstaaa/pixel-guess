@@ -7,9 +7,11 @@ export const Footer = () => (
             <div className="flex flex-col items-center gap-1.5 sm:items-start">
                 <div className="flex items-center gap-2">
                     <img
-                        alt="Pixel Guess"
+                        alt=""
                         className="h-6 w-6 rounded-md"
-                        src="/android-chrome-192x192.png"
+                        height={24}
+                        src="/logo-72.webp"
+                        width={24}
                     />
                     <span className="text-[14px] font-semibold text-foreground">
                         PIXEL GUESS
@@ -33,25 +35,25 @@ export const Footer = () => (
                 </p>
                 <div className="flex items-center gap-3">
                     <Link
-                        className="text-[12px] text-muted opacity-70 transition-opacity hover:opacity-100"
+                        className="text-[12px] text-muted transition-colors hover:text-foreground"
                         to="/about"
                     >
                         About
                     </Link>
                     <Link
-                        className="text-[12px] text-muted opacity-70 transition-opacity hover:opacity-100"
+                        className="text-[12px] text-muted transition-colors hover:text-foreground"
                         to="/how-to-play"
                     >
                         How to Play
                     </Link>
                     <Link
-                        className="text-[12px] text-muted opacity-70 transition-opacity hover:opacity-100"
+                        className="text-[12px] text-muted transition-colors hover:text-foreground"
                         to="/privacy-policy"
                     >
                         Privacy Policy
                     </Link>
                     <Link
-                        className="text-[12px] text-muted opacity-70 transition-opacity hover:opacity-100"
+                        className="text-[12px] text-muted transition-colors hover:text-foreground"
                         to="/terms-of-service"
                     >
                         Terms
@@ -67,16 +69,19 @@ export const Footer = () => (
                 >
                     <img
                         alt="Download on the App Store"
-                        className="h-[36px]"
-                        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                        className="h-[36px] w-auto"
+                        height={36}
+                        src="/app-store-badge.svg"
+                        width={108}
                     />
                 </a>
                 <div className="flex items-center gap-2">
                     <a
                         className="flex items-center gap-1.5 rounded-xl border border-border bg-surface px-3 py-2 text-[13px] text-muted transition-colors hover:border-primary/50 hover:text-foreground"
+                        aria-label="Email"
                         href="mailto:ilkerbalcilartr@gmail.com"
                     >
-                        <Mail className="h-4 w-4" />
+                        <Mail aria-hidden="true" className="h-4 w-4" />
                     </a>
                     <a
                         className="flex items-center gap-1.5 rounded-xl border border-border bg-surface px-3 py-2 text-[13px] text-muted transition-colors hover:border-primary/50 hover:text-foreground"
@@ -84,7 +89,7 @@ export const Footer = () => (
                         rel="noopener noreferrer"
                         target="_blank"
                     >
-                        <Coffee className="h-4 w-4" />
+                        <Coffee aria-hidden="true" className="h-4 w-4" />
                         <span>Buy me a coffee</span>
                     </a>
                 </div>

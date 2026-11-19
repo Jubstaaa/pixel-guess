@@ -52,6 +52,13 @@ describe('GamePage', () => {
         expect(screen.getByText('home')).toBeTruthy()
     })
 
+    test('the back link is named for screen readers', () => {
+        renderGame()
+        expect(
+            screen.getByRole('link', { name: 'Back to categories' })
+        ).toBeTruthy()
+    })
+
     test('a wrong guess disappears from the suggestions', () => {
         renderGame()
         guess(wrong)

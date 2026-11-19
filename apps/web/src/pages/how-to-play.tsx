@@ -226,7 +226,7 @@ export const HowToPlayPage = () => (
 
             <div className="mt-8 text-center">
                 <Link
-                    className="inline-block rounded-xl bg-primary px-8 py-3 font-bold text-white transition-opacity hover:opacity-90"
+                    className="inline-block rounded-xl bg-primary px-8 py-3 font-bold text-background transition-opacity hover:opacity-90"
                     to="/"
                 >
                     Start Playing Now

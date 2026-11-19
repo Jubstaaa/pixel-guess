@@ -18,9 +18,11 @@ export const HomePage = () => (
         <div className="mx-auto max-w-2xl px-4 py-12">
             <div className="mb-12 flex flex-col items-center text-center">
                 <img
-                    alt="Pixel Guess"
+                    alt=""
+                    height={80}
+                    width={80}
                     className="mb-4 h-20 w-20 rounded-[22px] shadow-[0_0_40px_-10px_rgba(245,158,11,0.3)]"
-                    src="/android-chrome-192x192.png"
+                    src="/logo-240.webp"
                 />
                 <h1 className="mb-2 text-[48px] font-[900] tracking-[-2px] text-foreground">
                     Pixel<span className="text-primary"> Guess</span>
@@ -37,8 +39,10 @@ export const HomePage = () => (
                 >
                     <img
                         alt="Download on the App Store"
-                        className="h-[40px]"
-                        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                        className="h-[40px] w-auto"
+                        height={40}
+                        src="/app-store-badge.svg"
+                        width={120}
                     />
                 </a>
             </div>

@@ -12,8 +12,10 @@ export const CategoryCard = ({ item }: CategoryCardProps) => (
         <div className="flex items-center gap-4 px-4 py-4">
             <div className="rounded-xl bg-primary/10 p-3">
                 <img
-                    alt={item.name}
+                    alt=""
                     className="h-11 w-11 rounded-lg object-contain"
+                    height={44}
+                    width={44}
                     src={getImageUrl(item.icon)}
                 />
             </div>
