@@ -139,13 +139,19 @@ const GameContent = ({
                 <div className="flex w-full items-center gap-3 rounded-2xl border border-border bg-surface px-3 py-3">
                     <Link
                         className="rounded-xl border border-border bg-surface-hover p-2 transition-opacity hover:opacity-80"
+                        aria-label="Back to categories"
                         to="/"
                     >
-                        <ChevronLeft className="h-[18px] w-[18px] text-foreground" />
+                        <ChevronLeft
+                            aria-hidden="true"
+                            className="h-[18px] w-[18px] text-foreground"
+                        />
                     </Link>
                     <img
-                        alt={category.name}
+                        alt=""
                         className="h-[22px] w-[22px] rounded-lg object-contain"
+                        height={22}
+                        width={22}
                         src={getImageUrl(category.icon)}
                     />
                     <span className="flex-1 truncate text-[14px] font-semibold text-foreground">
@@ -166,7 +172,10 @@ const GameContent = ({
                         type="button"
                         onClick={handleSkip}
                     >
-                        <SkipForward className="h-3.5 w-3.5" />
+                        <SkipForward
+                            aria-hidden="true"
+                            className="h-3.5 w-3.5"
+                        />
                         Skip
                     </button>
                 </div>

@@ -15,7 +15,7 @@ export const NotFoundPage = () => (
                 The page you're looking for doesn't exist or has been moved.
             </p>
             <Link
-                className="mt-8 rounded-xl bg-primary px-6 py-3 text-[14px] font-semibold text-white transition-opacity hover:opacity-90"
+                className="mt-8 rounded-xl bg-primary px-6 py-3 text-[14px] font-semibold text-background transition-opacity hover:opacity-90"
                 to="/"
             >
                 Back to Home

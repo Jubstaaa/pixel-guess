@@ -6,7 +6,6 @@ dist
 .env
 .env.local
 .DS_Store
-.vercel
 
 # iOS / Android build artifacts
 apps/mobile/ios
