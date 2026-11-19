@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, spyOn, test } from 'bun:test'
 
-import { MAX_COUNT } from '../constants'
+import { MAX_COUNT } from './config'
 import type { Character, GameState } from '../types'
 import {
     advanceToNextCharacter,

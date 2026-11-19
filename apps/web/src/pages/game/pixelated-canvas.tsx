@@ -1,6 +1,13 @@
-import { useCanvasPixelation } from '@/hooks/use-canvas-pixelation'
+import type { Difficulty, ImageType } from '@pixel-guess/shared'
 
-import type { PixelatedCanvasProps } from './pixelated-canvas.types'
+import { useCanvasPixelation } from './use-canvas-pixelation'
+
+interface PixelatedCanvasProps {
+    imageUrl: string | null
+    count: number
+    difficulty: Difficulty
+    imageType?: ImageType
+}
 
 export const PixelatedCanvas = ({
     imageUrl,

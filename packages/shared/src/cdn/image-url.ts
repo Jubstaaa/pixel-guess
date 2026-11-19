@@ -6,20 +6,7 @@
 export const IMAGE_CDN_BASE_URL =
     'https://pixelguess.fra1.cdn.digitaloceanspaces.com'
 
-export const MAX_COUNT = 6
-
-export const LEVEL_TYPE = {
-    EASY: 0,
-    HARD: 1,
-} as const
-
-export const DIFFICULTY_CONFIG = {
-    easy: { grayscale: false },
-    hard: { grayscale: true },
-} as const
-
-export const IMAGE_TYPE_BLOCK_SIZE = {
-    character: { easy: 48, hard: 24 },
-    poster: { easy: 24, hard: 12 },
-    logo: { easy: 36, hard: 18 },
-} as const
+// `key` is the relative path stored on every Character/Category — e.g.
+// 'dota-2/abaddon.webp'. It doubles as the object key in the Space, so the data
+// files did not have to change when the images moved off disk.
+export const getImageUrl = (key: string) => `${IMAGE_CDN_BASE_URL}/${key}`

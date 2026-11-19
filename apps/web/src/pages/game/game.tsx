@@ -14,13 +14,22 @@ import {
     getSkipState,
     MAX_COUNT,
 } from '@pixel-guess/shared'
-import type { Character, Difficulty, GameState } from '@pixel-guess/shared'
+import type {
+    Category,
+    Character,
+    Difficulty,
+    GameState,
+} from '@pixel-guess/shared'
 
-import { CharacterSearch } from '@/components/character-search/character-search'
-import { PixelatedCanvas } from '@/components/pixelated-canvas/pixelated-canvas'
-import { triggerConfetti } from '@/lib/confetti'
+import { CharacterSearch } from './character-search'
+import { triggerConfetti } from './confetti'
+import { PixelatedCanvas } from './pixelated-canvas'
 
-import type { GameContentProps } from './game.types'
+interface GameContentProps {
+    category: Category
+    characters: Character[]
+    difficulty: Difficulty
+}
 
 export const GamePage = () => {
     const { categorySlug, difficulty } = useParams<{

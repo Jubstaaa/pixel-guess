@@ -3,8 +3,14 @@ import { useCallback, useEffect, useId, useRef, useState } from 'react'
 import { Search } from 'lucide-react'
 
 import { filterCharacters, getImageUrl } from '@pixel-guess/shared'
+import type { Character } from '@pixel-guess/shared'
 
-import type { CharacterSearchProps } from './character-search.types'
+interface CharacterSearchProps {
+    characters: Character[]
+    disabled?: boolean
+    excludeIndices: number[]
+    onSelect: (character: Character, index: number) => void
+}
 
 export const CharacterSearch = ({
     characters,

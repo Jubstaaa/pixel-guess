@@ -5,9 +5,9 @@ import {
     ScrollRestoration,
 } from 'react-router'
 
-import { Footer } from './components/footer/footer'
-import { GamePage } from './pages/game'
-import { HomePage } from './pages/home'
+import { Footer } from './layout/footer'
+import { GamePage } from './pages/game/game'
+import { HomePage } from './pages/home/home'
 
 const Layout = () => (
     <>

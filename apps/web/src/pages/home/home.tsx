@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 
 import { categories } from '@pixel-guess/shared'
 
-import { CategoryCard } from '@/components/category-card/category-card'
+import { CategoryCard } from './category-card'
 
 export const HomePage = () => (
     <Fragment>

@@ -14,7 +14,7 @@ const IMAGES_DIR = join(import.meta.dir, '../assets/images')
 const REGION = 'fra1'
 const BUCKET = 'pixelguess'
 const ORIGIN = `${BUCKET}.${REGION}.digitaloceanspaces.com`
-// Matches IMAGE_CDN_BASE_URL in src/constants. Published mobile binaries request
+// Matches IMAGE_CDN_BASE_URL in src/cdn/image-url.ts. Published mobile binaries request
 // this host forever, so it must not drift.
 const CACHE_CONTROL = 'public, max-age=2592000'
 

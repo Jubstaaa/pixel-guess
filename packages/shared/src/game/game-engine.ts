@@ -1,4 +1,4 @@
-import { MAX_COUNT } from '../constants'
+import { MAX_COUNT } from './config'
 import type { Character, GameState } from '../types'
 
 export const getRandomCharacter = (
