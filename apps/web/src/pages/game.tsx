@@ -1,7 +1,6 @@
 import { Fragment, useCallback, useEffect, useRef, useState } from 'react'
 
 import { ChevronLeft, SkipForward } from 'lucide-react'
-import { Helmet } from 'react-helmet-async'
 import { Link, Navigate, useParams } from 'react-router'
 
 import {
@@ -144,44 +143,11 @@ const GameContent = ({
 
     return (
         <Fragment>
-            <Helmet>
-                <title>
-                    Pixel Guess: {category.name} Category |{' '}
-                    {difficulty === 'easy' ? 'Easy' : 'Hard'} Mode
-                </title>
-                <meta
-                    content={`${category.name} Category: Test your skills in guessing hidden images pixel by pixel in the ${category.name} category. Choose your challenge and start guessing!`}
-                    name="description"
-                />
-                <meta
-                    content={`Pixel Guess: ${category.name} Category | Fun Image Guessing Game`}
-                    property="og:title"
-                />
-                <meta
-                    content={`${category.name} Category: Test your skills in guessing hidden images pixel by pixel in the ${category.name} category.`}
-                    property="og:description"
-                />
-                <meta
-                    content={`https://pixelguessgame.com/${category.slug}/${difficulty}`}
-                    property="og:url"
-                />
-                <meta
-                    content={getImageUrl(category.icon)}
-                    property="og:image"
-                />
-                <meta
-                    content={`Pixel Guess: ${category.name} Category | Fun Image Guessing Game`}
-                    name="twitter:title"
-                />
-                <meta
-                    content={`${category.name} Category: Guess hidden images in the ${category.name} category. Challenge yourself!`}
-                    name="twitter:description"
-                />
-                <meta
-                    content={getImageUrl(category.icon)}
-                    name="twitter:image"
-                />
-            </Helmet>
+            <title>{`Pixel Guess: ${category.name} Category | ${difficulty === 'easy' ? 'Easy' : 'Hard'} Mode`}</title>
+            <meta
+                content={`${category.name} Category: Test your skills in guessing hidden images pixel by pixel in the ${category.name} category. Choose your challenge and start guessing!`}
+                name="description"
+            />
 
             <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 pt-4 pb-8">
                 <div className="flex w-full items-center gap-3 rounded-2xl border border-border bg-surface px-3 py-3">
