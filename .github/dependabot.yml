@@ -29,7 +29,10 @@ updates:
                   - 'react-native-*'
                   - '@shopify/react-native-skia'
       ignore:
-          # typescript-eslint does not support TypeScript 7 yet.
+          # `typescript` is an alias for @typescript/typescript6, the API that
+          # typescript-eslint and the Expo/Metro tooling load; TypeScript 7 itself
+          # (`tsc`) updates through @typescript/native, so the alias key must not
+          # be bumped to 7.
           - dependency-name: typescript
             versions: ['>=7']
     - package-ecosystem: github-actions
