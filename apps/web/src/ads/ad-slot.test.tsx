@@ -5,7 +5,7 @@ import { beforeEach, describe, expect, test, vi } from 'vitest'
 
 import html from '../../index.html?raw'
 
-import type { AdSlot as AdSlotComponent } from './ad-slot'
+import type { AdSlot as AdSlotComponent, AdSize } from './ad-slot'
 
 declare global {
     interface Window {
@@ -23,9 +23,13 @@ beforeEach(async () => {
     ;({ AdSlot } = await import('./ad-slot'))
 })
 
-const renderAt = (slot: string | null, path = '/movies/easy') => {
+const renderAt = (
+    slot: string | null,
+    path = '/movies/easy',
+    size: AdSize = 'mediumRectangle'
+) => {
     const router = createMemoryRouter(
-        [{ path: '*', element: <AdSlot slot={slot} /> }],
+        [{ path: '*', element: <AdSlot placement={{ size, slot }} /> }],
         { initialEntries: [path] }
     )
     return { router, ...render(<RouterProvider router={router} />) }
@@ -41,12 +45,28 @@ describe('AdSlot', () => {
         expect(container.innerHTML).toBe('')
     })
 
-    test('reserves the ad box before anything loads', () => {
-        const { container } = renderAt('1234567890')
-        const box = container.querySelector('[data-ad-box]')
-        expect(box?.className).toContain('h-62.5')
-        expect(box?.className).toContain('w-75')
-    })
+    // Each box is exactly the fixed size of its unit, so the ad that arrives
+    // later shifts nothing.
+    test.each([
+        ['mediumRectangle', 'w-75 h-62.5', 300, 250],
+        ['wideSkyscraper', 'w-40 h-150', 160, 600],
+        ['mobileBanner', 'w-80 h-12.5', 320, 50],
+    ] as const)(
+        'reserves the %s box before anything loads and fills it exactly',
+        async (size, classes, width, height) => {
+            const { container } = renderAt('1234567890', '/movies/easy', size)
+            const box = container.querySelector('[data-ad-box]')
+            for (const name of classes.split(' ')) {
+                expect(box?.classList).toContain(name)
+            }
+
+            fireEvent.keyDown(window)
+            act(() => mockAllIsIntersecting(true))
+            await vi.waitFor(() => expect(ad()).not.toBeNull())
+            expect(ad()?.getAttribute('style')).toContain(`width: ${width}px`)
+            expect(ad()?.getAttribute('style')).toContain(`height: ${height}px`)
+        }
+    )
 
     // The script renders in the same branch as the ad, and React keeps a
     // hoisted script for the whole document, so the queue is the reliable sign.
