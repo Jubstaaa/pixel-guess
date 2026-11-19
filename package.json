@@ -22,7 +22,7 @@
         "@typescript-eslint/eslint-plugin": "^8.72.2",
         "@typescript-eslint/parser": "^8.72.2",
         "concurrently": "^9.2.5",
-        "eslint": "^10.0.3",
+        "eslint": "^10.14.0",
         "eslint-plugin-prettier": "^5.5.7",
         "eslint-plugin-react": "^7.37.5",
         "eslint-plugin-react-hooks": "^7.1.1",
