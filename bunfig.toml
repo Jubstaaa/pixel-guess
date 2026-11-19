@@ -1,0 +1,8 @@
+[install]
+# Bun's isolated linker creates one store entry per peer-dependency context, and
+# Expo's packages peer on each other in a cycle (expo, @expo/cli,
+# babel-preset-expo, expo-router), so it installs expo, expo-constants and
+# expo-linking twice at the same version. A native build may only contain one
+# copy of each native module; Expo's monorepo guide recommends a hoisted layout
+# when isolated installs cause this.
+linker = "hoisted"

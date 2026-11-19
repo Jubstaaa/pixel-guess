@@ -7,11 +7,6 @@
         "icon": "./assets/icon.png",
         "userInterfaceStyle": "dark",
         "scheme": "pixelguess",
-        "splash": {
-            "image": "./assets/splash-icon.png",
-            "resizeMode": "contain",
-            "backgroundColor": "#000000"
-        },
         "ios": {
             "supportsTablet": false,
             "bundleIdentifier": "com.haccoo.pixel-guess",
@@ -44,7 +39,17 @@
                     "delayAppMeasurementInit": true
                 }
             ],
-            "expo-tracking-transparency"
+            "expo-tracking-transparency",
+            "expo-image",
+            [
+                "expo-splash-screen",
+                {
+                    "image": "./assets/splash-icon.png",
+                    "resizeMode": "contain",
+                    "backgroundColor": "#000000"
+                }
+            ],
+            "expo-status-bar"
         ],
         "experiments": {
             "typedRoutes": true
