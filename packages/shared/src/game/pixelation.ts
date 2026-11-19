@@ -1,4 +1,4 @@
-import { IMAGE_TYPE_BLOCK_SIZE, MAX_COUNT } from '../constants'
+import { IMAGE_TYPE_BLOCK_SIZE, MAX_COUNT } from './config'
 import type { Difficulty, ImageType } from '../types'
 
 export const computeBlockSize = (

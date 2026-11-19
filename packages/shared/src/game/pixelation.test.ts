@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test'
 
-import { IMAGE_TYPE_BLOCK_SIZE, MAX_COUNT } from '../constants'
+import { IMAGE_TYPE_BLOCK_SIZE, MAX_COUNT } from './config'
 import { computeBlockSize } from './pixelation'
 
 describe('computeBlockSize', () => {

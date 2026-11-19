@@ -2,12 +2,11 @@ export * from './types'
 export {
     MAX_COUNT,
     DIFFICULTY_CONFIG,
-    IMAGE_CDN_BASE_URL,
     IMAGE_TYPE_BLOCK_SIZE,
     LEVEL_TYPE,
-} from './constants'
-export { getImageUrl } from './lib/image-url'
-export { COLORS, type ThemeColors } from './constants/theme'
+} from './game/config'
+export { getImageUrl, IMAGE_CDN_BASE_URL } from './cdn/image-url'
+export { COLORS, type ThemeColors } from './theme/colors'
 export { categories, charactersByCategory } from './data/categories'
 export {
     dota2Characters,
@@ -21,6 +20,6 @@ export {
     getRandomCharacter,
     getNextState,
     getSkipState,
-} from './logic/game-engine'
-export { filterCharacters, checkGuess } from './logic/search'
-export { computeBlockSize } from './logic/pixelation'
+} from './game/game-engine'
+export { filterCharacters, checkGuess } from './game/search'
+export { computeBlockSize } from './game/pixelation'

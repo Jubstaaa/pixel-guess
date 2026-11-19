@@ -14,5 +14,5 @@ apps/mobile/android
 # Game images live in the `pixelguess` Space, not in this repo — ~1900 files and
 # 26MB that bloated both the app binary and the web build. This stays as a local
 # working directory: `bun run generate` writes into it and `bun run sync:images`
-# publishes it. See packages/shared/src/constants IMAGE_CDN_BASE_URL.
+# publishes it. See IMAGE_CDN_BASE_URL in packages/shared/src/cdn/image-url.ts.
 packages/shared/assets/images/
