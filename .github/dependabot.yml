@@ -8,11 +8,18 @@ updates:
       # usually caught and pulled within days.
       cooldown:
           default-days: 7
+      groups:
+          tailwind:
+              patterns: ['tailwindcss', '@tailwindcss/*']
+          vite:
+              patterns: ['vite', '@vitejs/*']
+          typescript-eslint:
+              patterns: ['typescript-eslint', '@typescript-eslint/*']
       # Expo pins its own toolchain; upgrade it with `npx expo install --fix`.
       ignore:
           - dependency-name: expo
-          - dependency-name: "expo-*"
-          - dependency-name: "@expo/*"
+          - dependency-name: 'expo-*'
+          - dependency-name: '@expo/*'
           - dependency-name: react-native
     - package-ecosystem: github-actions
       directory: /
