@@ -8,6 +8,8 @@ export const adPlacements = {
     gameMobile: { size: 'mobileBanner', slot: '4923114953' },
     // web-game-sidebar: one in each gutter beside the game on wide screens.
     gameSidebar: { size: 'wideSkyscraper', slot: '6100465255' },
-    // web-home-categories: a full grid row between the categories.
-    homeInList: { size: 'mediumRectangle', slot: '9085721246' },
+    // web-home-list-mobile: a category-card row in the one-column list.
+    homeListMobile: { size: 'largeMobileBanner', slot: '1339093169' },
+    // web-home-list-wide: a full category-card row in the two-column list.
+    homeListWide: { size: 'banner', slot: '1754026132' },
 } as const satisfies Record<string, AdPlacement>

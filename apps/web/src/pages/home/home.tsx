@@ -5,6 +5,7 @@ import { categories } from '@pixel-guess/shared'
 
 import { AdSlot } from '../../ads/ad-slot'
 import { adPlacements } from '../../ads/ad-placements'
+import { useMediaQuery } from '../../ads/use-media-query'
 
 import { CategoryCard } from './category-card'
 
@@ -13,6 +14,22 @@ export const AD_EVERY_N_CATEGORIES = 4
 
 const hasAdAfter = (index: number) =>
     (index + 1) % AD_EVERY_N_CATEGORIES === 0 && index < categories.length - 1
+
+// The grid's sm breakpoint: from here a full row is 608-640px wide, room for
+// a 468x60; below it the one-column row is narrower, so it takes a 320x100.
+const WIDE_LIST_QUERY = '(min-width: 640px)'
+
+// Shaped like a category card so it reads as one more row of the list.
+const ListAd = () => (
+    <AdSlot
+        className="col-span-full min-h-25.5 rounded-2xl border border-border bg-surface py-1.5"
+        placement={
+            useMediaQuery(WIDE_LIST_QUERY)
+                ? adPlacements.homeListWide
+                : adPlacements.homeListMobile
+        }
+    />
+)
 
 export const HomePage = () => (
     <Fragment>
@@ -64,12 +81,7 @@ export const HomePage = () => (
                 {categories.map((item, index) => (
                     <Fragment key={item.slug}>
                         <CategoryCard item={item} />
-                        {hasAdAfter(index) && (
-                            <AdSlot
-                                className="col-span-full py-3"
-                                placement={adPlacements.homeInList}
-                            />
-                        )}
+                        {hasAdAfter(index) && <ListAd />}
                     </Fragment>
                 ))}
             </div>
