@@ -29,6 +29,11 @@ jobs:
             - run: bun run lint
             - run: bun run type-check
             - run: bun run audit
+            # Dependabot cannot know which versions an Expo SDK is tested with; this
+            # fails any update that moves an SDK-pinned package off them.
+            - name: Expo SDK versions
+              working-directory: apps/mobile
+              run: bunx expo install --check
             - run: bun run build --filter=@pixel-guess/web
             # If the CDN base URL ever falls out of the bundle, every game image
             # 404s while the build still looks perfectly healthy.

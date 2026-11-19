@@ -18,7 +18,8 @@ updates:
           # Each Expo SDK is tested against one version of these, so they move
           # together in one PR. A new SDK major is applied in apps/mobile with
           # `bunx expo install expo@^<N>.0.0 --fix` and `bunx expo-doctor`, one
-          # SDK at a time, which also realigns anything bumped past the SDK.
+          # SDK at a time. CI runs `expo install --check`, so an update that moves a
+          # package off the versions the SDK pins fails instead of auto-merging.
           expo:
               patterns:
                   - expo
