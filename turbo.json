@@ -17,6 +17,9 @@
         },
         "generate": {
             "cache": false
+        },
+        "test": {
+            "dependsOn": ["^build"]
         }
     }
 }
