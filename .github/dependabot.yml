@@ -36,6 +36,20 @@ updates:
           # be bumped to 7.
           - dependency-name: typescript
             versions: ['>=7']
+          # The Expo SDK sets these versions (expo/bundledNativeModules.json) and
+          # `bunx expo install --fix` moves them with each SDK upgrade; any other
+          # version fails `expo install --check` in CI.
+          - dependency-name: react
+          - dependency-name: react-dom
+          - dependency-name: react-native
+          - dependency-name: react-native-reanimated
+          - dependency-name: react-native-worklets
+          - dependency-name: react-native-svg
+          - dependency-name: '@shopify/react-native-skia'
+          - dependency-name: react-native-safe-area-context
+            update-types: ['version-update:semver-major', 'version-update:semver-minor']
+          - dependency-name: react-native-screens
+            update-types: ['version-update:semver-major', 'version-update:semver-minor']
     - package-ecosystem: github-actions
       directory: /
       schedule:
