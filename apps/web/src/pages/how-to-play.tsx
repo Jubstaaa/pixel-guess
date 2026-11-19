@@ -1,17 +1,14 @@
 import { Fragment } from 'react'
 
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router'
 
 export const HowToPlayPage = () => (
     <Fragment>
-        <Helmet>
-            <title>How to Play Pixel Guess | Rules & Tips</title>
-            <meta
-                content="Learn how to play Pixel Guess, the free image guessing game. Understand the rules, scoring, difficulty modes, and get tips to improve your guessing skills."
-                name="description"
-            />
-        </Helmet>
+        <title>How to Play Pixel Guess | Rules & Tips</title>
+        <meta
+            content="Learn how to play Pixel Guess, the free image guessing game. Understand the rules, scoring, difficulty modes, and get tips to improve your guessing skills."
+            name="description"
+        />
 
         <div className="mx-auto max-w-2xl px-4 py-12">
             <h1 className="mb-6 text-3xl font-black text-foreground">

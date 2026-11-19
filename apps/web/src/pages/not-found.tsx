@@ -1,11 +1,8 @@
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router'
 
 export const NotFoundPage = () => (
     <>
-        <Helmet>
-            <title>404 - Page Not Found | Pixel Guess</title>
-        </Helmet>
+        <title>404 - Page Not Found | Pixel Guess</title>
 
         <div className="mx-auto flex max-w-2xl flex-col items-center justify-center px-4 py-24 text-center">
             <h1 className="text-[72px] font-[900] leading-none tracking-[-4px] text-primary">

@@ -1,13 +1,14 @@
 import { Fragment } from 'react'
 
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router'
 
 export const TermsOfServicePage = () => (
     <Fragment>
-        <Helmet>
-            <title>Terms of Service | Pixel Guess</title>
-        </Helmet>
+        <title>Terms of Service | Pixel Guess</title>
+        <meta
+            content="The terms for playing Pixel Guess on the web and in the mobile app."
+            name="description"
+        />
 
         <div className="mx-auto max-w-2xl px-4 py-12">
             <h1 className="mb-6 text-3xl font-black text-foreground">

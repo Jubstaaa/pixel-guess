@@ -1,5 +1,4 @@
 import { Fragment } from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router'
 
 import { categories } from '@pixel-guess/shared'
@@ -8,16 +7,13 @@ import { CategoryCard } from '@/components/category-card/category-card'
 
 export const HomePage = () => (
     <Fragment>
-        <Helmet>
-            <title>
-                Pixel Guess: Guess Hidden Images by Pixel | Fun Image Guessing
-                Game
-            </title>
-            <meta
-                content="Join Pixel Guess and challenge yourself to guess hidden images, pixel by pixel. Choose from 26+ categories including anime, games, movies, sports and more. Free online image guessing game for all ages."
-                name="description"
-            />
-        </Helmet>
+        <title>
+            Pixel Guess: Guess Hidden Images by Pixel | Fun Image Guessing Game
+        </title>
+        <meta
+            content="Join Pixel Guess and challenge yourself to guess hidden images, pixel by pixel. Choose from 26+ categories including anime, games, movies, sports and more. Free online image guessing game for all ages."
+            name="description"
+        />
 
         <div className="mx-auto max-w-2xl px-4 py-12">
             <div className="mb-12 flex flex-col items-center text-center">

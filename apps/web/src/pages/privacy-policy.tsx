@@ -1,13 +1,14 @@
 import { Fragment } from 'react'
 
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router'
 
 export const PrivacyPolicyPage = () => (
     <Fragment>
-        <Helmet>
-            <title>Privacy Policy | Pixel Guess</title>
-        </Helmet>
+        <title>Privacy Policy | Pixel Guess</title>
+        <meta
+            content="How Pixel Guess handles your data: what the game and its ads collect, how it is used, and the choices you have."
+            name="description"
+        />
 
         <div className="mx-auto max-w-2xl px-4 py-12">
             <h1 className="mb-6 text-3xl font-black text-foreground">
