@@ -53,15 +53,16 @@ bun run generate
 
 ## Dependency audit
 
-CI runs `bun run audit` (`bun audit --audit-level=high`) and fails on any high or critical advisory, except these, which all sit in the **mobile** app's Expo toolchain and need an Expo SDK upgrade (`npx expo install --fix` and a new EAS build) rather than a lockfile bump:
+CI runs `bun run audit` (`bun audit --audit-level=high`) and fails on any high or critical advisory. No advisories are ignored.
 
-| Advisory                                 | Package                | Comes from                                                               |
-| ---------------------------------------- | ---------------------- | ------------------------------------------------------------------------ |
-| GHSA-6g55-p6wh-862q, GHSA-r28c-9q8g-f849 | `postcss@8.4.49`       | `@expo/metro-config` (build time)                                        |
-| GHSA-mrhx-c7xc-m3w5                      | `zod@3.25.76`          | `@expo/cli` (build time)                                                 |
-| GHSA-5p2g-fcmc-qvqq, GHSA-w3rx-r6r6-pgpr | `image-size`           | `metro` (build time)                                                     |
-| GHSA-qr28-fpjm-wq7f                      | `decode-uri-component` | `query-string` ← `@react-navigation/core` (deep-link parsing in the app) |
+## Upgrading Expo
 
-Remove them with the next Expo SDK upgrade.
+Upgrade one SDK at a time, from `apps/mobile`:
 
-Tried on 2026-11-19: moving within SDK 55 (`expo` 55.0.6 → 55.0.32 with `expo install --fix`) clears four of the six, but `expo export` then fails with Metro's `Invariant Violation: Unexpectedly escaped traversal` under Bun's isolated `node_modules` (main bundles fine). Check that `bunx expo export --platform ios --platform android` still bundles before shipping any Expo upgrade. The remaining two (`zod` 3 inside `@expo/cli`, `decode-uri-component` via the `@react-navigation` copy `expo-router` pins) need SDK 56.
+```bash
+bunx expo install expo@^<N>.0.0 --fix
+bunx expo-doctor
+bunx expo export --platform ios --platform android --platform web
+```
+
+Then read that SDK's changelog for breaking changes. The workspace installs with Bun's hoisted linker (`bunfig.toml`): the isolated linker installs the Expo packages that peer on each other more than once, and expo-doctor rejects duplicate native modules.

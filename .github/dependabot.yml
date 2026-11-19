@@ -15,16 +15,20 @@ updates:
               patterns: ['vite', '@vitejs/*']
           typescript-eslint:
               patterns: ['typescript-eslint', '@typescript-eslint/*']
-      # Expo pins its own toolchain; upgrade it with `npx expo install --fix`.
+          # Each Expo SDK is tested against one version of these, so they move
+          # together in one PR. A new SDK major is applied in apps/mobile with
+          # `bunx expo install expo@^<N>.0.0 --fix` and `bunx expo-doctor`, one
+          # SDK at a time, which also realigns anything bumped past the SDK.
+          expo:
+              patterns:
+                  - expo
+                  - 'expo-*'
+                  - '@expo/*'
+                  - babel-preset-expo
+                  - react-native
+                  - 'react-native-*'
+                  - '@shopify/react-native-skia'
       ignore:
-          - dependency-name: expo
-          - dependency-name: 'expo-*'
-          - dependency-name: '@expo/*'
-          - dependency-name: react-native
-          # A native module's major needs a device build to verify; take it with the
-          # next Expo SDK upgrade.
-          - dependency-name: react-native-google-mobile-ads
-            update-types: ['version-update:semver-major']
           # typescript-eslint does not support TypeScript 7 yet.
           - dependency-name: typescript
             versions: ['>=7']
