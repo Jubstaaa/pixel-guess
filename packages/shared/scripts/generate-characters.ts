@@ -1037,8 +1037,8 @@ const CATEGORY_ORDER = [
 ]
 
 function writeCategoriesFile(results: CategoryResult[]) {
-    const sorted = CATEGORY_ORDER.map(
-        (slug) => results.find((r) => r.meta.slug === slug)!
+    const sorted = CATEGORY_ORDER.map((slug) =>
+        results.find((r) => r.meta.slug === slug)!
     ).filter(Boolean)
 
     const imports = sorted.map((r) => `    ${r.meta.exportName},`).join('\n')
