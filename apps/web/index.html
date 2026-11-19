@@ -3,6 +3,15 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Only the directives that cannot break AdSense, which injects scripts
+             and frames from many Google hosts. The rest of the header set
+             (HSTS, nosniff, frame-ancestors, a full CSP) has to come from the
+             server, because a meta tag cannot carry those. -->
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+        />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Pixel Guess" />
         <meta name="apple-itunes-app" content="app-id=6760237625" />
