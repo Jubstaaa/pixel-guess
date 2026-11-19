@@ -63,3 +63,5 @@ CI runs `bun run audit` (`bun audit --audit-level=high`) and fails on any high o
 | GHSA-qr28-fpjm-wq7f                      | `decode-uri-component` | `query-string` ← `@react-navigation/core` (deep-link parsing in the app) |
 
 Remove them with the next Expo SDK upgrade.
+
+Tried on 2026-11-19: moving within SDK 55 (`expo` 55.0.6 → 55.0.32 with `expo install --fix`) clears four of the six, but `expo export` then fails with Metro's `Invariant Violation: Unexpectedly escaped traversal` under Bun's isolated `node_modules` (main bundles fine). Check that `bunx expo export --platform ios --platform android` still bundles before shipping any Expo upgrade. The remaining two (`zod` 3 inside `@expo/cli`, `decode-uri-component` via the `@react-navigation` copy `expo-router` pins) need SDK 56.
