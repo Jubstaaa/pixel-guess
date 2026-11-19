@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!-- Only the directives that cannot break AdSense, which injects scripts
-             and frames from many Google hosts. The rest of the header set
+        <!-- Only the directives that cannot break AdSense (loaded by the ad
+             slots), which injects scripts and frames from many Google hosts. The rest of the header set
              (HSTS, nosniff, frame-ancestors, a full CSP) has to come from the
              server, because a meta tag cannot carry those. -->
         <meta
@@ -98,11 +98,6 @@
                 }
             }
         </script>
-        <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5250650495212334"
-            crossorigin="anonymous"
-        ></script>
     </head>
     <body>
         <div id="root"></div>

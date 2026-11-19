@@ -21,6 +21,9 @@ import type {
     GameState,
 } from '@pixel-guess/shared'
 
+import { AdSlot } from '../../ads/ad-slot'
+import { adSlots } from '../../ads/ad-slots'
+
 import { CharacterSearch } from './character-search'
 import { triggerConfetti } from './confetti'
 import { PixelatedCanvas } from './pixelated-canvas'
@@ -197,6 +200,8 @@ const GameContent = ({
                         onSelect={handleSelect}
                     />
                 </div>
+
+                <AdSlot className="mt-8" slot={adSlots.game} />
             </div>
         </Fragment>
     )

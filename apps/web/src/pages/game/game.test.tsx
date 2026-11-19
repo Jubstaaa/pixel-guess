@@ -7,6 +7,9 @@ import { charactersByCategory } from '@pixel-guess/shared'
 import { GamePage } from './game'
 
 vi.mock('./confetti', () => ({ triggerConfetti: vi.fn() }))
+vi.mock('../../ads/ad-slots', () => ({
+    adSlots: { game: '1234567890', home: null },
+}))
 
 const flags = charactersByCategory.flags!
 // Math.random() === 0 always picks the first unseen character.
@@ -90,5 +93,17 @@ describe('GamePage', () => {
         fireEvent.change(search(), { target: { value: wrong } })
         expect(screen.getByRole('option', { name: wrong })).toBeTruthy()
         vi.useRealTimers()
+    })
+
+    test('the ad sits below the game, never between the header and the image', () => {
+        renderGame()
+        const ad = screen.getByRole('complementary', { name: 'Advertisement' })
+        const image = document.querySelector('canvas')!
+        const follows = (a: Node, b: Node) =>
+            Boolean(
+                a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING
+            )
+        expect(follows(image, ad)).toBe(true)
+        expect(follows(search(), ad)).toBe(true)
     })
 })
