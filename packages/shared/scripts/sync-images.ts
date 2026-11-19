@@ -104,9 +104,12 @@ async function flushCdn(paths: string[]) {
         'content-type': 'application/json',
     }
 
-    const listed = await fetch('https://api.digitalocean.com/v2/cdn/endpoints', {
-        headers,
-    })
+    const listed = await fetch(
+        'https://api.digitalocean.com/v2/cdn/endpoints',
+        {
+            headers,
+        }
+    )
     const { endpoints } = (await listed.json()) as {
         endpoints: { id: string; origin: string }[]
     }
@@ -148,7 +151,9 @@ async function main() {
         (key) => !local.some((f) => f.key === key)
     )
 
-    console.log(`${changed.length} to upload, ${orphaned.length} orphaned remote`)
+    console.log(
+        `${changed.length} to upload, ${orphaned.length} orphaned remote`
+    )
 
     if (DRY_RUN) {
         for (const f of changed.slice(0, 20)) console.log(`  upload ${f.key}`)
