@@ -4,12 +4,13 @@ import { ChevronLeft, SkipForward } from 'lucide-react'
 import { Link, Navigate, useParams } from 'react-router'
 
 import {
+    advanceToNextCharacter,
     categories,
     charactersByCategory,
     checkGuess,
+    createInitialState,
     getImageUrl,
     getNextState,
-    getRandomCharacter,
     getSkipState,
     MAX_COUNT,
 } from '@pixel-guess/shared'
@@ -58,28 +59,13 @@ const GameContent = ({
     const [isRevealed, setIsRevealed] = useState(false)
     const [guessedIndices, setGuessedIndices] = useState<number[]>([])
 
-    const [state, setState] = useState<GameState>(() => {
-        const pick = getRandomCharacter(characters, [])
-        return {
-            currentCharacter: pick?.character ?? null,
-            count: 0,
-            seenIndices: pick ? [pick.index] : [],
-        }
-    })
+    const [state, setState] = useState<GameState>(() =>
+        createInitialState(characters)
+    )
 
     const pickNext = useCallback(
         (newState: GameState) => {
-            const pick = getRandomCharacter(characters, newState.seenIndices)
-            const seenIndices =
-                pick === null ? [] : [...newState.seenIndices, pick.index]
-            const nextPick = pick ?? getRandomCharacter(characters, [])
-
-            setState({
-                ...newState,
-                currentCharacter: nextPick?.character ?? null,
-                seenIndices:
-                    pick === null && nextPick ? [nextPick.index] : seenIndices,
-            })
+            setState(advanceToNextCharacter(characters, newState))
         },
         [characters]
     )
@@ -91,12 +77,12 @@ const GameContent = ({
     }, [])
 
     const handleSelect = useCallback(
-        (_character: Character, index: number) => {
-            if (!state.currentCharacter) return
+        (character: Character, index: number) => {
+            if (!state.currentCharacter || isRevealed) return
             setGuessedIndices((prev) => [...prev, index])
 
             const isCorrect = checkGuess(
-                _character.name,
+                character.name,
                 state.currentCharacter.name
             )
             const nextState = getNextState(state, isCorrect)
@@ -125,7 +111,7 @@ const GameContent = ({
                 }
             }
         },
-        [state, pickNext]
+        [state, isRevealed, pickNext]
     )
 
     const handleSkip = useCallback(() => {
@@ -188,6 +174,7 @@ const GameContent = ({
                 <div className="w-full">
                     <CharacterSearch
                         characters={characters}
+                        disabled={isRevealed}
                         excludeIndices={guessedIndices}
                         onSelect={handleSelect}
                     />
