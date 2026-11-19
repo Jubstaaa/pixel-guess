@@ -4,6 +4,10 @@ updates:
       directory: /
       schedule:
           interval: weekly
+      # Wait a week before proposing a new release: compromised versions are
+      # usually caught and pulled within days.
+      cooldown:
+          default-days: 7
       # Expo pins its own toolchain; upgrade it with `npx expo install --fix`.
       ignore:
           - dependency-name: expo
@@ -14,3 +18,7 @@ updates:
       directory: /
       schedule:
           interval: weekly
+      # Wait a week before proposing a new release: compromised versions are
+      # usually caught and pulled within days.
+      cooldown:
+          default-days: 7
