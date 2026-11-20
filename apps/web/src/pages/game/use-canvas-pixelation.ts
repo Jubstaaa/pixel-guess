@@ -58,54 +58,78 @@ export const useCanvasPixelation = (
         }
     }, [imageUrl, loadAttempt])
 
-    const image = decoded && decoded.url === imageUrl ? decoded.image : null
+    const current = decoded && decoded.url === imageUrl ? decoded : null
 
     // A layout effect, so the previous image never shows for a frame once the
     // new one is marked as loaded.
     useLayoutEffect(() => {
         const canvas = canvasRef.current
-        if (!image || !canvas) return
+        if (!current || !canvas) return
 
         const ctx = canvas.getContext('2d', { willReadFrequently: true })
-        if (!ctx) return
-
-        const maxSize = 400
-        const aspect = image.width / image.height
-        const width = aspect >= 1 ? maxSize : Math.round(maxSize * aspect)
-        const height = aspect >= 1 ? Math.round(maxSize / aspect) : maxSize
-
-        canvas.width = width
-        canvas.height = height
-
-        const { grayscale } = DIFFICULTY_CONFIG[difficulty]
-
-        ctx.clearRect(0, 0, width, height)
-        ctx.drawImage(image, 0, 0, width, height)
-
-        if (count === MAX_COUNT) {
-            if (grayscale) applyGrayscale(ctx, width, height)
-        } else {
-            const blockSize = computeBlockSize(
-                count,
-                difficulty,
-                Math.min(width, height),
-                imageType
-            )
-            applyPixelation(ctx, width, height, blockSize, grayscale)
+        const { image, url } = current
+        if (!ctx || !image.width || !image.height) {
+            setFailedUrl(url)
+            return
         }
-    }, [image, count, difficulty, imageType])
+
+        try {
+            drawRound(canvas, ctx, image, count, difficulty, imageType)
+        } catch (error) {
+            // A tainted canvas or an image the browser cannot read is one
+            // broken round, not a reason to take the whole page down.
+            if (!(error instanceof DOMException)) throw error
+            setFailedUrl(url)
+        }
+    }, [current, count, difficulty, imageType])
 
     const retry = useCallback(() => {
         setFailedUrl(null)
         setLoadAttempt((attempt) => attempt + 1)
     }, [])
 
+    const hasError = imageUrl !== null && failedUrl === imageUrl
+
     return {
         canvasRef,
-        hasError: image === null && imageUrl !== null && failedUrl === imageUrl,
-        isImageLoaded: image !== null,
+        hasError,
+        isImageLoaded: current !== null && !hasError,
         retry,
     }
+}
+
+const drawRound = (
+    canvas: HTMLCanvasElement,
+    ctx: CanvasRenderingContext2D,
+    image: HTMLImageElement,
+    count: number,
+    difficulty: Difficulty,
+    imageType: ImageType
+) => {
+    const maxSize = 400
+    const aspect = image.width / image.height
+    const width = aspect >= 1 ? maxSize : Math.round(maxSize * aspect)
+    const height = aspect >= 1 ? Math.round(maxSize / aspect) : maxSize
+
+    canvas.width = width
+    canvas.height = height
+
+    const { grayscale } = DIFFICULTY_CONFIG[difficulty]
+
+    ctx.clearRect(0, 0, width, height)
+    ctx.drawImage(image, 0, 0, width, height)
+
+    if (count === MAX_COUNT) {
+        if (grayscale) applyGrayscale(ctx, width, height)
+        return
+    }
+    const blockSize = computeBlockSize(
+        count,
+        difficulty,
+        Math.min(width, height),
+        imageType
+    )
+    applyPixelation(ctx, width, height, blockSize, grayscale)
 }
 
 const applyGrayscale = (
