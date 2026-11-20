@@ -5,7 +5,8 @@ import React, { Fragment, useEffect } from 'react'
 import { Stack } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
 
-import { COLORS } from '@/constants/colors'
+import { COLORS } from '@pixel-guess/shared'
+
 import { initializeAds } from '@/lib/ads'
 
 const RootLayout = () => {

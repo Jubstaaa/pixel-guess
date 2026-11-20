@@ -7,7 +7,9 @@ import { charactersByCategory } from '@pixel-guess/shared'
 
 import { Game } from '../game/game'
 
-import type { GameScreenProps } from './game-screen.types'
+interface GameScreenProps {
+    levelType: number
+}
 
 export const GameScreen = ({ levelType }: GameScreenProps) => {
     const { categorySlug } = useLocalSearchParams<{ categorySlug: string }>()

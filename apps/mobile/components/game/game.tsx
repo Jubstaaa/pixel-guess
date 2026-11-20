@@ -35,7 +35,10 @@ import { Image } from '@/lib/image'
 
 import { PixelatedImage } from '../pixelated-image/pixelated-image'
 
-import type { GameProps } from './game.types'
+interface GameProps {
+    categorySlug: string
+    levelType: number
+}
 
 const REVEAL_DURATION_MS = 2000
 
