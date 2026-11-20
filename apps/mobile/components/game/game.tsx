@@ -42,13 +42,7 @@ interface GameProps {
 
 const REVEAL_DURATION_MS = 2000
 
-const CONFETTI_COLORS = [
-    COLORS.primary,
-    '#a855f7',
-    '#f59e0b',
-    '#10b981',
-    '#f43f5e',
-]
+const CONFETTI_COLORS = [COLORS.primary, '#a855f7', '#10b981', '#f43f5e']
 
 export const Game = ({ categorySlug, levelType }: GameProps) => {
     const confettiRef = useRef<ConfettiCannon>(null)
