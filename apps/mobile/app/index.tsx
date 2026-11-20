@@ -6,6 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { categories } from '@pixel-guess/shared'
 
 import { CategoryCard } from '@/components/category-card/category-card'
+import { PrivacyOptionsLink } from '@/components/privacy-options-link/privacy-options-link'
 import { Image } from '@/lib/image'
 
 // Metro resolves required assets to a numeric module id.
@@ -49,6 +50,8 @@ const HomeScreen = () => {
                         <CategoryCard key={item.slug} item={item} />
                     ))}
                 </View>
+
+                <PrivacyOptionsLink />
             </ScrollView>
         </SafeAreaView>
     )

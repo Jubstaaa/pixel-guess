@@ -3,11 +3,7 @@ import { useCallback, useEffect, useRef } from 'react'
 import type * as GoogleMobileAds from 'react-native-google-mobile-ads'
 import type { InterstitialAd } from 'react-native-google-mobile-ads'
 
-import { initializeAds } from '@/lib/ads'
-
-const AD_UNIT_ID = __DEV__
-    ? 'ca-app-pub-3940256099942544/4411468910'
-    : 'ca-app-pub-5250650495212334/6351511966'
+import { getInterstitialAdUnitId, initializeAds } from '@/lib/ads'
 
 const MIN_INTERVAL = 4
 const MAX_INTERVAL = 7
@@ -15,67 +11,94 @@ const MAX_INTERVAL = 7
 const getNextThreshold = () =>
     MIN_INTERVAL + Math.floor(Math.random() * (MAX_INTERVAL - MIN_INTERVAL + 1))
 
+type AdStatus = 'idle' | 'loaded' | 'loading'
+
 export const useInterstitialAd = () => {
     const correctCount = useRef(0)
     const nextShowAt = useRef(getNextThreshold())
     const adRef = useRef<InterstitialAd | null>(null)
-    const isLoaded = useRef(false)
-    const isTrackingGranted = useRef(false)
+    const adStatus = useRef<AdStatus>('idle')
+    const isMounted = useRef(false)
 
-    const loadAd = useCallback(() => {
-        try {
+    const requestAd = useCallback(() => {
+        const loadAd = async () => {
+            adStatus.current = 'loading'
+
+            // Read consent per request: the privacy options form can change it
+            // between two ads.
+            const consent = await initializeAds()
+            if (!isMounted.current || !consent.canRequestAds) {
+                adRef.current = null
+                adStatus.current = 'idle'
+
+                return
+            }
+
             const { InterstitialAd, AdEventType } =
                 require('react-native-google-mobile-ads') as typeof GoogleMobileAds
 
-            const ad = InterstitialAd.createForAdRequest(AD_UNIT_ID, {
-                requestNonPersonalizedAdsOnly: !isTrackingGranted.current,
-            })
+            const ad = InterstitialAd.createForAdRequest(
+                getInterstitialAdUnitId(),
+                {
+                    requestNonPersonalizedAdsOnly:
+                        !consent.isPersonalizationAllowed,
+                }
+            )
 
             ad.addAdEventListener(AdEventType.LOADED, () => {
-                isLoaded.current = true
+                adStatus.current = 'loaded'
+            })
+
+            // No fill or a network error: retried when the next ad is due.
+            ad.addAdEventListener(AdEventType.ERROR, () => {
+                adStatus.current = 'idle'
             })
 
             ad.addAdEventListener(AdEventType.CLOSED, () => {
-                isLoaded.current = false
-                loadAd()
+                requestAd()
             })
 
             ad.load()
             adRef.current = ad
-        } catch {
-            // Native module not available (Expo Go)
         }
+
+        loadAd().catch(() => {
+            // Ads are optional; a failed request is retried when the next ad is due.
+            adStatus.current = 'idle'
+        })
     }, [])
 
     useEffect(() => {
-        let isMounted = true
-
-        void initializeAds().then((granted) => {
-            if (!isMounted) return
-
-            isTrackingGranted.current = granted
-            loadAd()
-        })
+        isMounted.current = true
+        requestAd()
 
         return () => {
-            isMounted = false
+            isMounted.current = false
         }
-    }, [loadAd])
+    }, [requestAd])
 
     const onCorrectGuess = useCallback(() => {
         correctCount.current += 1
 
-        if (correctCount.current >= nextShowAt.current && isLoaded.current) {
-            // Since v17.2 show() rejects instead of throwing when the ad expired or
-            // never finished loading; fetch a fresh one for the next threshold.
-            adRef.current?.show().catch(() => {
-                isLoaded.current = false
-                loadAd()
-            })
-            correctCount.current = 0
-            nextShowAt.current = getNextThreshold()
+        if (correctCount.current < nextShowAt.current) return
+
+        if (adStatus.current === 'idle') {
+            requestAd()
+
+            return
         }
-    }, [loadAd])
+
+        if (adStatus.current !== 'loaded') return
+
+        // Since v17.2 show() rejects instead of throwing when the ad expired or
+        // never finished loading; fetch a fresh one for the next threshold.
+        adRef.current?.show().catch(() => {
+            requestAd()
+        })
+        adStatus.current = 'idle'
+        correctCount.current = 0
+        nextShowAt.current = getNextThreshold()
+    }, [requestAd])
 
     return { onCorrectGuess }
 }
