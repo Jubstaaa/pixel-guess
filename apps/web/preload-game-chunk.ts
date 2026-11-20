@@ -24,7 +24,7 @@ export const preloadGameChunk = (): Plugin => ({
             return [
                 {
                     tag: 'script',
-                    injectTo: 'head-prepend',
+                    injectTo: 'head',
                     children: `if (${GAME_PATH}.test(location.pathname)) { const link = document.createElement('link'); link.rel = 'modulepreload'; link.href = ${href}; document.head.append(link) }`,
                 },
             ]
