@@ -1,10 +1,9 @@
-import tsPlugin from '@typescript-eslint/eslint-plugin'
-import tsParser from '@typescript-eslint/parser'
+import prettierPlugin from 'eslint-plugin-prettier'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
-import prettierPlugin from 'eslint-plugin-prettier'
+import tseslint from 'typescript-eslint'
 
-export default [
+export default tseslint.config(
     {
         ignores: [
             '**/node_modules/**',
@@ -18,14 +17,15 @@ export default [
     },
     {
         files: ['**/*.{ts,tsx}'],
+        extends: [tseslint.configs.recommendedTypeChecked],
         languageOptions: {
-            parser: tsParser,
             parserOptions: {
                 ecmaFeatures: { jsx: true },
+                projectService: true,
+                tsconfigRootDir: import.meta.dirname,
             },
         },
         plugins: {
-            '@typescript-eslint': tsPlugin,
             react: reactPlugin,
             'react-hooks': reactHooks,
             prettier: prettierPlugin,
@@ -34,21 +34,20 @@ export default [
             react: { version: 'detect' },
         },
         rules: {
-            ...tsPlugin.configs.recommended.rules,
             'prettier/prettier': 'error',
             'react/react-in-jsx-scope': 'off',
             'react-hooks/rules-of-hooks': 'error',
-            'react-hooks/exhaustive-deps': 'warn',
+            'react-hooks/exhaustive-deps': 'error',
             '@typescript-eslint/no-unused-vars': [
-                'warn',
+                'error',
                 { argsIgnorePattern: '^_' },
             ],
-            '@typescript-eslint/no-explicit-any': 'warn',
+            '@typescript-eslint/no-explicit-any': 'error',
             '@typescript-eslint/no-require-imports': 'off',
             '@typescript-eslint/consistent-type-imports': [
                 'error',
                 { prefer: 'type-imports' },
             ],
         },
-    },
-]
+    }
+)

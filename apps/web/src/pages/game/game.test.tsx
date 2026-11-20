@@ -16,10 +16,10 @@ vi.mock('../../ads/ad-placements', () => ({
     },
 }))
 
-const flags = charactersByCategory.flags!
+const flags = charactersByCategory.flags
 // Math.random() === 0 always picks the first unseen character.
-const answer = flags[0]!.name
-const wrong = flags[1]!.name
+const answer = flags[0].name
+const wrong = flags[1].name
 
 const renderGame = (path = '/flags/easy') =>
     render(
@@ -80,7 +80,7 @@ describe('GamePage', () => {
         guess(answer)
         expect((search() as HTMLInputElement).disabled).toBe(true)
         expect(
-            (screen.getByRole('button', { name: /skip/i }) as HTMLButtonElement)
+            screen.getByRole<HTMLButtonElement>('button', { name: /skip/i })
                 .disabled
         ).toBe(true)
         vi.useRealTimers()
@@ -158,10 +158,10 @@ describe.each([390, 1279])('GamePage ads at %ipx', (width) => {
     test('shows one 320x50 banner below the guess input', () => {
         renderGame()
         expect(ads()).toHaveLength(1)
-        const box = ads()[0]!.querySelector('[data-ad-box]')
+        const box = ads()[0].querySelector('[data-ad-box]')
         expect(box?.classList).toContain('w-80')
         expect(box?.classList).toContain('h-12.5')
-        expect(follows(search(), ads()[0]!)).toBe(true)
+        expect(follows(search(), ads()[0])).toBe(true)
     })
 
     test('requests only the banner, never the hidden sidebar ads', async () => {
@@ -209,7 +209,7 @@ describe('GamePage ads', () => {
 
         act(() => setMedia({ width: 390 }))
         expect(ads()).toHaveLength(1)
-        expect(ads()[0]!.querySelector('[data-ad-box]')?.classList).toContain(
+        expect(ads()[0].querySelector('[data-ad-box]')?.classList).toContain(
             'h-12.5'
         )
 

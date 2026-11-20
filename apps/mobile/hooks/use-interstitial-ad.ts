@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react'
 
+import type * as GoogleMobileAds from 'react-native-google-mobile-ads'
 import type { InterstitialAd } from 'react-native-google-mobile-ads'
 
 import { initializeAds } from '@/lib/ads'
@@ -23,10 +24,8 @@ export const useInterstitialAd = () => {
 
     const loadAd = useCallback(() => {
         try {
-            const {
-                InterstitialAd,
-                AdEventType,
-            } = require('react-native-google-mobile-ads')
+            const { InterstitialAd, AdEventType } =
+                require('react-native-google-mobile-ads') as typeof GoogleMobileAds
 
             const ad = InterstitialAd.createForAdRequest(AD_UNIT_ID, {
                 requestNonPersonalizedAdsOnly: !isTrackingGranted.current,

@@ -2,7 +2,6 @@ name: CI
 
 on:
     pull_request:
-    workflow_call:
 
 permissions:
     contents: read
@@ -30,6 +29,21 @@ jobs:
             - run: bun run type-check
             - run: bun run test
             - run: bun run audit
+            # Unused files, exports and dependencies (knip.json), copy-paste
+            # (.jscpd.json) and the module graph (.dependency-cruiser.cjs):
+            # each fails the job instead of drifting back unnoticed.
+            - run: bun run knip
+            - run: bun run jscpd
+            - run: bun run depcruise
+            - name: Trivy (vulnerabilities, secrets, misconfiguration)
+              uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+              with:
+                  scan-type: fs
+                  scan-ref: .
+                  scanners: vuln,secret,misconfig
+                  severity: HIGH,CRITICAL
+                  ignore-unfixed: true
+                  exit-code: '1'
             # Dependabot cannot know which versions an Expo SDK is tested with; this
             # fails any update that moves an SDK-pinned package off them.
             - name: Expo SDK versions

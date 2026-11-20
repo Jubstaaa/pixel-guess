@@ -1,0 +1,15 @@
+{
+    "minTokens": 60,
+    "threshold": 3,
+    "reporters": ["console"],
+    "gitignore": true,
+    "ignore": [
+        "**/*.test.*",
+        "**/dist/**",
+        "**/node_modules/**",
+        "**/.expo/**",
+        "**/src/data/**",
+        "**/bun.lock"
+    ],
+    "path": ["apps/web/src", "apps/mobile", "packages/shared"]
+}

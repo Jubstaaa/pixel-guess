@@ -8,6 +8,9 @@ import { categories } from '@pixel-guess/shared'
 import { CategoryCard } from '@/components/category-card/category-card'
 import { Image } from '@/lib/image'
 
+// Metro resolves required assets to a numeric module id.
+const appIcon = require('../assets/icon.png') as number
+
 const HomeScreen = () => {
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#000000' }}>
@@ -20,7 +23,7 @@ const HomeScreen = () => {
                     <Image
                         className="mb-6"
                         contentFit="cover"
-                        source={require('../assets/icon.png')}
+                        source={appIcon}
                         style={{
                             width: 80,
                             height: 80,

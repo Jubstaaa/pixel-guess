@@ -129,6 +129,10 @@ export const CharacterSearch = ({
                     role="listbox"
                 >
                     {filteredCharacters.map(({ character, index }, i) => (
+                        // Keyboard users pick options from the combobox input
+                        // (arrow keys + Enter via aria-activedescendant), so
+                        // the option itself needs only the pointer handler.
+                        // eslint-disable-next-line jsx-a11y/click-events-have-key-events
                         <li
                             key={index}
                             aria-selected={i === selectedIndex}

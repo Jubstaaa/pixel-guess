@@ -8,9 +8,9 @@ describe('generated game data', () => {
         for (const category of categories) {
             const characters = charactersByCategory[category.slug]
             expect(characters, category.slug).toBeDefined()
-            expect(characters!.length, category.slug).toBeGreaterThan(0)
+            expect(characters.length, category.slug).toBeGreaterThan(0)
             expect(category.characterCount, category.slug).toBe(
-                characters!.length
+                characters.length
             )
         }
     })
