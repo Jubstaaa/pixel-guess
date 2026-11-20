@@ -61,7 +61,7 @@ jobs:
                   # chunk they delay the first paint of every page.
                   entry=$(find apps/web/dist/assets -name 'index-*.js')
                   test -n "$entry"
-                  if grep -q 'Afghanistan' $entry; then
+                  if grep -q 'Afghanistan' "$entry"; then
                       echo "::error::character data leaked into the entry chunk"
                       exit 1
                   fi
