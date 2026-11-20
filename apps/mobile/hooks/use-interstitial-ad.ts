@@ -3,11 +3,7 @@ import { useCallback, useEffect, useRef } from 'react'
 import type * as GoogleMobileAds from 'react-native-google-mobile-ads'
 import type { InterstitialAd } from 'react-native-google-mobile-ads'
 
-import { initializeAds } from '@/lib/ads'
-
-const AD_UNIT_ID = __DEV__
-    ? 'ca-app-pub-3940256099942544/4411468910'
-    : 'ca-app-pub-5250650495212334/6351511966'
+import { getInterstitialAdUnitId, initializeAds } from '@/lib/ads'
 
 const MIN_INTERVAL = 4
 const MAX_INTERVAL = 7
@@ -20,16 +16,20 @@ export const useInterstitialAd = () => {
     const nextShowAt = useRef(getNextThreshold())
     const adRef = useRef<InterstitialAd | null>(null)
     const isLoaded = useRef(false)
-    const isTrackingGranted = useRef(false)
+    const isPersonalizationAllowed = useRef(false)
 
     const loadAd = useCallback(() => {
         try {
             const { InterstitialAd, AdEventType } =
                 require('react-native-google-mobile-ads') as typeof GoogleMobileAds
 
-            const ad = InterstitialAd.createForAdRequest(AD_UNIT_ID, {
-                requestNonPersonalizedAdsOnly: !isTrackingGranted.current,
-            })
+            const ad = InterstitialAd.createForAdRequest(
+                getInterstitialAdUnitId(),
+                {
+                    requestNonPersonalizedAdsOnly:
+                        !isPersonalizationAllowed.current,
+                }
+            )
 
             ad.addAdEventListener(AdEventType.LOADED, () => {
                 isLoaded.current = true
@@ -50,10 +50,10 @@ export const useInterstitialAd = () => {
     useEffect(() => {
         let isMounted = true
 
-        void initializeAds().then((granted) => {
-            if (!isMounted) return
+        void initializeAds().then((consent) => {
+            if (!isMounted || !consent.canRequestAds) return
 
-            isTrackingGranted.current = granted
+            isPersonalizationAllowed.current = consent.isPersonalizationAllowed
             loadAd()
         })
 
