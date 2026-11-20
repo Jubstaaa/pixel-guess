@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 
 import { SkipForward } from 'lucide-react-native'
 
@@ -16,36 +16,36 @@ import {
 import ConfettiCannon from 'react-native-confetti-cannon'
 
 import {
+    advanceToNextCharacter,
     categories,
     charactersByCategory,
     checkGuess,
+    COLORS,
+    createInitialState,
     filterCharacters,
     getImageUrl,
     getNextState,
-    getRandomCharacter,
     getSkipState,
+    MAX_COUNT,
 } from '@pixel-guess/shared'
 import type { Character, GameState } from '@pixel-guess/shared'
 
-import { COLORS } from '@/constants/colors'
 import { useInterstitialAd } from '@/hooks/use-interstitial-ad'
 import { Image } from '@/lib/image'
 
 import { PixelatedImage } from '../pixelated-image/pixelated-image'
 
-import type { GameProps } from './game.types'
+interface GameProps {
+    categorySlug: string
+    levelType: number
+}
 
-const CONFETTI_COLORS = [
-    COLORS.primary,
-    '#a855f7',
-    '#f59e0b',
-    '#10b981',
-    '#f43f5e',
-]
+const REVEAL_DURATION_MS = 2000
+
+const CONFETTI_COLORS = [COLORS.primary, '#a855f7', '#10b981', '#f43f5e']
 
 export const Game = ({ categorySlug, levelType }: GameProps) => {
     const confettiRef = useRef<ConfettiCannon>(null)
-    const timeoutRef = useRef<ReturnType<typeof setTimeout>>(null)
 
     const { onCorrectGuess } = useInterstitialAd()
 
@@ -64,30 +64,24 @@ export const Game = ({ categorySlug, levelType }: GameProps) => {
         [categorySlug]
     )
 
-    const [state, setState] = useState<GameState>(() => {
-        const pick = getRandomCharacter(characters, [])
-        return {
-            currentCharacter: pick?.character ?? null,
-            count: 0,
-            seenIndices: pick ? [pick.index] : [],
-        }
-    })
-
-    const pickNext = useCallback(
-        (newState: GameState) => {
-            const pick = getRandomCharacter(characters, newState.seenIndices)
-            const seenIndices =
-                pick === null ? [] : [...newState.seenIndices, pick.index]
-            const nextPick = pick ?? getRandomCharacter(characters, [])
-            setState({
-                ...newState,
-                currentCharacter: nextPick?.character ?? null,
-                seenIndices:
-                    pick === null && nextPick ? [nextPick.index] : seenIndices,
-            })
-        },
-        [characters]
+    const [state, setState] = useState<GameState>(() =>
+        createInitialState(characters)
     )
+
+    useEffect(() => {
+        if (!isRevealed) return
+
+        const timeout = setTimeout(() => {
+            setIsRevealed(false)
+            setGuessedIndices([])
+            setInput('')
+            setState((current) =>
+                advanceToNextCharacter(characters, getSkipState(current))
+            )
+        }, REVEAL_DURATION_MS)
+
+        return () => clearTimeout(timeout)
+    }, [isRevealed, characters])
 
     const handleDismissDropdown = useCallback(() => {
         setShowDropdown(false)
@@ -96,7 +90,9 @@ export const Game = ({ categorySlug, levelType }: GameProps) => {
 
     const handleSelect = useCallback(
         (character: Character, index: number) => {
-            if (!state.currentCharacter) return
+            // The dropdown can still be open when a reveal starts; a pick made
+            // then would score a round that is already over.
+            if (!state.currentCharacter || isRevealed) return
             Keyboard.dismiss()
             setShowDropdown(false)
             setGuessedIndices((prev) => [...prev, index])
@@ -106,54 +102,27 @@ export const Game = ({ categorySlug, levelType }: GameProps) => {
                 state.currentCharacter.name
             )
             const nextState = getNextState(state, isCorrect)
+            setState(nextState)
 
             if (isCorrect) {
                 confettiRef.current?.start()
-                setIsRevealed(true)
-                setState(nextState)
                 onCorrectGuess()
-                timeoutRef.current = setTimeout(() => {
-                    setIsRevealed(false)
-                    setGuessedIndices([])
-                    setInput('')
-                    pickNext(nextState)
-                }, 2000)
-            } else {
-                if (nextState.count >= 6) {
-                    setIsRevealed(true)
-                    setState(nextState)
-                    timeoutRef.current = setTimeout(() => {
-                        setIsRevealed(false)
-                        setGuessedIndices([])
-                        setInput('')
-                        pickNext(getSkipState(nextState))
-                    }, 2000)
-                } else {
-                    setState(nextState)
-                }
+            }
+            if (isCorrect || nextState.count >= MAX_COUNT) {
+                setIsRevealed(true)
             }
         },
-        [state, pickNext, onCorrectGuess]
+        [state, isRevealed, onCorrectGuess]
     )
 
-    const handleSkip = useCallback(() => {
-        setIsRevealed(true)
-        const nextState = getSkipState(state)
-        setState(nextState)
-        timeoutRef.current = setTimeout(() => {
-            setIsRevealed(false)
-            setGuessedIndices([])
-            setInput('')
-            pickNext(nextState)
-        }, 2000)
-    }, [state, pickNext])
+    const handleSkip = useCallback(() => setIsRevealed(true), [])
 
     const filteredCharacters = useMemo(
         () => filterCharacters(characters, input, guessedIndices),
         [characters, input, guessedIndices]
     )
 
-    const displayCount = isRevealed ? 6 : state.count
+    const displayCount = isRevealed ? MAX_COUNT : state.count
 
     if (!state.currentCharacter) {
         return (
@@ -222,6 +191,7 @@ export const Game = ({ categorySlug, levelType }: GameProps) => {
                         <TextInput
                             autoCapitalize="none"
                             autoCorrect={false}
+                            editable={!isRevealed}
                             className="h-[56px] w-full rounded-2xl border border-border bg-surface px-5 text-[16px] text-foreground"
                             placeholder="Search character..."
                             placeholderTextColor={COLORS.muted}

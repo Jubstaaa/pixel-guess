@@ -5,10 +5,10 @@ import { ChevronLeft } from 'lucide-react-native'
 import { useRouter } from 'expo-router'
 import { Text, TouchableOpacity, View } from 'react-native'
 
-import { COLORS } from '@/constants/colors'
-import { Image } from '@/lib/image'
-import { getImageUrl } from '@pixel-guess/shared'
+import { COLORS, getImageUrl } from '@pixel-guess/shared'
 import type { Category } from '@pixel-guess/shared'
+
+import { Image } from '@/lib/image'
 
 interface HeaderProps {
     category: Category
