@@ -63,7 +63,7 @@ export const GamePage = () => {
         <GameContent
             category={category}
             characters={characters}
-            difficulty={difficulty as Difficulty}
+            difficulty={difficulty}
         />
     )
 }

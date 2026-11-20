@@ -74,14 +74,16 @@ function logoUrl(domain: string, params: Record<string, string>): string {
     return url.toString()
 }
 
-export async function fetchBrands(): Promise<CategoryResult> {
+// Synchronous, but shaped like every other source so the generator can treat
+// them alike.
+export function fetchBrands(): Promise<CategoryResult> {
     const characters = BRANDS.map(({ name, domain }) => ({
         name,
         remoteUrl: logoUrl(domain, { format: 'png', theme: 'dark' }),
     })).sort(byName)
 
     console.log(`Brands: ${characters.length} brands`)
-    return {
+    return Promise.resolve({
         meta: {
             slug: 'brands',
             name: 'Brands',
@@ -90,5 +92,5 @@ export async function fetchBrands(): Promise<CategoryResult> {
             iconUrl: logoUrl('google.com', { format: 'png' }),
         },
         characters,
-    }
+    })
 }

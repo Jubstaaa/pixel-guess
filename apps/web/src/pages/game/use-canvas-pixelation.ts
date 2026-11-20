@@ -166,8 +166,8 @@ const applyPixelation = (
 
             let r = data[i],
                 g = data[i + 1],
-                b = data[i + 2],
-                a = data[i + 3]
+                b = data[i + 2]
+            const a = data[i + 3]
 
             if (grayscale) {
                 const avg = (r + g + b) / 3

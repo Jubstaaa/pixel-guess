@@ -50,7 +50,7 @@ jest.mock('lucide-react-native', () => ({ SkipForward: () => null }))
 
 const REVEAL_MS = 2000
 
-const flags = charactersByCategory.flags!
+const flags = charactersByCategory.flags
 // Math.random() === 0 always picks the first unseen character.
 const [first, second] = flags
 
@@ -87,25 +87,25 @@ afterEach(() => {
 describe('Game', () => {
     test('a correct guess reveals the image, then moves to the next character', async () => {
         await renderGame()
-        expectShowing(first!.imageUrl, 0)
+        expectShowing(first.imageUrl, 0)
 
-        await guess(first!.name)
+        await guess(first.name)
 
-        expectShowing(first!.imageUrl, MAX_COUNT)
+        expectShowing(first.imageUrl, MAX_COUNT)
         expect(mockOnCorrectGuess).toHaveBeenCalledTimes(1)
 
         await finishReveal()
 
-        expectShowing(second!.imageUrl, 0)
+        expectShowing(second.imageUrl, 0)
         expect(search()).toHaveDisplayValue('')
     })
 
     test('a wrong guess sharpens the image and keeps the character', async () => {
         await renderGame()
 
-        await guess(second!.name)
+        await guess(second.name)
 
-        expectShowing(first!.imageUrl, 1)
+        expectShowing(first.imageUrl, 1)
         expect(mockOnCorrectGuess).not.toHaveBeenCalled()
     })
 
@@ -116,11 +116,11 @@ describe('Game', () => {
             await guess(character.name)
         }
 
-        expectShowing(first!.imageUrl, MAX_COUNT)
+        expectShowing(first.imageUrl, MAX_COUNT)
 
         await finishReveal()
 
-        expectShowing(second!.imageUrl, 0)
+        expectShowing(second.imageUrl, 0)
     })
 
     test('skip reveals the answer, then moves to the next character', async () => {
@@ -128,11 +128,11 @@ describe('Game', () => {
 
         await fireEvent.press(screen.getByText('Skip'))
 
-        expectShowing(first!.imageUrl, MAX_COUNT)
+        expectShowing(first.imageUrl, MAX_COUNT)
 
         await finishReveal()
 
-        expectShowing(second!.imageUrl, 0)
+        expectShowing(second.imageUrl, 0)
     })
 
     test('the search input is read-only while the answer is revealed', async () => {
@@ -146,13 +146,13 @@ describe('Game', () => {
     test('a guess picked from the open list during the reveal does not advance twice', async () => {
         await renderGame()
 
-        await fireEvent.changeText(search(), first!.name)
+        await fireEvent.changeText(search(), first.name)
         await fireEvent.press(screen.getByText('Skip'))
-        await fireEvent.press(screen.getByText(first!.name))
+        await fireEvent.press(screen.getByText(first.name))
         await finishReveal()
 
         expect(mockOnCorrectGuess).not.toHaveBeenCalled()
-        expectShowing(second!.imageUrl, 0)
+        expectShowing(second.imageUrl, 0)
     })
 
     test('leaving the screen during the reveal cancels the pending round change', async () => {

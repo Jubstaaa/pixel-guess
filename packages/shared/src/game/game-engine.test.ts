@@ -16,7 +16,7 @@ const characters: Character[] = ['A', 'B', 'C'].map((name) => ({
 }))
 
 const state = (overrides: Partial<GameState> = {}): GameState => ({
-    currentCharacter: characters[0]!,
+    currentCharacter: characters[0],
     count: 0,
     seenIndices: [0],
     ...overrides,
@@ -75,7 +75,7 @@ describe('createInitialState', () => {
     test('starts on a random character with no attempts used', () => {
         spyOn(Math, 'random').mockReturnValue(0.5)
         expect(createInitialState(characters)).toEqual({
-            currentCharacter: characters[1]!,
+            currentCharacter: characters[1],
             count: 0,
             seenIndices: [1],
         })
@@ -96,7 +96,7 @@ describe('advanceToNextCharacter', () => {
             characters,
             state({ seenIndices: [0, 2] })
         )
-        expect(next.currentCharacter).toBe(characters[1]!)
+        expect(next.currentCharacter).toBe(characters[1])
         expect(next.seenIndices).toEqual([0, 2, 1])
     })
 
@@ -106,7 +106,7 @@ describe('advanceToNextCharacter', () => {
             characters,
             state({ seenIndices: [0, 1, 2] })
         )
-        expect(next.currentCharacter).toBe(characters[0]!)
+        expect(next.currentCharacter).toBe(characters[0])
         expect(next.seenIndices).toEqual([0])
     })
 

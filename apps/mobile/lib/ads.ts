@@ -1,3 +1,4 @@
+import type * as GoogleMobileAds from 'react-native-google-mobile-ads'
 import { AppState } from 'react-native'
 
 import { requestTrackingPermissionsAsync } from 'expo-tracking-transparency'
@@ -36,7 +37,8 @@ const requestConsentAndInitialize = async () => {
     }
 
     try {
-        const { default: mobileAds } = require('react-native-google-mobile-ads')
+        const { default: mobileAds } =
+            require('react-native-google-mobile-ads') as typeof GoogleMobileAds
         await mobileAds().initialize()
     } catch {
         // Native module not available (Expo Go)

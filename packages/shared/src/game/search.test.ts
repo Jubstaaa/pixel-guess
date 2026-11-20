@@ -49,7 +49,7 @@ describe('filterCharacters', () => {
     test('keeps the original index of each match', () => {
         const [match] = filterCharacters(characters, 'sakura')
         expect(match?.index).toBe(2)
-        expect(match?.character).toBe(characters[2]!)
+        expect(match?.character).toBe(characters[2])
     })
 
     test('ranks exact, then prefix, then substring matches', () => {
