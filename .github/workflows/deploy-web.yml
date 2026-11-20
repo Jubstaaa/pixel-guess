@@ -11,6 +11,8 @@ on:
             - 'bun.lock'
             - 'package.json'
             - 'turbo.json'
+            - 'tsconfig.base.json'
+            - 'bunfig.toml'
             - '.github/workflows/deploy-web.yml'
     workflow_dispatch:
 
@@ -22,12 +24,10 @@ concurrency:
     group: deploy-web
     cancel-in-progress: false
 
+# No CI re-run here: the protect-main ruleset requires the `check` job to pass
+# on a branch that is up to date with main, so what lands is what was tested.
 jobs:
-    ci:
-        uses: ./.github/workflows/ci.yml
-
     deploy:
-        needs: ci
         runs-on: ubuntu-latest
         timeout-minutes: 15
         steps:
