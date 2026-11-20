@@ -1,6 +1,7 @@
 import { describe, expect, test } from 'bun:test'
 
-import { categories, charactersByCategory } from './categories'
+import { categories } from './categories'
+import { charactersByCategory } from './characters-by-category'
 
 // The data files are generated; these pin the invariants both apps rely on.
 describe('generated game data', () => {
