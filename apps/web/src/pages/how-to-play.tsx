@@ -2,6 +2,8 @@ import { Fragment } from 'react'
 
 import { Link } from 'react-router'
 
+import { categories } from '@pixel-guess/shared'
+
 export const HowToPlayPage = () => (
     <Fragment>
         <title>How to Play Pixel Guess | Rules & Tips</title>
@@ -28,9 +30,9 @@ export const HowToPlayPage = () => (
                     <strong className="text-foreground">
                         Choose a category
                     </strong>{' '}
-                    — Pick from 26+ categories including anime characters, game
-                    heroes, movie posters, football clubs, country flags, and
-                    more.
+                    — Pick from {categories.length} categories including anime
+                    characters, game heroes, movie posters, football clubs,
+                    country flags, and more.
                 </li>
                 <li>
                     <strong className="text-foreground">
@@ -50,13 +52,6 @@ export const HowToPlayPage = () => (
                     </strong>{' '}
                     — Each wrong guess makes the image slightly clearer. After 6
                     attempts, the full image is revealed.
-                </li>
-                <li>
-                    <strong className="text-foreground">
-                        Build your streak
-                    </strong>{' '}
-                    — Correct guesses build your streak counter. How many can
-                    you get in a row?
                 </li>
             </ol>
 
@@ -143,14 +138,12 @@ export const HowToPlayPage = () => (
             </ul>
 
             <h2 className="mb-3 mt-8 text-xl font-bold text-foreground">
-                Scoring & Streaks
+                Scoring
             </h2>
             <p className="mb-6 text-[15px] leading-relaxed text-muted">
-                Pixel Guess tracks your current streak and best streak for each
-                category and difficulty separately. A correct guess on your
-                first attempt is just as valuable as one on your sixth — what
-                matters is getting it right! Your streaks are saved locally in
-                your browser, so you can pick up where you left off.
+                A correct guess on your first attempt is just as valuable as one
+                on your sixth — what matters is getting it right! Every round
+                starts fresh with a new image.
             </p>
 
             <h2 className="mb-3 mt-8 text-xl font-bold text-foreground">
@@ -192,9 +185,10 @@ export const HowToPlayPage = () => (
                         How many characters are there?
                     </h3>
                     <p className="text-[15px] text-muted">
-                        Over 1,800 unique items across 26+ categories, including
-                        game characters, anime heroes, movie posters, football
-                        club crests, country flags, brand logos, and more.
+                        Over 1,800 unique items across {categories.length}{' '}
+                        categories, including game characters, anime heroes,
+                        movie posters, football club crests, country flags,
+                        brand logos, and more.
                     </p>
                 </div>
 
