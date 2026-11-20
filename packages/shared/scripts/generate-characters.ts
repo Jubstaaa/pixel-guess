@@ -5,6 +5,7 @@ import PQueue from 'p-queue'
 import pRetry, { AbortError } from 'p-retry'
 import sharp from 'sharp'
 
+import { orderCategories } from './category-order'
 import {
     type CategoryOutcome,
     requireAllCategories,
@@ -12,6 +13,7 @@ import {
 import type { CategoryResult, CharacterEntry } from './sources/category'
 import { fetchBrands } from './sources/brands'
 import { fetchDota2 } from './sources/dota-2'
+import { fetchOrNetworkError } from './sources/fetch-json'
 import { fetchDragonBall } from './sources/dragon-ball'
 import { fetchFlags } from './sources/flags'
 import { fetchFootball } from './sources/football'
@@ -59,8 +61,10 @@ async function fetchCategory(
             retries: 2,
             minTimeout: 3000,
             factor: 2,
-            onFailedAttempt: ({ attemptNumber }) =>
-                console.warn(`  ↻ ${label} attempt ${attemptNumber} failed`),
+            onFailedAttempt: ({ attemptNumber, error }) =>
+                console.warn(
+                    `  ↻ ${label} attempt ${attemptNumber} failed: ${error.message}`
+                ),
         })
         return { label, result }
     } catch (e) {
@@ -81,12 +85,16 @@ async function downloadBatch(tasks: DownloadTask[]): Promise<DownloadTask[]> {
             try {
                 await pRetry(
                     async () => {
-                        const res = await fetch(task.url, {
-                            headers: {
-                                'User-Agent':
-                                    'Mozilla/5.0 (compatible; PixelGuess/1.0)',
-                            },
-                        })
+                        const res = await fetchOrNetworkError(
+                            new URL(task.url),
+                            task.url,
+                            {
+                                headers: {
+                                    'User-Agent':
+                                        'Mozilla/5.0 (compatible; PixelGuess/1.0)',
+                                },
+                            }
+                        )
                         if (res.status === 429) throw new Error('rate limited')
                         if (!res.ok) throw new AbortError(`HTTP ${res.status}`)
                         const buf = Buffer.from(await res.arrayBuffer())
@@ -175,39 +183,7 @@ import type { Character } from '../../types'
 
 // ━━━ OUTPUT GENERATORS ━━━
 
-const CATEGORY_ORDER = [
-    'movies',
-    'tv-shows',
-    'anime-series',
-    'pokemon',
-    'harry-potter',
-    'football',
-    'brands',
-    'flags',
-    'people',
-    'dragon-ball',
-    'naruto',
-    'one-piece',
-    'attack-on-titan',
-    'demon-slayer',
-    'jujutsu-kaisen',
-    'death-note',
-    'my-hero-academia',
-    'fullmetal-alchemist',
-    'hunter-x-hunter',
-    'league-of-legends',
-    'valorant',
-    'dota-2',
-    'overwatch',
-    'genshin-impact',
-    'rick-and-morty',
-]
-
-function writeCategoriesFile(results: CategoryResult[]) {
-    const sorted = CATEGORY_ORDER.map((slug) =>
-        results.find((r) => r.meta.slug === slug)!
-    ).filter(Boolean)
-
+function writeCategoriesFile(sorted: CategoryResult[]) {
     const imports = sorted.map((r) => `    ${r.meta.exportName},`).join('\n')
 
     const entries = sorted
@@ -309,18 +285,15 @@ async function main() {
         await Bun.sleep(JIKAN_DELAY_MS)
     }
 
-    const allResults = requireAllCategories([
-        ...parallelOutcomes,
-        ...jikanOutcomes,
-    ])
+    const allResults = orderCategories(
+        requireAllCategories([...parallelOutcomes, ...jikanOutcomes])
+    )
 
     console.log(`\n${allResults.length} categories fetched successfully`)
 
     // ━━━ PREPARE IMAGE DOWNLOADS ━━━
     console.log('\nPreparing image downloads...')
 
-    if (existsSync(OUT_DIR)) rmSync(OUT_DIR, { recursive: true })
-    mkdirSync(OUT_DIR, { recursive: true })
     if (FRESH && existsSync(IMAGES_DIR)) rmSync(IMAGES_DIR, { recursive: true })
     mkdirSync(IMAGES_DIR, { recursive: true })
 
@@ -384,6 +357,11 @@ async function main() {
 
     // ━━━ WRITE CHARACTER DATA FILES ━━━
     console.log('\nWriting data files...')
+
+    // Wiped only now, so an interrupted download phase leaves the previous
+    // data in place instead of a categories.ts importing deleted files.
+    if (existsSync(OUT_DIR)) rmSync(OUT_DIR, { recursive: true })
+    mkdirSync(OUT_DIR, { recursive: true })
 
     for (const result of allResults) {
         const keyMap = characterLocalKeys.get(result)!

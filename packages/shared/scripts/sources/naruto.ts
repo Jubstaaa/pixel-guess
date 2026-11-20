@@ -32,7 +32,7 @@ export async function fetchNaruto(): Promise<CategoryResult> {
     const characters = [first, ...rest]
         .flatMap((page) => page.characters)
         .flatMap(({ name, images: [image] }) =>
-            image ? [{ name, remoteUrl: image }] : []
+            image === undefined ? [] : [{ name, remoteUrl: image }]
         )
         .slice(0, LIMIT)
         .sort(byName)

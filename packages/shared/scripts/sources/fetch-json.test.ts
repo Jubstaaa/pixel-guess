@@ -1,4 +1,4 @@
-import { afterAll, describe, expect, test } from 'bun:test'
+import { afterAll, describe, expect, spyOn, test } from 'bun:test'
 import { z } from 'zod'
 
 import { fetchJson, redactUrl } from './fetch-json'
@@ -39,6 +39,21 @@ describe('fetchJson', () => {
             fetchJson(new URL('/missing', server.url), schema)
         ).rejects.toThrow(/HTTP 404/)
         expect(hits.get('/missing')).toBe(1)
+    })
+})
+
+describe('fetchJson network errors', () => {
+    test('retries a refused connection and names the URL when it gives up', async () => {
+        const warn = spyOn(console, 'warn').mockImplementation(() => {})
+        const closed = Bun.serve({ fetch: () => new Response(), port: 0 })
+        const url = new URL('/x?api_key=secret', closed.url)
+        await closed.stop(true)
+
+        await expect(
+            fetchJson(url, schema, undefined, { minTimeout: 0, retries: 2 })
+        ).rejects.toThrow(/Network error: .*api_key=REDACTED/)
+        expect(warn).toHaveBeenCalledTimes(3)
+        warn.mockRestore()
     })
 })
 

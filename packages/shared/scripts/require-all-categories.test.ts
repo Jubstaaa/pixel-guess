@@ -39,6 +39,17 @@ describe('requireAllCategories', () => {
         ).toThrow('2 of 3 categories failed (Naruto, Football)')
     })
 
+    test('treats a category that came back empty as failed', () => {
+        const empty = { ...category('naruto'), characters: [] }
+
+        expect(() =>
+            requireAllCategories([
+                { label: 'Movies', result: category('movies') },
+                { label: 'Naruto', result: empty },
+            ])
+        ).toThrow('1 of 2 categories failed (Naruto: no characters)')
+    })
+
     test('throws when every category failed', () => {
         expect(() =>
             requireAllCategories([{ label: 'Movies', result: null }])
