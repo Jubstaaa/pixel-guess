@@ -15,6 +15,7 @@ export default defineConfig({
         environment: 'jsdom',
         setupFiles: ['./src/test-setup.ts'],
         restoreMocks: true,
+        unstubGlobals: true,
         // Vitest hands node_modules to Node's resolver, which gives root-level
         // packages (Testing Library, React Router, Lucide) the mobile app's React. The
         // optimizer bundles them through Vite instead, so `dedupe` applies.

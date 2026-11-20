@@ -27,19 +27,19 @@ const context = {
     putImageData: vi.fn(),
 }
 
-const renderPixelation = (imageUrl: string) => {
+const renderPixelation = (imageUrl: string, count = 0) => {
     const canvas = document.createElement('canvas')
     vi.spyOn(canvas, 'getContext').mockReturnValue(
         context as unknown as CanvasRenderingContext2D
     )
     const hook = renderHook(
-        ({ url }) => {
-            const result = useCanvasPixelation(url, 0, 'easy')
+        ({ url, attempts }) => {
+            const result = useCanvasPixelation(url, attempts, 'easy')
             ;(result.canvasRef as { current: HTMLCanvasElement }).current =
                 canvas
             return result
         },
-        { initialProps: { url: imageUrl } }
+        { initialProps: { attempts: count, url: imageUrl } }
     )
     return hook
 }
@@ -72,7 +72,7 @@ describe('useCanvasPixelation', () => {
     test('ignores an earlier image that finishes loading late', () => {
         const { rerender } = renderPixelation('flags/a.webp')
         const stale = FakeImage.created.at(-1)!
-        rerender({ url: 'flags/b.webp' })
+        rerender({ attempts: 0, url: 'flags/b.webp' })
         const current = FakeImage.created.at(-1)!
         expect(current).not.toBe(stale)
 
@@ -81,5 +81,38 @@ describe('useCanvasPixelation', () => {
         act(() => stale.onload?.())
 
         expect(drawImage).not.toHaveBeenCalled()
+    })
+
+    test('decodes an image once and redraws it for each attempt', () => {
+        const { rerender } = renderPixelation('flags/a.webp')
+        act(() => FakeImage.created.at(-1)?.onload?.())
+        const created = FakeImage.created.length
+        drawImage.mockClear()
+
+        rerender({ attempts: 1, url: 'flags/a.webp' })
+
+        expect(FakeImage.created).toHaveLength(created)
+        expect(drawImage).toHaveBeenCalled()
+    })
+
+    test('reports a failed image instead of loading forever', () => {
+        const { result } = renderPixelation('flags/a.webp')
+        act(() => FakeImage.created.at(-1)?.onerror?.())
+        expect(result.current.hasError).toBe(true)
+        expect(result.current.isImageLoaded).toBe(false)
+    })
+
+    test('retries a failed image', () => {
+        const { result } = renderPixelation('flags/a.webp')
+        act(() => FakeImage.created.at(-1)?.onerror?.())
+        const failed = FakeImage.created.at(-1)
+
+        act(() => result.current.retry())
+        const retried = FakeImage.created.at(-1)
+        expect(retried).not.toBe(failed)
+        act(() => retried?.onload?.())
+
+        expect(result.current.hasError).toBe(false)
+        expect(result.current.isImageLoaded).toBe(true)
     })
 })

@@ -1,4 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import {
+    useCallback,
+    useEffect,
+    useLayoutEffect,
+    useRef,
+    useState,
+} from 'react'
 
 import {
     computeBlockSize,
@@ -8,6 +14,11 @@ import {
 } from '@pixel-guess/shared'
 import type { Difficulty, ImageType } from '@pixel-guess/shared'
 
+interface DecodedImage {
+    url: string
+    image: HTMLImageElement
+}
+
 export const useCanvasPixelation = (
     imageUrl: string | null,
     count: number,
@@ -15,22 +26,17 @@ export const useCanvasPixelation = (
     imageType: ImageType = 'character'
 ) => {
     const canvasRef = useRef<HTMLCanvasElement>(null)
-    const [isImageLoaded, setIsImageLoaded] = useState(false)
+    const [decoded, setDecoded] = useState<DecodedImage | null>(null)
+    const [failedUrl, setFailedUrl] = useState<string | null>(null)
+    const [loadAttempt, setLoadAttempt] = useState(0)
 
+    // Loading depends on the URL only: each wrong guess redraws the image
+    // that is already decoded instead of fetching and decoding it again.
     useEffect(() => {
-        if (!imageUrl) {
-            setIsImageLoaded(false)
-            return
-        }
+        if (!imageUrl) return
 
-        const canvas = canvasRef.current
-        if (!canvas) return
-
-        const ctx = canvas.getContext('2d', { willReadFrequently: true })
-        if (!ctx) return
-
-        // A newer image or attempt count supersedes this one; its late load
-        // must not paint over what is on screen now.
+        // A newer image supersedes this one; its late load must not replace
+        // what is on screen now.
         let isStale = false
         const img = new Image()
         // The images are served from the CDN, so every one of them is
@@ -39,55 +45,67 @@ export const useCanvasPixelation = (
         // than just one frame. Requires the bucket to send an
         // Access-Control-Allow-Origin header, which it does.
         img.crossOrigin = 'anonymous'
-        const finalUrl = getImageUrl(imageUrl)
-
         img.onload = () => {
-            if (isStale) return
-            const maxSize = 400
-            const aspect = img.width / img.height
-            const width = aspect >= 1 ? maxSize : Math.round(maxSize * aspect)
-            const height = aspect >= 1 ? Math.round(maxSize / aspect) : maxSize
-
-            canvas.width = width
-            canvas.height = height
-
-            const shortSide = Math.min(width, height)
-            const blockSize = computeBlockSize(
-                count,
-                difficulty,
-                shortSide,
-                imageType
-            )
-            const { grayscale } = DIFFICULTY_CONFIG[difficulty]
-
-            ctx.clearRect(0, 0, width, height)
-
-            if (count === MAX_COUNT) {
-                ctx.drawImage(img, 0, 0, width, height)
-                if (grayscale) {
-                    applyGrayscale(ctx, width, height)
-                }
-            } else {
-                ctx.drawImage(img, 0, 0, width, height)
-                applyPixelation(ctx, width, height, blockSize, grayscale)
-            }
-
-            setIsImageLoaded(true)
+            if (!isStale) setDecoded({ image: img, url: imageUrl })
         }
-
         img.onerror = () => {
-            if (isStale) return
-            setIsImageLoaded(false)
+            if (!isStale) setFailedUrl(imageUrl)
         }
-
-        img.src = finalUrl
+        img.src = getImageUrl(imageUrl)
 
         return () => {
             isStale = true
         }
-    }, [imageUrl, count, difficulty, imageType])
+    }, [imageUrl, loadAttempt])
 
-    return { canvasRef, isImageLoaded }
+    const image = decoded && decoded.url === imageUrl ? decoded.image : null
+
+    // A layout effect, so the previous image never shows for a frame once the
+    // new one is marked as loaded.
+    useLayoutEffect(() => {
+        const canvas = canvasRef.current
+        if (!image || !canvas) return
+
+        const ctx = canvas.getContext('2d', { willReadFrequently: true })
+        if (!ctx) return
+
+        const maxSize = 400
+        const aspect = image.width / image.height
+        const width = aspect >= 1 ? maxSize : Math.round(maxSize * aspect)
+        const height = aspect >= 1 ? Math.round(maxSize / aspect) : maxSize
+
+        canvas.width = width
+        canvas.height = height
+
+        const { grayscale } = DIFFICULTY_CONFIG[difficulty]
+
+        ctx.clearRect(0, 0, width, height)
+        ctx.drawImage(image, 0, 0, width, height)
+
+        if (count === MAX_COUNT) {
+            if (grayscale) applyGrayscale(ctx, width, height)
+        } else {
+            const blockSize = computeBlockSize(
+                count,
+                difficulty,
+                Math.min(width, height),
+                imageType
+            )
+            applyPixelation(ctx, width, height, blockSize, grayscale)
+        }
+    }, [image, count, difficulty, imageType])
+
+    const retry = useCallback(() => {
+        setFailedUrl(null)
+        setLoadAttempt((attempt) => attempt + 1)
+    }, [])
+
+    return {
+        canvasRef,
+        hasError: image === null && imageUrl !== null && failedUrl === imageUrl,
+        isImageLoaded: image !== null,
+        retry,
+    }
 }
 
 const applyGrayscale = (
