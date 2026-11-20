@@ -52,10 +52,9 @@ export const TermsOfServicePage = () => (
                 User Data
             </h2>
             <p className="mb-6 text-[15px] leading-relaxed text-muted">
-                Pixel Guess stores game progress (streaks and scores) locally in
-                your browser using localStorage. We do not collect personal
-                information or require account creation. For more details,
-                please see our{' '}
+                Pixel Guess does not save your game progress. We do not collect
+                personal information or require account creation. For more
+                details, please see our{' '}
                 <Link className="text-primary underline" to="/privacy-policy">
                     Privacy Policy
                 </Link>

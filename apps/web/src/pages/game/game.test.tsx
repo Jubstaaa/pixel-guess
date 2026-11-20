@@ -123,16 +123,26 @@ describe.each([1440, 1920])('GamePage ads at %ipx', (width) => {
 
     test('puts a 160x600 ad in each gutter beside the game', () => {
         renderGame()
-        const [left, right] = ads()
         expect(ads()).toHaveLength(2)
-        const canvas = document.querySelector('canvas')!
-        expect(follows(left!, canvas)).toBe(true)
-        expect(follows(canvas, right!)).toBe(true)
+        const gutters = ads().map((ad) =>
+            [...ad.classList].find((c) => /^(left|right)-/.test(c))
+        )
+        expect(gutters.map((c) => c?.split('-')[0]).sort()).toEqual([
+            'left',
+            'right',
+        ])
         for (const ad of ads()) {
             expect(ad.querySelector('[data-ad-box]')?.classList).toContain(
                 'h-150'
             )
         }
+    })
+
+    // They are placed visually, so the DOM order is free to put the game
+    // first: keyboard users reach the back link and the guess box before any ad.
+    test('the sidebars come after the game in keyboard order', () => {
+        renderGame()
+        for (const ad of ads()) expect(follows(search(), ad)).toBe(true)
     })
 
     test('requests only the sidebar ads, never the mobile banner', async () => {

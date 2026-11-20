@@ -155,14 +155,10 @@ const GameContent = ({
             />
 
             {/* The sidebars are out of the flow, so the game is laid out exactly
-                as without them; the minimum height keeps them off the footer. */}
+                as without them; the minimum height keeps them off the footer.
+                Both come after the game in the DOM so keyboard and screen
+                reader users reach the game before any ad. */}
             <div className={hasSidebarAds ? 'relative min-h-168' : undefined}>
-                {hasSidebarAds && (
-                    <AdSlot
-                        className="absolute top-4 left-[calc(25%-12rem)]"
-                        placement={adPlacements.gameSidebar}
-                    />
-                )}
                 <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 pt-4 pb-8">
                     <div className="flex w-full items-center gap-3 rounded-2xl border border-border bg-surface px-3 py-3">
                         <Link
@@ -225,10 +221,16 @@ const GameContent = ({
                     )}
                 </div>
                 {hasSidebarAds && (
-                    <AdSlot
-                        className="absolute top-4 right-[calc(25%-12rem)]"
-                        placement={adPlacements.gameSidebar}
-                    />
+                    <Fragment>
+                        <AdSlot
+                            className="absolute top-4 left-[calc(25%-12rem)]"
+                            placement={adPlacements.gameSidebar}
+                        />
+                        <AdSlot
+                            className="absolute top-4 right-[calc(25%-12rem)]"
+                            placement={adPlacements.gameSidebar}
+                        />
+                    </Fragment>
                 )}
             </div>
         </Fragment>
