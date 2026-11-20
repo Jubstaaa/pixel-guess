@@ -13,7 +13,7 @@ export default [
             '**/.turbo/**',
             '**/babel.config.js',
             '**/metro.config.js',
-            '**/eslint.config.js',
+            '**/eslint.config.{js,mjs}',
         ],
     },
     {

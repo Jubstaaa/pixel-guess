@@ -9,15 +9,23 @@ import {
 } from '@shopify/react-native-skia'
 import { ActivityIndicator, View } from 'react-native'
 
-import { COLORS } from '@/constants/colors'
-import { useCachedImageUri } from '@/hooks/use-cached-image'
+import { COLORS } from '@pixel-guess/shared'
+import type { ImageType } from '@pixel-guess/shared'
+
+import { useCachedImageUri } from './use-cached-image'
 import {
     computeBlockSize,
     GRAYSCALE_MATRIX,
     usePixelateShader,
-} from '@/hooks/use-skia-pixelation'
+} from './use-skia-pixelation'
 
-import type { PixelatedImageProps } from './pixelated-image.types'
+interface PixelatedImageProps {
+    count: number
+    imageUrl: string
+    levelType: number
+    imageType?: ImageType
+    size?: number
+}
 
 export const PixelatedImage = ({
     imageUrl,

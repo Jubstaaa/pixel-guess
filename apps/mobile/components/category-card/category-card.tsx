@@ -4,10 +4,13 @@ import { useRouter } from 'expo-router'
 import { Text, TouchableOpacity, View } from 'react-native'
 
 import { getImageUrl } from '@pixel-guess/shared'
+import type { Category } from '@pixel-guess/shared'
 
 import { Image } from '@/lib/image'
 
-import type { CategoryCardProps } from './category-card.types'
+interface CategoryCardProps {
+    item: Category
+}
 
 export const CategoryCard = ({ item }: CategoryCardProps) => {
     const router = useRouter()

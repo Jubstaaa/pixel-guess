@@ -2,11 +2,13 @@ import { Fragment } from 'react'
 
 import { Link } from 'react-router'
 
+import { categories } from '@pixel-guess/shared'
+
 export const AboutPage = () => (
     <Fragment>
         <title>About Pixel Guess | Free Image Guessing Game</title>
         <meta
-            content="Learn about Pixel Guess, a free online image guessing game with 26+ categories including anime, games, movies, sports and more. Guess pixelated images in Easy or Hard mode!"
+            content={`Learn about Pixel Guess, a free online image guessing game with ${categories.length} categories including anime, games, movies, sports and more. Guess pixelated images in Easy or Hard mode!`}
             name="description"
         />
 
@@ -31,8 +33,7 @@ export const AboutPage = () => (
                 goal is to guess what the image shows before running out of
                 attempts. With each wrong guess, the pixelation decreases and
                 the image becomes clearer. On your 6th and final attempt, the
-                image is fully revealed. The game tracks your streak — how many
-                correct guesses you can make in a row.
+                image is fully revealed.
             </p>
 
             <h2 className="mb-3 mt-8 text-xl font-bold text-foreground">
@@ -55,7 +56,7 @@ export const AboutPage = () => (
             </ul>
 
             <h2 className="mb-3 mt-8 text-xl font-bold text-foreground">
-                26+ Categories
+                {categories.length} Categories
             </h2>
             <p className="mb-4 text-[15px] leading-relaxed text-muted">
                 We have a wide variety of categories to choose from, spanning

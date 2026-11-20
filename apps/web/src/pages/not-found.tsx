@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 export const NotFoundPage = () => (
     <>
         <title>404 - Page Not Found | Pixel Guess</title>
+        <meta content="noindex" name="robots" />
 
         <div className="mx-auto flex max-w-2xl flex-col items-center justify-center px-4 py-24 text-center">
             <h1 className="text-[72px] font-[900] leading-none tracking-[-4px] text-primary">

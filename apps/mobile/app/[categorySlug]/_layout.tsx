@@ -5,8 +5,7 @@ import { ActivityIndicator, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 import { Header } from '@/components/header/header'
-import { COLORS } from '@/constants/colors'
-import { categories } from '@pixel-guess/shared'
+import { categories, COLORS } from '@pixel-guess/shared'
 
 const CategoryLayout = () => {
     const { categorySlug } = useLocalSearchParams<{ categorySlug: string }>()

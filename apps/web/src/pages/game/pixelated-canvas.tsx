@@ -24,7 +24,7 @@ export const PixelatedCanvas = ({
     difficulty,
     imageType = 'character',
 }: PixelatedCanvasProps) => {
-    const { canvasRef, isImageLoaded } = useCanvasPixelation(
+    const { canvasRef, hasError, isImageLoaded, retry } = useCanvasPixelation(
         imageUrl,
         count,
         difficulty,
@@ -33,10 +33,28 @@ export const PixelatedCanvas = ({
 
     return (
         <div className={`relative ${FRAME_ASPECT[imageType]}`}>
-            {!isImageLoaded && (
-                <div className="absolute inset-0 flex items-center justify-center bg-surface">
-                    <div className="h-12 w-12 animate-spin rounded-full border-4 border-primary border-t-transparent" />
+            {hasError ? (
+                <div
+                    className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-surface px-6 text-center"
+                    role="alert"
+                >
+                    <p className="text-sm text-muted">
+                        This image could not be loaded.
+                    </p>
+                    <button
+                        className="rounded-xl border border-border bg-surface-hover px-4 py-2 text-sm font-medium text-foreground transition-opacity hover:opacity-80"
+                        type="button"
+                        onClick={retry}
+                    >
+                        Retry
+                    </button>
                 </div>
+            ) : (
+                !isImageLoaded && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-surface">
+                        <div className="h-12 w-12 animate-spin rounded-full border-4 border-primary border-t-transparent" />
+                    </div>
+                )
             )}
             <canvas
                 ref={canvasRef}

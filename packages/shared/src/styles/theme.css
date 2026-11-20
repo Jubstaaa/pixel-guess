@@ -1,3 +1,4 @@
+/* Generated from src/theme/colors.ts by `bun run generate:theme`. */
 @theme {
     --color-primary: #f59e0b;
     --color-primary-foreground: #ffffff;

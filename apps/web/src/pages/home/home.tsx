@@ -37,7 +37,7 @@ export const HomePage = () => (
             Pixel Guess: Guess Hidden Images by Pixel | Fun Image Guessing Game
         </title>
         <meta
-            content="Join Pixel Guess and challenge yourself to guess hidden images, pixel by pixel. Choose from 26+ categories including anime, games, movies, sports and more. Free online image guessing game for all ages."
+            content={`Join Pixel Guess and challenge yourself to guess hidden images, pixel by pixel. Choose from ${categories.length} categories including anime, games, movies, sports and more. Free online image guessing game for all ages.`}
             name="description"
         />
 
@@ -55,7 +55,7 @@ export const HomePage = () => (
                 </h1>
                 <p className="mx-auto mt-2 max-w-[320px] text-[14px] leading-[21px] text-muted">
                     The free image guessing game. Pick a category, guess the
-                    hidden image pixel by pixel, and build your streak!
+                    hidden image pixel by pixel, in as few guesses as you can!
                 </p>
                 <a
                     className="mt-4"
@@ -110,8 +110,7 @@ export const HomePage = () => (
                         start guessing! Type your answer in the search bar to
                         see matching suggestions. Easy mode shows full-color
                         images while Hard mode adds a grayscale filter for an
-                        extra challenge. Track your streak and try to beat your
-                        personal best!{' '}
+                        extra challenge.{' '}
                         <Link
                             className="text-primary underline"
                             to="/how-to-play"
@@ -124,7 +123,7 @@ export const HomePage = () => (
 
                 <div>
                     <h2 className="mb-3 text-xl font-bold text-foreground">
-                        26+ Categories to Choose From
+                        {categories.length} Categories to Choose From
                     </h2>
                     <p>
                         From anime characters like Dragon Ball, Naruto, and One
