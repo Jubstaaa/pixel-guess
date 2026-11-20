@@ -1,4 +1,5 @@
 import type * as GoogleMobileAds from 'react-native-google-mobile-ads'
+import type { AdsConsentInfo } from 'react-native-google-mobile-ads'
 import { AppState, Platform } from 'react-native'
 
 import { requestTrackingPermissionsAsync } from 'expo-tracking-transparency'
@@ -22,6 +23,7 @@ const NO_ADS: AdsConsentState = {
 }
 
 let consentPromise: Promise<AdsConsentState> | null = null
+let sdkStart: Promise<boolean> | null = null
 
 export const getInterstitialAdUnitId = () =>
     __DEV__
@@ -82,34 +84,56 @@ const requestTracking = async () => {
     }
 }
 
+// GDPR is the only regime whose personalisation choice the app reads itself;
+// US state opt-outs travel in the GPP string, which the SDK applies per request.
 const hasPersonalizationConsent = async ({
     AdsConsent,
 }: typeof GoogleMobileAds) => {
-    if (!(await AdsConsent.getGdprApplies())) return true
+    try {
+        if (!(await AdsConsent.getGdprApplies())) return true
 
-    const { selectPersonalisedAds } = await AdsConsent.getUserChoices()
+        const { selectPersonalisedAds } = await AdsConsent.getUserChoices()
 
-    return selectPersonalisedAds
+        return selectPersonalisedAds
+    } catch {
+        // An unreadable consent record must never be read as a yes.
+        return false
+    }
 }
 
-const requestConsentAndInitialize = async (): Promise<AdsConsentState> => {
-    const ads = loadNativeAds()
-    if (!ads) return NO_ADS
+// Resolves whether ATT was granted. Runs once, whether consent arrives at
+// launch or later through the privacy options form.
+const startSdk = (ads: typeof GoogleMobileAds) => {
+    sdkStart ??= (async () => {
+        // ATT comes after the UMP message, the order Google's sample uses.
+        const isTrackingGranted = await requestTracking()
 
-    await waitUntilActive()
+        await ads.default().initialize()
 
-    const { canRequestAds, privacyOptionsRequirementStatus } =
-        await gatherConsent(ads)
+        return isTrackingGranted
+    })()
+
+    return sdkStart
+}
+
+const toConsentState = async (
+    ads: typeof GoogleMobileAds,
+    { canRequestAds, privacyOptionsRequirementStatus }: AdsConsentInfo
+): Promise<AdsConsentState> => {
     const isPrivacyOptionsRequired =
         privacyOptionsRequirementStatus ===
         ads.AdsConsentPrivacyOptionsRequirementStatus.REQUIRED
 
     if (!canRequestAds) return { ...NO_ADS, isPrivacyOptionsRequired }
 
-    // ATT comes after the UMP message, the order Google's sample uses.
-    const isTrackingGranted = await requestTracking()
-
-    await ads.default().initialize()
+    let isTrackingGranted: boolean
+    try {
+        isTrackingGranted = await startSdk(ads)
+    } catch {
+        // Without a started SDK there are no ads, but the user must still be
+        // able to reach the privacy options.
+        return { ...NO_ADS, isPrivacyOptionsRequired }
+    }
 
     return {
         canRequestAds,
@@ -119,14 +143,28 @@ const requestConsentAndInitialize = async (): Promise<AdsConsentState> => {
     }
 }
 
+const requestConsentAndInitialize = async (): Promise<AdsConsentState> => {
+    const ads = loadNativeAds()
+    if (!ads) return NO_ADS
+
+    await waitUntilActive()
+
+    return toConsentState(ads, await gatherConsent(ads))
+}
+
 export const initializeAds = () => {
-    // Ads are optional: a consent or SDK failure must never break the game, so
-    // the session simply runs without them.
+    // Ads are optional: if the consent status itself cannot be read, the
+    // session runs without them rather than breaking the game.
     consentPromise ??= requestConsentAndInitialize().catch(() => NO_ADS)
 
     return consentPromise
 }
 
 export const showPrivacyOptions = async () => {
-    await loadNativeAds()?.AdsConsent.showPrivacyOptionsForm()
+    const ads = loadNativeAds()
+    if (!ads) throw new Error('Google Mobile Ads native module is unavailable')
+
+    const consentInfo = await ads.AdsConsent.showPrivacyOptionsForm()
+    consentPromise = toConsentState(ads, consentInfo)
+    await consentPromise
 }

@@ -20,12 +20,19 @@ const mockCalls: string[] = []
 const mockConsent = {
     canRequestAds: true,
     gatherFails: false,
+    choicesFail: false,
     gdprApplies: true,
     initializeFails: false,
     privacyOptionsRequirementStatus: 'NOT_REQUIRED',
     selectPersonalisedAds: true,
     trackingGranted: true,
 }
+
+const mockConsentInfo = () => ({
+    canRequestAds: mockConsent.canRequestAds,
+    privacyOptionsRequirementStatus:
+        mockConsent.privacyOptionsRequirementStatus,
+})
 
 jest.mock('react-native-google-mobile-ads', () => ({
     __esModule: true,
@@ -36,22 +43,18 @@ jest.mock('react-native-google-mobile-ads', () => ({
                 ? Promise.reject(new Error('network'))
                 : Promise.resolve({})
         }),
-        getConsentInfo: jest.fn(() =>
-            Promise.resolve({
-                canRequestAds: mockConsent.canRequestAds,
-                privacyOptionsRequirementStatus:
-                    mockConsent.privacyOptionsRequirementStatus,
-            })
-        ),
+        getConsentInfo: jest.fn(() => Promise.resolve(mockConsentInfo())),
         getGdprApplies: jest.fn(() => Promise.resolve(mockConsent.gdprApplies)),
         getUserChoices: jest.fn(() =>
-            Promise.resolve({
-                selectPersonalisedAds: mockConsent.selectPersonalisedAds,
-            })
+            mockConsent.choicesFail
+                ? Promise.reject(new Error('tc string'))
+                : Promise.resolve({
+                      selectPersonalisedAds: mockConsent.selectPersonalisedAds,
+                  })
         ),
         showPrivacyOptionsForm: jest.fn(() => {
             mockCalls.push('showPrivacyOptionsForm')
-            return Promise.resolve({})
+            return Promise.resolve(mockConsentInfo())
         }),
     },
     AdsConsentPrivacyOptionsRequirementStatus: {
@@ -94,6 +97,7 @@ beforeEach(() => {
     Object.assign(mockConsent, {
         canRequestAds: true,
         gatherFails: false,
+        choicesFail: false,
         gdprApplies: true,
         initializeFails: false,
         privacyOptionsRequirementStatus: 'NOT_REQUIRED',
@@ -143,6 +147,24 @@ describe('initializeAds', () => {
         expect(state.canRequestAds).toBe(false)
     })
 
+    test('keeps the privacy options entry point when the SDK fails to start', async () => {
+        mockConsent.initializeFails = true
+        mockConsent.privacyOptionsRequirementStatus = 'REQUIRED'
+
+        const state = await loadAds().initializeAds()
+
+        expect(state.isPrivacyOptionsRequired).toBe(true)
+    })
+
+    test('falls back to non-personalized ads when the consent choices cannot be read', async () => {
+        mockConsent.choicesFail = true
+
+        const state = await loadAds().initializeAds()
+
+        expect(state.canRequestAds).toBe(true)
+        expect(state.isPersonalizationAllowed).toBe(false)
+    })
+
     test('allows personalized ads only with ATT and GDPR personalization consent', async () => {
         expect((await loadAds().initializeAds()).isPersonalizationAllowed).toBe(
             true
@@ -185,7 +207,33 @@ describe('showPrivacyOptions', () => {
     test('opens the UMP privacy options form', async () => {
         await loadAds().showPrivacyOptions()
 
-        expect(mockCalls).toEqual(['showPrivacyOptionsForm'])
+        expect(mockCalls[0]).toBe('showPrivacyOptionsForm')
+    })
+
+    test('starts the SDK when consent is first given through the form', async () => {
+        mockConsent.canRequestAds = false
+        const ads = loadAds()
+        await ads.initializeAds()
+        expect(mockCalls).not.toContain('initialize')
+
+        mockConsent.canRequestAds = true
+        await ads.showPrivacyOptions()
+
+        expect(mockCalls).toContain('initialize')
+        expect((await ads.initializeAds()).canRequestAds).toBe(true)
+    })
+
+    test('applies the choices made in the form to later ad requests', async () => {
+        const ads = loadAds()
+        expect((await ads.initializeAds()).isPersonalizationAllowed).toBe(true)
+
+        mockConsent.selectPersonalisedAds = false
+        await ads.showPrivacyOptions()
+        expect((await ads.initializeAds()).isPersonalizationAllowed).toBe(false)
+
+        mockConsent.canRequestAds = false
+        await ads.showPrivacyOptions()
+        expect((await ads.initializeAds()).canRequestAds).toBe(false)
     })
 })
 

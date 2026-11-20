@@ -1,14 +1,29 @@
-import { beforeEach, describe, expect, jest, test } from '@jest/globals'
-import { renderHook, waitFor } from '@testing-library/react-native'
+import {
+    afterEach,
+    beforeEach,
+    describe,
+    expect,
+    jest,
+    test,
+} from '@jest/globals'
+import { act, renderHook, waitFor } from '@testing-library/react-native'
 
 import type { AdsConsentState } from '@/lib/ads'
 
 import { useInterstitialAd } from './use-interstitial-ad'
 
 const AD_UNIT = 'test-unit'
+// Math.random() === 0 puts every ad threshold at the minimum interval.
+const FIRST_THRESHOLD = 4
+
+type Listener = () => void
+
+const mockListeners = new Map<string, Listener>()
 
 const mockCreateForAdRequest = jest.fn((_unitId: string, _options: object) => ({
-    addAdEventListener: jest.fn(),
+    addAdEventListener: (event: string, listener: Listener) => {
+        mockListeners.set(event, listener)
+    },
     load: jest.fn(),
     show: jest.fn(() => Promise.resolve()),
 }))
@@ -16,7 +31,7 @@ const mockCreateForAdRequest = jest.fn((_unitId: string, _options: object) => ({
 const mockInitializeAds = jest.fn<() => Promise<AdsConsentState>>()
 
 jest.mock('react-native-google-mobile-ads', () => ({
-    AdEventType: { CLOSED: 'closed', LOADED: 'loaded' },
+    AdEventType: { CLOSED: 'closed', ERROR: 'error', LOADED: 'loaded' },
     InterstitialAd: { createForAdRequest: mockCreateForAdRequest },
 }))
 
@@ -32,8 +47,22 @@ const consentState = (state: Partial<AdsConsentState>): AdsConsentState => ({
     ...state,
 })
 
+const emit = (event: string) =>
+    act(() => {
+        mockListeners.get(event)?.()
+    })
+
+const expectAdRequests = (count: number) =>
+    waitFor(() => expect(mockCreateForAdRequest).toHaveBeenCalledTimes(count))
+
 beforeEach(() => {
     mockCreateForAdRequest.mockClear()
+    mockListeners.clear()
+    jest.spyOn(Math, 'random').mockReturnValue(0)
+})
+
+afterEach(() => {
+    jest.restoreAllMocks()
 })
 
 describe('useInterstitialAd', () => {
@@ -71,5 +100,52 @@ describe('useInterstitialAd', () => {
                 requestNonPersonalizedAdsOnly: false,
             })
         )
+    })
+
+    test('applies consent changed since the previous ad to the next request', async () => {
+        mockInitializeAds.mockResolvedValue(consentState({}))
+        await renderHook(() => useInterstitialAd())
+        await expectAdRequests(1)
+
+        mockInitializeAds.mockResolvedValue(
+            consentState({ isPersonalizationAllowed: false })
+        )
+        await emit('closed')
+
+        await waitFor(() =>
+            expect(mockCreateForAdRequest).toHaveBeenLastCalledWith(AD_UNIT, {
+                requestNonPersonalizedAdsOnly: true,
+            })
+        )
+    })
+
+    test('stops requesting ads once consent is withdrawn', async () => {
+        mockInitializeAds.mockResolvedValue(consentState({}))
+        await renderHook(() => useInterstitialAd())
+        await expectAdRequests(1)
+
+        const withdrawn = Promise.resolve(
+            consentState({ canRequestAds: false })
+        )
+        mockInitializeAds.mockReturnValue(withdrawn)
+        await emit('closed')
+        await withdrawn
+
+        expect(mockCreateForAdRequest).toHaveBeenCalledTimes(1)
+    })
+
+    test('retries a failed load when the next ad is due', async () => {
+        mockInitializeAds.mockResolvedValue(consentState({}))
+        const { result } = await renderHook(() => useInterstitialAd())
+        await expectAdRequests(1)
+
+        await emit('error')
+        await act(() => {
+            for (let guess = 0; guess < FIRST_THRESHOLD; guess += 1) {
+                result.current.onCorrectGuess()
+            }
+        })
+
+        await expectAdRequests(2)
     })
 })

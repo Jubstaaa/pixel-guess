@@ -25,7 +25,7 @@ export const PrivacyOptionsLink = () => {
         showPrivacyOptions().catch(() => {
             Alert.alert(
                 'Privacy options unavailable',
-                'Please check your connection and try again.'
+                'Please try again later.'
             )
         })
     }, [])
