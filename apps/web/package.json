@@ -8,7 +8,7 @@
         "build": "tsc -b && vite build",
         "preview": "vite preview",
         "type-check": "tsc --noEmit",
-        "lint": "eslint src/",
+        "lint": "eslint src preload-game-chunk.ts preload-game-chunk.test.ts",
         "test": "vitest run"
     },
     "dependencies": {

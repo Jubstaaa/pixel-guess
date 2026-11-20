@@ -7,7 +7,8 @@ export {
 } from './game/config'
 export { getImageUrl, IMAGE_CDN_BASE_URL } from './cdn/image-url'
 export { COLORS, type ThemeColors } from './theme/colors'
-export { categories, charactersByCategory } from './data/categories'
+export { categories } from './data/categories'
+export { charactersByCategory } from './data/characters-by-category'
 export {
     dota2Characters,
     flagCharacters,
