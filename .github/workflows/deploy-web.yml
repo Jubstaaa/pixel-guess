@@ -28,6 +28,8 @@ concurrency:
 # on a branch that is up to date with main, so what lands is what was tested.
 jobs:
     deploy:
+        # A manual dispatch can name any ref; only main has passed the check.
+        if: github.ref == 'refs/heads/main'
         runs-on: ubuntu-latest
         timeout-minutes: 15
         steps:
