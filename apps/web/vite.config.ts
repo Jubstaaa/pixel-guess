@@ -3,8 +3,10 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
+import { preloadGameChunk } from './preload-game-chunk'
+
 export default defineConfig({
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), preloadGameChunk()],
     resolve: {
         // The hoisted install puts the mobile app's React (pinned by its Expo SDK)
         // at the root, so a dependency such as react-helmet-async gets its own

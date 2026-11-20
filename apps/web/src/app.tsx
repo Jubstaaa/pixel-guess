@@ -6,7 +6,6 @@ import {
 } from 'react-router'
 
 import { Footer } from './layout/footer'
-import { GamePage } from './pages/game/game'
 import { HomePage } from './pages/home/home'
 
 const Layout = () => (
@@ -21,9 +20,10 @@ const Layout = () => (
     </>
 )
 
-// Home and the game are where visitors land, so they stay in the entry chunk:
-// a lazy game route would add a request waterfall to every shared game link.
-// The text pages load their own chunk on navigation.
+// Only home is in the entry chunk. The game carries every character list
+// (most of the bundle), so keeping it out lets home paint much sooner; a
+// shared game link pays one extra request for it, started as soon as the
+// router matches the URL.
 const router = createBrowserRouter([
     {
         element: <Layout />,
@@ -56,7 +56,12 @@ const router = createBrowserRouter([
                         .TermsOfServicePage,
                 }),
             },
-            { path: '/:categorySlug/:difficulty', element: <GamePage /> },
+            {
+                path: '/:categorySlug/:difficulty',
+                lazy: async () => ({
+                    Component: (await import('./pages/game/game')).GamePage,
+                }),
+            },
             {
                 path: '*',
                 lazy: async () => ({

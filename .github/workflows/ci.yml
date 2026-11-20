@@ -57,5 +57,8 @@ jobs:
                   test -s apps/web/dist/index.html
                   test "$(find apps/web/dist -type f | wc -l)" -ge 10
                   grep -rq 'pixelguess.fra1.cdn.digitaloceanspaces.com' apps/web/dist/assets/
+                  # The character lists belong to the game chunk; in the entry
+                  # chunk they delay the first paint of every page.
+                  ! grep -q 'Afghanistan' apps/web/dist/assets/index-*.js
             - name: actionlint
               run: docker run --rm -v "$PWD:/repo" -w /repo rhysd/actionlint:1.7.12@sha256:b1934ee5f1c509618f2508e6eb47ee0d3520686341fec936f3b79331f9315667 -color

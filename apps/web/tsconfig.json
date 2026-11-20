@@ -10,5 +10,10 @@
         "declaration": false,
         "declarationMap": false
     },
-    "include": ["src", "vite-env.d.ts"]
+    "include": [
+        "src",
+        "vite-env.d.ts",
+        "preload-game-chunk.ts",
+        "preload-game-chunk.test.ts"
+    ]
 }
