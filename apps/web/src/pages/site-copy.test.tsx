@@ -1,9 +1,9 @@
-import { render } from '@testing-library/react'
 import type { ReactElement } from 'react'
-import { createMemoryRouter, RouterProvider } from 'react-router'
-import { describe, expect, test, vi } from 'vitest'
 
 import { categories } from '@pixel-guess/shared'
+import { render } from '@testing-library/react'
+import { createMemoryRouter, RouterProvider } from 'react-router'
+import { describe, expect, test, vi } from 'vitest'
 
 import { AboutPage } from './about'
 import { HomePage } from './home/home'
@@ -21,12 +21,12 @@ vi.mock('../ads/ad-placements', () => ({
 const renderPage = (page: ReactElement) =>
     render(
         <RouterProvider
-            router={createMemoryRouter([{ path: '/', element: page }])}
+            router={createMemoryRouter([{ element: page, path: '/' }])}
         />
     )
 
 const pageText = () =>
-    `${document.body.textContent} ${[...document.head.querySelectorAll('meta[name="description"]')].map((m) => m.getAttribute('content')).join(' ')}`
+    `${document.body.textContent} ${[...document.head.querySelectorAll('meta[name="description"]')].map(m => m.getAttribute('content')).join(' ')}`
 
 describe.each([
     ['home', <HomePage key="home" />],
@@ -39,7 +39,6 @@ describe.each([
         expect(pageText()).not.toMatch(/\d+\+ categories/i)
     })
 
-    // The web game keeps no score history, so promising one misleads.
     test('does not promise streak tracking', () => {
         renderPage(page)
         expect(pageText()).not.toMatch(/streak/i)
@@ -55,8 +54,6 @@ test.each([
     expect(pageText()).toContain(`${categories.length} categories`)
 })
 
-// The server answers every unknown path with the app, so the page itself has
-// to keep those URLs out of search results.
 test('the not-found page asks search engines not to index it', () => {
     renderPage(<NotFoundPage />)
     expect(

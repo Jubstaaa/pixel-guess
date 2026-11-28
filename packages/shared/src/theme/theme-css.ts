@@ -1,7 +1,9 @@
 const toCssVariable = (name: string) =>
-    `--color-${name.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`)}`
+    `--color-${name.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`)}`
 
-export const renderThemeCss = (colors: Readonly<Record<string, string>>) =>
+export const renderThemeCss = (
+    colors: Readonly<Record<string, string>>
+): string =>
     [
         '/* Generated from src/theme/colors.ts by `bun run generate:theme`. */',
         '@theme {',

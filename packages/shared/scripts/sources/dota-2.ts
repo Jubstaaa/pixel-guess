@@ -22,14 +22,14 @@ export async function fetchDota2(): Promise<CategoryResult> {
 
     console.log(`Dota 2: ${characters.length} heroes`)
     return {
+        characters,
         meta: {
-            slug: 'dota-2',
-            name: 'Dota 2',
             exportName: 'dota2Characters',
-            imageType: 'character',
             iconUrl:
                 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/global/dota2_logo_symbol.png',
+            imageType: 'character',
+            name: 'Dota 2',
+            slug: 'dota-2',
         },
-        characters,
     }
 }

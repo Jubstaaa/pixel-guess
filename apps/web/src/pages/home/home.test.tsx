@@ -1,10 +1,9 @@
+import { categories } from '@pixel-guess/shared'
 import { act, fireEvent, render, screen } from '@testing-library/react'
 import { setMedia } from 'mock-match-media'
 import { mockAllIsIntersecting } from 'react-intersection-observer/test-utils'
 import { createMemoryRouter, RouterProvider } from 'react-router'
 import { beforeEach, describe, expect, test, vi } from 'vitest'
-
-import { categories } from '@pixel-guess/shared'
 
 import { AD_EVERY_N_CATEGORIES, HomePage } from './home'
 
@@ -18,23 +17,22 @@ vi.mock('../../ads/ad-placements', () => ({
 const renderHome = () =>
     render(
         <RouterProvider
-            router={createMemoryRouter([{ path: '/', element: <HomePage /> }])}
+            router={createMemoryRouter([{ element: <HomePage />, path: '/' }])}
         />
     )
 
-// The grid's direct children, in order: a category card or an ad.
 const gridItems = () =>
     [
         ...screen.getByRole('heading', { name: 'Choose a Category' })
             .nextElementSibling!.children,
-    ].map((item) => (item.tagName === 'ASIDE' ? 'ad' : 'category'))
+    ].map(item => (item.tagName === 'ASIDE' ? 'ad' : 'category'))
 
 describe('HomePage ads', () => {
     test('places an ad after every fourth category', () => {
         renderHome()
         const items = gridItems()
 
-        expect(items.filter((item) => item === 'category')).toHaveLength(
+        expect(items.filter(item => item === 'category')).toHaveLength(
             categories.length
         )
         let run = 0
@@ -51,12 +49,11 @@ describe('HomePage ads', () => {
     test('never ends the list with an ad', () => {
         renderHome()
         expect(gridItems().at(-1)).toBe('category')
-        expect(gridItems().filter((item) => item === 'ad')).toHaveLength(
+        expect(gridItems().filter(item => item === 'ad')).toHaveLength(
             Math.floor((categories.length - 1) / AD_EVERY_N_CATEGORIES)
         )
     })
 
-    // A whole row of the two-column grid, so the cards around it stay aligned.
     test('every ad spans the full row of the grid', () => {
         renderHome()
         const ads = screen.getAllByRole('complementary', {
@@ -79,7 +76,7 @@ describe('HomePage ads', () => {
 })
 
 const requestedSlots = () =>
-    [...document.querySelectorAll('ins.adsbygoogle')].map((ins) =>
+    [...document.querySelectorAll('ins.adsbygoogle')].map(ins =>
         ins.getAttribute('data-ad-slot')
     )
 

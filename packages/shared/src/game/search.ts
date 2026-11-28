@@ -1,14 +1,12 @@
 import type { Character } from '../types'
 
 const normalize = (str: string): string =>
-    String(str || '')
+    (str || '')
         .toLowerCase()
         .normalize('NFD')
         .replace(/[\u0300-\u036f]/g, '')
         .replace(/[^a-z0-9]/g, '')
 
-// Exact beats prefix beats substring; within a tier, the more of the name the
-// query covers, the higher it ranks, so "san" lists Sanji before Sanji Vinsmoke.
 const matchScore = (name: string, search: string): number => {
     if (name === search) return 1
     const coverage = search.length / Math.max(name.length, 1)
@@ -31,11 +29,11 @@ export const filterCharacters = (
     if (!search) return available.slice(0, limit)
 
     return available
-        .map((item) => ({
+        .map(item => ({
             ...item,
             score: matchScore(normalize(item.character.name), search),
         }))
-        .filter((x) => x.score > 0)
+        .filter(x => x.score > 0)
         .sort((a, b) => b.score - a.score)
         .slice(0, limit)
         .map(({ character, index }) => ({ character, index }))

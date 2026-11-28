@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useRef } from 'react'
-
 import type * as GoogleMobileAds from 'react-native-google-mobile-ads'
 import type { InterstitialAd } from 'react-native-google-mobile-ads'
+
+import { useCallback, useEffect, useRef } from 'react'
 
 import { getInterstitialAdUnitId, initializeAds } from '@/lib/ads'
 
@@ -19,13 +19,12 @@ export const useInterstitialAd = () => {
     const adRef = useRef<InterstitialAd | null>(null)
     const adStatus = useRef<AdStatus>('idle')
     const isMounted = useRef(false)
+    const requestAdRef = useRef<() => void>(() => undefined)
 
     const requestAd = useCallback(() => {
         const loadAd = async () => {
             adStatus.current = 'loading'
 
-            // Read consent per request: the privacy options form can change it
-            // between two ads.
             const consent = await initializeAds()
             if (!isMounted.current || !consent.canRequestAds) {
                 adRef.current = null
@@ -34,7 +33,7 @@ export const useInterstitialAd = () => {
                 return
             }
 
-            const { InterstitialAd, AdEventType } =
+            const { AdEventType, InterstitialAd } =
                 require('react-native-google-mobile-ads') as typeof GoogleMobileAds
 
             const ad = InterstitialAd.createForAdRequest(
@@ -49,13 +48,12 @@ export const useInterstitialAd = () => {
                 adStatus.current = 'loaded'
             })
 
-            // No fill or a network error: retried when the next ad is due.
             ad.addAdEventListener(AdEventType.ERROR, () => {
                 adStatus.current = 'idle'
             })
 
             ad.addAdEventListener(AdEventType.CLOSED, () => {
-                requestAd()
+                requestAdRef.current()
             })
 
             ad.load()
@@ -63,10 +61,13 @@ export const useInterstitialAd = () => {
         }
 
         loadAd().catch(() => {
-            // Ads are optional; a failed request is retried when the next ad is due.
             adStatus.current = 'idle'
         })
     }, [])
+
+    useEffect(() => {
+        requestAdRef.current = requestAd
+    }, [requestAd])
 
     useEffect(() => {
         isMounted.current = true
@@ -90,8 +91,6 @@ export const useInterstitialAd = () => {
 
         if (adStatus.current !== 'loaded') return
 
-        // Since v17.2 show() rejects instead of throwing when the ad expired or
-        // never finished loading; fetch a fresh one for the next threshold.
         adRef.current?.show().catch(() => {
             requestAd()
         })

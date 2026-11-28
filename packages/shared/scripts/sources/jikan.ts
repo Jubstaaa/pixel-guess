@@ -12,7 +12,6 @@ export const jikanCharactersSchema = z.object({
     data: z.array(
         z.object({
             character: z.object({
-                name: z.string(),
                 images: z
                     .object({
                         jpg: z
@@ -20,15 +19,18 @@ export const jikanCharactersSchema = z.object({
                             .optional(),
                     })
                     .optional(),
+                name: z.string(),
             }),
             favorites: z.number(),
         })
     ),
 })
 
-// MyAnimeList stores names as "Family, Given".
-function toDisplayName(name: string): string {
-    return name.includes(', ') ? name.split(', ').reverse().join(' ') : name
+interface JikanCategory {
+    animeId: number
+    label: string
+    limit: number
+    meta: CategoryMeta
 }
 
 export function toJikanCharacters(
@@ -39,23 +41,16 @@ export function toJikanCharacters(
         .flatMap(({ character, favorites }) => {
             const imageUrl = character.images?.jpg?.image_url
             return imageUrl
-                ? [{ name: character.name, imageUrl, favorites }]
+                ? [{ favorites, imageUrl, name: character.name }]
                 : []
         })
         .sort((a, b) => b.favorites - a.favorites)
         .slice(0, limit)
-        .map(({ name, imageUrl }) => ({
+        .map(({ imageUrl, name }) => ({
             name: toDisplayName(name),
             remoteUrl: imageUrl,
         }))
         .sort(byName)
-}
-
-interface JikanCategory {
-    label: string
-    animeId: number
-    limit: number
-    meta: CategoryMeta
 }
 
 function animeMeta(
@@ -64,13 +59,17 @@ function animeMeta(
     exportName: string,
     iconUrl: string
 ): CategoryMeta {
-    return { slug, name, exportName, imageType: 'poster', iconUrl }
+    return { exportName, iconUrl, imageType: 'poster', name, slug }
+}
+
+function toDisplayName(name: string): string {
+    return name.includes(', ') ? name.split(', ').reverse().join(' ') : name
 }
 
 export const JIKAN_CATEGORIES: JikanCategory[] = [
     {
-        label: 'One Piece',
         animeId: 21,
+        label: 'One Piece',
         limit: 60,
         meta: animeMeta(
             'one-piece',
@@ -80,8 +79,8 @@ export const JIKAN_CATEGORIES: JikanCategory[] = [
         ),
     },
     {
-        label: 'Attack on Titan',
         animeId: 16498,
+        label: 'Attack on Titan',
         limit: 40,
         meta: animeMeta(
             'attack-on-titan',
@@ -91,8 +90,8 @@ export const JIKAN_CATEGORIES: JikanCategory[] = [
         ),
     },
     {
-        label: 'Demon Slayer',
         animeId: 38000,
+        label: 'Demon Slayer',
         limit: 40,
         meta: animeMeta(
             'demon-slayer',
@@ -102,8 +101,8 @@ export const JIKAN_CATEGORIES: JikanCategory[] = [
         ),
     },
     {
-        label: 'Jujutsu Kaisen',
         animeId: 40748,
+        label: 'Jujutsu Kaisen',
         limit: 40,
         meta: animeMeta(
             'jujutsu-kaisen',
@@ -113,8 +112,8 @@ export const JIKAN_CATEGORIES: JikanCategory[] = [
         ),
     },
     {
-        label: 'My Hero Academia',
         animeId: 31964,
+        label: 'My Hero Academia',
         limit: 40,
         meta: animeMeta(
             'my-hero-academia',
@@ -124,8 +123,8 @@ export const JIKAN_CATEGORIES: JikanCategory[] = [
         ),
     },
     {
-        label: 'Death Note',
         animeId: 1535,
+        label: 'Death Note',
         limit: 30,
         meta: animeMeta(
             'death-note',
@@ -135,8 +134,8 @@ export const JIKAN_CATEGORIES: JikanCategory[] = [
         ),
     },
     {
-        label: 'FMA Brotherhood',
         animeId: 5114,
+        label: 'FMA Brotherhood',
         limit: 40,
         meta: animeMeta(
             'fullmetal-alchemist',
@@ -146,8 +145,8 @@ export const JIKAN_CATEGORIES: JikanCategory[] = [
         ),
     },
     {
-        label: 'Hunter x Hunter',
         animeId: 11061,
+        label: 'Hunter x Hunter',
         limit: 40,
         meta: animeMeta(
             'hunter-x-hunter',
@@ -159,8 +158,8 @@ export const JIKAN_CATEGORIES: JikanCategory[] = [
 ]
 
 export async function fetchJikanCategory({
-    label,
     animeId,
+    label,
     limit,
     meta,
 }: JikanCategory): Promise<CategoryResult> {
@@ -171,5 +170,5 @@ export async function fetchJikanCategory({
     const characters = toJikanCharacters(payload, limit)
 
     console.log(`${label}: ${characters.length} characters`)
-    return { meta, characters }
+    return { characters, meta }
 }

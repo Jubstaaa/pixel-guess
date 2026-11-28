@@ -1,8 +1,6 @@
-import { Fragment } from 'react'
-
-import { Link } from 'react-router'
-
 import { categories } from '@pixel-guess/shared'
+import { Fragment } from 'react'
+import { Link } from 'react-router'
 
 export const HowToPlayPage = () => (
     <Fragment>
@@ -172,8 +170,7 @@ export const HowToPlayPage = () => (
                             className="text-primary underline"
                             href="https://apps.apple.com/app/id6760237625"
                             rel="noopener noreferrer"
-                            target="_blank"
-                        >
+                            target="_blank">
                             App Store
                         </a>
                         .
@@ -200,8 +197,7 @@ export const HowToPlayPage = () => (
                         Absolutely! Reach out at{' '}
                         <a
                             className="text-primary underline"
-                            href="mailto:ilkerbalcilartr@gmail.com"
-                        >
+                            href="mailto:ilkerbalcilartr@gmail.com">
                             ilkerbalcilartr@gmail.com
                         </a>{' '}
                         or open an issue on our{' '}
@@ -209,8 +205,7 @@ export const HowToPlayPage = () => (
                             className="text-primary underline"
                             href="https://github.com/Jubstaaa/pixel-guess"
                             rel="noopener noreferrer"
-                            target="_blank"
-                        >
+                            target="_blank">
                             GitHub repository
                         </a>
                         .
@@ -221,8 +216,7 @@ export const HowToPlayPage = () => (
             <div className="mt-8 text-center">
                 <Link
                     className="inline-block rounded-xl bg-primary px-8 py-3 font-bold text-background transition-opacity hover:opacity-90"
-                    to="/"
-                >
+                    to="/">
                     Start Playing Now
                 </Link>
             </div>

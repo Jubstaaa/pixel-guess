@@ -23,8 +23,7 @@ export const Footer = () => (
                             className="text-foreground underline underline-offset-2"
                             href="https://ilkerbalcilar.com"
                             rel="noopener noreferrer"
-                            target="_blank"
-                        >
+                            target="_blank">
                             Jubstaa
                         </a>
                     </span>
@@ -36,26 +35,22 @@ export const Footer = () => (
                 <div className="flex items-center gap-3">
                     <Link
                         className="text-[12px] text-muted transition-colors hover:text-foreground"
-                        to="/about"
-                    >
+                        to="/about">
                         About
                     </Link>
                     <Link
                         className="text-[12px] text-muted transition-colors hover:text-foreground"
-                        to="/how-to-play"
-                    >
+                        to="/how-to-play">
                         How to Play
                     </Link>
                     <Link
                         className="text-[12px] text-muted transition-colors hover:text-foreground"
-                        to="/privacy-policy"
-                    >
+                        to="/privacy-policy">
                         Privacy Policy
                     </Link>
                     <Link
                         className="text-[12px] text-muted transition-colors hover:text-foreground"
-                        to="/terms-of-service"
-                    >
+                        to="/terms-of-service">
                         Terms
                     </Link>
                 </div>
@@ -65,8 +60,7 @@ export const Footer = () => (
                 <a
                     href="https://apps.apple.com/app/pixel-guess/id6760237625"
                     rel="noopener noreferrer"
-                    target="_blank"
-                >
+                    target="_blank">
                     <img
                         alt="Download on the App Store"
                         className="h-[36px] w-auto"
@@ -77,18 +71,16 @@ export const Footer = () => (
                 </a>
                 <div className="flex items-center gap-2">
                     <a
-                        className="flex items-center gap-1.5 rounded-xl border border-border bg-surface px-3 py-2 text-[13px] text-muted transition-colors hover:border-primary/50 hover:text-foreground"
                         aria-label="Email"
-                        href="mailto:ilkerbalcilartr@gmail.com"
-                    >
+                        className="flex items-center gap-1.5 rounded-xl border border-border bg-surface px-3 py-2 text-[13px] text-muted transition-colors hover:border-primary/50 hover:text-foreground"
+                        href="mailto:ilkerbalcilartr@gmail.com">
                         <Mail aria-hidden="true" className="h-4 w-4" />
                     </a>
                     <a
                         className="flex items-center gap-1.5 rounded-xl border border-border bg-surface px-3 py-2 text-[13px] text-muted transition-colors hover:border-primary/50 hover:text-foreground"
                         href="https://buymeacoffee.com/jubstaa"
                         rel="noopener noreferrer"
-                        target="_blank"
-                    >
+                        target="_blank">
                         <Coffee aria-hidden="true" className="h-4 w-4" />
                         <span>Buy me a coffee</span>
                     </a>

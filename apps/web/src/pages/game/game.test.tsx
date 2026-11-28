@@ -1,10 +1,9 @@
+import { charactersByCategory } from '@pixel-guess/shared'
 import { act, fireEvent, render, screen } from '@testing-library/react'
 import { setMedia } from 'mock-match-media'
 import { mockAllIsIntersecting } from 'react-intersection-observer/test-utils'
 import { createMemoryRouter, RouterProvider } from 'react-router'
 import { beforeEach, describe, expect, test, vi } from 'vitest'
-
-import { charactersByCategory } from '@pixel-guess/shared'
 
 import { GamePage } from './game'
 
@@ -16,10 +15,10 @@ vi.mock('../../ads/ad-placements', () => ({
     },
 }))
 
-const flags = charactersByCategory.flags
-// Math.random() === 0 always picks the first unseen character.
-const answer = flags[0].name
-const wrong = flags[1].name
+const flags = charactersByCategory.flags ?? []
+
+const answer = flags[0]?.name ?? ''
+const wrong = flags[1]?.name ?? ''
 
 const renderGame = (path = '/flags/easy') =>
     render(
@@ -27,10 +26,10 @@ const renderGame = (path = '/flags/easy') =>
             router={createMemoryRouter(
                 [
                     {
-                        path: '/:categorySlug/:difficulty',
                         element: <GamePage />,
+                        path: '/:categorySlug/:difficulty',
                     },
-                    { path: '/', element: <p>home</p> },
+                    { element: <p>home</p>, path: '/' },
                 ],
                 { initialEntries: [path] }
             )}
@@ -103,31 +102,34 @@ describe('GamePage', () => {
 
 const ads = () =>
     screen.queryAllByRole('complementary', { name: 'Advertisement' })
+const firstAd = () => {
+    const [ad] = ads()
+    if (!ad) throw new Error('expected an advertisement')
+    return ad
+}
 const requestedSlots = () =>
-    [...document.querySelectorAll('ins.adsbygoogle')].map((ins) =>
+    [...document.querySelectorAll('ins.adsbygoogle')].map(ins =>
         ins.getAttribute('data-ad-slot')
     )
 const follows = (a: Node, b: Node) =>
     Boolean(a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING)
 
-// Loads every ad the page has mounted: the visitor has interacted and
-// every slot is on screen.
 const loadAds = async () => {
     fireEvent.keyDown(window)
     act(() => mockAllIsIntersecting(true))
     await vi.waitFor(() => expect(requestedSlots().length).toBeGreaterThan(0))
 }
 
-describe.each([1440, 1920])('GamePage ads at %ipx', (width) => {
+describe.each([1440, 1920])('GamePage ads at %ipx', width => {
     beforeEach(() => setMedia({ width }))
 
     test('puts a 160x600 ad in each gutter beside the game', () => {
         renderGame()
         expect(ads()).toHaveLength(2)
-        const gutters = ads().map((ad) =>
-            [...ad.classList].find((c) => /^(left|right)-/.test(c))
+        const gutters = ads().map(ad =>
+            [...ad.classList].find(c => /^(left|right)-/.test(c))
         )
-        expect(gutters.map((c) => c?.split('-')[0]).sort()).toEqual([
+        expect(gutters.map(c => c?.split('-')[0]).sort()).toEqual([
             'left',
             'right',
         ])
@@ -138,8 +140,6 @@ describe.each([1440, 1920])('GamePage ads at %ipx', (width) => {
         }
     })
 
-    // They are placed visually, so the DOM order is free to put the game
-    // first: keyboard users reach the back link and the guess box before any ad.
     test('the sidebars come after the game in keyboard order', () => {
         renderGame()
         for (const ad of ads()) expect(follows(search(), ad)).toBe(true)
@@ -152,16 +152,16 @@ describe.each([1440, 1920])('GamePage ads at %ipx', (width) => {
     })
 })
 
-describe.each([390, 1279])('GamePage ads at %ipx', (width) => {
+describe.each([390, 1279])('GamePage ads at %ipx', width => {
     beforeEach(() => setMedia({ width }))
 
     test('shows one 320x50 banner below the guess input', () => {
         renderGame()
         expect(ads()).toHaveLength(1)
-        const box = ads()[0].querySelector('[data-ad-box]')
+        const box = firstAd().querySelector('[data-ad-box]')
         expect(box?.classList).toContain('w-80')
         expect(box?.classList).toContain('h-12.5')
-        expect(follows(search(), ads()[0])).toBe(true)
+        expect(follows(search(), firstAd())).toBe(true)
     })
 
     test('requests only the banner, never the hidden sidebar ads', async () => {
@@ -172,8 +172,6 @@ describe.each([390, 1279])('GamePage ads at %ipx', (width) => {
 })
 
 describe('GamePage ads', () => {
-    // The sidebars sit in the gutters out of the layout flow, so the game is
-    // exactly as wide and placed exactly as it is without them.
     test('the game column is the same with and without the sidebars', () => {
         const column = () =>
             screen.getByRole('link', { name: 'Back to categories' })
@@ -189,7 +187,7 @@ describe('GamePage ads', () => {
 
     test.each([390, 1440])(
         'no ad sits between the header and the image at %ipx',
-        (width) => {
+        width => {
             setMedia({ width })
             renderGame()
             const header = screen.getByRole('link', {
@@ -209,7 +207,7 @@ describe('GamePage ads', () => {
 
         act(() => setMedia({ width: 390 }))
         expect(ads()).toHaveLength(1)
-        expect(ads()[0].querySelector('[data-ad-box]')?.classList).toContain(
+        expect(firstAd().querySelector('[data-ad-box]')?.classList).toContain(
             'h-12.5'
         )
 

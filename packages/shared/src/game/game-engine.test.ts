@@ -1,7 +1,8 @@
 import { afterEach, describe, expect, spyOn, test } from 'bun:test'
 
-import { MAX_COUNT } from './config'
 import type { Character, GameState } from '../types'
+
+import { MAX_COUNT } from './config'
 import {
     advanceToNextCharacter,
     createInitialState,
@@ -10,14 +11,14 @@ import {
     getSkipState,
 } from './game-engine'
 
-const characters: Character[] = ['A', 'B', 'C'].map((name) => ({
-    name,
+const characters: Character[] = ['A', 'B', 'C'].map(name => ({
     imageUrl: `test/${name}.webp`,
+    name,
 }))
 
 const state = (overrides: Partial<GameState> = {}): GameState => ({
-    currentCharacter: characters[0],
     count: 0,
+    currentCharacter: characters[0] ?? null,
     seenIndices: [0],
     ...overrides,
 })
@@ -75,16 +76,16 @@ describe('createInitialState', () => {
     test('starts on a random character with no attempts used', () => {
         spyOn(Math, 'random').mockReturnValue(0.5)
         expect(createInitialState(characters)).toEqual({
-            currentCharacter: characters[1],
             count: 0,
+            currentCharacter: characters[1] ?? null,
             seenIndices: [1],
         })
     })
 
     test('has no character for an empty category', () => {
         expect(createInitialState([])).toEqual({
-            currentCharacter: null,
             count: 0,
+            currentCharacter: null,
             seenIndices: [],
         })
     })
@@ -96,7 +97,7 @@ describe('advanceToNextCharacter', () => {
             characters,
             state({ seenIndices: [0, 2] })
         )
-        expect(next.currentCharacter).toBe(characters[1])
+        expect(next.currentCharacter).toBe(characters[1] ?? null)
         expect(next.seenIndices).toEqual([0, 2, 1])
     })
 
@@ -106,7 +107,7 @@ describe('advanceToNextCharacter', () => {
             characters,
             state({ seenIndices: [0, 1, 2] })
         )
-        expect(next.currentCharacter).toBe(characters[0])
+        expect(next.currentCharacter).toBe(characters[0] ?? null)
         expect(next.seenIndices).toEqual([0])
     })
 

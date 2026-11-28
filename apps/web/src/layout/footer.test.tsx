@@ -12,7 +12,7 @@ test('every footer link has an accessible name', () => {
     )
     for (const link of screen.getAllByRole('link')) {
         expect(
-            link.textContent?.trim() ||
+            link.textContent.trim() ||
                 link.getAttribute('aria-label') ||
                 link.querySelector('img[alt]:not([alt=""])')
         ).toBeTruthy()

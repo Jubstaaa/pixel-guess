@@ -21,14 +21,14 @@ export async function fetchValorant(): Promise<CategoryResult> {
 
     console.log(`Valorant: ${characters.length} agents`)
     return {
+        characters,
         meta: {
-            slug: 'valorant',
-            name: 'Valorant',
             exportName: 'valorantCharacters',
-            imageType: 'character',
             iconUrl:
                 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version_%28cropped%29.png',
+            imageType: 'character',
+            name: 'Valorant',
+            slug: 'valorant',
         },
-        characters,
     }
 }

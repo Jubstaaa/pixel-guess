@@ -17,8 +17,7 @@ export const NotFoundPage = () => (
             </p>
             <Link
                 className="mt-8 rounded-xl bg-primary px-6 py-3 text-[14px] font-semibold text-background transition-opacity hover:opacity-90"
-                to="/"
-            >
+                to="/">
                 Back to Home
             </Link>
         </div>

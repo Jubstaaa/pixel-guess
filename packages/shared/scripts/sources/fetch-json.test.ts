@@ -6,7 +6,6 @@ import { fetchJson, redactUrl } from './fetch-json'
 const hits = new Map<string, number>()
 
 const server = Bun.serve({
-    port: 0,
     fetch(req) {
         const { pathname } = new URL(req.url)
         hits.set(pathname, (hits.get(pathname) ?? 0) + 1)
@@ -14,6 +13,7 @@ const server = Bun.serve({
         if (pathname === '/bad-shape') return Response.json({ count: 'three' })
         return new Response('missing', { status: 404 })
     },
+    port: 0,
 })
 
 afterAll(() => server.stop(true))

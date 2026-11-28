@@ -20,55 +20,51 @@ const Layout = () => (
     </>
 )
 
-// Only home is in the entry chunk. The game carries every character list
-// (most of the bundle), so keeping it out lets home paint much sooner; a
-// shared game link pays one extra request for it, started as soon as the
-// router matches the URL.
 const router = createBrowserRouter([
     {
-        element: <Layout />,
         children: [
-            { path: '/', element: <HomePage /> },
+            { element: <HomePage />, path: '/' },
             {
-                path: '/about',
                 lazy: async () => ({
                     Component: (await import('./pages/about')).AboutPage,
                 }),
+                path: '/about',
             },
             {
-                path: '/how-to-play',
                 lazy: async () => ({
                     Component: (await import('./pages/how-to-play'))
                         .HowToPlayPage,
                 }),
+                path: '/how-to-play',
             },
             {
-                path: '/privacy-policy',
                 lazy: async () => ({
                     Component: (await import('./pages/privacy-policy'))
                         .PrivacyPolicyPage,
                 }),
+                path: '/privacy-policy',
             },
             {
-                path: '/terms-of-service',
                 lazy: async () => ({
                     Component: (await import('./pages/terms-of-service'))
                         .TermsOfServicePage,
                 }),
+                path: '/terms-of-service',
             },
             {
-                path: '/:categorySlug/:difficulty',
                 lazy: async () => ({
                     Component: (await import('./pages/game/game')).GamePage,
                 }),
+                path: '/:categorySlug/:difficulty',
             },
             {
-                path: '*',
                 lazy: async () => ({
                     Component: (await import('./pages/not-found')).NotFoundPage,
                 }),
+                path: '*',
             },
         ],
+        element: <Layout />,
     },
 ])
 

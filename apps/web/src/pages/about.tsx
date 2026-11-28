@@ -1,8 +1,6 @@
-import { Fragment } from 'react'
-
-import { Link } from 'react-router'
-
 import { categories } from '@pixel-guess/shared'
+import { Fragment } from 'react'
+import { Link } from 'react-router'
 
 export const AboutPage = () => (
     <Fragment>
@@ -100,8 +98,7 @@ export const AboutPage = () => (
                     className="text-primary underline"
                     href="https://apps.apple.com/app/id6760237625"
                     rel="noopener noreferrer"
-                    target="_blank"
-                >
+                    target="_blank">
                     App Store
                 </a>
                 .
@@ -117,8 +114,7 @@ export const AboutPage = () => (
                     className="text-primary underline"
                     href="https://github.com/Jubstaaa/pixel-guess"
                     rel="noopener noreferrer"
-                    target="_blank"
-                >
+                    target="_blank">
                     GitHub
                 </a>
                 . Contributions and feedback are welcome!
@@ -131,8 +127,7 @@ export const AboutPage = () => (
                 Have feedback, suggestions, or found a bug? Reach out at{' '}
                 <a
                     className="text-primary underline"
-                    href="mailto:ilkerbalcilartr@gmail.com"
-                >
+                    href="mailto:ilkerbalcilartr@gmail.com">
                     ilkerbalcilartr@gmail.com
                 </a>{' '}
                 or visit the{' '}

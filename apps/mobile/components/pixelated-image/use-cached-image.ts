@@ -1,28 +1,17 @@
-import { useEffect, useState } from 'react'
-
 import { getImageUrl } from '@pixel-guess/shared'
 import { Image } from 'expo-image'
+import { useEffect, useState } from 'react'
 
 const toFileUri = (path: string) =>
     path.startsWith('file://') ? path : `file://${path}`
 
-/**
- * Resolves an image key to something Skia can draw, preferring a local copy.
- *
- * Skia's `useImage` accepts a remote URL but keeps no persistent cache, so it
- * would re-download the same character every round. expo-image already
- * maintains a disk cache — and the search list renders the very same URLs
- * through it — so this warms that cache and hands Skia the file on disk.
- *
- * Falls back to the remote URL whenever the cache cannot be consulted: a slower
- * image beats a blank canvas.
- */
-export const useCachedImageUri = (key: string | null) => {
-    const [uri, setUri] = useState<string | null>(null)
+export const useCachedImageUri = (key: null | string) => {
+    const [resolved, setResolved] = useState<null | {
+        key: string
+        uri: string
+    }>(null)
 
     useEffect(() => {
-        setUri(null)
-
         if (!key) return
 
         let cancelled = false
@@ -37,9 +26,10 @@ export const useCachedImageUri = (key: string | null) => {
                     path = await Image.getCachePathAsync(url)
                 }
 
-                if (!cancelled) setUri(path ? toFileUri(path) : url)
+                if (!cancelled)
+                    setResolved({ key, uri: path ? toFileUri(path) : url })
             } catch {
-                if (!cancelled) setUri(url)
+                if (!cancelled) setResolved({ key, uri: url })
             }
         }
 
@@ -50,5 +40,5 @@ export const useCachedImageUri = (key: string | null) => {
         }
     }, [key])
 
-    return uri
+    return resolved?.key === key ? resolved.uri : null
 }

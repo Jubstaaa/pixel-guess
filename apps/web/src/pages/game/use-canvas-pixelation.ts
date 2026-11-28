@@ -1,3 +1,11 @@
+import type { Difficulty, ImageType } from '@pixel-guess/shared'
+
+import {
+    computeBlockSize,
+    DIFFICULTY_CONFIG,
+    getImageUrl,
+    MAX_COUNT,
+} from '@pixel-guess/shared'
 import {
     useCallback,
     useEffect,
@@ -6,44 +14,28 @@ import {
     useState,
 } from 'react'
 
-import {
-    computeBlockSize,
-    DIFFICULTY_CONFIG,
-    getImageUrl,
-    MAX_COUNT,
-} from '@pixel-guess/shared'
-import type { Difficulty, ImageType } from '@pixel-guess/shared'
-
 interface DecodedImage {
-    url: string
     image: HTMLImageElement
+    url: string
 }
 
 export const useCanvasPixelation = (
-    imageUrl: string | null,
+    imageUrl: null | string,
     count: number,
     difficulty: Difficulty,
     imageType: ImageType = 'character'
 ) => {
     const canvasRef = useRef<HTMLCanvasElement>(null)
     const [decoded, setDecoded] = useState<DecodedImage | null>(null)
-    const [failedUrl, setFailedUrl] = useState<string | null>(null)
+    const [failedUrl, setFailedUrl] = useState<null | string>(null)
     const [loadAttempt, setLoadAttempt] = useState(0)
 
-    // Loading depends on the URL only: each wrong guess redraws the image
-    // that is already decoded instead of fetching and decoding it again.
     useEffect(() => {
         if (!imageUrl) return
 
-        // A newer image supersedes this one; its late load must not replace
-        // what is on screen now.
         let isStale = false
         const img = new Image()
-        // The images are served from the CDN, so every one of them is
-        // cross-origin. Without this the canvas is tainted and the getImageData
-        // calls below throw a SecurityError, which breaks the whole game rather
-        // than just one frame. Requires the bucket to send an
-        // Access-Control-Allow-Origin header, which it does.
+
         img.crossOrigin = 'anonymous'
         img.onload = () => {
             if (!isStale) setDecoded({ image: img, url: imageUrl })
@@ -58,10 +50,8 @@ export const useCanvasPixelation = (
         }
     }, [imageUrl, loadAttempt])
 
-    const current = decoded && decoded.url === imageUrl ? decoded : null
+    const current = decoded?.url === imageUrl ? decoded : null
 
-    // A layout effect, so the previous image never shows for a frame once the
-    // new one is marked as loaded.
     useLayoutEffect(() => {
         const canvas = canvasRef.current
         if (!current || !canvas) return
@@ -76,16 +66,15 @@ export const useCanvasPixelation = (
         try {
             drawRound(canvas, ctx, image, count, difficulty, imageType)
         } catch (error) {
-            // A tainted canvas or an image the browser cannot read is one
-            // broken round, not a reason to take the whole page down.
             if (!(error instanceof DOMException)) throw error
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setFailedUrl(url)
         }
     }, [current, count, difficulty, imageType])
 
     const retry = useCallback(() => {
         setFailedUrl(null)
-        setLoadAttempt((attempt) => attempt + 1)
+        setLoadAttempt(attempt => attempt + 1)
     }, [])
 
     const hasError = imageUrl !== null && failedUrl === imageUrl
@@ -140,7 +129,8 @@ const applyGrayscale = (
     const imageData = ctx.getImageData(0, 0, width, height)
     const { data } = imageData
     for (let i = 0; i < data.length; i += 4) {
-        const avg = (data[i] + data[i + 1] + data[i + 2]) / 3
+        const avg =
+            ((data[i] ?? 0) + (data[i + 1] ?? 0) + (data[i + 2] ?? 0)) / 3
         data[i] = data[i + 1] = data[i + 2] = avg
     }
     ctx.putImageData(imageData, 0, 0)
@@ -164,10 +154,10 @@ const applyPixelation = (
             const centerY = Math.min(y + Math.floor(blockSize / 2), height - 1)
             const i = (centerY * width + centerX) * 4
 
-            let r = data[i],
-                g = data[i + 1],
-                b = data[i + 2]
-            const a = data[i + 3]
+            let b = data[i + 2] ?? 0,
+                g = data[i + 1] ?? 0,
+                r = data[i] ?? 0
+            const a = data[i + 3] ?? 0
 
             if (grayscale) {
                 const avg = (r + g + b) / 3

@@ -1,5 +1,5 @@
 {
-    "extends": "expo/tsconfig.base",
+    "extends": ["expo/tsconfig.base", "@jubstaa/config/tsconfig/base"],
     "compilerOptions": {
         "strict": true,
         "paths": {
@@ -12,6 +12,7 @@
         ".expo/types/**/*.d.ts",
         "expo-env.d.ts",
         ".expo/types/**/*.ts",
-        "nativewind-env.d.ts"
+        "nativewind-env.d.ts",
+        "eslint.config.ts"
     ]
 }

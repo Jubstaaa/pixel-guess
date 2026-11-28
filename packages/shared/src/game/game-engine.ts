@@ -1,31 +1,30 @@
-import { MAX_COUNT } from './config'
 import type { Character, GameState } from '../types'
+
+import { MAX_COUNT } from './config'
 
 export const getRandomCharacter = (
     characters: Character[],
     seenIndices: number[]
-): { character: Character; index: number } | null => {
+): null | { character: Character; index: number } => {
     const available = characters
         .map((c, i) => ({ c, i }))
         .filter(({ i }) => !seenIndices.includes(i))
 
-    if (available.length === 0) return null
-
     const pick = available[Math.floor(Math.random() * available.length)]
+    if (!pick) return null
+
     return { character: pick.c, index: pick.i }
 }
 
 export const createInitialState = (characters: Character[]): GameState => {
     const pick = getRandomCharacter(characters, [])
     return {
-        currentCharacter: pick?.character ?? null,
         count: 0,
+        currentCharacter: pick?.character ?? null,
         seenIndices: pick ? [pick.index] : [],
     }
 }
 
-// Once every character in the category has been shown, the history is cleared
-// so the category can be played again instead of running dry.
 export const advanceToNextCharacter = (
     characters: Character[],
     state: GameState

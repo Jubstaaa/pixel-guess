@@ -5,23 +5,23 @@ import { fetchJson } from './fetch-json'
 
 const EXCLUDED_CODES = new Set([
     'ac',
+    'aq',
+    'bv',
     'cp',
     'dg',
     'ea',
     'eu',
+    'gs',
     'hm',
     'ic',
+    'io',
     'sh',
     'sj',
     'ta',
+    'tf',
+    'um',
     'un',
     'xk',
-    'bv',
-    'aq',
-    'tf',
-    'gs',
-    'io',
-    'um',
 ])
 
 const codesSchema = z.record(z.string(), z.string())
@@ -42,13 +42,13 @@ export async function fetchFlags(): Promise<CategoryResult> {
 
     console.log(`Flags: ${characters.length} countries`)
     return {
-        meta: {
-            slug: 'flags',
-            name: 'Flags',
-            exportName: 'flagCharacters',
-            imageType: 'logo',
-            iconUrl: 'https://flagcdn.com/w160/un.png',
-        },
         characters,
+        meta: {
+            exportName: 'flagCharacters',
+            iconUrl: 'https://flagcdn.com/w160/un.png',
+            imageType: 'logo',
+            name: 'Flags',
+            slug: 'flags',
+        },
     }
 }

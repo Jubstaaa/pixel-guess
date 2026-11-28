@@ -1,38 +1,33 @@
-import React from 'react'
-
+import { categories } from '@pixel-guess/shared'
 import { ScrollView, Text, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-
-import { categories } from '@pixel-guess/shared'
 
 import { CategoryCard } from '@/components/category-card/category-card'
 import { PrivacyOptionsLink } from '@/components/privacy-options-link/privacy-options-link'
 import { Image } from '@/lib/image'
 
-// Metro resolves required assets to a numeric module id.
 const appIcon = require('../assets/icon.png') as number
 
 const HomeScreen = () => {
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: '#000000' }}>
+        <SafeAreaView style={{ backgroundColor: '#000000', flex: 1 }}>
             <ScrollView
                 className="px-4"
                 contentContainerClassName="pb-10"
-                showsVerticalScrollIndicator={false}
-            >
+                showsVerticalScrollIndicator={false}>
                 <View className="items-center pt-12 pb-10">
                     <Image
                         className="mb-6"
                         contentFit="cover"
                         source={appIcon}
                         style={{
-                            width: 80,
-                            height: 80,
                             borderRadius: 22,
+                            height: 80,
                             shadowColor: '#f59e0b',
-                            shadowOffset: { width: 0, height: 0 },
+                            shadowOffset: { height: 0, width: 0 },
                             shadowOpacity: 0.3,
                             shadowRadius: 20,
+                            width: 80,
                         }}
                     />
                     <Text className="text-[48px] font-[900] tracking-[-2px] text-foreground">
@@ -46,8 +41,8 @@ const HomeScreen = () => {
                 </View>
 
                 <View className="gap-3">
-                    {categories.map((item) => (
-                        <CategoryCard key={item.slug} item={item} />
+                    {categories.map(item => (
+                        <CategoryCard item={item} key={item.slug} />
                     ))}
                 </View>
 

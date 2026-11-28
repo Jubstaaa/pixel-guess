@@ -13,7 +13,7 @@ import type { AdsConsentState } from '@/lib/ads'
 import { useInterstitialAd } from './use-interstitial-ad'
 
 const AD_UNIT = 'test-unit'
-// Math.random() === 0 puts every ad threshold at the minimum interval.
+
 const FIRST_THRESHOLD = 4
 
 type Listener = () => void

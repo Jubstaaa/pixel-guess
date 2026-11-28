@@ -19,14 +19,14 @@ export async function fetchOverwatch(): Promise<CategoryResult> {
 
     console.log(`Overwatch: ${characters.length} heroes`)
     return {
+        characters,
         meta: {
-            slug: 'overwatch',
-            name: 'Overwatch',
             exportName: 'overwatchCharacters',
-            imageType: 'character',
             iconUrl:
                 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Overwatch_2_logo.svg/400px-Overwatch_2_logo.svg.png',
+            imageType: 'character',
+            name: 'Overwatch',
+            slug: 'overwatch',
         },
-        characters,
     }
 }

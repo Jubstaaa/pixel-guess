@@ -13,8 +13,6 @@ describe('theme.css', () => {
         ).toContain('--color-surface-hover: #1a1a1a;')
     })
 
-    // Web and the mobile class names read theme.css, mobile inline styles
-    // read COLORS: one palette only if the file is generated from COLORS.
     test('is generated from COLORS (run `bun run generate:theme`)', async () => {
         expect(await committedCss()).toBe(renderThemeCss(COLORS))
     })

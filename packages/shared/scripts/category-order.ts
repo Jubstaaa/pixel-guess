@@ -1,6 +1,5 @@
 import type { CategoryResult } from './sources/category'
 
-// Display order of the category list in both apps.
 export const CATEGORY_ORDER = [
     'movies',
     'tv-shows',
@@ -29,14 +28,12 @@ export const CATEGORY_ORDER = [
     'rick-and-morty',
 ]
 
-// A source missing from CATEGORY_ORDER would still get a data file but vanish
-// from the category list, so any mismatch fails the run before data is written.
 export function orderCategories(results: CategoryResult[]): CategoryResult[] {
-    const bySlug = new Map(results.map((r) => [r.meta.slug, r]))
+    const bySlug = new Map(results.map(r => [r.meta.slug, r]))
     const unordered = [...bySlug.keys()].filter(
-        (slug) => !CATEGORY_ORDER.includes(slug)
+        slug => !CATEGORY_ORDER.includes(slug)
     )
-    const missing = CATEGORY_ORDER.filter((slug) => !bySlug.has(slug))
+    const missing = CATEGORY_ORDER.filter(slug => !bySlug.has(slug))
 
     if (unordered.length > 0 || missing.length > 0) {
         throw new Error(
@@ -44,7 +41,7 @@ export function orderCategories(results: CategoryResult[]): CategoryResult[] {
         )
     }
 
-    return CATEGORY_ORDER.flatMap((slug) => {
+    return CATEGORY_ORDER.flatMap(slug => {
         const result = bySlug.get(slug)
         return result ? [result] : []
     })

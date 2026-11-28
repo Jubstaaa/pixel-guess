@@ -1,11 +1,8 @@
 import type { CategoryMeta } from './sources/category'
 
-// Source text for the generated files under src/data, formatted the way
-// prettier would so a fresh generate leaves `bun run lint` green.
-
 export interface CategoryModuleEntry {
-    meta: Pick<CategoryMeta, 'exportName' | 'imageType' | 'name' | 'slug'>
     characterCount: number
+    meta: Pick<CategoryMeta, 'exportName' | 'imageType' | 'name' | 'slug'>
 }
 
 const HEADER =
@@ -13,36 +10,9 @@ const HEADER =
 
 const PRINT_WIDTH = 80
 
-function serializeString(s: string): string {
-    if (s.includes("'"))
-        return `"${s.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`
-    return `'${s.replace(/\\/g, '\\\\')}'`
-}
-
-export function serializeCharacters(
-    exportName: string,
-    chars: { name: string; localKey: string }[]
-): string {
-    const header = `${HEADER}import type { Character } from '../../types'
-
-`
-    const items = chars.map(({ name, localKey }) => {
-        const nameStr = serializeString(name)
-        const urlStr = serializeString(localKey)
-        const urlLine = `        imageUrl: ${urlStr},`
-        const urlFormatted =
-            urlLine.length > PRINT_WIDTH
-                ? `        imageUrl:\n            ${urlStr},`
-                : urlLine
-        return `    {\n        name: ${nameStr},\n${urlFormatted}\n    }`
-    })
-    const array = items.length === 0 ? '[]' : `[\n${items.join(',\n')},\n]`
-    return header + `export const ${exportName}: Character[] = ${array}\n`
-}
-
 export function renderCategoriesModule(entries: CategoryModuleEntry[]): string {
     const items = entries
-        .map(({ meta, characterCount }) => {
+        .map(({ characterCount, meta }) => {
             const iconKey = serializeString(`categories/${meta.slug}.webp`)
             return `    {
         slug: '${meta.slug}',
@@ -66,8 +36,7 @@ export function renderCharactersByCategoryModule(
     entries: CategoryModuleEntry[]
 ): string {
     const imports = entries.map(({ meta }) => `    ${meta.exportName},`)
-    // Quote only the slugs that need it ('tv-shows'), matching prettier's
-    // as-needed quoteProps.
+
     const pairs = entries.map(({ meta }) => {
         const key = /^[A-Za-z_$][\w$]*$/.test(meta.slug)
             ? meta.slug
@@ -85,4 +54,31 @@ export const charactersByCategory: Record<string, Character[]> = {
 ${pairs.join('\n')}
 }
 `
+}
+
+export function serializeCharacters(
+    exportName: string,
+    chars: { localKey: string; name: string }[]
+): string {
+    const header = `${HEADER}import type { Character } from '../../types'
+
+`
+    const items = chars.map(({ localKey, name }) => {
+        const nameStr = serializeString(name)
+        const urlStr = serializeString(localKey)
+        const urlLine = `        imageUrl: ${urlStr},`
+        const urlFormatted =
+            urlLine.length > PRINT_WIDTH
+                ? `        imageUrl:\n            ${urlStr},`
+                : urlLine
+        return `    {\n        name: ${nameStr},\n${urlFormatted}\n    }`
+    })
+    const array = items.length === 0 ? '[]' : `[\n${items.join(',\n')},\n]`
+    return header + `export const ${exportName}: Character[] = ${array}\n`
+}
+
+function serializeString(s: string): string {
+    if (s.includes("'"))
+        return `"${s.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`
+    return `'${s.replace(/\\/g, '\\\\')}'`
 }

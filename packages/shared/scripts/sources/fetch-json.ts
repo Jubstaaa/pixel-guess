@@ -2,33 +2,7 @@ import pRetry, { AbortError, type Options } from 'p-retry'
 import { z } from 'zod'
 
 const SECRET_PARAMS = ['api_key']
-const DEFAULT_RETRY = { retries: 3, minTimeout: 2000 }
-
-// Request URLs end up in retry warnings and error messages, and TMDB only
-// accepts its v3 key as a query parameter.
-export function redactUrl(url: URL): string {
-    const safe = new URL(url)
-    for (const param of SECRET_PARAMS) {
-        if (safe.searchParams.has(param))
-            safe.searchParams.set(param, 'REDACTED')
-    }
-    return safe.toString()
-}
-
-// p-retry only retries a TypeError it recognises as a network error, and it
-// does not recognise Bun's messages (ECONNREFUSED, ENOTFOUND), so they would
-// fail on the first attempt with no URL attached.
-export async function fetchOrNetworkError(
-    url: URL,
-    label: string,
-    init?: RequestInit
-): Promise<Response> {
-    try {
-        return await fetch(url, init)
-    } catch (cause) {
-        throw new Error(`Network error: ${label}`, { cause })
-    }
-}
+const DEFAULT_RETRY = { minTimeout: 2000, retries: 3 }
 
 export async function fetchJson<Schema extends z.ZodType>(
     url: URL,
@@ -55,10 +29,32 @@ export async function fetchJson<Schema extends z.ZodType>(
         {
             ...retry,
             factor: 2,
-            onFailedAttempt: ({ attemptNumber, error }) =>
+            onFailedAttempt: ({ attemptNumber, error }) => {
                 console.warn(
                     `  ↻ attempt ${attemptNumber} failed: ${error.message}`
-                ),
+                )
+            },
         }
     )
+}
+
+export async function fetchOrNetworkError(
+    url: URL,
+    label: string,
+    init?: RequestInit
+): Promise<Response> {
+    try {
+        return await fetch(url, init)
+    } catch (cause) {
+        throw new Error(`Network error: ${label}`, { cause })
+    }
+}
+
+export function redactUrl(url: URL): string {
+    const safe = new URL(url)
+    for (const param of SECRET_PARAMS) {
+        if (safe.searchParams.has(param))
+            safe.searchParams.set(param, 'REDACTED')
+    }
+    return safe.toString()
 }
