@@ -7,20 +7,6 @@
     "packageRules": [
         {
             "matchPackageNames": [
-                "vite",
-                "@vitejs/**"
-            ],
-            "groupName": "vite"
-        },
-        {
-            "matchPackageNames": [
-                "typescript-eslint",
-                "@typescript-eslint/**"
-            ],
-            "groupName": "typescript-eslint"
-        },
-        {
-            "matchPackageNames": [
                 "expo",
                 "expo-*",
                 "@expo/**",
@@ -30,16 +16,6 @@
                 "@shopify/react-native-skia"
             ],
             "groupName": "expo"
-        },
-        {
-            "matchPackageNames": [
-                "typescript",
-                "@typescript/typescript6"
-            ],
-            "matchUpdateTypes": [
-                "major"
-            ],
-            "enabled": false
         },
         {
             "matchPackageNames": [
