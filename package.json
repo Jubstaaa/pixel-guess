@@ -1,5 +1,10 @@
 {
     "name": "pixel-guess",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Jubstaaa/pixel-guess.git"
+    },
     "private": true,
     "type": "module",
     "workspaces": [
@@ -15,7 +20,7 @@
         "lint": "turbo run lint",
         "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
         "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
-        "type-check": "turbo run type-check",
+        "typecheck": "turbo run type-check",
         "test": "turbo run test",
         "audit": "bun audit --audit-level=high",
         "depcruise": "depcruise apps/web/src packages/shared/src packages/shared/scripts --ts-config apps/web/tsconfig.json && depcruise apps/mobile --ts-config apps/mobile/tsconfig.json",

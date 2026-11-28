@@ -1,7 +1,5 @@
 name: Deploy web
 
-# Only the web app is deployed from here. The mobile app ships through EAS, and
-# the game images are published separately with `bun run sync:images`.
 on:
     push:
         branches: [main]
@@ -19,19 +17,13 @@ on:
 permissions:
     contents: read
 
-# Never cancel a release halfway through the upload.
 concurrency:
     group: deploy-web
     cancel-in-progress: false
 
-# No CI re-run here: the protect-main ruleset requires the `check` job to pass
-# on a branch that is up to date with main, so what lands is what was tested.
 jobs:
     deploy:
-        # Deploy secrets live in this environment, which only accepts main,
-        # so a workflow on another branch cannot read them.
         environment: Production
-        # A manual dispatch can name any ref; only main has passed the check.
         if: github.ref == 'refs/heads/main'
         runs-on: ubuntu-latest
         timeout-minutes: 15
@@ -50,8 +42,6 @@ jobs:
                   user: ${{ secrets.DO_USER }}
                   key: ${{ secrets.DO_SSH_KEY }}
                   known-hosts: ${{ secrets.DO_KNOWN_HOSTS }}
-            # Atomic release: the site switches to the new build in one rename, and
-            # goes back to the previous one if it does not answer.
             - uses: Jubstaaa/deploy-actions/static@1d9b582d7547aa6f02352b655c0721dd5a88071f # v1.3.0
               with:
                   source-dir: apps/web/dist

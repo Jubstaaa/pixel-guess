@@ -41,7 +41,7 @@ A fun, image-guessing game built with **React (Web)** and **React Native (Expo)*
 ```bash
 bun run format:check
 bun run lint
-bun run type-check
+bun run typecheck
 bun run test     # bun test in packages/shared, Vitest in apps/web
 bun run build --filter=@pixel-guess/web
 ```
@@ -92,3 +92,7 @@ bunx expo export --platform ios --platform android --platform web
 ```
 
 Then read that SDK's changelog for breaking changes. The workspace installs with Bun's hoisted linker (`bunfig.toml`): the isolated linker installs the Expo packages that peer on each other more than once, and expo-doctor rejects duplicate native modules.
+
+## License
+
+MIT

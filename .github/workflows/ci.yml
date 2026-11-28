@@ -21,17 +21,12 @@ jobs:
             - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
               with:
                   bun-version-file: package.json
-            # Installs the mobile workspace too, which is heavier than this job
-            # needs, but --frozen-lockfile is what keeps the lockfile honest.
             - run: bun install --frozen-lockfile
             - run: bun run format:check
             - run: bun run lint
-            - run: bun run type-check
+            - run: bun run typecheck
             - run: bun run test
             - run: bun run audit
-            # Unused files, exports and dependencies (knip.json), copy-paste
-            # (.jscpd.json) and the module graph (.dependency-cruiser.cjs):
-            # each fails the job instead of drifting back unnoticed.
             - run: bun run knip
             - run: bun run jscpd
             - run: bun run depcruise
@@ -44,21 +39,15 @@ jobs:
                   severity: HIGH,CRITICAL
                   ignore-unfixed: true
                   exit-code: '1'
-            # Dependabot cannot know which versions an Expo SDK is tested with; this
-            # fails any update that moves an SDK-pinned package off them.
             - name: Expo SDK versions
               working-directory: apps/mobile
               run: bunx expo install --check
             - run: bun run build --filter=@pixel-guess/web
-            # If the CDN base URL ever falls out of the bundle, every game image
-            # 404s while the build still looks perfectly healthy.
             - name: Sanity-check the web build
               run: |
                   test -s apps/web/dist/index.html
                   test "$(find apps/web/dist -type f | wc -l)" -ge 10
                   grep -rq 'pixelguess.fra1.cdn.digitaloceanspaces.com' apps/web/dist/assets/
-                  # The character lists belong to the game chunk; in the entry
-                  # chunk they delay the first paint of every page.
                   entry=$(find apps/web/dist/assets -name 'index-*.js')
                   test -n "$entry"
                   if grep -q 'Afghanistan' "$entry"; then
