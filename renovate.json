@@ -1,0 +1,68 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "github>Jubstaaa/configs",
+        "github>Jubstaaa/configs:cooldown"
+    ],
+    "packageRules": [
+        {
+            "matchPackageNames": [
+                "vite",
+                "@vitejs/**"
+            ],
+            "groupName": "vite"
+        },
+        {
+            "matchPackageNames": [
+                "typescript-eslint",
+                "@typescript-eslint/**"
+            ],
+            "groupName": "typescript-eslint"
+        },
+        {
+            "matchPackageNames": [
+                "expo",
+                "expo-*",
+                "@expo/**",
+                "babel-preset-expo",
+                "react-native",
+                "react-native-*",
+                "@shopify/react-native-skia"
+            ],
+            "groupName": "expo"
+        },
+        {
+            "matchPackageNames": [
+                "typescript",
+                "@typescript/typescript6"
+            ],
+            "matchUpdateTypes": [
+                "major"
+            ],
+            "enabled": false
+        },
+        {
+            "matchPackageNames": [
+                "react",
+                "react-dom",
+                "react-native",
+                "react-native-reanimated",
+                "react-native-worklets",
+                "react-native-svg",
+                "@shopify/react-native-skia"
+            ],
+            "enabled": false
+        },
+        {
+            "matchPackageNames": [
+                "react-native-safe-area-context",
+                "react-native-screens"
+            ],
+            "matchUpdateTypes": [
+                "major",
+                "minor"
+            ],
+            "enabled": false
+        }
+    ]
+}
