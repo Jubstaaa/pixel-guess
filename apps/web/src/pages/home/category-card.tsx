@@ -1,7 +1,7 @@
-import { Link } from 'react-router'
+import type { Category } from '@pixel-guess/shared'
 
 import { getImageUrl } from '@pixel-guess/shared'
-import type { Category } from '@pixel-guess/shared'
+import { Link } from 'react-router'
 
 interface CategoryCardProps {
     item: Category
@@ -15,8 +15,8 @@ export const CategoryCard = ({ item }: CategoryCardProps) => (
                     alt=""
                     className="h-11 w-11 rounded-lg object-contain"
                     height={44}
-                    width={44}
                     src={getImageUrl(item.icon)}
+                    width={44}
                 />
             </div>
             <div className="flex flex-1 flex-col gap-2.5">
@@ -26,14 +26,12 @@ export const CategoryCard = ({ item }: CategoryCardProps) => (
                 <div className="flex gap-2">
                     <Link
                         className="rounded-lg border border-success/25 bg-success/10 px-4 py-1.5 text-[12px] font-semibold text-success transition-opacity hover:opacity-80"
-                        to={`/${item.slug}/easy`}
-                    >
+                        to={`/${item.slug}/easy`}>
                         Easy
                     </Link>
                     <Link
                         className="rounded-lg border border-warning/25 bg-warning/10 px-4 py-1.5 text-[12px] font-semibold text-warning transition-opacity hover:opacity-80"
-                        to={`/${item.slug}/hard`}
-                    >
+                        to={`/${item.slug}/hard`}>
                         Hard
                     </Link>
                 </div>

@@ -1,9 +1,8 @@
-import { useCallback, useEffect, useId, useRef, useState } from 'react'
-
-import { Search } from 'lucide-react'
+import type { Character } from '@pixel-guess/shared'
 
 import { filterCharacters, getImageUrl } from '@pixel-guess/shared'
-import type { Character } from '@pixel-guess/shared'
+import { Search } from 'lucide-react'
+import { useCallback, useEffect, useId, useRef, useState } from 'react'
 
 interface CharacterSearchProps {
     characters: Character[]
@@ -34,10 +33,6 @@ export const CharacterSearch = ({
     )
     const isExpanded = isOpen && !disabled && filteredCharacters.length > 0
 
-    useEffect(() => {
-        setSelectedIndex(0)
-    }, [input])
-
     const handleSelect = useCallback(
         (index: number) => {
             const item = filteredCharacters[index]
@@ -55,13 +50,13 @@ export const CharacterSearch = ({
             switch (e.key) {
                 case 'ArrowDown':
                     e.preventDefault()
-                    setSelectedIndex((prev) =>
+                    setSelectedIndex(prev =>
                         Math.min(prev + 1, filteredCharacters.length - 1)
                     )
                     break
                 case 'ArrowUp':
                     e.preventDefault()
-                    setSelectedIndex((prev) => Math.max(prev - 1, 0))
+                    setSelectedIndex(prev => Math.max(prev - 1, 0))
                     break
                 case 'Enter':
                     e.preventDefault()
@@ -85,11 +80,13 @@ export const CharacterSearch = ({
             }
         }
         document.addEventListener('mousedown', onClickOutside)
-        return () => document.removeEventListener('mousedown', onClickOutside)
+        return () => {
+            document.removeEventListener('mousedown', onClickOutside)
+        }
     }, [])
 
     return (
-        <div ref={containerRef} className="relative w-full">
+        <div className="relative w-full" ref={containerRef}>
             <label className="sr-only" htmlFor={inputId}>
                 Guess the character
             </label>
@@ -108,16 +105,19 @@ export const CharacterSearch = ({
                     className="h-14 w-full rounded-2xl border border-border bg-surface pl-12 pr-4 text-[16px] text-foreground placeholder-muted focus:border-primary/50 focus:ring-4 focus:ring-primary/10 transition-all outline-none disabled:opacity-50"
                     disabled={disabled}
                     id={inputId}
+                    onChange={e => {
+                        setInput(e.target.value)
+                        setSelectedIndex(0)
+                        setIsOpen(true)
+                    }}
+                    onFocus={() => {
+                        setIsOpen(true)
+                    }}
+                    onKeyDown={handleKeyDown}
                     placeholder="Search character..."
                     role="combobox"
                     type="text"
                     value={input}
-                    onChange={(e) => {
-                        setInput(e.target.value)
-                        setIsOpen(true)
-                    }}
-                    onFocus={() => setIsOpen(true)}
-                    onKeyDown={handleKeyDown}
                 />
             </div>
 
@@ -126,15 +126,10 @@ export const CharacterSearch = ({
                     aria-labelledby={inputId}
                     className="absolute top-full left-0 right-0 z-50 mt-2 overflow-hidden rounded-2xl border border-border bg-surface/95 p-1.5 backdrop-blur-xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)]"
                     id={listboxId}
-                    role="listbox"
-                >
+                    role="listbox">
                     {filteredCharacters.map(({ character, index }, i) => (
-                        // Keyboard users pick options from the combobox input
-                        // (arrow keys + Enter via aria-activedescendant), so
-                        // the option itself needs only the pointer handler.
                         // eslint-disable-next-line jsx-a11y/click-events-have-key-events
                         <li
-                            key={index}
                             aria-selected={i === selectedIndex}
                             className={`flex w-full cursor-pointer items-center gap-3 rounded-xl px-3 py-3 transition-colors ${
                                 i === selectedIndex
@@ -142,13 +137,18 @@ export const CharacterSearch = ({
                                     : 'text-foreground hover:bg-surface-hover'
                             }`}
                             id={optionId(i)}
-                            role="option"
-                            onMouseEnter={() => setSelectedIndex(i)}
-                            // Keep focus in the input so the list stays a
-                            // combobox popup rather than a focus trap.
-                            onMouseDown={(e) => e.preventDefault()}
-                            onClick={() => handleSelect(i)}
-                        >
+                            key={index}
+                            onClick={() => {
+                                handleSelect(i)
+                            }}
+
+                            onMouseDown={e => {
+                                e.preventDefault()
+                            }}
+                            onMouseEnter={() => {
+                                setSelectedIndex(i)
+                            }}
+                            role="option">
                             <div className="flex h-10 w-10 shrink-0 overflow-hidden rounded-lg border border-border/50 bg-background">
                                 <img
                                     alt=""

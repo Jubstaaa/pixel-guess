@@ -1,9 +1,6 @@
-import React from 'react'
-
+import { charactersByCategory } from '@pixel-guess/shared'
 import { useLocalSearchParams } from 'expo-router'
 import { Text, View } from 'react-native'
-
-import { charactersByCategory } from '@pixel-guess/shared'
 
 import { Game } from '../game/game'
 

@@ -14,8 +14,8 @@
         "generate:fresh": "bun run scripts/generate-characters.ts --fresh",
         "generate:theme": "bun run scripts/generate-theme-css.ts",
         "sync:images": "bun run scripts/sync-images.ts",
-        "type-check": "tsc --noEmit && tsc -p tsconfig.scripts.json",
-        "lint": "eslint src scripts",
+        "type-check": "tsc --noEmit",
+        "lint": "eslint .",
         "test": "bun test"
     },
     "devDependencies": {

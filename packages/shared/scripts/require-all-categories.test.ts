@@ -1,18 +1,19 @@
 import { describe, expect, test } from 'bun:test'
 
-import { requireAllCategories } from './require-all-categories'
 import type { CategoryResult } from './sources/category'
+
+import { requireAllCategories } from './require-all-categories'
 
 function category(slug: string): CategoryResult {
     return {
-        meta: {
-            slug,
-            name: slug,
-            exportName: `${slug}Characters`,
-            imageType: 'poster',
-            iconUrl: `https://example.com/${slug}.png`,
-        },
         characters: [{ name: 'A', remoteUrl: 'https://example.com/a.png' }],
+        meta: {
+            exportName: `${slug}Characters`,
+            iconUrl: `https://example.com/${slug}.png`,
+            imageType: 'poster',
+            name: slug,
+            slug,
+        },
     }
 }
 

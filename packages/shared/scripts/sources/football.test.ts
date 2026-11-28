@@ -7,14 +7,14 @@ describe('toFootballCharacters', () => {
         const premierLeague = footballTeamsSchema.parse({
             count: 2,
             teams: [
-                { id: 57, name: 'Arsenal FC', crest: 'https://crests/57.png' },
-                { id: 1, name: 'No Crest FC', crest: null },
+                { crest: 'https://crests/57.png', id: 57, name: 'Arsenal FC' },
+                { crest: null, id: 1, name: 'No Crest FC' },
             ],
         })
         const cup = footballTeamsSchema.parse({
             teams: [
-                { id: 57, name: 'Arsenal FC', crest: 'https://crests/57.png' },
-                { id: 5, name: 'Bayern', crest: 'https://crests/5.png' },
+                { crest: 'https://crests/57.png', id: 57, name: 'Arsenal FC' },
+                { crest: 'https://crests/5.png', id: 5, name: 'Bayern' },
             ],
         })
 

@@ -7,7 +7,7 @@ const DDRAGON = 'https://ddragon.leagueoflegends.com'
 
 const versionsSchema = z.array(z.string()).nonempty()
 const championsSchema = z.object({
-    data: z.record(z.string(), z.object({ name: z.string(), id: z.string() })),
+    data: z.record(z.string(), z.object({ id: z.string(), name: z.string() })),
 })
 
 export async function fetchLeagueOfLegends(): Promise<CategoryResult> {
@@ -21,7 +21,7 @@ export async function fetchLeagueOfLegends(): Promise<CategoryResult> {
     )
 
     const characters = Object.values(data)
-        .map(({ name, id }) => ({
+        .map(({ id, name }) => ({
             name,
             remoteUrl: `${DDRAGON}/cdn/${version}/img/champion/${id}.png`,
         }))
@@ -29,14 +29,14 @@ export async function fetchLeagueOfLegends(): Promise<CategoryResult> {
 
     console.log(`LoL: ${characters.length} champions (v${version})`)
     return {
+        characters,
         meta: {
-            slug: 'league-of-legends',
-            name: 'League of Legends',
             exportName: 'leagueOfLegendsCharacters',
-            imageType: 'character',
             iconUrl:
                 'https://images.weserv.nl/?url=vignette.wikia.nocookie.net/leagueoflegends/images/1/12/League_of_Legends_Icon.png',
+            imageType: 'character',
+            name: 'League of Legends',
+            slug: 'league-of-legends',
         },
-        characters,
     }
 }

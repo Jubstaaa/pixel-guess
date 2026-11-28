@@ -6,27 +6,25 @@ import {
 } from './data-modules'
 
 const movies = {
+    characterCount: 3,
     meta: {
         exportName: 'movieCharacters',
         imageType: 'poster' as const,
         name: 'Movies',
         slug: 'movies',
     },
-    characterCount: 3,
 }
 const tvShows = {
+    characterCount: 2,
     meta: {
         exportName: 'tvShowCharacters',
         imageType: 'poster' as const,
         name: 'TV Shows',
         slug: 'tv-shows',
     },
-    characterCount: 2,
 }
 
 describe('renderCategoriesModule', () => {
-    // The home page imports the category list; if it imported the character
-    // arrays to count them, every character would ship in the entry bundle.
     test('writes the counts as literals and imports no character data', () => {
         const source = renderCategoriesModule([movies, tvShows])
         expect(source).toContain('characterCount: 3,')

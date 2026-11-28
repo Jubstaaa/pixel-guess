@@ -1,5 +1,6 @@
-import React, { useMemo } from 'react'
+import type { ImageType } from '@pixel-guess/shared'
 
+import { COLORS } from '@pixel-guess/shared'
 import {
     Canvas,
     ColorMatrix,
@@ -7,10 +8,8 @@ import {
     RuntimeShader,
     useImage,
 } from '@shopify/react-native-skia'
+import { useMemo } from 'react'
 import { ActivityIndicator, View } from 'react-native'
-
-import { COLORS } from '@pixel-guess/shared'
-import type { ImageType } from '@pixel-guess/shared'
 
 import { useCachedImageUri } from './use-cached-image'
 import {
@@ -21,29 +20,29 @@ import {
 
 interface PixelatedImageProps {
     count: number
+    imageType?: ImageType | undefined
     imageUrl: string
     levelType: number
-    imageType?: ImageType
     size?: number
 }
 
 export const PixelatedImage = ({
-    imageUrl,
     count,
-    levelType,
     imageType = 'character',
+    imageUrl,
+    levelType,
     size = 320,
 }: PixelatedImageProps) => {
     const source = useCachedImageUri(imageUrl)
     const image = useImage(source)
     const shader = usePixelateShader()
 
-    const { canvasWidth, canvasHeight } = useMemo(() => {
-        if (!image) return { canvasWidth: size, canvasHeight: size }
+    const { canvasHeight, canvasWidth } = useMemo(() => {
+        if (!image) return { canvasHeight: size, canvasWidth: size }
         const aspect = image.width() / image.height()
         const w = aspect >= 1 ? size : Math.round(size * aspect)
         const h = aspect >= 1 ? Math.round(size / aspect) : size
-        return { canvasWidth: w, canvasHeight: h }
+        return { canvasHeight: h, canvasWidth: w }
     }, [image, size])
 
     const pixelSize = useMemo(
@@ -63,14 +62,13 @@ export const PixelatedImage = ({
         return (
             <View
                 style={{
-                    height: size,
-                    width: size,
                     alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: 12,
                     backgroundColor: COLORS.surface,
-                }}
-            >
+                    borderRadius: 12,
+                    height: size,
+                    justifyContent: 'center',
+                    width: size,
+                }}>
                 <ActivityIndicator color={COLORS.primary} size="large" />
             </View>
         )
@@ -84,16 +82,15 @@ export const PixelatedImage = ({
                 image={image}
                 width={canvasWidth}
                 x={0}
-                y={0}
-            >
+                y={0}>
                 {isFullyRevealed && levelType === 1 ? (
                     <ColorMatrix matrix={GRAYSCALE_MATRIX} />
                 ) : !isFullyRevealed ? (
                     <RuntimeShader
                         source={shader}
                         uniforms={{
-                            pixelSize,
                             grayscale: levelType === 1 ? 1.0 : 0.0,
+                            pixelSize,
                         }}
                     />
                 ) : null}

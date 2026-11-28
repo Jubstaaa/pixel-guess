@@ -1,22 +1,21 @@
-import React, { useMemo } from 'react'
-
+import { categories, COLORS } from '@pixel-guess/shared'
 import { Slot, useLocalSearchParams } from 'expo-router'
+import { useMemo } from 'react'
 import { ActivityIndicator, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 import { Header } from '@/components/header/header'
-import { categories, COLORS } from '@pixel-guess/shared'
 
 const CategoryLayout = () => {
     const { categorySlug } = useLocalSearchParams<{ categorySlug: string }>()
 
     const category = useMemo(
-        () => categories.find((c) => c.slug === categorySlug) ?? null,
+        () => categories.find(c => c.slug === categorySlug) ?? null,
         [categorySlug]
     )
 
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: '#000000' }}>
+        <SafeAreaView style={{ backgroundColor: '#000000', flex: 1 }}>
             <View className="flex-1 gap-3 px-3 pt-2">
                 {category ? (
                     <Header category={category} />

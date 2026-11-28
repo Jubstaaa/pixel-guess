@@ -5,9 +5,6 @@ export interface CategoryOutcome {
     result: CategoryResult | null
 }
 
-// The generator rewrites src/data from scratch, so a category missing or empty
-// here would silently disappear from both apps. Any failure aborts the run before
-// anything on disk is touched.
 export function requireAllCategories(
     outcomes: CategoryOutcome[]
 ): CategoryResult[] {
@@ -23,5 +20,5 @@ export function requireAllCategories(
         )
     }
 
-    return outcomes.flatMap((o) => (o.result ? [o.result] : []))
+    return outcomes.flatMap(o => (o.result ? [o.result] : []))
 }

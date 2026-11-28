@@ -7,7 +7,7 @@ const avatarsSchema = z.object({
     data: z.object({
         items: z.record(
             z.string(),
-            z.object({ name: z.string(), icon: z.string() })
+            z.object({ icon: z.string(), name: z.string() })
         ),
     }),
 })
@@ -19,7 +19,7 @@ export async function fetchGenshinImpact(): Promise<CategoryResult> {
     )
 
     const characters = Object.values(data.items)
-        .map(({ name, icon }) => ({
+        .map(({ icon, name }) => ({
             name,
             remoteUrl: `https://gi.yatta.moe/assets/UI/${icon}.png`,
         }))
@@ -27,14 +27,14 @@ export async function fetchGenshinImpact(): Promise<CategoryResult> {
 
     console.log(`Genshin Impact: ${characters.length} characters`)
     return {
+        characters,
         meta: {
-            slug: 'genshin-impact',
-            name: 'Genshin Impact',
             exportName: 'genshinCharacters',
-            imageType: 'character',
             iconUrl:
                 'https://images.weserv.nl/?url=logos-world.net/wp-content/uploads/2024/01/Genshin-Impact-Logo.png',
+            imageType: 'character',
+            name: 'Genshin Impact',
+            slug: 'genshin-impact',
         },
-        characters,
     }
 }

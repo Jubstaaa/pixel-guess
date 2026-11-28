@@ -1,9 +1,8 @@
-import { useMemo } from 'react'
-
-import { Skia } from '@shopify/react-native-skia'
+import type { ImageType } from '@pixel-guess/shared'
 
 import { computeBlockSize as sharedComputeBlockSize } from '@pixel-guess/shared'
-import type { ImageType } from '@pixel-guess/shared'
+import { Skia } from '@shopify/react-native-skia'
+import { useMemo } from 'react'
 
 const PIXELATE_SHADER_SRC = `
   uniform shader image;
@@ -29,7 +28,7 @@ export const GRAYSCALE_MATRIX = [
 export const computeBlockSize = (
     count: number,
     levelType: number,
-    size: number = 400,
+    size = 400,
     imageType: ImageType = 'character'
 ): number =>
     sharedComputeBlockSize(

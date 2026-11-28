@@ -1,11 +1,9 @@
 import '../global.css'
 
-import React, { Fragment, useEffect } from 'react'
-
+import { COLORS } from '@pixel-guess/shared'
 import { Stack } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
-
-import { COLORS } from '@pixel-guess/shared'
+import { Fragment, useEffect } from 'react'
 
 import { initializeAds } from '@/lib/ads'
 

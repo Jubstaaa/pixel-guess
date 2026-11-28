@@ -1,7 +1,9 @@
-import { Fragment, useCallback, useEffect, useRef, useState } from 'react'
-
-import { ChevronLeft, SkipForward } from 'lucide-react'
-import { Link, Navigate, useParams } from 'react-router'
+import type {
+    Category,
+    Character,
+    Difficulty,
+    GameState,
+} from '@pixel-guess/shared'
 
 import {
     advanceToNextCharacter,
@@ -14,24 +16,17 @@ import {
     getSkipState,
     MAX_COUNT,
 } from '@pixel-guess/shared'
-import type {
-    Category,
-    Character,
-    Difficulty,
-    GameState,
-} from '@pixel-guess/shared'
+import { ChevronLeft, SkipForward } from 'lucide-react'
+import { Fragment, useCallback, useEffect, useRef, useState } from 'react'
+import { Link, Navigate, useParams } from 'react-router'
 
-import { AdSlot } from '../../ads/ad-slot'
 import { adPlacements } from '../../ads/ad-placements'
+import { AdSlot } from '../../ads/ad-slot'
 import { useMediaQuery } from '../../ads/use-media-query'
-
 import { CharacterSearch } from './character-search'
 import { triggerConfetti } from './confetti'
 import { PixelatedCanvas } from './pixelated-canvas'
 
-// Each gutter beside the 448px game column is (viewport - 448) / 2 wide. From
-// 1280px that is 416px: a 160px ad centred in it keeps 128px clear on both
-// sides. Narrower screens get the banner instead.
 const SIDEBAR_ADS_QUERY = '(min-width: 1280px)'
 
 interface GameContentProps {
@@ -46,7 +41,7 @@ export const GamePage = () => {
         difficulty: string
     }>()
 
-    const category = categories.find((c) => c.slug === categorySlug)
+    const category = categories.find(c => c.slug === categorySlug)
     const characters = categorySlug
         ? charactersByCategory[categorySlug]
         : undefined
@@ -97,7 +92,7 @@ const GameContent = ({
     const handleSelect = useCallback(
         (character: Character, index: number) => {
             if (!state.currentCharacter || isRevealed) return
-            setGuessedIndices((prev) => [...prev, index])
+            setGuessedIndices(prev => [...prev, index])
 
             const isCorrect = checkGuess(
                 character.name,
@@ -154,18 +149,14 @@ const GameContent = ({
                 name="description"
             />
 
-            {/* The sidebars are out of the flow, so the game is laid out exactly
-                as without them; the minimum height keeps them off the footer.
-                Both come after the game in the DOM so keyboard and screen
-                reader users reach the game before any ad. */}
+            {}
             <div className={hasSidebarAds ? 'relative min-h-168' : undefined}>
                 <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 pt-4 pb-8">
                     <div className="flex w-full items-center gap-3 rounded-2xl border border-border bg-surface px-3 py-3">
                         <Link
-                            className="rounded-xl border border-border bg-surface-hover p-2 transition-opacity hover:opacity-80"
                             aria-label="Back to categories"
-                            to="/"
-                        >
+                            className="rounded-xl border border-border bg-surface-hover p-2 transition-opacity hover:opacity-80"
+                            to="/">
                             <ChevronLeft
                                 aria-hidden="true"
                                 className="h-[18px] w-[18px] text-foreground"
@@ -175,8 +166,8 @@ const GameContent = ({
                             alt=""
                             className="h-[22px] w-[22px] rounded-lg object-contain"
                             height={22}
-                            width={22}
                             src={getImageUrl(category.icon)}
+                            width={22}
                         />
                         <span className="flex-1 truncate text-[14px] font-semibold text-foreground">
                             {category.name}
@@ -193,9 +184,8 @@ const GameContent = ({
                         <button
                             className="absolute right-2 top-2 flex items-center gap-1.5 rounded-xl border border-border/50 bg-background/80 px-3 py-1.5 text-xs font-medium text-muted backdrop-blur-sm transition-opacity hover:opacity-80 disabled:opacity-50"
                             disabled={isRevealed}
-                            type="button"
                             onClick={handleSkip}
-                        >
+                            type="button">
                             <SkipForward
                                 aria-hidden="true"
                                 className="h-3.5 w-3.5"

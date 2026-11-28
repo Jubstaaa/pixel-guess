@@ -1,20 +1,26 @@
 import { existsSync, mkdirSync, rmSync, writeFileSync } from 'fs'
-import { join } from 'path'
-
 import PQueue from 'p-queue'
 import pRetry, { AbortError } from 'p-retry'
+import { join } from 'path'
 import sharp from 'sharp'
 
+import type { CategoryModuleEntry } from './data-modules'
+import type { CategoryResult } from './sources/category'
+
 import { orderCategories } from './category-order'
+import {
+    renderCategoriesModule,
+    renderCharactersByCategoryModule,
+    serializeCharacters,
+} from './data-modules'
 import {
     type CategoryOutcome,
     requireAllCategories,
 } from './require-all-categories'
-import type { CategoryResult, CharacterEntry } from './sources/category'
 import { fetchBrands } from './sources/brands'
 import { fetchDota2 } from './sources/dota-2'
-import { fetchOrNetworkError } from './sources/fetch-json'
 import { fetchDragonBall } from './sources/dragon-ball'
+import { fetchOrNetworkError } from './sources/fetch-json'
 import { fetchFlags } from './sources/flags'
 import { fetchFootball } from './sources/football'
 import { fetchGenshinImpact } from './sources/genshin-impact'
@@ -33,52 +39,21 @@ import {
 } from './sources/tmdb'
 import { fetchValorant } from './sources/valorant'
 import { toFileName } from './to-file-name'
-import {
-    renderCategoriesModule,
-    renderCharactersByCategoryModule,
-    serializeCharacters,
-} from './data-modules'
-import type { CategoryModuleEntry } from './data-modules'
 
 const OUT_DIR = join(import.meta.dir, '../src/data/characters')
-// Local working directory only — gitignored. The images this writes are published
-// to the CDN by scripts/sync-images.ts; neither app reads them off disk.
+
 const IMAGES_DIR = join(import.meta.dir, '../assets/images')
 const FRESH = process.argv.includes('--fresh')
 
 const MAX_IMAGE_SIZE = 400
 const IMAGE_QUALITY = 80
-// Jikan allows three requests per second; one category at a time with a pause
-// keeps the eight anime categories under it.
+
 const JIKAN_DELAY_MS = 1000
 
 interface DownloadTask {
-    url: string
-    outPath: string
     localKey: string
-}
-
-async function fetchCategory(
-    label: string,
-    fn: () => Promise<CategoryResult>
-): Promise<CategoryOutcome> {
-    try {
-        const result = await pRetry(fn, {
-            retries: 2,
-            minTimeout: 3000,
-            factor: 2,
-            onFailedAttempt: ({ attemptNumber, error }) =>
-                console.warn(
-                    `  ↻ ${label} attempt ${attemptNumber} failed: ${error.message}`
-                ),
-        })
-        return { label, result }
-    } catch (e) {
-        console.error(
-            `✗ ${label} failed: ${e instanceof Error ? e.message : String(e)}`
-        )
-        return { label, result: null }
-    }
+    outPath: string
+    url: string
 }
 
 async function downloadBatch(tasks: DownloadTask[]): Promise<DownloadTask[]> {
@@ -86,7 +61,7 @@ async function downloadBatch(tasks: DownloadTask[]): Promise<DownloadTask[]> {
     let completed = 0
     const queue = new PQueue({ concurrency: 30 })
 
-    const jobs = tasks.map((task) =>
+    const jobs = tasks.map(task =>
         queue.add(async () => {
             try {
                 await pRetry(
@@ -112,7 +87,7 @@ async function downloadBatch(tasks: DownloadTask[]): Promise<DownloadTask[]> {
                             .webp({ quality: IMAGE_QUALITY })
                             .toFile(task.outPath)
                     },
-                    { retries: 3, minTimeout: 1000, factor: 2 }
+                    { factor: 2, minTimeout: 1000, retries: 3 }
                 )
             } catch {
                 failed.push(task)
@@ -127,6 +102,30 @@ async function downloadBatch(tasks: DownloadTask[]): Promise<DownloadTask[]> {
     await Promise.all(jobs)
     console.log('')
     return failed
+}
+
+async function fetchCategory(
+    label: string,
+    fn: () => Promise<CategoryResult>
+): Promise<CategoryOutcome> {
+    try {
+        const result = await pRetry(fn, {
+            factor: 2,
+            minTimeout: 3000,
+            onFailedAttempt: ({ attemptNumber, error }) => {
+                console.warn(
+                    `  ↻ ${label} attempt ${attemptNumber} failed: ${error.message}`
+                )
+            },
+            retries: 2,
+        })
+        return { label, result }
+    } catch (e) {
+        console.error(
+            `✗ ${label} failed: ${e instanceof Error ? e.message : String(e)}`
+        )
+        return { label, result: null }
+    }
 }
 
 const MAX_RETRY_ROUNDS = 3
@@ -152,40 +151,8 @@ async function downloadAll(tasks: DownloadTask[]): Promise<Set<string>> {
         for (const t of remaining) console.warn(`  - ${t.localKey} (${t.url})`)
     }
 
-    return new Set(remaining.map((t) => t.localKey))
+    return new Set(remaining.map(t => t.localKey))
 }
-
-// ━━━ OUTPUT GENERATORS ━━━
-
-function writeCategoryModules(entries: CategoryModuleEntry[]) {
-    const dataDir = join(import.meta.dir, '../src/data')
-    writeFileSync(
-        join(dataDir, 'categories.ts'),
-        renderCategoriesModule(entries)
-    )
-    writeFileSync(
-        join(dataDir, 'characters-by-category.ts'),
-        renderCharactersByCategoryModule(entries)
-    )
-    console.log(
-        'Written: src/data/categories.ts, src/data/characters-by-category.ts'
-    )
-}
-
-function writeCharactersIndex(results: CategoryResult[]) {
-    const sorted = [...results].sort((a, b) =>
-        a.meta.slug.localeCompare(b.meta.slug)
-    )
-    const exports = sorted
-        .map((r) => `export { ${r.meta.exportName} } from './${r.meta.slug}'`)
-        .join('\n')
-
-    const content = `// Auto-generated by scripts/generate-characters.ts — do not edit manually\n${exports}\n`
-    writeFileSync(join(OUT_DIR, 'index.ts'), content)
-    console.log('Written: src/data/characters/index.ts')
-}
-
-// ━━━ MAIN ━━━
 
 async function main() {
     const tmdbApiKey = process.env.TMDB_API_KEY
@@ -232,7 +199,6 @@ async function main() {
 
     console.log(`\n${allResults.length} categories fetched successfully`)
 
-    // ━━━ PREPARE IMAGE DOWNLOADS ━━━
     console.log('\nPreparing image downloads...')
 
     if (FRESH && existsSync(IMAGES_DIR)) rmSync(IMAGES_DIR, { recursive: true })
@@ -241,7 +207,7 @@ async function main() {
     const downloadTasks: DownloadTask[] = []
     const characterLocalKeys = new Map<
         CategoryResult,
-        Map<CharacterEntry, string>
+        { localKey: string; name: string }[]
     >()
 
     for (const result of allResults) {
@@ -249,7 +215,7 @@ async function main() {
         mkdirSync(dir, { recursive: true })
 
         const usedNames = new Map<string, number>()
-        const keyMap = new Map<CharacterEntry, string>()
+        const keyed: { localKey: string; name: string }[] = []
 
         for (const char of result.characters) {
             let fileName = toFileName(char.name)
@@ -258,35 +224,33 @@ async function main() {
             usedNames.set(toFileName(char.name), count + 1)
 
             const localKey = `${result.meta.slug}/${fileName}.webp`
-            keyMap.set(char, localKey)
+            keyed.push({ localKey, name: char.name })
 
             downloadTasks.push({
-                url: char.remoteUrl,
-                outPath: join(IMAGES_DIR, localKey),
                 localKey,
+                outPath: join(IMAGES_DIR, localKey),
+                url: char.remoteUrl,
             })
         }
 
-        characterLocalKeys.set(result, keyMap)
+        characterLocalKeys.set(result, keyed)
     }
 
-    // Category icons
     const categoriesDir = join(IMAGES_DIR, 'categories')
     mkdirSync(categoriesDir, { recursive: true })
 
     for (const result of allResults) {
         const iconKey = `categories/${result.meta.slug}.webp`
         downloadTasks.push({
-            url: result.meta.iconUrl,
-            outPath: join(IMAGES_DIR, iconKey),
             localKey: iconKey,
+            outPath: join(IMAGES_DIR, iconKey),
+            url: result.meta.iconUrl,
         })
     }
 
-    // ━━━ DOWNLOAD + OPTIMIZE ━━━
     const tasksToDownload = FRESH
         ? downloadTasks
-        : downloadTasks.filter((t) => !existsSync(t.outPath))
+        : downloadTasks.filter(t => !existsSync(t.outPath))
     const cached = downloadTasks.length - tasksToDownload.length
     console.log(
         `\nDownloading ${tasksToDownload.length} images${cached > 0 ? ` (${cached} cached)` : ''}...`
@@ -296,40 +260,59 @@ async function main() {
             ? await downloadAll(tasksToDownload)
             : new Set<string>()
 
-    // ━━━ WRITE CHARACTER DATA FILES ━━━
     console.log('\nWriting data files...')
 
-    // Wiped only now, so an interrupted download phase leaves the previous
-    // data in place instead of a categories.ts importing deleted files.
     if (existsSync(OUT_DIR)) rmSync(OUT_DIR, { recursive: true })
     mkdirSync(OUT_DIR, { recursive: true })
 
     const moduleEntries: CategoryModuleEntry[] = []
     for (const result of allResults) {
-        const keyMap = characterLocalKeys.get(result)!
-        const chars = result.characters
-            .filter((c) => !failed.has(keyMap.get(c)!))
-            .map((c) => ({
-                name: c.name,
-                localKey: keyMap.get(c)!,
-            }))
+        const chars = (characterLocalKeys.get(result) ?? []).filter(
+            c => !failed.has(c.localKey)
+        )
 
         const content = serializeCharacters(result.meta.exportName, chars)
         writeFileSync(join(OUT_DIR, `${result.meta.slug}.ts`), content)
-        moduleEntries.push({ meta: result.meta, characterCount: chars.length })
+        moduleEntries.push({ characterCount: chars.length, meta: result.meta })
     }
 
-    // ━━━ WRITE CHARACTERS INDEX ━━━
     writeCharactersIndex(allResults)
 
-    // ━━━ WRITE CATEGORY MODULES ━━━
     writeCategoryModules(moduleEntries)
 
     console.log('\nDone!')
     console.log('Run `bun run sync:images` to publish the images to the CDN.')
 }
 
-main().catch((err) => {
+function writeCategoryModules(entries: CategoryModuleEntry[]) {
+    const dataDir = join(import.meta.dir, '../src/data')
+    writeFileSync(
+        join(dataDir, 'categories.ts'),
+        renderCategoriesModule(entries)
+    )
+    writeFileSync(
+        join(dataDir, 'characters-by-category.ts'),
+        renderCharactersByCategoryModule(entries)
+    )
+    console.log(
+        'Written: src/data/categories.ts, src/data/characters-by-category.ts'
+    )
+}
+
+function writeCharactersIndex(results: CategoryResult[]) {
+    const sorted = [...results].sort((a, b) =>
+        a.meta.slug.localeCompare(b.meta.slug)
+    )
+    const exports = sorted
+        .map(r => `export { ${r.meta.exportName} } from './${r.meta.slug}'`)
+        .join('\n')
+
+    const content = `// Auto-generated by scripts/generate-characters.ts — do not edit manually\n${exports}\n`
+    writeFileSync(join(OUT_DIR, 'index.ts'), content)
+    console.log('Written: src/data/characters/index.ts')
+}
+
+main().catch((err: unknown) => {
     console.error(err)
     process.exit(1)
 })

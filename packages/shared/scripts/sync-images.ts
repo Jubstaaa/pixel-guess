@@ -1,21 +1,19 @@
-import { createHash } from 'crypto'
-import { readdirSync, readFileSync, statSync } from 'fs'
-import { join, relative } from 'path'
-
 import {
     DeleteObjectsCommand,
     ListObjectsV2Command,
     PutObjectCommand,
     S3Client,
 } from '@aws-sdk/client-s3'
+import { createHash } from 'crypto'
+import { readdirSync, readFileSync, statSync } from 'fs'
 import PQueue from 'p-queue'
+import { join, relative } from 'path'
 
 const IMAGES_DIR = join(import.meta.dir, '../assets/images')
 const REGION = 'fra1'
 const BUCKET = 'pixelguess'
 const ORIGIN = `${BUCKET}.${REGION}.digitaloceanspaces.com`
-// Matches IMAGE_CDN_BASE_URL in src/cdn/image-url.ts. Published mobile binaries request
-// this host forever, so it must not drift.
+
 const CACHE_CONTROL = 'public, max-age=2592000'
 
 const PRUNE = process.argv.includes('--prune')
@@ -29,15 +27,15 @@ if (!accessKeyId || !secretAccessKey) {
 }
 
 const s3 = new S3Client({
-    region: REGION,
-    endpoint: `https://${REGION}.digitaloceanspaces.com`,
     credentials: { accessKeyId, secretAccessKey },
+    endpoint: `https://${REGION}.digitaloceanspaces.com`,
+    region: REGION,
 })
 
 interface LocalFile {
     key: string
-    path: string
     md5: string
+    path: string
 }
 
 function collectLocalFiles(dir: string): LocalFile[] {
@@ -55,12 +53,57 @@ function collectLocalFiles(dir: string): LocalFile[] {
 
         out.push({
             key: relative(IMAGES_DIR, full),
-            path: full,
             md5: createHash('md5').update(readFileSync(full)).digest('hex'),
+            path: full,
         })
     }
 
     return out
+}
+
+async function flushCdn(paths: string[]) {
+    const token = process.env.DO_API_TOKEN
+
+    if (!token) {
+        console.log(
+            '\nDO_API_TOKEN not set — skipping CDN purge. Changed objects will' +
+                ' keep serving the old bytes for up to the endpoint TTL. Purge with:' +
+                `\n  doctl compute cdn flush <endpoint-id> --files ${paths.slice(0, 3).join(',')}`
+        )
+        return
+    }
+
+    const headers = {
+        'authorization': `Bearer ${token}`,
+        'content-type': 'application/json',
+    }
+
+    const listed = await fetch(
+        'https://api.digitalocean.com/v2/cdn/endpoints',
+        {
+            headers,
+        }
+    )
+    const { endpoints } = (await listed.json()) as {
+        endpoints: { id: string; origin: string }[]
+    }
+    const endpoint = endpoints.find(e => e.origin === ORIGIN)
+
+    if (!endpoint) {
+        console.log(`\nNo CDN endpoint found for ${ORIGIN} — skipping purge.`)
+        return
+    }
+
+    const res = await fetch(
+        `https://api.digitalocean.com/v2/cdn/endpoints/${endpoint.id}/cache`,
+        { body: JSON.stringify({ files: paths }), headers, method: 'DELETE' }
+    )
+
+    console.log(
+        res.ok
+            ? `Purged ${paths.length} path(s) from the CDN.`
+            : `CDN purge failed: ${res.status} ${await res.text()}`
+    )
 }
 
 async function listRemote(): Promise<Map<string, string>> {
@@ -77,7 +120,7 @@ async function listRemote(): Promise<Map<string, string>> {
 
         for (const obj of page.Contents ?? []) {
             if (!obj.Key) continue
-            // Single-part uploads, so the ETag is the object's md5 in quotes.
+
             remote.set(obj.Key, (obj.ETag ?? '').replaceAll('"', ''))
         }
 
@@ -85,51 +128,6 @@ async function listRemote(): Promise<Map<string, string>> {
     } while (token)
 
     return remote
-}
-
-async function flushCdn(paths: string[]) {
-    const token = process.env.DO_API_TOKEN
-
-    if (!token) {
-        console.log(
-            '\nDO_API_TOKEN not set — skipping CDN purge. Changed objects will' +
-                ' keep serving the old bytes for up to the endpoint TTL. Purge with:' +
-                `\n  doctl compute cdn flush <endpoint-id> --files ${paths.slice(0, 3).join(',')}`
-        )
-        return
-    }
-
-    const headers = {
-        authorization: `Bearer ${token}`,
-        'content-type': 'application/json',
-    }
-
-    const listed = await fetch(
-        'https://api.digitalocean.com/v2/cdn/endpoints',
-        {
-            headers,
-        }
-    )
-    const { endpoints } = (await listed.json()) as {
-        endpoints: { id: string; origin: string }[]
-    }
-    const endpoint = endpoints.find((e) => e.origin === ORIGIN)
-
-    if (!endpoint) {
-        console.log(`\nNo CDN endpoint found for ${ORIGIN} — skipping purge.`)
-        return
-    }
-
-    const res = await fetch(
-        `https://api.digitalocean.com/v2/cdn/endpoints/${endpoint.id}/cache`,
-        { method: 'DELETE', headers, body: JSON.stringify({ files: paths }) }
-    )
-
-    console.log(
-        res.ok
-            ? `Purged ${paths.length} path(s) from the CDN.`
-            : `CDN purge failed: ${res.status} ${await res.text()}`
-    )
 }
 
 async function main() {
@@ -146,9 +144,9 @@ async function main() {
     const remote = await listRemote()
     console.log(`${remote.size} objects in ${BUCKET}`)
 
-    const changed = local.filter((f) => remote.get(f.key) !== f.md5)
+    const changed = local.filter(f => remote.get(f.key) !== f.md5)
     const orphaned = [...remote.keys()].filter(
-        (key) => !local.some((f) => f.key === key)
+        key => !local.some(f => f.key === key)
     )
 
     console.log(
@@ -165,15 +163,15 @@ async function main() {
     let done = 0
 
     await queue.addAll(
-        changed.map((file) => async () => {
+        changed.map(file => async () => {
             await s3.send(
                 new PutObjectCommand({
-                    Bucket: BUCKET,
-                    Key: file.key,
-                    Body: readFileSync(file.path),
                     ACL: 'public-read',
-                    ContentType: 'image/webp',
+                    Body: readFileSync(file.path),
+                    Bucket: BUCKET,
                     CacheControl: CACHE_CONTROL,
+                    ContentType: 'image/webp',
+                    Key: file.key,
                 })
             )
 
@@ -184,8 +182,6 @@ async function main() {
 
     console.log(`Uploaded ${done} objects.`)
 
-    // Deleting is opt-in: a half-generated local directory would otherwise wipe
-    // images that shipped mobile versions are still requesting.
     if (orphaned.length > 0) {
         if (!PRUNE) {
             console.log(
@@ -201,7 +197,7 @@ async function main() {
                         Delete: {
                             Objects: orphaned
                                 .slice(i, i + 1000)
-                                .map((Key) => ({ Key })),
+                                .map(Key => ({ Key })),
                         },
                     })
                 )
@@ -211,11 +207,11 @@ async function main() {
     }
 
     if (changed.length > 0) {
-        await flushCdn(changed.map((f) => `/${f.key}`))
+        await flushCdn(changed.map(f => `/${f.key}`))
     }
 }
 
-main().catch((err) => {
+main().catch((err: unknown) => {
     console.error(err)
     process.exit(1)
 })

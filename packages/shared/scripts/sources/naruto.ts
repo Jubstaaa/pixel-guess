@@ -7,18 +7,11 @@ const PAGE_SIZE = 100
 const LIMIT = 60
 
 const pageSchema = z.object({
-    total: z.number().int().nonnegative(),
     characters: z.array(
-        z.object({ name: z.string(), images: z.array(z.string()) })
+        z.object({ images: z.array(z.string()), name: z.string() })
     ),
+    total: z.number().int().nonnegative(),
 })
-
-function pageUrl(page: number): URL {
-    const url = new URL('https://dattebayo-api.onrender.com/characters')
-    url.searchParams.set('limit', String(PAGE_SIZE))
-    if (page > 1) url.searchParams.set('page', String(page))
-    return url
-}
 
 export async function fetchNaruto(): Promise<CategoryResult> {
     const first = await fetchJson(pageUrl(1), pageSchema)
@@ -30,8 +23,8 @@ export async function fetchNaruto(): Promise<CategoryResult> {
     )
 
     const characters = [first, ...rest]
-        .flatMap((page) => page.characters)
-        .flatMap(({ name, images: [image] }) =>
+        .flatMap(page => page.characters)
+        .flatMap(({ images: [image], name }) =>
             image === undefined ? [] : [{ name, remoteUrl: image }]
         )
         .slice(0, LIMIT)
@@ -39,14 +32,21 @@ export async function fetchNaruto(): Promise<CategoryResult> {
 
     console.log(`Naruto: ${characters.length} characters`)
     return {
+        characters,
         meta: {
-            slug: 'naruto',
-            name: 'Naruto',
             exportName: 'narutoCharacters',
-            imageType: 'poster',
             iconUrl:
                 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Naruto_logo.svg/400px-Naruto_logo.svg.png',
+            imageType: 'poster',
+            name: 'Naruto',
+            slug: 'naruto',
         },
-        characters,
     }
+}
+
+function pageUrl(page: number): URL {
+    const url = new URL('https://dattebayo-api.onrender.com/characters')
+    url.searchParams.set('limit', String(PAGE_SIZE))
+    if (page > 1) url.searchParams.set('page', String(page))
+    return url
 }

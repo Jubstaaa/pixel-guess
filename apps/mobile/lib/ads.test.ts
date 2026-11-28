@@ -9,6 +9,7 @@ import {
 import * as ReactNative from 'react-native'
 
 import type * as AdsModule from './ads'
+
 import { getInterstitialAdUnitId } from './ads'
 
 const IOS_UNIT = 'ca-app-pub-5250650495212334/6351511966'
@@ -19,8 +20,8 @@ const mockCalls: string[] = []
 
 const mockConsent = {
     canRequestAds: true,
-    gatherFails: false,
     choicesFail: false,
+    gatherFails: false,
     gdprApplies: true,
     initializeFails: false,
     privacyOptionsRequirementStatus: 'NOT_REQUIRED',
@@ -79,10 +80,8 @@ jest.mock('expo-tracking-transparency', () => ({
     },
 }))
 
-// The preset mocks currentState as a jest.fn, which never reads as foregrounded.
 Object.assign(ReactNative.AppState, { currentState: 'active' })
 
-// initializeAds memoizes its promise, so each test needs a fresh module.
 const loadAds = () => {
     let ads: typeof AdsModule | undefined
     jest.isolateModules(() => {
@@ -96,8 +95,8 @@ beforeEach(() => {
     mockCalls.length = 0
     Object.assign(mockConsent, {
         canRequestAds: true,
-        gatherFails: false,
         choicesFail: false,
+        gatherFails: false,
         gdprApplies: true,
         initializeFails: false,
         privacyOptionsRequirementStatus: 'NOT_REQUIRED',
@@ -258,7 +257,7 @@ describe('getInterstitialAdUnitId', () => {
 
     test('uses the Android unit in an Android release build', () => {
         asRelease()
-        // jest-expo runs tests against Platform.ios; mirror Platform.android.
+
         jest.spyOn(ReactNative.Platform, 'select').mockImplementation(
             (spec: {
                 android?: unknown

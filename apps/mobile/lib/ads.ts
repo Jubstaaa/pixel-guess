@@ -1,8 +1,8 @@
 import type * as GoogleMobileAds from 'react-native-google-mobile-ads'
 import type { AdsConsentInfo } from 'react-native-google-mobile-ads'
-import { AppState, Platform } from 'react-native'
 
 import { requestTrackingPermissionsAsync } from 'expo-tracking-transparency'
+import { AppState, Platform } from 'react-native'
 
 const TEST_INTERSTITIAL_UNIT_ID = 'ca-app-pub-3940256099942544/4411468910'
 const INTERSTITIAL_UNIT_IDS = {
@@ -22,8 +22,8 @@ const NO_ADS: AdsConsentState = {
     isPrivacyOptionsRequired: false,
 }
 
-let consentPromise: Promise<AdsConsentState> | null = null
-let sdkStart: Promise<boolean> | null = null
+let consentPromise: null | Promise<AdsConsentState> = null
+let sdkStart: null | Promise<boolean> = null
 
 export const getInterstitialAdUnitId = () =>
     __DEV__
@@ -33,8 +33,6 @@ export const getInterstitialAdUnitId = () =>
               default: INTERSTITIAL_UNIT_IDS.ios,
           })
 
-// The native module is missing in Expo Go, so it is required lazily and a
-// missing module is treated as "no ads" rather than a crash.
 const loadNativeAds = () => {
     try {
         return require('react-native-google-mobile-ads') as typeof GoogleMobileAds
@@ -43,18 +41,15 @@ const loadNativeAds = () => {
     }
 }
 
-// Neither the UMP form nor ATTrackingManager is shown unless the app is already
-// foregrounded; asking straight from the root layout's effect can resolve
-// without the user ever seeing a prompt.
 const waitUntilActive = () =>
-    new Promise<void>((resolve) => {
+    new Promise<void>(resolve => {
         if (AppState.currentState === 'active') {
             resolve()
 
             return
         }
 
-        const subscription = AppState.addEventListener('change', (state) => {
+        const subscription = AppState.addEventListener('change', state => {
             if (state === 'active') {
                 subscription.remove()
                 resolve()
@@ -65,10 +60,7 @@ const waitUntilActive = () =>
 const gatherConsent = async ({ AdsConsent }: typeof GoogleMobileAds) => {
     try {
         await AdsConsent.gatherConsent()
-    } catch {
-        // Google's guidance: on a gather error still try to request ads; UMP
-        // then answers with the consent stored from the previous session.
-    }
+    } catch {}
 
     return AdsConsent.getConsentInfo()
 }
@@ -79,13 +71,10 @@ const requestTracking = async () => {
 
         return granted
     } catch {
-        // Tracking Transparency unavailable (simulator, older iOS): no IDFA.
         return false
     }
 }
 
-// GDPR is the only regime whose personalisation choice the app reads itself;
-// US state opt-outs travel in the GPP string, which the SDK applies per request.
 const hasPersonalizationConsent = async ({
     AdsConsent,
 }: typeof GoogleMobileAds) => {
@@ -96,16 +85,12 @@ const hasPersonalizationConsent = async ({
 
         return selectPersonalisedAds
     } catch {
-        // An unreadable consent record must never be read as a yes.
         return false
     }
 }
 
-// Resolves whether ATT was granted. Runs once, whether consent arrives at
-// launch or later through the privacy options form.
 const startSdk = (ads: typeof GoogleMobileAds) => {
     sdkStart ??= (async () => {
-        // ATT comes after the UMP message, the order Google's sample uses.
         const isTrackingGranted = await requestTracking()
 
         await ads.default().initialize()
@@ -130,8 +115,6 @@ const toConsentState = async (
     try {
         isTrackingGranted = await startSdk(ads)
     } catch {
-        // Without a started SDK there are no ads, but the user must still be
-        // able to reach the privacy options.
         return { ...NO_ADS, isPrivacyOptionsRequired }
     }
 
@@ -153,8 +136,6 @@ const requestConsentAndInitialize = async (): Promise<AdsConsentState> => {
 }
 
 export const initializeAds = () => {
-    // Ads are optional: if the consent status itself cannot be read, the
-    // session runs without them rather than breaking the game.
     consentPromise ??= requestConsentAndInitialize().catch(() => NO_ADS)
 
     return consentPromise

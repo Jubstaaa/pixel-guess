@@ -1,22 +1,22 @@
-export type ImageType = 'character' | 'poster' | 'logo'
-
 export interface Category {
-    slug: string
-    name: string
-    icon: string
     characterCount: number
+    icon: string
     imageType: ImageType
+    name: string
+    slug: string
 }
 
 export interface Character {
-    name: string
     imageUrl: string
-}
-
-export interface GameState {
-    currentCharacter: Character | null
-    count: number
-    seenIndices: number[]
+    name: string
 }
 
 export type Difficulty = 'easy' | 'hard'
+
+export interface GameState {
+    count: number
+    currentCharacter: Character | null
+    seenIndices: number[]
+}
+
+export type ImageType = 'character' | 'logo' | 'poster'

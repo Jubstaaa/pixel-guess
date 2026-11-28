@@ -1,26 +1,26 @@
-export * from './types'
-export {
-    MAX_COUNT,
-    DIFFICULTY_CONFIG,
-    IMAGE_TYPE_BLOCK_SIZE,
-    LEVEL_TYPE,
-} from './game/config'
 export { getImageUrl, IMAGE_CDN_BASE_URL } from './cdn/image-url'
-export { COLORS, type ThemeColors } from './theme/colors'
 export { categories } from './data/categories'
-export { charactersByCategory } from './data/characters-by-category'
 export {
     dota2Characters,
     flagCharacters,
     leagueOfLegendsCharacters,
     valorantCharacters,
 } from './data/characters'
+export { charactersByCategory } from './data/characters-by-category'
+export {
+    DIFFICULTY_CONFIG,
+    IMAGE_TYPE_BLOCK_SIZE,
+    LEVEL_TYPE,
+    MAX_COUNT,
+} from './game/config'
 export {
     advanceToNextCharacter,
     createInitialState,
-    getRandomCharacter,
     getNextState,
+    getRandomCharacter,
     getSkipState,
 } from './game/game-engine'
-export { filterCharacters, checkGuess } from './game/search'
 export { computeBlockSize } from './game/pixelation'
+export { checkGuess, filterCharacters } from './game/search'
+export { COLORS, type ThemeColors } from './theme/colors'
+export * from './types'

@@ -22,7 +22,7 @@ describe('computeBlockSize', () => {
             computeBlockSize(count, 'easy', 400, 'logo')
         )
         for (let i = 1; i < sizes.length; i++) {
-            expect(sizes[i]).toBeLessThan(sizes[i - 1])
+            expect(sizes[i] ?? 0).toBeLessThan(sizes[i - 1] ?? 0)
         }
     })
 

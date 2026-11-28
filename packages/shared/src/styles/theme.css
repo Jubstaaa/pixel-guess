@@ -1,15 +1,15 @@
 /* Generated from src/theme/colors.ts by `bun run generate:theme`. */
 @theme {
-    --color-primary: #f59e0b;
-    --color-primary-foreground: #ffffff;
     --color-background: #000000;
-    --color-foreground: #ffffff;
-    --color-surface: #111111;
-    --color-surface-hover: #1a1a1a;
     --color-border: #222222;
+    --color-danger: #f31260;
+    --color-foreground: #ffffff;
     --color-muted: #888888;
     --color-muted-foreground: #666666;
-    --color-warning: #f5a524;
+    --color-primary: #f59e0b;
+    --color-primary-foreground: #ffffff;
     --color-success: #17c964;
-    --color-danger: #f31260;
+    --color-surface: #111111;
+    --color-surface-hover: #1a1a1a;
+    --color-warning: #f5a524;
 }

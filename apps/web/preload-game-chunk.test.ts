@@ -1,6 +1,6 @@
-import { runInNewContext } from 'node:vm'
-
 import type { IndexHtmlTransformContext } from 'vite'
+
+import { runInNewContext } from 'node:vm'
 import { describe, expect, test } from 'vitest'
 
 import { preloadGameChunk } from './preload-game-chunk'
@@ -10,7 +10,7 @@ const transform = (bundle: IndexHtmlTransformContext['bundle']) => {
     if (typeof transformIndexHtml !== 'object')
         throw new Error('expected an ordered hook')
     return transformIndexHtml.handler.call({} as never, '<html></html>', {
-        bundle,
+        ...(bundle ? { bundle } : {}),
         filename: 'index.html',
         path: '/index.html',
     })
@@ -29,7 +29,7 @@ describe('preloadGameChunk', () => {
         }) as { children: string; tag: string }[]
 
         expect(tags).toHaveLength(1)
-        const script = tags[0].children
+        const script = tags[0]?.children ?? ''
         expect(script).toContain('/assets/game-abc.js')
 
         const run = (pathname: string) => {

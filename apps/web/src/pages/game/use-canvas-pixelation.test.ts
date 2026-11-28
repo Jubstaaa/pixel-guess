@@ -33,7 +33,7 @@ const renderPixelation = (imageUrl: string, count = 0) => {
         context as unknown as CanvasRenderingContext2D
     )
     const hook = renderHook(
-        ({ url, attempts }) => {
+        ({ attempts, url }) => {
             const result = useCanvasPixelation(url, attempts, 'easy')
             ;(result.canvasRef as { current: HTMLCanvasElement }).current =
                 canvas

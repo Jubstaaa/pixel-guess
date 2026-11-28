@@ -1,3 +1,6 @@
+import type * as ReactModule from 'react'
+import type * as ReactNative from 'react-native'
+
 import {
     afterEach,
     beforeEach,
@@ -6,11 +9,8 @@ import {
     jest,
     test,
 } from '@jest/globals'
-import { act, fireEvent, render, screen } from '@testing-library/react-native'
-import type * as ReactModule from 'react'
-import type * as ReactNative from 'react-native'
-
 import { charactersByCategory, MAX_COUNT } from '@pixel-guess/shared'
+import { act, fireEvent, render, screen } from '@testing-library/react-native'
 
 import { Game } from './game'
 
@@ -20,7 +20,6 @@ jest.mock('@/hooks/use-interstitial-ad', () => ({
     useInterstitialAd: () => ({ onCorrectGuess: mockOnCorrectGuess }),
 }))
 
-// Skia needs a native canvas; the stub exposes the two props the game drives.
 jest.mock('../pixelated-image/pixelated-image', () => {
     const { Text } = jest.requireActual<typeof ReactNative>('react-native')
     return {
@@ -37,10 +36,10 @@ jest.mock('../pixelated-image/pixelated-image', () => {
 jest.mock('react-native-confetti-cannon', () => {
     const { Component } = jest.requireActual<typeof ReactModule>('react')
     return class ConfettiCannon extends Component {
-        start() {}
-        render() {
+        override render() {
             return null
         }
+        start() {}
     }
 })
 
@@ -50,9 +49,15 @@ jest.mock('lucide-react-native', () => ({ SkipForward: () => null }))
 
 const REVEAL_MS = 2000
 
-const flags = charactersByCategory.flags
-// Math.random() === 0 always picks the first unseen character.
-const [first, second] = flags
+const flags = charactersByCategory.flags ?? []
+
+const need = <T,>(value: T | undefined): T => {
+    if (value === undefined) throw new Error('missing test data')
+    return value
+}
+
+const first = need(flags[0])
+const second = need(flags[1])
 
 const shownImage = () => screen.getByTestId('pixelated-image')
 
@@ -160,7 +165,7 @@ describe('Game', () => {
 
         await fireEvent.press(screen.getByText('Skip'))
         await unmount()
-        // Picking the next character is the only consumer of Math.random here.
+
         const picksBeforeTimeout = jest.mocked(Math.random).mock.calls.length
         await finishReveal()
 

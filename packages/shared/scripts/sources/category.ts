@@ -1,19 +1,19 @@
-export interface CharacterEntry {
-    name: string
-    remoteUrl: string
-}
-
 export interface CategoryMeta {
-    slug: string
-    name: string
     exportName: string
-    imageType: 'character' | 'poster' | 'logo'
     iconUrl: string
+    imageType: 'character' | 'logo' | 'poster'
+    name: string
+    slug: string
 }
 
 export interface CategoryResult {
-    meta: CategoryMeta
     characters: CharacterEntry[]
+    meta: CategoryMeta
+}
+
+export interface CharacterEntry {
+    name: string
+    remoteUrl: string
 }
 
 export function byName(a: CharacterEntry, b: CharacterEntry): number {

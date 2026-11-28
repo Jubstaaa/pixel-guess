@@ -3,9 +3,9 @@ import { mockAllIsIntersecting } from 'react-intersection-observer/test-utils'
 import { createMemoryRouter, RouterProvider } from 'react-router'
 import { beforeEach, describe, expect, test, vi } from 'vitest'
 
-import html from '../../index.html?raw'
+import type { AdSize, AdSlot as AdSlotComponent } from './ad-slot'
 
-import type { AdSlot as AdSlotComponent, AdSize } from './ad-slot'
+import html from '../../index.html?raw'
 
 declare global {
     interface Window {
@@ -15,8 +15,6 @@ declare global {
 
 let AdSlot: typeof AdSlotComponent
 
-// The "has the visitor interacted yet" flag is page-wide, so every test gets a
-// fresh copy of the module.
 beforeEach(async () => {
     vi.resetModules()
     delete window.adsbygoogle
@@ -24,12 +22,12 @@ beforeEach(async () => {
 })
 
 const renderAt = (
-    slot: string | null,
+    slot: null | string,
     path = '/movies/easy',
     size: AdSize = 'largeMobileBanner'
 ) => {
     const router = createMemoryRouter(
-        [{ path: '*', element: <AdSlot placement={{ size, slot }} /> }],
+        [{ element: <AdSlot placement={{ size, slot }} />, path: '*' }],
         { initialEntries: [path] }
     )
     return { router, ...render(<RouterProvider router={router} />) }
@@ -45,8 +43,6 @@ describe('AdSlot', () => {
         expect(container.innerHTML).toBe('')
     })
 
-    // Each box is exactly the fixed size of its unit, so the ad that arrives
-    // later shifts nothing.
     test.each([
         ['banner', 'w-117 h-15', 468, 60],
         ['largeMobileBanner', 'w-80 h-25', 320, 100],
@@ -69,8 +65,6 @@ describe('AdSlot', () => {
         }
     )
 
-    // The script renders in the same branch as the ad, and React keeps a
-    // hoisted script for the whole document, so the queue is the reliable sign.
     test('requests no ad and loads no script before the visitor interacts', () => {
         renderAt('1234567890')
         act(() => mockAllIsIntersecting(true))

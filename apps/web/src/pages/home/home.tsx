@@ -1,25 +1,19 @@
+import { categories } from '@pixel-guess/shared'
 import { Fragment } from 'react'
 import { Link } from 'react-router'
 
-import { categories } from '@pixel-guess/shared'
-
-import { AdSlot } from '../../ads/ad-slot'
 import { adPlacements } from '../../ads/ad-placements'
+import { AdSlot } from '../../ads/ad-slot'
 import { useMediaQuery } from '../../ads/use-media-query'
-
 import { CategoryCard } from './category-card'
 
-// Even, so on the two-column grid every ad follows whole rows of cards.
 export const AD_EVERY_N_CATEGORIES = 4
 
 const hasAdAfter = (index: number) =>
     (index + 1) % AD_EVERY_N_CATEGORIES === 0 && index < categories.length - 1
 
-// The grid's sm breakpoint: from here a full row is 608-640px wide, room for
-// a 468x60; below it the one-column row is narrower, so it takes a 320x100.
 const WIDE_LIST_QUERY = '(min-width: 640px)'
 
-// Shaped like a category card so it reads as one more row of the list.
 const ListAd = () => (
     <AdSlot
         className="col-span-full min-h-25.5 rounded-2xl border border-border bg-surface py-1.5"
@@ -45,10 +39,10 @@ export const HomePage = () => (
             <div className="mb-12 flex flex-col items-center text-center">
                 <img
                     alt=""
-                    height={80}
-                    width={80}
                     className="mb-4 h-20 w-20 rounded-[22px] shadow-[0_0_40px_-10px_rgba(245,158,11,0.3)]"
+                    height={80}
                     src="/logo-240.webp"
+                    width={80}
                 />
                 <h1 className="mb-2 text-[48px] font-[900] tracking-[-2px] text-foreground">
                     Pixel<span className="text-primary"> Guess</span>
@@ -61,8 +55,7 @@ export const HomePage = () => (
                     className="mt-4"
                     href="https://apps.apple.com/app/pixel-guess/id6760237625"
                     rel="noopener noreferrer"
-                    target="_blank"
-                >
+                    target="_blank">
                     <img
                         alt="Download on the App Store"
                         className="h-[40px] w-auto"
@@ -113,8 +106,7 @@ export const HomePage = () => (
                         extra challenge.{' '}
                         <Link
                             className="text-primary underline"
-                            to="/how-to-play"
-                        >
+                            to="/how-to-play">
                             Learn more about how to play
                         </Link>
                         .

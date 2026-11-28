@@ -1,5 +1,4 @@
 import { Fragment } from 'react'
-
 import { Link } from 'react-router'
 
 export const PrivacyPolicyPage = () => (
@@ -68,8 +67,7 @@ export const PrivacyPolicyPage = () => (
                 contact us at{' '}
                 <a
                     className="text-primary underline"
-                    href="mailto:ilkerbalcilartr@gmail.com"
-                >
+                    href="mailto:ilkerbalcilartr@gmail.com">
                     ilkerbalcilartr@gmail.com
                 </a>
                 .
