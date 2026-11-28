@@ -1,9 +1,6 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": [
-        "github>Jubstaaa/configs",
-        "github>Jubstaaa/configs:cooldown"
-    ],
+    "extends": ["github>Jubstaaa/configs", "github>Jubstaaa/configs:cooldown"],
     "packageRules": [
         {
             "matchPackageNames": [
@@ -34,10 +31,7 @@
                 "react-native-safe-area-context",
                 "react-native-screens"
             ],
-            "matchUpdateTypes": [
-                "major",
-                "minor"
-            ],
+            "matchUpdateTypes": ["major", "minor"],
             "enabled": false
         }
     ]
